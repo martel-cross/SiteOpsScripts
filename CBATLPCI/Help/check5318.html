@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5318">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Guest Account">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Guest Account</H1>
+
+<H2>Check Description</H2>
+
+<P>This check determines whether the built-in Guest account is enabled on the 
+scanned computer.</P>
+
+<P>The Guest account is a built-in account used to log on to a computer running <NOLOC>Microsoft&reg; Windows&reg; Server&nbsp;2008</NOLOC>, <NOLOC>Microsoft&reg; Windows&reg; Server&nbsp;2003</NOLOC>, <NOLOC>Windows&nbsp;Vista</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC> 
+or <NOLOC>Windows&nbsp;2000</NOLOC>, when a user does not have an account on the computer or domain, or in any of the domains trusted by the computer's domain. Computers running <NOLOC>Windows&nbsp;XP</NOLOC> map incoming user connections from across a network to the local Guest account 
+(<NOLOC>ForceGuest</NOLOC>) when simple file sharing is enabled. This feature is configured 
+under the <a href="http://go.microsoft.com/fwlink/?LinkId=21472"><NOLOC>ForceGuest</NOLOC> 
+registry setting</a>. If the Guest account is enabled on computers running <NOLOC>Windows&nbsp;NT</NOLOC>, <NOLOC>Windows</NOLOC>&nbsp;2000, <NOLOC>Windows Server&nbsp;2003</NOLOC>, <NOLOC>Windows Server&nbsp;2008</NOLOC>, <NOLOC>Windows&nbsp;Vista</NOLOC>, or <NOLOC>Windows&nbsp;XP</NOLOC> (not using simple file sharing; 
+<NOLOC>ForceGuest</NOLOC> registry setting is disabled), it will be flagged in the security report as a vulnerability. If the Guest account is enabled on computers running <NOLOC>Windows&nbsp;XP</NOLOC> that use simple file sharing 
+(<NOLOC>ForceGuest</NOLOC> registry setting is enabled), it will not be flagged as a vulnerability.</P>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>The Guest account is disabled by default in <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition. However, only the guest's ability to log on locally is affected. The account 
+itself is not disabled for incoming user connections from across the network and 
+can still be used with simple file sharing.</LI>
+</UL>
+
+<H2>Additional Information</H2>
+
+<P><a href="http://go.microsoft.com/fwlink/?LinkId=19331">Description of File 
+Sharing and Permissions in <NOLOC>Windows&nbsp;XP</NOLOC></a></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16501" TITLE="http://www.microsoft.com/" TARGET="_blank">What's New in Security for <NOLOC>Windows&nbsp;XP</NOLOC> Professional and <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition</A></P>
+
+<P><a href="http://go.microsoft.com/fwlink/?LinkId=21472">How to Set Security in 
+<NOLOC>Windows&nbsp;XP</NOLOC> Professional That Is Installed in a Workgroup</a><BR>
+</P>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+
+</BODY>
+</HTML>

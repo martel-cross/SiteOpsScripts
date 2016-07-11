@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53315">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="SQL Server Integration Services">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1> SQL Server Integration Services </H1>
+
+<H2>Issue</H2>
+
+<P>This check determines if the Sysdtslog90 table exists in the Master and MSDB 
+databases.</P>
+
+<H2>Solution</H2>
+
+<a name="sectionToggle0">
+<p>The <b>LoggingMode</b> property, found in each container that can perform 
+logging, determines whether the container's event information is recorded to the 
+event log. This property is assigned a value from the </a>DTSLoggingMode 
+structure, and is inherited from the container's parent by default. If the 
+container is a package, and therefore has no parent, the property uses the 
+UseParentSetting, which defaults to <b>Disabled</b>.</p>
+<div class="subSection">
+	<p>After the <b>LoggingMode</b> property is set to <b>Enabled</b>, a log 
+	provider is added to the SelectedLogProviders collection of the container to 
+	complete the process. The <b>SelectedLogProviders</b> collection is 
+	available on the LoggingOptions object, and contains the log providers 
+	selected for the container. The Add method is called to create a provider 
+	and add it to the collection. The method then returns the log provider that 
+	was added to the collection. Each provider has configuration settings that 
+	are unique to that provider, and these properties are set using the 
+	ConfigString property.</p>
+</div>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16968" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>SQL Server</NOLOC> Agent Properties</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

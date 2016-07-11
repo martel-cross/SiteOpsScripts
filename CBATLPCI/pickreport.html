@@ -1,0 +1,176 @@
+ï»¿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+<head>
+    <meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+    <link REL="stylesheet" type="text/css" href="css/scanner.css" />
+    <script language="javascript">
+
+var ENTER = 13;
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit() 
+{
+    return top.keyHit(event);
+}
+
+function onmouseclick()
+{
+    ToggleReportList();
+    return false;
+}
+function keydown() 
+{
+    var key = event.keyCode;
+    if (key == ENTER)
+    {
+        ToggleReportList();
+    }
+    return false;
+}
+    function initPage()
+    {
+        top.Header.ShowFrames();
+        window.focus();
+        // set hourglass
+        parent.SetAllCursors(this, "wait");
+        ReportFilePath.innerText = parent.Scanner.UserDirectory;
+        HideOptions();
+        top.scan = false;
+        if (parent.ShowMostRecentRpt || parent.bHaveFullList)
+        {
+            setTimeout("ShowReportList()",25);  // Allows screen to repaint
+        } else {
+            // start the report build and wait for an event to fire
+            parent.Scanner.GetReportList(2);
+        }
+    }
+
+    function ScanProgress(OptionID,NumEvents,NotUsed)
+    {
+        if(OptionID == 3) {
+            parent.bHaveFullList = true;
+            ShowReportList();
+        }
+    }
+
+    function SortOrder_OnChange()
+    {
+        var sortArr = document.all["SortOrder"].value.split("|");
+        var sortKey = sortArr[0];
+        var sortOrder = sortArr[1];
+        //call the sort method
+        frmreports.Sort(sortKey,sortOrder);
+    }
+
+    function HideOptions()
+    {
+        parent.DisableAll();
+        parent.DisableActions();
+        top.Edit.document.all["NextReport"].style.visibility="hidden";
+        top.Edit.document.all["PreviousReport"].style.visibility="hidden";
+        top.Edit.document.all["PreviousReportImg"].style.visibility="hidden";
+        top.Edit.document.all["NextReportImg"].style.visibility="hidden";
+
+        document.all["SortOrder"].disabled=true;
+        document.all["toggleList"].style.visibility="hidden";
+        frmreports["DisplayList"].innerHTML = "Building report list ...";
+        parent.parent.SetCursor(frmreports, "wait");
+    }
+
+    function ShowOptions()
+    {
+        parent.EnableAll();
+        parent.ShowActions(true);
+        document.all["SortOrder"].disabled=false;
+        document.all["toggleList"].style.visibility="visible";
+        if (parent.ShowMostRecentRpt) {
+            document.all["toggleList"].innerText = "Click here to see all security reports";
+            document.all["toggleList"].style.visibility="visible";
+        } else {
+            if (parent.Scanner.ReportCount(1) > 0) {
+                document.all["toggleList"].innerText = "Click here to see reports from the most recent scan only";
+                document.all["toggleList"].style.visibility="visible";
+            } else {
+                document.all["toggleList"].style.visibility="hidden";
+            }
+        }
+    }
+
+    function ToggleReportList()
+    {
+        HideOptions();
+        parent.ShowMostRecentRpt = !parent.ShowMostRecentRpt;
+        if (parent.ShowMostRecentRpt || parent.bHaveFullList)
+        {
+            setTimeout("ShowReportList()",25);  // Allows screen to repaint
+        } else {
+            // start the report build and wait for an event to fire
+            parent.Scanner.GetReportList(2);
+        }
+    }
+
+    function ShowReportList() 
+    {
+        if (parent.ShowMostRecentRpt) {
+            frmreports.LoadReportList(1);
+        } else {
+            frmreports.LoadReportList(3);
+        }
+        ShowOptions();
+                top.Header.SetNavigationState();
+    }
+    </script>
+</head>
+<body onload="initPage()" onUnload = " top.Header.DisableButtons();" oncontextmenu="return false" tabindex = "-1">
+    <table name="rptTable" id="rptTable" Border="0" cellspacing="0" HEIGHT="100%" WIDTH="100%">
+            <tr>
+                <td>
+                    <span class="sys-font-heading3 sys-rhp-color-title">Choose a security scan report to view</span><br><br>
+                    <span>
+                        Security reports are located in:
+                    </span>
+                    <span id="ReportFilePath">
+                        FilePath
+                    </span>
+                    <br><br>
+                    <span id="SortSpan">
+                        <u>S</u>ort order: 
+                        <select accesskey="s" align="absMiddle" name="SortOrder" id="SortOrder" onchange="SortOrder_OnChange()" style="MARGIN-LEFT: 5px">
+                            <option value=@computer|ascending>Computer name (ascending)</option>
+                            <option value=@computer|descending>Computer name (descending)</option>
+                            <option value=@ip|ascending>IP address (ascending)</option>
+                            <option value=@ip|descending>IP address (descending)</option>
+                            <option value=@grade|ascending>Security assessment (ascending)</option>
+                            <option value=@grade|descending>Security assessment (descending)</option>
+                            <option value=@date|ascending>Scan date (ascending)</option>
+                            <option selected value=@date|descending>Scan date (descending)</option>
+                        </select>
+                    &nbsp;&nbsp;
+                    <a class="sys-link-normal" id="toggleList" href="javascript:ToggleReportList();" onkeydown="return keydown()" onclick="return onmouseclick();"></a>
+                    </span>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td style="HEIGHT: 100%">
+                    <IFRAME SCROLLING="yes" MARGINWIDTH="1" MARGINHEIGHT="1" WIDTH="100%" HEIGHT="100%" NAME="frmreports" SRC="reports.html">
+                    </IFRAME>
+                </td>
+            </tr>
+    </table>
+        <TEXTAREA ID="ClipBoardText" name="ClipBoardText" STYLE="display:none;"></TEXTAREA>
+        <span style="DISPLAY:none" name="HiddenCopyReport" id="HiddenCopyReport"><span>
+</body>
+</html>

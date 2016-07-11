@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53315">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="SQL Server Integration Services">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1> SQL Server Integration Services </H1>
+
+<H2>Issue</H2>
+
+<P>This check determines if the BuiltIn Admin is part of db_DTSAdmin, 
+db_DTSltduser or db_dtsoperator roles.</P>
+
+<H2>Solution</H2>
+
+<p>By default, the permissions of the <b>db_dtsadmin</b>, and <b>dtsoperator</b> 
+fixed database-level roles and the unique security identifier of the user who 
+created the package apply to the reader role for packages, and the permissions 
+of the <b>db_dtsadmin</b> role and the unique security identifier of the user 
+who created the package apply to the writer role. A user must be a member of the
+<b>db_dtsadmin</b>, <b>db_dtsltduser</b>, or <b>db_dtsoperator</b> role to have 
+read access to the package. A user must be a member of the <b>db_dtsadmin</b> 
+role to have write access.</p>
+<p>The fixed database-level roles work in conjunction with user-defined roles. 
+The user-defined roles are the roles that you create in SQL Server Management 
+Studio and then use to assign permissions to packages. To access a package, a 
+user must be a member of the user-defined role and the pertinent Integration 
+Services fixed database-level role. For example, if users are members of the <b>
+AuditUsers</b> user-defined role that is assigned to a package, they must also 
+be members of <b>db_dtsadmin</b>, <b>db_dtsltduser</b>, or <b>db_dtsoperator</b> 
+role to have read access to the package. </p>
+<p>If you do not assign user-defined roles to packages, access to packages is 
+determined by the fixed database-level roles.</p>
+<p>If you want to use user-defined roles, you must add them to the <b>msdb</b> 
+database before you can assign them to packages. You can create new database 
+roles in SQL Server Management Studio.</p>
+
+<H2>Additional Information</H2>
+
+<P>
+<A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16968" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>SQL Server</NOLOC> Agent Properties</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5318fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Guest Account">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Guest Account</H1>
+
+<H2>Issue</H2>
+
+<P>The Guest account is intended for users who require temporary access to the system. However, if you enable this account, you can create a security risk because an unauthorized user could gain anonymous access to your system through this account.</P>
+
+<H2>Solution</H2>
+	      
+<P>Disable the Guest account. The Guest account is disabled by default in 
+<NOLOC>Microsoft&reg; Windows&reg;&nbsp;2000</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, <NOLOC>Windows&nbsp;Vista</NOLOC>, <NOLOC>Windows Server&nbsp;2003</NOLOC>, and <NOLOC>Windows Server&nbsp;2008</NOLOC>.</P>
+
+<P CLASS="note">Note</P>
+<UL>
+<LI> If you are running <NOLOC>Windows&nbsp;XP</NOLOC> with simple file sharing 
+enabled (maps incoming user connections from across a network to the local Guest 
+account), you do not have to disable the Guest account because it does not pose a risk. 
+(For more details on simple file sharing and the <NOLOC>ForceGuest</NOLOC> feature, refer to the "<a href="http://go.microsoft.com/fwlink/?LinkID=16501">What's New in Security for <NOLOC>Windows&nbsp;XP</NOLOC> Professional and <NOLOC>Windows&nbsp;XP</NOLOC> 
+Home Edition</a>" white paper and the Knowledge Base article on "<a href="http://go.microsoft.com/fwlink/?LinkId=21472">How 
+to Set Security in <NOLOC>Windows&nbsp;XP</NOLOC> Professional That Is Installed in a Workgroup</a>" 
+listed in the Additional Resources section.) The Guest account is disabled by default in <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition. However, only the guest's ability to log on locally is affected. The account itself is not disabled for incoming user connections from across the network and can still be used with simple file sharing.</LI>
+</UL>
+
+<H2>Instructions</H2>
+
+<P><B>To disable the Guest account</B></P>
+
+<OL>
+<LI>Open the <B>Control Panel</B>.</LI> 
+<LI>Double-click 
+<B>Administrative Tools</B>, and then double-click <B>Computer Management</B>.</LI> <LI>Double-click the <B>Local Users and Groups</B> folder, and then click the <B>Users</B> folder.</LI>
+<LI>In the right pane, double-click the <B>Guest</B> account.</LI>
+<LI>In the <B>Guest Properties</B> dialog box, select the <B>Account is disabled</B> check box. </LI>
+</OL>
+<BR>
+
+<H2>Additional Information</H2>
+
+<P><a href="http://go.microsoft.com/fwlink/?LinkId=19331">Description of File 
+Sharing and Permissions in <NOLOC>Windows&nbsp;XP</NOLOC></a></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16501" TITLE="http://www.microsoft.com/" TARGET="_blank">What's New in Security for <NOLOC>Windows&nbsp;XP</NOLOC> Professional and <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition</A></P>
+
+<P><a href="http://go.microsoft.com/fwlink/?LinkId=21472">How to Set Security in 
+<NOLOC>Windows&nbsp;XP</NOLOC> Professional That Is Installed in a Workgroup</a><BR>
+</P>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

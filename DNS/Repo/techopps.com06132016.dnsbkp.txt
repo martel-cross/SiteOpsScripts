@@ -1,0 +1,37 @@
+;
+;  Database file (null) for Default zone scope in zone techopps.com.
+;      Zone version:  55
+;
+
+@                       IN  SOA qtxad2.atl.careerbuilder.com. admin.atl.careerbuilder.com. (
+                        		55           ; serial number
+                        		900          ; refresh
+                        		600          ; retry
+                        		86400        ; expire
+                        		3600       ) ; default TTL
+
+;
+;  Zone NS records
+;
+
+@                       NS	bearad2.atl.careerbuilder.com.
+@                       NS	luigiad1.atl.careerbuilder.com.
+@                       NS	luigiad2.atl.careerbuilder.com.
+@                       NS	bearad1.atl.careerbuilder.com.
+bearad1.atl.careerbuilder.com. A	10.230.10.9
+@                       NS	qtwad2.atl.careerbuilder.com.
+@                       NS	qtwad1.atl.careerbuilder.com.
+@                       NS	qtmad2.atl.careerbuilder.com.
+@                       NS	devad2.atl.careerbuilder.com.
+@                       NS	devad1.atl.careerbuilder.com.
+@                       NS	qtxad1.atl.careerbuilder.com.
+@                       NS	qtxad2.atl.careerbuilder.com.
+@                       NS	qtmad1.atl.careerbuilder.com.
+qtmad1.atl.careerbuilder.com. A	10.240.10.9
+
+;
+;  Zone records
+;
+
+@                       MX	10	relay.techopps.com.
+relay                   A	10.240.10.150

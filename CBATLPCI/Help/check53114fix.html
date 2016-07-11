@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53114fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>Windows</NOLOC> Auditing">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>Windows</NOLOC> Auditing</H1>
+
+<H2>Issue</H2>
+
+<P>Auditing is a vital step in detecting system intrusions or malicious activity on 
+your systems and network. The <NOLOC>Windows</NOLOC> Event Viewer does not log event entries in the security log unless you enable auditing on the system.</P>
+
+<H2>Solution</H2>
+
+<P>Enable auditing on each <NOLOC>Microsoft&reg; Windows&reg;</NOLOC> operating system on your network. After you enable auditing, you can choose which events to monitor, such as successful or failed logon attempts. In addition, certain files and directories can be audited on NTFS file systems for modifications or deletions. 
+View the links under the Additional Resources section below for more information 
+on configuring audit policies.</P>
+
+<H2>Instructions</H2>
+
+<P><B>To enable auditing on a computer running <NOLOC>Windows&nbsp;Server</NOLOC>&nbsp;2008, <NOLOC>Windows&nbsp;Server</NOLOC>&nbsp;2003, <NOLOC>Windows&nbsp;Vista</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, or <NOLOC>Windows</NOLOC>&nbsp;2000</B></P>
+
+<OL>
+<LI>Open the <B>Control Panel</B>.</LI>
+<LI>In Control Panel, double-click <B>Administrative Tools</B>, and then click <B>Local Security Policy</B>.</LI> 
+<LI>In Local Security Settings, double-click <B>Local Policies</B>, double-click <B>Audit Policy</B>, and then click the events that you want to audit. We recommend that you audit the following events:</LI>
+
+<BLOCKQUOTE>
+
+<P>Audit account logon events (Success, Failure)</P>
+<P>Audit account management (Success, Failure)</P>
+<P>Audit directory service access (Failure)</P>
+<P>Audit logon events (Success, Failure)</P>
+<P>Audit object access (Failure)</P>
+<P>Audit policy change (Success, Failure)</P>
+<P>Audit system events (Success, Failure)</P>
+</BLOCKQUOTE>
+
+</OL>
+
+<br>
+
+<P>To view the event logs, click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, and then click <B>Event Viewer</B>.</P>
+
+<H2>Additional Resources</H2>
+
+<P><a href="http://go.microsoft.com/fwlink/?LinkId=19031">Chapter&nbsp;3 - Audit 
+Policy (Threats and Countermeasures Guide)</a></P>
+
+<a href="http://go.microsoft.com/fwlink/?LinkId=19032">Chapter&nbsp;9 - Auditing and 
+Intrusion Detection (Securing <NOLOC>Windows&nbsp;2000 Server</NOLOC>)</a><p>
+<a href="http://go.microsoft.com/fwlink/?LinkId=19401"><NOLOC>Windows Server</NOLOC>&nbsp;2003: Auditing Security Events Best Practices</a></p>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

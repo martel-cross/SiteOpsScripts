@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5339fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>SQL Server</NOLOC> Guest Account">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>SQL Server</NOLOC> Guest Account</H1>
+
+<H2>Issue</H2>
+
+<P>By allowing the Guest account access to your database, you also allow any valid <NOLOC>Microsoft&reg;</NOLOC> <NOLOC>SQL Server&trade;</NOLOC> logon account to have access to that database.</P>
+
+<H2>Solution</H2>
+
+<P>The security report lists all <NOLOC>SQL Server</NOLOC> databases that allow access to the Guest account, excluding master, tempdb, and msdb. For security reasons, we recommend that you remove the Guest account access from all other databases listed in the report and delete any sample databases.</P>
+
+
+<H2>Instructions</H2>
+
+<P><B>To remove the Guest account access from databases</B></P>    
+ 
+<OL>
+<LI>Click <B>Start</B>, point to <B>Programs</B>, point to <B><NOLOC>Microsoft</NOLOC> <NOLOC>SQL Server</NOLOC></B>, and then click <B>Enterprise Manager</B>.</LI>
+<LI>Double-click <B><NOLOC>Microsoft SQL Server</NOLOC>s</B>, and then double-click <B><NOLOC>SQL Server</NOLOC> Group</B>.</LI>
+<LI>Click the <B>Databases</B> folder, click the database that you want to secure, and then click <B>users</B>.</LI>
+<LI>In the right pane, right-click <B>Guest</B>, and then click <B>Delete</B>.</LI>
+</OL> 
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16953" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>SQL Server</NOLOC> Security Strategies</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16954" TITLE="http://www.microsoft.com/" TARGET="_blank">Establishing Application Security and Application Roles</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

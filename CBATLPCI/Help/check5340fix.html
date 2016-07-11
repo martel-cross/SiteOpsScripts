@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5340fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Incomplete Updates">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Incomplete Updates</H1>
+
+<H2>Issue</H2>
+
+<P>A result marked with a potential risk score <IMG SRC="../Graphics/mini_x_gold.gif" WIDTH="16" HEIGHT="16"> confirms that a previous software update installation was not completed. You must restart the computer to finish the installation. If the incomplete installation was a security update, the computer may be at risk until the computer is restarted.</P>
+
+<H2>Solution</H2>
+
+<P>We recommend that you restart the computer as soon as possible and scan the computer again for security updates.  If the score provided by this check is a blue asterisk (best practice), the notes provided by this check should also be reviewed to understand the limitations of some updates.</P>
+
+<P CLASS="note">Notes</P>
+<UL>
+    <LI>This check takes advantage of an improvement added to <NOLOC>Update.exe</NOLOC>, the standard update installer for Windows products.  This installer and the improvement used by this check are described in <a href="http://go.microsoft.com/fwlink/?linkid=45291"><NOLOC>Microsoft</NOLOC> Knowledgebase article 832475.</a>  
+	The check is able to accurately identify when an update is in an incomplete 
+	state if it was packaged with the latest versions of the Update.exe 
+	installer.</LI>
+    <LI>Updates packaged using the <NOLOC>Windows</NOLOC> Installer (MSI) are also not evaluated by this check.  The registry key <CODE>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\PendingFileRenameOperations</CODE> can sometimes be used to determine whether a restart is required. If this key exists and has files listed within it, a restart is pending.</LI>
+</UL>
+
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+</BODY>
+</HTML>

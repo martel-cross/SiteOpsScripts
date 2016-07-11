@@ -1,0 +1,521 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+<head>
+<link REL="stylesheet" type="text/css" href="css/scanner.css" />
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+<script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+<script LANGUAGE="javascript">
+
+    // Load XML
+    var xml = null;
+    var xsl = null;
+    var Detailxml = XCreateObject("MSXML2.DOMDocument");
+    var Detailxsl = XCreateObject("MSXML2.DOMDocument");
+    var Headerxsl = null;
+    var strXMLHeader;
+    var windowRptDetails;//New Window Name, if name changes CHANGE REPORTDETAILS.HTML
+    var windowRptIEZonesSubDetails; 
+
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit() 
+{
+    return top.keyHit(event);
+}
+   
+
+function initPage()
+{
+    top.Header.ShowFrames();
+    window.focus();
+
+    // Load XML
+    xml = XCreateObject("MSXML2.DOMDocument")
+    xsl = XCreateObject("MSXML2.DOMDocument")
+    Headerxsl = XCreateObject("MSXML2.DOMDocument")
+    if( !xml || !xsl || !Headerxsl)
+    {
+        top.location = "default.html";
+        return;
+    }
+
+    xml.async = false
+
+    // decode html encoding in the report name
+    ReportToViewUnesc = unescape(parent.parent.ReportToView);
+    
+    strXML = "";
+
+    try
+    {
+        //Load XML
+        strXML = parent.parent.Scanner.GetUserXML(ReportToViewUnesc,true);
+        if(strXML == "")
+        {
+            document.all["SortOrder"].disabled = true;
+            top.Header.SetNavigationState();
+            alert("Not able to load report file. Report file may have been removed or corrupted.");
+            return;
+        }
+    }
+    catch(e)
+    {
+        alert("Not able to load report file. Report file may have been removed or corrupted.");
+        return;
+    }
+
+    xml.loadXML(strXML);
+
+    // Load the XSL    - ReportHeader.xsl & Report.xsl
+    Headerxsl.async = false
+    Headerxsl.load("reportHeader.xsl");
+    Headerxsl.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+    //set the file name variable
+    var FileNameVarNodes = Headerxsl.selectNodes("//xsl:variable[@name='FileName']");  
+    // Replace the values with the new sort key.
+    for (var i = FileNameVarNodes.nextNode(); i != null; i = FileNameVarNodes.nextNode())
+    {
+        i.text = ReportToViewUnesc;
+    }
+
+        ShowReportAge();
+    ShowCatalogAge();
+    strXMLHeader = xml.transformNode(Headerxsl);
+
+    xsl.async = false
+    xsl.load("report.xsl");
+    xsl.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+    ShowActions();
+
+    //get the currently selected node for statup, as that page is responsible for the default    
+    var sortArr = document.all["SortOrder"].value.split("|");//@Veena
+    var sortKey = sortArr[0];
+    var sortOrder = sortArr[1];
+    if(top.scan)
+    {
+        DisableActions();
+    }
+    else
+    {
+            SetNavigationState();
+    }
+    sort(sortKey,sortOrder);
+    GetHeader();
+    top.Header.SetNavigationState();
+}
+    
+    function DisableActions()
+    {
+        var topFrame = top.location.pathname;
+        var showreport = /ShowReport.html/i;
+
+        if(topFrame.search(showreport)<0)
+        {
+            top.Edit.document.all["NextReport"].className = "sys-link-disabled";
+        top.Edit.document.all["NextReport"].href = "javascript:void(0);";
+        top.Edit.document.all["NextReportImg"].src = "Graphics/arrow_disabled.gif";
+            top.Edit.document.all["PreviousReport"].className = "sys-link-disabled";
+        top.Edit.document.all["PreviousReport"].href = "javascript:void(0);";
+        top.Edit.document.all["PreviousReportImg"].src = "Graphics/barrow_disabled.gif";
+    }
+    } 
+
+    function ShowActions()
+    {
+        var topFrame = top.location.pathname;
+        var showreport = /ShowReport.html/i;
+
+        if(topFrame.search(showreport)<0)
+        {
+          top.Edit.document.all["NextReport"].style.visibility="visible";
+        top.Edit.document.all["PreviousReport"].style.visibility="visible";
+        top.Edit.document.all["PreviousReportImg"].style.visibility="visible";
+        top.Edit.document.all["NextReportImg"].style.visibility="visible";
+    }
+    }
+       
+    function ShowReportAge()
+    {
+        //set the variable ReportAgePH
+        var DateInXmlNodes = xml.selectNodes("//SecScan/@Date");
+        var DateInXml = DateInXmlNodes.nextNode();
+        var ReportAgePHVarNodes = Headerxsl.selectNodes("//xsl:variable[@name='ReportAgePH']");
+        for (var i = ReportAgePHVarNodes.nextNode(); i != null; i = ReportAgePHVarNodes.nextNode())
+        {
+          i.text = ReportAge(DateInXml.text);
+        }
+    }    
+        
+    function ShowCatalogAge()
+    {
+        var securityUpdatesScanDoneNode = xml.selectNodes("//SecScan[@SecurityUpdatesScanDone='True']");
+        if (securityUpdatesScanDoneNode != null)
+        {
+            if (securityUpdatesScanDoneNode.nextNode() != null)
+            {
+                var versionInXmlNodes = xml.selectNodes("//SecScan/@HotfixDataVersion");
+
+                if (versionInXmlNodes != null)
+                {
+                    //set the variable CatSyncAgePH
+                    var versionInPackageXmlText = parent.parent.Scanner.PackageXmlDate;
+
+                    var versionInXmlText = versionInXmlNodes.nextNode().text;
+                    var CatSyncAgePHVarNodes = Headerxsl.selectNodes("//xsl:variable[@name='CatSyncAgePH']");
+                    for (var i = CatSyncAgePHVarNodes.nextNode(); i != null; i = CatSyncAgePHVarNodes.nextNode())
+                    {
+                        i.text = CatalogAge(versionInPackageXmlText, versionInXmlText);
+                    }
+                }
+            }
+        }
+    }
+        
+    function ReportAge(dateCompareAgainst)
+    {
+        var days = ReportAgeInDays(dateCompareAgainst);
+        return ReportAgeMsg(days);
+    }
+    
+    function dateDiff(d1, d2)
+    {
+        if( d1 < d2 )
+            return -1;
+        return( Math.floor((d1-d2)/86400000) );
+    }
+
+    function ReportAgeInDays(dateCompareAgainst)
+    {
+        try
+        {
+            var reportDate = dateCompareAgainst;
+            var x0 = reportDate.split(" ")[0].split("-");
+             
+            var d1 = new Date();
+            // [0]: year, [1]: month, [2]: days
+            var d2 = new Date(x0[0], x0[1] - 1, x0[2]);    // -1 to make it 0-based
+
+            return dateDiff(d1, d2);
+        }
+        catch (e)
+        {
+            return -1;
+        }        
+    }
+
+    function CatalogAge(versionPackageXml, versionInReport)
+    {
+        var timediff = CatalogAgeInDays(versionPackageXml, versionInReport);
+        if (timediff == 0)
+            timediff = IsCatalogAgeInSecondsGreater(versionPackageXml, versionInReport);
+        
+        if (timediff > 0)
+            return CatalogAgeMsg(versionPackageXml);
+    }
+    
+    function IsCatalogAgeInSecondsGreater(versionPackageXml, versionInReport)
+    {
+        try
+        {
+            var x0 = versionInReport.split("T")[1].split("Z")[0].split(".")[0].split(":");
+            var xPackageXml = versionPackageXml.split("T")[1].split("Z")[0].split(".")[0].split(":");
+
+            // [0]: hours, [1]: minutes, [2]: seconds
+            if ( ((xPackageXml[0] - x0[0]) * 3600 + (xPackageXml[1] - x0[1]) * 60 + xPackageXml[2] - x0[2]) > 0)
+                return 1;
+            else
+                return 0;            
+        }
+        catch (e)
+        {
+            return -1;
+        }    
+    }
+
+    function CatalogAgeInDays(versionPackageXml, versionInReport)
+    {
+        try
+        {
+            var x0 = versionInReport.split("T")[0].split("-");
+            var xPackageXml = versionPackageXml.split("T")[0].split("-");
+
+            // [0]: year, [1]: month, [2]: days
+            var d0 = new Date(x0[0], x0[1] - 1, x0[2]);    // -1 to make it 0-based
+            var dPackageXml = new Date(xPackageXml[0], xPackageXml[1] - 1, xPackageXml[2]);    // -1 to make it 0-based
+
+            return dateDiff(dPackageXml, d0);
+        }
+        catch (e)
+        {
+            return -1;
+        }    
+    }
+
+        
+    //sorts the page-- called from viewreport.html
+    function sort(key,order) {
+      // Find the "xsl:sort select" attributes in the style sheet.
+      var s = xsl.selectNodes("//xsl:sort/@select");
+      
+      // Replace the values with the new sort key.
+      for (var i = s.nextNode(); i != null; i = s.nextNode())
+      {    
+        if(i.value != '@Rank')
+        {
+            i.value = key;
+        }
+      }
+      
+      s = xsl.selectNodes("//xsl:sort/@order");
+      // Replace the values with the new sort Order.
+      for (var i = s.nextNode(); i != null; i = s.nextNode())
+      {
+        i.value = order;
+      }
+      document.all["Display"].innerHTML = xml.transformNode(xsl)
+      window.scrollTo(0,0);
+     }
+
+function ChangeReport(ReportFileName)
+{
+    ReportFileName = unescape(ReportFileName);
+    strXML = "";
+
+    try
+    {
+        //Load XML
+        strXML = parent.parent.Scanner.GetUserXML(ReportFileName,true);
+        if(strXML == "")
+        {
+            alert("Not able to load report file. Report file may have been removed or corrupted.");
+            return;
+        }
+    }
+    catch(e)
+    {
+        alert("Not able to load report file. Report file may have been removed or corrupted.");
+        return;
+    }
+
+    //Load XML
+    xml.loadXML(strXML );
+
+    // Load the XSL    - ReportHeader.xsl & Report.xsl
+    Headerxsl.load("reportHeader.xsl");
+    Headerxsl.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+    //set the file name variable
+    var FileNameVarNodes = Headerxsl.selectNodes("//xsl:variable[@name='FileName']");  
+    // Replace the Filename variable
+    for (var i = FileNameVarNodes.nextNode(); i != null; i = FileNameVarNodes.nextNode())
+    {
+      i.text = ReportFileName;
+    }
+
+    ShowReportAge();
+    ShowCatalogAge();
+    strXMLHeader = xml.transformNode(Headerxsl);
+
+    //re sort the new doc with the current sort state
+    var sortArr = document.all["SortOrder"].value.split("|");
+    var sortKey = sortArr[0];
+    var sortOrder = sortArr[1];
+    
+    sort(sortKey,sortOrder);
+    GetHeader();
+}
+
+    function OpenDetails(CheckID,bHotfix,bIEZones,SQLInstanceName,GroupID)
+    {    //bool bHotfix determins if Hotfix check or not
+        parent.parent.gblrptCheckID = CheckID;
+        parent.parent.gblrptGroupId = GroupID;
+        var WindowLeft = window.screenLeft - 200;
+        var WindowTop = window.screenTop - 200; 
+    
+        parent.parent.gblHotFixCheck = bHotfix;
+        parent.parent.gblSQLInstanceName = SQLInstanceName;
+        parent.parent.gblIEZones = bIEZones;
+        parent.parent.gblIEZonesId = -1;
+        CloseDetails();
+    
+        try {
+        windowRptDetails = window.showModelessDialog("reportdetails.html",window,"toolbar:no;location:no;directories:no;status:no;menubar:no;scrollbars:yes;resizable:yes;dialogWidth:800px;dialogHeight:600px;maximize:yes;minimize:yes;unadorned:no;dialogLeft:" + WindowLeft + ";dialogTop:" + WindowTop);
+        windowRptDetails.focus();
+        } catch (e) {}
+    }
+
+    function CloseDetails()//close all the open Windows if any
+    {
+        try
+            {
+            if (windowRptIEZonesSubDetails != null)
+            {
+                windowRptIEZonesSubDetails.close();    
+            }
+            }
+        catch (e)
+            {
+            ; // don't throw a script error if we can't close a window
+            }
+
+        try
+            {
+
+            windowRptDetails.close();
+
+            }
+        catch (e)
+            {
+            ; // don't throw a script error if we can't close a window
+            }
+
+        try {
+            windowRptDetails = null;
+            windowRptIEZonesSubDetails = null;
+            }
+        catch (e)
+            {
+            ; // don't throw a script error if we can't close a window
+            }
+
+    }
+
+    function Unload()//close all the open Windows if any
+    {
+        CloseDetails();
+                top.Header.DisableButtons();
+    }
+    
+    function ReportAgeMsg(daysOld)
+    {
+        var msg;
+        
+        if (daysOld < 0)
+        {
+            msg = " *** " + "Microsoft recommends scanning on a weekly basis. The age of this report could not be determined." + " ***";
+        }
+        else if (daysOld == 0) {}
+        else if (daysOld == 1)
+        {
+            msg = " *** " + "This report is 1 day old." + " ***";
+        }
+        else if (daysOld < 7)
+        {
+            msg = " *** " + "This report is " +  daysOld  + " days old." + " ***";
+        }
+        else
+        {
+            msg = " *** " + "Microsoft recommends scanning on a weekly basis. This report is " + daysOld + " days old." + " ***";
+        }
+
+        return msg;
+    }
+
+    function CatalogAgeMsg(versionStamp)
+    {
+        var msg = " *** " + "A new security update catalog is available. Please scan again to check for the latest security updates published " + versionStamp + "" + " ***";
+        return msg;        
+    }
+    function GetHeader()
+    {    
+        var DateInXmlNodes = xml.selectNodes("//SecScan/@Date");
+        var DateInXml = DateInXmlNodes.nextNode();
+        var DomainInXmlNodes = xml.selectNodes("//SecScan/@Domain");
+        var DomainInXml = DomainInXmlNodes.nextNode();
+        var ComputerInXmlNodes = xml.selectNodes("//SecScan/@Machine");
+        var ComputerInXml = ComputerInXmlNodes.nextNode();
+        var strMainHeader = "Report Details for "+DomainInXml.text+" - "+ComputerInXml.text+" ("+DateInXml.text+")";
+        ViewHeader.innerHTML = String(strMainHeader) + String(strXMLHeader);
+    }
+
+function SetNavigationState()
+{    
+ var topFrame = top.location.pathname;
+ var showreport = /ShowReport.html/i;
+
+ if(topFrame.search(showreport)<0)
+ {
+  try{    
+    if(parent.ReportListArr.length -2 == parent.ReportListArrIndex)
+    {    //disable the next button
+        top.Edit.document.all["NextReport"].className = "sys-link-disabled";
+        top.Edit.document.all["NextReport"].href = "javascript:void(0);";
+        top.Edit.document.all["NextReportImg"].src = "Graphics/arrow_disabled.gif";
+    }
+    else
+    {
+        top.Edit.document.all["NextReport"].className = "sys-link-normal";
+        top.Edit.document.all["NextReport"].href = "javascript:NextReport();";
+        top.Edit.document.all["NextReportImg"].src = "Graphics/arrow.gif";
+    }
+    if(parent.ReportListArrIndex == 0)
+    {//disable previous
+        top.Edit.document.all["PreviousReport"].className = "sys-link-disabled";
+        top.Edit.document.all["PreviousReport"].href = "javascript:void(0);";
+        top.Edit.document.all["PreviousReportImg"].src = "Graphics/barrow_disabled.gif";
+    }
+    else
+    {
+        top.Edit.document.all["PreviousReport"].className = "sys-link-normal";
+        top.Edit.document.all["PreviousReport"].href = "javascript:PreviousReport();";
+        top.Edit.document.all["PreviousReportImg"].src = "Graphics/barrow.gif";
+    }
+    top.Edit.document.all["NextReport"].style.display = "inline";
+    top.Edit.document.all["PreviousReport"].style.display = "inline";
+  }
+  catch(e){
+    //parent.ViewReports(false); 
+    top.Edit.document.all["NextReport"].style.display = "none";
+    top.Edit.document.all["PreviousReport"].style.display = "none";
+  }
+ }
+}
+
+function SortOnChange()
+{
+    var sortArr = document.all["SortOrder"].value.split("|");
+    var sortKey = sortArr[0];
+    var sortOrder = sortArr[1];
+    //call the sort method
+    sort(sortKey,sortOrder);    
+}
+//-->
+</script>
+</head>
+<body onload="initPage()" onunload="Unload()" oncontextmenu="return false" style="BORDER-RIGHT: 0px; MARGIN: 50px; OVERFLOW: auto"  ondragstart="return false"  tabindex = "-1">
+<div id="viewreport">
+<form id="viewreport" name="viewreport">
+    <table Border="0" cellspacing="0" >
+        <tbody>
+            <tr>
+                <td>
+                    <span id="ViewHeader" class="sys-font-heading3 sys-rhp-color-title"></span>
+                         <span><u>S</u>ort Order:
+                        <select accesskey="s" align="absMiddle" id="SortOrder" name="SortOrder" onchange="SortOnChange()" style="MARGIN-LEFT: 5px">
+                        <option value="@Name|ascending">Issue name</option>
+                        <option value="@Grade|ascending" selected>Score (worst first)</option>
+                        <option value="@Grade|descending">Score (best first)</option>
+                        </select>
+                    </span>
+                    
+                </td>
+            </tr>
+        </tbody> 
+    </table> 
+</form>
+</div>
+ <span id="Display" name="Display"></span>
+</body>
+</html>
+
+

@@ -1,0 +1,10 @@
+#TYPE Selected.Microsoft.ActiveDirectory.Management.ADPrincipal
+"name","samaccountname","distinguishedname","objectclass","sid"
+"AliShahzad","ashahzad","CN=AliShahzad,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-1258"
+"ColinField","cfield","CN=ColinField,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-27198"
+"GregNegelow","gnegelow","CN=GregNegelow,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-27355"
+"JohanMunoz","jmunoz","CN=JohanMunoz,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-25338"
+"MahmoudHarb","mharb","CN=MahmoudHarb,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-27247"
+"MohammedLahmaydi","mlahmaydi","CN=MohammedLahmaydi,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-27197"
+"SiteBackend Service","besvc","CN=SiteBackend Service,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-11484"
+"Windows","windows","CN=Windows,CN=Builtin,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-500"

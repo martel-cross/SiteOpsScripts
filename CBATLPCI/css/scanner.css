@@ -1,0 +1,327 @@
+.sys-bottompane-normal
+{
+    position: absolute;
+    bottom: 2em;
+}
+.sys-bottompane-resize
+{
+    position: absolute;
+    top: 140;
+}
+.sys-bottompane-body
+{
+    position: absolute;
+    bottom: 2em;
+    right: 6em;
+}
+A.link-normal
+{
+    color : #FFFFFF;
+    text-decoration : none
+}
+A.sys-link-normal
+{
+    color : #227AD3;
+    text-decoration : none
+}
+A.sys-link-normal:hover
+{    
+    color : #6666FF;
+    text-decoration : underline
+}
+A.sys-link-normal:active
+{
+    color : #3333FF;
+    text-decoration : none
+}
+img.arrow 
+{
+    width: 25px;
+    height: 25px;
+    BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH: 0px
+}
+.sys-link-disabled
+{
+    CURSOR: default! important;
+    COLOR: #999999! important
+    text-decoration : none
+}
+.sys-font-body-bold
+{
+    font-family : Tahoma;
+    font-size: 10pt;
+    font-weight : bold
+}
+
+.ReportListHeader
+{
+    background-color:#DDDDDD;
+    border:1px solid;
+    border-color:#a6a6a6
+    color: #000000;
+    font-weight : bold;
+    font-family : Tahoma;
+    font-size: 10pt;
+    HEIGHT : 20px
+}
+
+.sys-toppane-body
+{
+    PADDING-RIGHT: 11px;
+    PADDING-LEFT: 11px;
+    PADDING-BOTTOM: 11px;
+    PADDING-TOP: 11px;
+    HEIGHT: 100%
+}
+.sys-toppane-header
+{
+    PADDING-RIGHT: 11px;
+    PADDING-LEFT: 21px;
+    PADDING-BOTTOM: 0.45em;
+    VERTICAL-ALIGN: middle;
+    PADDING-TOP: 0.45em
+}
+
+.sys-toppane-header-color
+{
+    color : #FFFFFF
+}
+.sys-toppane-header-bgcolor    
+{
+    Background-color : #0148B2
+}
+.sys-toppane-selection
+{
+    background-color : #5A87A8
+}
+.sys-toppane-bgcolor
+{
+    background-color : #FFFFFF
+}
+.sys-toppane-color-border
+{
+    BORDER-LEFT-COLOR: #5582d2;
+    BORDER-BOTTOM-COLOR: #5582d2;
+    BORDER-TOP-COLOR: #5582d2;
+    BORDER-RIGHT-COLOR: #5582d2
+}
+.sys-toppane-color-border
+{
+    BORDER-RIGHT: 1px solid;
+    BORDER-TOP: 1px solid;
+    BORDER-LEFT: 1px solid;
+    BORDER-BOTTOM: 1px solid
+}
+
+.sys-header-gradient-V
+{
+    background-color : #2057C1
+}
+.sys-lhp-bgcolor
+{
+    filter: progid:DXImageTransform.Microsoft.gradient
+    (startColorstr=#416FA6, endColorstr=#6CB96E)
+
+}
+.sys-bottompane-header-color
+{
+    color : #215DC6
+}
+.sys-bottompane-header-bgcolor
+{
+    background-color : #FFFFFF
+}
+.sys-bottompane-bgcolor
+{
+    background-color : #FFFFFF
+}
+.sys-bottompane-color-border
+{
+    border-color : #FFFFFF
+}
+.sys-rhp-color-title
+{
+    color : #6487DC
+}
+.sys-font-heading3    
+{
+    font-family : Tahoma;
+    font-size : 14pt;
+}
+.reportsubheader
+{
+    font-family : Tahoma;
+    font-size : 8pt;
+    font-weight : bold
+}
+.reportheader
+{
+    font-family : Tahoma;
+    font-size : 9pt;
+    font-weight : bold
+}
+
+.sys-rhp-bgcolor
+{
+    background-color : #FFFFFF
+}
+.header    
+{
+    Background-color : #416FA6;
+
+}
+.subHeader
+{
+    MARGIN: 18px 0px 4px
+}
+
+.welcome-footer-normal
+{
+    position: absolute;
+    bottom: 0;
+    color: black;
+    font-family: Tahoma;
+    font-size: 8pt;
+    line-height: 22px;
+    cursor: default;
+}
+.welcome-footer-resize
+{
+    position:static;
+    color: black;
+    font-family: Tahoma;
+    font-size: 8pt;
+    line-height: 22px;
+    cursor: default;
+}
+
+.welcome-footer-link{
+    color: black;
+    text-decoration : none;
+}
+
+
+.welcome-footer-link:hover {
+    color: #0000FF;
+    text-decoration : underline;
+}
+
+
+BODY
+{
+   MARGIN: 11px;
+   font-family: Tahoma;
+   font-size: 8pt;
+   color: #000000;
+   BACKGROUND-COLOR: #FFFFFF;
+}
+BODY
+{
+   font-family: Tahoma;
+   font-size: 8pt;
+}
+.updatewindow
+{
+   MARGIN-TOP:    3px;
+   MARGIN-BOTTOM: 0px;
+   MARGIN-LEFT:   0px;
+   MARGIN-RIGHT:  0px;
+   font-family: Tahoma;
+   font-size: 8pt;
+}
+TABLE.updateinfo {
+   BACKGROUND-COLOR: #D6DFF7;
+   BORDER: #2459c3 1px solid;
+}
+TD
+{
+   font-family: Tahoma;
+   font-size: 8pt;
+
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    VERTICAL-ALIGN: top;
+    PADDING-TOP: 0px
+}
+TR.ReportsRowOverOdd {
+    background-color : #FFFFFF;
+}
+TR.ReportsRowOverEven {
+    background-color : #FFFFFF;
+}
+TR.ReportsRowOverSelected {
+    color : #000033;
+    background-color : #C7D8FA;
+}
+
+BUTTON
+{
+   font-family: Tahoma;
+   font-size: 10pt;
+   width: 75;
+   height: 24;
+}
+INPUT
+{
+   font-family: Tahoma;
+   font-size: 8pt;
+}
+INPUT.buttonok
+{
+    width: 75;
+    height: 24;
+    font-size: 10pt;
+}
+SELECT
+{
+   font-family: Tahoma;
+   font-size: 8pt;
+}
+FORM
+{
+    MARGIN: 0px
+}
+
+.halignlikea
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 21px;
+}
+A
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 21px;
+    PADDING-BOTTOM: 0.35em;
+    PADDING-TOP: 0.35em
+}
+A.Navigation
+{
+    cursor: default;
+    PADDING-RIGHT: 0;
+    PADDING-LEFT: 0;
+    PADDING-BOTTOM: 0;
+    PADDING-TOP: 0
+}
+A IMG
+{
+    BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    WIDTH: 11px;
+    HEIGHT: 11px;
+    BORDER-RIGHT-WIDTH: 0px
+}
+SPAN
+{
+   font-family: Tahoma;
+   font-size: 11px;
+}
+P
+{
+   font-family: Tahoma;
+   font-size: 8pt;
+}

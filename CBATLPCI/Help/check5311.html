@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5311">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Security Updates, Update Rollups, and Service Packs">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Security Updates, Update Rollups, and Service Packs</H1>
+
+<H2>Check Description</H2>
+
+<P>This check determines which available updates are not installed on the scanned computer.  Updates being scanned for security fall into three categories related to the life cycle of a security fix.</P>
+
+<P><b>Security updates</b> are security-related updates that usually address a 
+specific bug or security vulnerability. All security updates offered during a service 
+pack's lifetime are combined into the subsequent service pack. Each security 
+update identified by this tool has an associated <NOLOC>Microsoft</NOLOC> security bulletin that contains more information about the fix. The results of this check identify which security updates are missing, and provides a link to the <NOLOC>Microsoft</NOLOC> Web site to view the details of each security bulletin.</P>
+
+<p><b>Update rollups</b> are a cumulative set of security fixes.  These updates are released periodically, and because they are smaller than full service packs tend to be easier to deploy.  Because update rollups are focused on security issues, they also tend to be easier to deploy than multiple security updates.  For example, when updating a computer that has been recently installed and may have no security updates protecting it.</P>
+
+<P><b>Service packs</b> are collections of security and non-security updates that focus on a variety 
+of improvements and fixes for a <NOLOC>Microsoft</NOLOC> product. Service packs provide fixes for issues that have been reported after the product has become generally available. 
+Service packs are cumulative, meaning that each new service pack will contain all the fixes in previous service packs, plus any new fixes. They are designed to ensure platform 
+compatibility with newly released software and drivers, and contain updates that 
+fix issues discovered by customers or by internal testing.</p>
+
+<p>When your computer is running the latest service packs and the latest update rollups you can minimize the number of additional, individual  security updates needed.</p>
+
+<P><NOLOC>Microsoft&reg;</NOLOC> Baseline Security Analyzer (MBSA) checks to ensure that you have the latest security updates, update rollups and service packs for all products being serviced by the  <NOLOC>Microsoft Update</NOLOC> site.  This includes, but is not limited to the following:</P>
+
+<UL>
+	<LI><NOLOC>Microsoft&reg; Windows</NOLOC>&nbsp;2000, <NOLOC>Windows&nbsp;XP</NOLOC>, 
+	<NOLOC>Windows Server</NOLOC>&nbsp;2003, <NOLOC>Windows&nbsp;Vista</NOLOC>, <NOLOC>Windows Server</NOLOC>&nbsp;2008, 
+	<NOLOC>Windows 7</NOLOC>, <NOLOC>Windows Server 2008 R2</NOLOC>, <NOLOC>Windows 8</NOLOC>, <NOLOC>Windows Server 2012</NOLOC>, <NOLOC>Windows 8.1</NOLOC>, <NOLOC>Windows Server 2012 R2</NOLOC></LI>
+	<LI><NOLOC>Internet Information Server (IIS)</NOLOC>&nbsp;5.0, 5.1 and IIS&nbsp;6.0</LI>
+	<LI><NOLOC>SQL Server&trade;</NOLOC>&nbsp;2000 and 2005 (including <NOLOC>Microsoft</NOLOC> Data Engine)</LI>
+	<LI><NOLOC>Internet Explorer</NOLOC>&nbsp;5.01 and later</LI>
+	<LI><NOLOC>Windows Media</NOLOC> Player&nbsp;6.4 and later</LI>
+	<LI><NOLOC>Exchange&nbsp;Server</NOLOC>&nbsp;2000, 2003&nbsp; and 2005 (including <NOLOC>Exchange</NOLOC> administrative tools)</LI>
+	<LI><NOLOC>Microsoft</NOLOC> Data Access Components (MDAC)&nbsp;- 
+	all supported versions</LI>
+	<LI><NOLOC>Microsoft</NOLOC> Virtual Machine (VM)</LI>
+	<LI><NOLOC>MSXML</NOLOC>&nbsp;- all supported versions</LI>
+	<LI><NOLOC>Microsoft</NOLOC> <NOLOC>Office XP</NOLOC> (2002), <NOLOC>Office System</NOLOC> 
+	2003 and <NOLOC>Office</NOLOC> 2007</LI>
+	<li><NOLOC>.Net Framework</NOLOC> 1.0, 1.1, 2.0 and later</li>
+	<li><NOLOC>Microsoft DirectX</NOLOC></li>
+  </UL>
+
+See the <A HREF="http://go.microsoft.com/fwlink/?LinkId=43098"><NOLOC>Microsoft</NOLOC> Web site</A> for the current list of products
+
+  <P>Security update checks are performed by using information obtained directly 
+	from the <NOLOC>Microsoft Update</NOLOC> site (online), a <NOLOC>Windows Server Update Services</NOLOC> (<NOLOC>WSUS</NOLOC>) 
+	server, or from an offline catalog (<NOLOC>CAB</NOLOC>) file when offline or in a secure 
+	environment.&nbsp; The MBSA tool downloads this information from <NOLOC>Microsoft.com</NOLOC> each time it has changed. If it is not able to contact <NOLOC>Microsoft.com</NOLOC>, it will use a version of the offline catalog cached on the local computer. There is also an option to perform this check only against an approved updates list from a local 
+	<NOLOC>WSUS</NOLOC>
+	server, or only against the complete list of available updates from <NOLOC>Microsoft Update</NOLOC>.</P>
+
+  <P><B>Default Settings.</B>&nbsp;&nbsp;Security update scans executed from the <NOLOC>Microsoft</NOLOC> Baseline Security Analyzer (MBSA) graphical user interface (GUI) or from the <NOLOC>MBSAcli.exe</NOLOC> command line interface (CLI) will scan and report missing updates marked as security updates, update rollups or service packs in <NOLOC>Microsoft Update (MU)</NOLOC>.  If the computer has an <NOLOC>Update Services</NOLOC> server assigned by the system administrator that does not have the updates in the specific categories approved, those items will be given an informational score in the report.</P>
+
+<H2>Additional Resources</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16478" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft</NOLOC> Security Bulletin Search</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16479" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft Windows Server Update Services</NOLOC></A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

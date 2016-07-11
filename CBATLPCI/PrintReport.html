@@ -1,0 +1,67 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+	<head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+		<link REL="stylesheet" type="text/css" href="css/scanner.css" />
+		<script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+
+		<script language="javascript">
+		function initPage()
+		{	
+			var objXML = XCreateObject("MSXML2.DOMDocument")
+			var objXSL = XCreateObject("MSXML2.DOMDocument")
+			
+			objXSL.async = false;
+			objXML.async = false;
+			
+			ReportToViewUnesc = unescape(parent.ReportToView);
+
+			objXSL.load("printreport.xsl");
+			objXSL.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+			objXML.loadXML(parent.Scanner.GetUserXML(ReportToViewUnesc, true))
+			
+			var sortArr = parent.Content.document.all["SortOrder"].value.split("|");
+			var sortKey = sortArr[0];
+			var sortOrder = sortArr[1];
+			//change the filename variable
+			var FileNameVarNodes = objXSL.selectNodes("//xsl:variable[@name='FileName']");  
+			// Replace the values with the new sort key.
+			for (var i = FileNameVarNodes.nextNode(); i != null; i = FileNameVarNodes.nextNode())
+			{
+			  i.text = ReportToViewUnesc;
+			}
+			
+			var s = objXSL.selectNodes("//xsl:sort/@select");
+		  
+			// Replace the values with the new sort key.
+			for (var i = s.nextNode(); i != null; i = s.nextNode())
+			{
+				if(i.value != "@Rank")
+				{
+					i.value = sortKey;
+				}
+			}
+		  
+			s = objXSL.selectNodes("//xsl:sort/@order");
+			// Replace the values with the new sort Order.
+			for (var i = s.nextNode(); i != null; i = s.nextNode())
+			{
+			  i.value = sortOrder;
+			}
+
+			document.all["DisplayArea"].innerHTML = objXML.transformNode(objXSL)
+			parent.Print.focus();
+			window.print();
+
+			delete objXML;
+			delete objXSL;
+		}
+		</script>
+	</head>
+	<body onload="initPage()" style="BORDER-RIGHT: 0px; MARGIN: 0px; OVERFLOW: auto" oncontextmenu="return false">
+		<span id="DisplayArea" name="DisplayArea"></span>
+	</body>
+</html>

@@ -1,0 +1,2991 @@
+#TYPE System.Diagnostics.EventLogEntry#security/Microsoft-Windows-Security-Auditing/4634
+"EventID","MachineName","Data","Index","Category","CategoryNumber","EntryType","Message","Source","ReplacementStrings","InstanceId","TimeGenerated","TimeWritten","UserName","Site","Container"
+"4634","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987080","(12545)","12545","SuccessAudit","An account was logged off.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-19720
+	Account Name:		logicmonitor
+	Account Domain:		CBATL
+	Logon ID:		0xcf00af1
+
+Logon Type:			3
+
+This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.","Microsoft-Windows-Security-Auditing","System.String[]","4634","6/6/2016 1:09:19 PM","6/6/2016 1:09:19 PM",,,
+"4624","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987079","(12544)","12544","SuccessAudit","An account was successfully logged on.
+
+Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Impersonation Level:		%%1833
+
+New Logon:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-19720
+	Account Name:		logicmonitor
+	Account Domain:		CBATL
+	Logon ID:		0xcf00af1
+	Logon GUID:		{24F6025B-3F6D-24FD-FDD8-62B6D413502A}
+
+Process Information:
+	Process ID:		0x0
+	Process Name:		-
+
+Network Information:
+	Workstation Name:	
+	Source Network Address:	10.240.65.75
+	Source Port:		54584
+
+Detailed Authentication Information:
+	Logon Process:		Kerberos
+	Authentication Package:	Kerberos
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","Microsoft-Windows-Security-Auditing","System.String[]","4624","6/6/2016 1:09:17 PM","6/6/2016 1:09:17 PM",,,
+"4672","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987078","(12548)","12548","SuccessAudit","Special privileges assigned to new logon.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-19720
+	Account Name:		logicmonitor
+	Account Domain:		CBATL
+	Logon ID:		0xcf00af1
+
+Privileges:		SeSecurityPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeTakeOwnershipPrivilege
+			SeDebugPrivilege
+			SeSystemEnvironmentPrivilege
+			SeLoadDriverPrivilege
+			SeImpersonatePrivilege","Microsoft-Windows-Security-Auditing","System.String[]","4672","6/6/2016 1:09:17 PM","6/6/2016 1:09:17 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987077","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x16c8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987076","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987075","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987074","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987073","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987072","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x16c8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987071","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x16c8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987070","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987069","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987068","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x18e0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987067","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987066","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987065","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987064","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987063","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x18e0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987062","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x18e0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987061","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987060","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987059","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1730
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987058","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987057","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987056","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987055","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987054","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1730
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987053","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1730
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987052","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987051","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987050","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1858
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987049","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987048","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987047","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987046","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987045","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1858
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987044","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1858
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987043","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987042","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987041","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1860
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987040","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987039","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987038","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987037","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987036","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1860
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987035","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1860
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987034","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x150c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987033","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1548
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987032","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1468
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987031","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x153c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987030","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x19e0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987029","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x19e0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987028","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x153c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987027","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1468
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987026","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x13a4
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987025","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1468
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987024","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x153c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987023","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x47c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987022","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x14c8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987021","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1370
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987020","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1370
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987019","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x14c8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987018","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x47c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987017","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987016","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x47c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987015","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x14c8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987014","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x14c8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987013","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x47c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987012","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987011","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1adc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987010","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987009","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x47c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987008","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x47c
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987007","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987006","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1adc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987005","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x14bc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987004","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1adc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987003","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987002","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987001","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1adc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211987000","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x14bc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986999","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x14bc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986998","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1adc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986997","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986996","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x16c4
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986995","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986994","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1adc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986993","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1adc
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986992","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986991","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x16c4
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986990","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x1af0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986989","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x16c4
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986988","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986987","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x18f0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986986","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x16c4
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986985","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x1af0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986984","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x17f8
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986983","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security
+	Handle ID:		0x1af0
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986982","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog
+	Handle ID:		0x16c4
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,
+"4656","qtmmgmt1.atl.careerbuilder.com","System.Byte[]","211986981","(12801)","12801","SuccessAudit","A handle to an object was requested.
+
+Subject:
+	Security ID:		S-1-5-21-839522115-261903793-1417001333-27817
+	Account Name:		jterry.site
+	Account Domain:		CBATL
+	Logon ID:		0xbb02248
+
+Object:
+	Object Server:		Security
+	Object Type:		Key
+	Object Name:		\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security\Microsoft-Windows-Security-Auditing
+	Handle ID:		0x16c4
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x2964
+	Process Name:		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		%%1538
+				%%4432
+				%%4435
+				%%4436
+				
+	Access Reasons:		-
+	Access Mask:		0x20019
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0","Microsoft-Windows-Security-Auditing","System.String[]","4656","6/6/2016 1:09:15 PM","6/6/2016 1:09:15 PM",,,

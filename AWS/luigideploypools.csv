@@ -1,0 +1,10 @@
+pool,servername
+cbasync,drawsasync0
+cbauth,drawsauth0
+cbbatch,drawsbatch0
+jeproc,drawsjeproc0
+mailapp,drawsmail10
+mailhigh,drawsmail20
+maillow,drawsmail1
+campaignemail,drawsmail30
+cbsvc,drawssvc0

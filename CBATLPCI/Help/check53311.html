@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53311">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Restricting <NOLOC>CmdExec</NOLOC> Rights to <NOLOC>Sysadmin</NOLOC>">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Restricting <CODE>CmdExec</CODE> Rights to <NOLOC>Sysadmin</NOLOC></H1>
+
+<H2>Check Description</H2>
+
+<P>This check ensures that <CODE>CmdExec</CODE> rights are restricted to <NOLOC>Sysadmin</NOLOC> only. All 
+other accounts that have <CODE>CmdExec</CODE> rights are listed on the security report.</P>
+
+<P><NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> Agent is a service available on <NOLOC>Microsoft Windows&reg; Server&nbsp;2008</NOLOC>, <NOLOC>Windows&reg; Server&nbsp;2003</NOLOC>, <NOLOC>Windows&nbsp;Vista</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC> 
+and 
+<NOLOC>Windows&nbsp;2000</NOLOC> that executes jobs, monitors <NOLOC>SQL Server</NOLOC>, and sends alerts.  With <NOLOC>SQL Server</NOLOC> Agent, you can automate certain administrative tasks by using scripted job steps. A job 
+is a specified series of operations performed sequentially by <NOLOC>SQL Server</NOLOC> Agent. A job can perform a wide range of activities, including running Transact-SQL scripts, command-line applications, and <NOLOC>Microsoft ActiveX&reg;</NOLOC> scripts. Jobs can be created to run tasks that are often repeated or scheduled, and they can automatically notify users of job status by generating alerts.</P>
+
+<P CLASS="note">Note:</P>
+<UL>
+<LI>You must start the <NOLOC>SQL Server</NOLOC> Agent service before your local or multiserver administrative tasks can run automatically.</LI></UL> 
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16968" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>SQL Server</NOLOC> Agent Properties</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

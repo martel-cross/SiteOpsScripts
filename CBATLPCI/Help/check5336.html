@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5336">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Exposed sa or <NOLOC>SQL Server</NOLOC> Service Account Password">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Exposed sa or <NOLOC>SQL Server</NOLOC> Service Account Password</H1>
+
+<H2>Check Description</H2>
+
+<P>This check determines whether <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC>&nbsp;7.0 Service Pack&nbsp;1 (SP1), <NOLOC>SQL Server</NOLOC>&nbsp;7.0 SP2, or <NOLOC>SQL Server</NOLOC>&nbsp;7.0 SP3 sa (system administrator) account passwords are written in plaintext to the <NOLOC>Setup.iss</NOLOC>, <NOLOC>Sqlstp.log</NOLOC>, or <NOLOC>SqlspX.log</NOLOC> files in the <NOLOC>%windir%</NOLOC> and <NOLOC>%windir%\%temp%</NOLOC> directories. The <NOLOC>Splstp.log</NOLOC> or <NOLOC>SqlspX.log</NOLOC> file is also checked on <NOLOC>SQL Server</NOLOC>&nbsp;2000 if domain credentials are used in starting <NOLOC>SQL Server</NOLOC> services.</P>
+
+<P>If Mixed Mode authentication is used while setting up <NOLOC>SQL Server</NOLOC>, the sa password is saved in plaintext format in the <NOLOC>Setup.iss</NOLOC> and <NOLOC>Sqlstp.log</NOLOC> files for <NOLOC>SQL Server</NOLOC>&nbsp;7.0 SP1, <NOLOC>SQL Server</NOLOC>&nbsp;7.0 SP2, and <NOLOC>SQL Server</NOLOC>&nbsp;7.0 SP3. Administrators using <NOLOC>Windows</NOLOC> Authentication Mode (which is the recommended mode) would only have credentials at risk if they chose to provide a domain credential to be used when starting the <NOLOC>SQL Server</NOLOC> services automatically.</P>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16943" TITLE="http://www.microsoft.com/" TARGET="_blank">FIX: Service Pack Installation May Save Standard Security Password in File (263968)</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16549" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft</NOLOC> Security Bulletin (MS00-035): Frequently Asked Questions</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

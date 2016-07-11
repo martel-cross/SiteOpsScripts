@@ -1,0 +1,155 @@
+Please have the following systems moved to the correct group. They are currently in the default API folder.
+
+
+
+Host CBASYNC218 has been in API group for more than 14 days (total days: 158).
+
+Host CBSVC11 has been in API group for more than 14 days (total days: 158).
+
+Host CBBATCH8 has been in API group for more than 14 days (total days: 158).
+
+Host CBSVC10 has been in API group for more than 14 days (total days: 158).
+
+Host CBSVC14 has been in API group for more than 14 days (total days: 158).
+
+Host CBASYNC211 has been in API group for more than 14 days (total days: 159).
+
+Host CBSVC12 has been in API group for more than 14 days (total days: 158).
+
+Host CBSVC13 has been in API group for more than 14 days (total days: 158).
+
+Host GHQVCHIWWW06 has been in API group for more than 14 days (total days: 26).
+
+Host GHQVCHIDIO03 has been in API group for more than 14 days (total days: 27).
+
+Host GHQVCHIDOC03 has been in API group for more than 14 days (total days: 27).
+
+Host CBBATCH16 has been in API group for more than 14 days (total days: 158).
+
+Host GHQVCHISC03 has been in API group for more than 14 days (total days: 27).
+
+Host GHQVAUTH03 has been in API group for more than 14 days (total days: 27).
+
+Host GHQVCHISTAPI03 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVCHIWS03 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVREBSTAPI03 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVCHIASYNC03 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVREBASYNC03 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVREBWS03 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVREBDIO03 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVCHIWWW02 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVREBWWW02 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVCHIWWW05 has been in API group for more than 14 days (total days: 31).
+
+Host GHQVREBWWW05 has been in API group for more than 14 days (total days: 31).
+
+Host GHQSTJENKINS has been in API group for more than 14 days (total days: 548).
+
+Host GHQCDBUILD01 has been in API group for more than 14 days (total days: 548).
+
+Host ghqdpisvc01 has been in API group for more than 14 days (total days: 79).
+
+Host ghqdpifeed01 has been in API group for more than 14 days (total days: 79).
+
+Host ghqdpibatch01 has been in API group for more than 14 days (total days: 79).
+
+Host ghqdpiwww01 has been in API group for more than 14 days (total days: 79).
+
+Host ghqdpimybatch01 has been in API group for more than 14 days (total days: 79).
+
+Host ghqdpimysvc01 has been in API group for more than 14 days (total days: 79).
+
+Host ghqdpimail01 has been in API group for more than 14 days (total days: 79).
+
+Host ghqdpimap01 has been in API group for more than 14 days (total days: 79).
+
+Host QTWAPP01VM01 has been in API group for more than 14 days (total days: 41).
+
+Host IACBATCH04 has been in API group for more than 14 days (total days: 159).
+
+Host QTWAPP01VM04 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM05 has been in API group for more than 14 days (total days: 41).
+
+Host devstats has been in API group for more than 14 days (total days: 999).
+
+Host QTWAPP01VM02 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM03 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM08 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM09 has been in API group for more than 14 days (total days: 41).
+
+Host GHQWEB2008TEST1 has been in API group for more than 14 days (total days: 93).
+
+Host QTWAPP01VM06 has been in API group for more than 14 days (total days: 41).
+
+Host ATEDRONETEST01 has been in API group for more than 14 days (total days: 93).
+
+Host QTWAPP01VM07 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM12 has been in API group for more than 14 days (total days: 41).
+
+Host GHQSO2012R200 has been in API group for more than 14 days (total days: 91).
+
+Host QTWAPP01VM13 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM10 has been in API group for more than 14 days (total days: 41).
+
+Host GHQSOMAIL00 has been in API group for more than 14 days (total days: 91).
+
+Host QTWAPP01VM11 has been in API group for more than 14 days (total days: 41).
+
+Host GHQPIBlog has been in API group for more than 14 days (total days: 46).
+
+Host QTWAPP01VM30 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM31 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM32 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM15 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM14 has been in API group for more than 14 days (total days: 41).
+
+Host IACBATCH03 has been in API group for more than 14 days (total days: 160).
+
+Host QTWAPP01VM17 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM16 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM19 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM18 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM21 has been in API group for more than 14 days (total days: 41).
+
+Host IACBATCH02 has been in API group for more than 14 days (total days: 160).
+
+Host QTWAPP01VM20 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM23 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM22 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM25 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM24 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM27 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM26 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM29 has been in API group for more than 14 days (total days: 41).
+
+Host QTWAPP01VM28 has been in API group for more than 14 days (total days: 41).

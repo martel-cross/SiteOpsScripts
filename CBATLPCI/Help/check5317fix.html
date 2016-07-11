@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5317fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Password Expiration">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Password Expiration</H1>
+
+<H2>Issue</H2>
+
+<P>A local account that has a setting of <B>Password never expires</B> will override the <B>Maximum Password Age</B> setting in the <B>Password</B> policy in Group Policy, thereby enabling a user to keep the same password forever.</P>
+
+<P>Also, the <B>Password never expires</B> setting will override the <B>User must 
+change password at next logon</B> setting. When users are assigned new passwords 
+by administrators or help desk operators, it is good practice to set the <B>User must 
+change password at next logon</B> option to ensure the user sets a new password.</P>
+
+<P CLASS="caution"><Font color="red">Caution</FONT></P>
+<UL>
+    <LI>Users must not remove the <B>Password never expires</B>
+settings for the following accounts, because doing so can break application and server 
+functionality:</LI>
+  <UL>
+  <LI><NOLOC>IUSR_</NOLOC>&lt;<I>computername</I>&gt;</LI>
+  <LI><NOLOC>IWAM_</NOLOC>&lt;<I>computername</I>&gt;</LI>
+  <LI><NOLOC>TSInternetUser</NOLOC></LI>
+  </UL>
+</UL>
+
+
+<H2>Solution</H2>
+
+<P>Any local accounts identified in the security report as having passwords that do not expire should be reviewed to determine why the option is set, and if it should be removed.</P>
+
+<P>Accounts in the <NOLOC>NoExpireOk.txt</NOLOC> file (in the MBSA installation folder) will 
+not be reported during the password expiration check. Users can add or remove 
+account names in this file to be skipped during the scan.</P>
+
+<H2>Instructions</H2>
+
+<P><B>To clear the Password never expires setting in 
+<NOLOC>Microsoft&reg; Windows&reg;</NOLOC> platforms</B></P> 
+
+<OL>
+<LI>Open the 
+<B>Control Panel</B>.</LI>
+<LI>Double-click <B>Administrative</B> 
+<B>Tools</B>, and then double-click <B>Computer Management</B>. </LI>
+<LI>Double-click the <B>Local Users and Groups</B> folder, and then click the <B>Users</B> folder.</LI>
+<LI>In the right pane, double-click the account that you want to change.</LI>
+<LI>In the <B>Properties</B> dialog box, clear the <B>Password never expires</B> check box.</LI>
+</OL>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+</BODY>
+</HTML>

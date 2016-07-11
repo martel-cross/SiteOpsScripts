@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5337fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Members of the <NOLOC>Sysadmin</NOLOC> Role">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Members of the <NOLOC>Sysadmin</NOLOC> Role</H1>
+
+<H2>Issue</H2>
+
+<P>The members of the <NOLOC>Sysadmin</NOLOC> role should be kept to a minimum because this 
+role gives system administrator rights to all its members.</P>
+
+<H2>Solution</H2>
+
+<P>Review the members of the <NOLOC>Sysadmin</NOLOC> role. Ensure that each of these members should have system administrator rights to the computer running <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC>.</P>
+
+<P CLASS="important"><FONT color="red">Important: </FONT></P>
+<UL>
+<LI>If you are running Small Business 
+Server (SBS)&nbsp;2000 or <NOLOC>Windows</NOLOC> Small Business Server 2003 Premium Edition, you will need at least one local Administrator account in the <NOLOC>Sysadmin</NOLOC> role to use <NOLOC>SQL Server</NOLOC> Enterprise Manager on the server.</LI>
+</UL>
+
+<H2>Instructions</H2>
+
+<P><B>To review the <NOLOC>Sysadmin</NOLOC> members</B>
+
+<OL>
+<LI>Click <B>Start</B>, 
+point to <B>Programs</B>, point to <B><NOLOC>Microsoft SQL Server</NOLOC></B>, and then click <B>Enterprise Manager</B>. </LI>
+<LI>In <NOLOC>SQL Server</NOLOC> Enterprise Manager, double-click <B><NOLOC>SQL Server</NOLOC> Group</B>, and then double-click the <NOLOC>SQL Server</NOLOC> that you want to secure.</LI>
+<LI>Click the <B>Security</B> folder, click <B>Server Roles</B>, and then double-click the <B>System Administrators</B> role in the right pane.</LI>
+</OL>
+
+<p>If you do not want to use Enterprise Manager, or do not have access to the 
+tool as in the case of MSDE, to review the <NOLOC>Sysadmin</NOLOC> members, the following steps 
+can be performed:</p>
+<ol>
+	<li>Open a command prompt window.</li>
+	<li>Use the <a href="http://go.microsoft.com/fwlink/?LinkId=19764">osql 
+	utility</a> to connect to the <NOLOC>SQL</NOLOC> instance using a valid login.</li>
+	<li>Issue the following command to obtain the list of <NOLOC>Sysadmin</NOLOC> role members:<p>
+	a. <CODE>sp_helpsrvrolemember 'Sysadmin'</CODE><br>
+	b. <CODE>go</CODE><br>
+&nbsp;</li>
+</ol>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16547" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft SQL Server</NOLOC>&nbsp;Security</A></P>
+
+<BR>
+<P> <FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

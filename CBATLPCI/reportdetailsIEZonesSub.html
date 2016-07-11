@@ -1,0 +1,61 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+-->
+<html>
+<head><META HTTP-EQUIV="Content-Type" CONTENT="text/html" CHARSET="UTF-8"/>
+<title> Microsoft Baseline Security Analyzer</title>
+<link rel="stylesheet" type="text/css" href="css/resultdetails.css">
+<script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+<script language="javascript">
+
+Myparent=window.dialogArguments;
+function initPage()
+{
+	var Detailxml = Myparent.Detailxml;
+	var Detailxsl = Myparent.Detailxsl;
+
+	Detailxml.loadXML('');
+	Detailxsl.loadXML('');
+
+	Detailxml.async = false
+	
+	// Load the XSL
+	Detailxsl.async = false
+	
+	Detailxsl.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+
+	Detailxsl.load("reportdetailsIEZonesSub.xsl");
+
+	var CheckIDNodes = Detailxsl.selectNodes("//xsl:variable[@name='SubID']/@select");
+	// Replace the values with the check id
+	for (var i = CheckIDNodes.nextNode(); i != null; i = CheckIDNodes.nextNode())
+	{
+		i.value = Myparent.Myparent.parent.parent.gblIEZonesId;
+	}
+
+	var IEZoneNameNodes = Detailxsl.selectNodes("//xsl:variable[@name='IEZoneName']/@select");
+	// Replace the values with the check id
+	for (var i = IEZoneNameNodes.nextNode(); i != null; i = IEZoneNameNodes.nextNode())
+	{
+		i.value = "'" + Myparent.Myparent.parent.parent.gblIEZoneName + "'";
+	}
+
+	Detailxsl.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+	
+	Detailxml.loadXML(Myparent.Myparent.xml.xml);
+		
+	ResultDetails.innerHTML = Detailxml.transformNode(Detailxsl);
+
+	Detailxml.loadXML('');
+	Detailxsl.loadXML('');
+}
+
+</script>
+		
+	</head>
+	<body id="bodyID" style="margin:10" onload="initPage()" oncontextmenu="return false">
+		<p class="banner"><img src="Graphics/banner.jpg"></p>
+		<div Height="0" id="ResultDetails">
+		</div>
+	</body>
+</html>

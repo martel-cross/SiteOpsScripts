@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5319fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Auto Logon">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Auto Logon</H1>
+      
+<H2>Issue</H2>
+
+<P>If Auto Logon is enabled on the scanned computer, the password that is used to log on 
+automatically is stored in the registry (either in plaintext or encrypted format). In 
+either case, this feature poses a security risk because anyone with physical access 
+to the computer can boot the system and automatically log on without having to enter any credentials.</P>
+
+<H2>Solution</H2>
+
+<P>Disable the Auto Logon feature. To disable this feature, use the Registry Editor to remove the <CODE>AutoAdminLogon</CODE> and <CODE>DefaultPassword</CODE> values under the following registry key:</P>
+
+<PRE><CODE>HKEY_LOCAL_MACHINE\Software\Microsoft\<NOLOC>Windows&nbsp;NT</NOLOC>\CurrentVersion\Winlogon</CODE></PRE>
+
+<P CLASS="caution"><Font color="red">Caution</FONT></P>
+<UL>
+    <LI>Using the  incorrectly can cause serious, system-wide problems that may require you to reinstall <NOLOC>Microsoft&reg; Windows&reg;</NOLOC> to correct them. <NOLOC>Microsoft</NOLOC> cannot guarantee that problems resulting from the incorrect use of the Registry Editor can be solved.</LI>
+</UL>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>You need administrator access to perform this task.</LI>
+</UL>
+
+<H2>Instructions</H2>
+<P><B>To disable the Auto Logon feature</B></P>
+<OL>
+  <LI>Click <B>Start</B>, click <B>Run</B>, and then type <B>Regedit.exe</B>.</LI>
+  <LI>In the Registry Editor, expand the following keys in this order: 
+	<B><CODE>HKEY_LOCAL_MACHINE\Software\Microsoft\<NOLOC>Windows</NOLOC>&nbsp;NT\CurrentVersion\Winlogon</CODE>.</B></LI>
+  <LI>Click <CODE>Winlogon</CODE>.</LI>
+  <LI>In the right pane, find the <CODE>DefaultPassword</CODE> key in the name column and see if there is a value (anything other than "value not set") in the data column. If there is no value set or the <CODE>DefaultPassword</CODE> key does not exist, Auto Logon is not enabled.</LI>
+  <LI>If there is a value, click the <CODE>DefaultPassword</CODE> key.</LI>
+  <LI>On the <B>Edit</B> menu, click <B>Delete</B>.</LI>
+  <LI>In the right pane, find the <CODE>AutoAdminLogon</CODE> key in the name column. If the value is set to 1, which indicates that Auto Logon is enabled, change the value to 0 to disable this feature.</LI> 
+  </OL>
+
+<H2>Additional Information</H2>
+
+<P>The credentials used to log on by default during automatic logon are located 
+under the following registry key:</P>
+
+<PRE><CODE>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\<NOLOC>Windows&nbsp;NT</NOLOC>\CurrentVersion\Winlogon
+</CODE></PRE>
+<P><B><CODE>AutoAdminLogon REG_SZ</CODE> </B><I>0</I> or <i>1</i> - Must be zero to remove this feature.</P>
+
+<P>When you use <CODE>AutoAdminLogon</CODE>, <NOLOC>Windows</NOLOC> automatically logs on the specified user when the system is started, bypassing the CTRL+ALT+DEL logon dialog box. This is a serious security problem because anyone can gain access to your computer.</P>    
+          
+<P><CODE>DefaultUserName REG_SZ</CODE> <I>Username</I></P>
+
+<P><CODE>DefaultPassword REG_SZ</CODE> <I>Password</I></P>
+
+<P>Specifies the password for the user listed under <CODE>DefaultUserName</CODE>.</P>
+
+<P>If the password that you use for automatic logon is stored programmatically by using the <CODE>LsaStorePrivateData</CODE> API, it is encrypted and stored under the following 
+registry keys:</P>
+
+<PRE><CODE>HKEY_LOCAL_MACHINE\SECURITY\Policy\Secrets\DefaultPassword\CurrVal<BR>
+HKEY_LOCAL_MACHINE\SECURITY\Policy\Secrets\DefaultPassword\OldVal</CODE></PRE>
+
+<P>By encrypting the password as an LSA secret, you prevent remote users from reading a plaintext password that is stored under the <CODE>Winlogon</CODE> registry key. However, anyone with physical access to the computer can boot the system and log on automatically, whether the password is encrypted or in plaintext, which poses a security risk.</P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check20001">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>IISAdminBase</NOLOC> Registration">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>IISAdminBase</NOLOC> Registration</H1>
+
+<H2>Issue</H2>
+
+<P>If the Internet Information Services (IIS) <NOLOC>IISAdminBase</NOLOC> objects are not registered on the computer running <NOLOC>Microsoft&reg;</NOLOC> Baseline Security Analyzer (MBSA), as well as on any remote computer being scanned, the <NOLOC>IIS</NOLOC>-specific security checks cannot be performed. The <NOLOC>IISAdminBase</NOLOC> objects can be registered by installing the <NOLOC>IIS</NOLOC> Common Files that are included in the <NOLOC>Microsoft&reg; Windows</NOLOC> operating 
+system. Note that a full installation of <NOLOC>IIS</NOLOC> is not required, and just the <NOLOC>IIS</NOLOC> 
+Common Files can be installed on the computer running MBSA to scan remote <NOLOC>IIS</NOLOC> 
+servers.</P>
+
+<H2>Solution</H2>
+
+<P>The <NOLOC>IIS</NOLOC> Common Files must be installed on the computer running MBSA, as well as 
+on any <NOLOC>IIS</NOLOC> computer being remotely scanned by MBSA. The <NOLOC>IIS</NOLOC> Common Files 
+can be installed by using Add/Remove Programs 
+and choosing the Add/Remove <NOLOC>Windows</NOLOC> Components option. In the <NOLOC>Windows</NOLOC> Components window, select Internet Information Services (IIS), and click the Details button. Select the check box for Common Files and click OK. Click Next in the <NOLOC>Windows</NOLOC> Components window to continue with the installation of the selected <NOLOC>IIS</NOLOC> components.</P>
+
+<H2>Additional Resources</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16477" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft</NOLOC> Baseline Security Analyzer (MBSA) Is Available</A></P>
+
+<P> <FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+</BODY>
+</HTML>

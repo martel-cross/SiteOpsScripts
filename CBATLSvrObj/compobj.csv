@@ -1,0 +1,18 @@
+Server Name,Dns Record,Pingable,Queried Name,Queried Model,Status,LastActive
+jt-namingtest4.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,03/31/2016 12:12:43
+jt-namingtest5.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,03/31/2016 13:01:47
+jt-namingtest8.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,03/31/2016 15:28:06
+jt-nametest2.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,03/31/2016 09:47:36
+jt-2008test.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,04/01/2016 08:26:45
+WIN-RUHSMQ79HD0.atl.careerbuilder.com,10.198.55.128,True,GHQREBELWEB03,VMware Virtual Platform,IP Reused,03/25/2016 15:17:19
+QTXPtoV2.atl.careerbuilder.com,10.240.65.211,False,,,Recommend Delete Object & DNS Record,04/13/2016 18:53:42
+GHQFOUND06.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,04/22/2016 10:58:58
+JSTEST1.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,04/15/2016 22:07:51
+QTMWSUS.atl.careerbuilder.com,10.240.70.143,False,,,Recommend Delete Object & DNS Record,04/24/2016 20:51:36
+QTXPtoV1.atl.careerbuilder.com,10.240.65.210,False,,,Recommend Delete Object & DNS Record,04/24/2016 20:27:22
+jt-test1.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,04/28/2016 10:51:48
+jt-test2.atl.careerbuilder.com,No Record,No Ip on Record,,,Recommend Delete Object,04/28/2016 11:32:53
+QTXPTOV3.atl.careerbuilder.com,10.240.65.212,False,,,Recommend Delete Object & DNS Record,04/03/2016 23:18:22
+prtg.atl.careerbuilder.com,10.240.70.129,False,,,Recommend Delete Object & DNS Record,05/22/2016 05:05:45
+jt-test909.atl.careerbuilder.com,10.230.65.40,False,,,Recommend Delete Object & DNS Record,05/10/2016 17:04:31
+JT-patchtest.atl.careerbuilder.com,10.198.55.175,True,,,IP Reused,05/16/2016 14:50:19

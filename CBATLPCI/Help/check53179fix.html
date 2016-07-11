@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML DIR="ltr">
+	<HEAD>
+		<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+		<META NAME="MS-HAID" CONTENT="a_check53179fix">
+		<META NAME="MS.LOCALE" CONTENT="EN-US">
+		<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>Windows</NOLOC> Firewall Check">
+		<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+			<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css">
+	</HEAD>
+	<BODY>
+		<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+		<H1><NOLOC>Windows</NOLOC> Firewall Check</H1>
+		<h2>Issue</h2>
+		<p class="banner"><NOLOC>Windows</NOLOC> Firewall is firewall 
+		software that provides protection for computers by controlling what 
+		information is communicated from your computer to and from the Internet 
+		or other computers on a network. <NOLOC>Windows</NOLOC> Firewall is included in <NOLOC>Windows 
+		Server 2008</NOLOC>, <NOLOC>Windows Vista</NOLOC>, <NOLOC>Windows&reg; XP</NOLOC> and <NOLOC>Windows Server 2003</NOLOC> Standard 
+		Edition and Enterprise Edition.<br>
+		</p>
+		<p class="banner">The scanned computer does not have <NOLOC>Windows</NOLOC> Firewall enabled on all 
+		network connections.</p>
+		<h2>Notes</h2>
+		<ul>
+			<li>
+			<p class="banner">MBSA does not detect whether another firewall (either hardware or 
+		software) is in use and protecting the scanned computer.</p></li>
+		</ul>
+		<h2>Solution</h2>
+		<p class="banner">Enable <NOLOC>Windows</NOLOC> Firewall on each network 
+		connection on your computer.</p>
+
+		<h3><NOLOC>Windows Vista</NOLOC> and <NOLOC>Windows Server 2008</NOLOC></h3>
+		<p class="banner">You must be logged on as an administrator or a member of the 
+		Administrators group in order to complete this procedure. If your 
+		computer is connected to a network, network policy settings might also 
+		prevent you from completing this procedure.</p>
+		<ol>
+			<li>Open <strong>Start</strong>, and then click the <b>Control Panel</b>.</li>
+			<li>Click <strong><NOLOC>Windows</NOLOC> Firewall</strong> icon.</li>
+			<li>Choose <strong>Turn <NOLOC>Windows</NOLOC> Firewall On or Off</strong>, then select <strong>On</strong> 
+			(recommended).</li>
+		</ol>
+		<p class="banner"><br>
+		</p>
+
+		<h3><NOLOC>Windows&nbsp;XP</NOLOC> Service Pack 2</h3>
+		<p class="banner">To turn <NOLOC>Windows</NOLOC> Firewall on with no exceptions:<br>
+		</p>
+		<p class="banner">You must be logged on as an administrator or a member of the 
+		Administrators group in order to complete this procedure. If your 
+		computer is connected to a network, network policy settings might also 
+		prevent you from completing this procedure.<br>
+		</p>
+		<OL>
+		<LI>Open <NOLOC>Windows</NOLOC> Firewall.</LI> <br>
+		<LI>On the <B>General</B> tab, click <B>On</B>.</LI> <br>
+		<LI>Select the <B>Don’t allow exceptions</B> check box.</LI> <br>
+		
+		</OL>
+		<h3>Notes</h3>
+		<ul>
+			<li>
+			<p class="banner">Be sure to check the system requirements to permit an MBSA remote scan before 
+			configuring the firewall settings. Unless you do this, MBSA 
+			may be unable to remotely scan the security compliance of your 
+			<NOLOC>Windows&nbsp;XP</NOLOC> Service Pack 2 computers.</p></li>
+			<li>
+			<p class="banner">To open <NOLOC>Windows</NOLOC> Firewall, click Start, click Control Panel, and then 
+		click <NOLOC>Windows</NOLOC> Firewall.</p></li>
+			<li>
+			<p class="banner">When you select <B>Don't allow exceptions</B>, <NOLOC>Windows</NOLOC> Firewall blocks all 
+		requests to connect to your computer, including those from programs or 
+		services on the <B>Exceptions</B> tab. The firewall also blocks file and 
+		printer sharing, and discovery of network devices.</p></li>
+			<li>
+			<p class="banner">Using <NOLOC>Windows</NOLOC> Firewall with no exceptions is useful when you connect 
+		to a public network, such as one at an airport or hotel. This setting 
+		can help to protect your computer by blocking all attempts to connect to 
+		your computer.</p></li>
+			<li>
+			<p class="banner">When you use <NOLOC>Windows</NOLOC> Firewall with no exceptions, you can still view 
+		Web pages, send and receive e-mail, or use an instant messaging program.
+			<br></p></li>
+		</ul>
+		<p class="banner">To enable <NOLOC>Windows</NOLOC> Firewall manually for a network connection:<br>
+		</p>
+<OL>
+		<LI>In Control Panel, double-click <B>Networking and Internet Connections</B>, and 
+		then click <B>Network Connections</B>. </LI>
+		<LI>Right-click the connection on which you want to enable <NOLOC>Windows</NOLOC> Firewall, and 
+		then click <B>Properties</B>. </LI>
+		<LI>On the <B>Advanced</B> tab, click the box to select the option to "Protect my 
+		computer or network."</LI>
+</OL>
+		<h3><NOLOC>Windows Server 2003</NOLOC> Instructions</h3>
+<OL>
+		<LI>In Control Panel, double-click <B>Add or Remove Programs</B>.</LI>
+		<LI>Click <B>Add/Remove <NOLOC>Windows</NOLOC> Components</B>, select the  <B>Security Configuration Wizard</B> check box, and then click <B>Next</B>.</LI>
+		<LI>Run the wizard to create and apply a security policy that configures the <NOLOC>Windows</NOLOC> Firewall based on the roles and applications required on the server.</LI>
+</OL>
+	
+
+		<H2>Additional Information</H2>
+		<p><a href="http://go.microsoft.com/fwlink/?LinkId=19702"><NOLOC>Windows</NOLOC> 
+		Firewall</a></p>
+		<p><a href="http://go.microsoft.com/fwlink/?LinkId=19709">Firewall FAQ</a></p>
+		<BR>
+		<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+	</BODY>
+</HTML>

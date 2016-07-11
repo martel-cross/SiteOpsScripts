@@ -1,0 +1,63 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+<head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+<SCRIPT LANGUAGE="javascript">
+
+document.onmousewheel = onmousescroll;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function isAltKey(ev,ch)
+{
+    if (ev.altKey)
+    {
+        var key = String.fromCharCode(ev.keyCode);
+        return (key == ch || key.toLowerCase(key) == ch.toLowerCase(key))
+    }
+    return false;
+}
+
+function keyUp(evt)
+{
+    //run the scan if user presses "alt + s"
+    if (isAltKey(event,"s"))
+    {
+        if(top.Content.AllOptionsDisabled==false)
+            top.Content.Scan();
+    }
+}
+
+
+function keyHit() 
+{
+    return top.keyHit(event);
+}
+
+function initPage()
+{
+    top.Header.ShowFrames();
+    window.focus();
+    document.onkeydown = keyHit;
+    document.onkeyup = keyUp;
+    top.Header.SetNavigationState();
+}
+
+</script>
+</head>
+    <body bgcolor = "#DFDFDF" onload = "initPage();" oncontextmenu = "return false;" style ="MARGIN-TOP:22;MARGIN-BOTTOM:22;" onselectstart="return false" tabindex = "-1">
+           <div id ="Footer" align = right>
+                <button id="StartScan" style="width: 120px;height: 23px;padding: 0px 5px 1px 6px;overflow: visible;" onclick="return top.Content.Scan();" name="StartScan"><u>S</u>tart Scan</button>&nbsp;
+                <button id="Cancel" style="width: 80px;height: 23px;padding: 0px 5px 1px 6px;overflow: visible;" onclick="top.Header.GoHome();" name="Cancel">Cancel</button>
+                <input id="OK" class "buttonok" type="button" value="OK" onclick="javascript:top.Header.GoHome();" style="width: 80px;height: 23px;padding: 0px 5px 1px 6px;overflow: visible;" name="OK">
+        </div>
+    </body>
+</html>

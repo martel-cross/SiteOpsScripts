@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5327fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="MSADC and Scripts Virtual Directories on <NOLOC>IIS</NOLOC>">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>MSADC</NOLOC> and Scripts Virtual Directories on <NOLOC>IIS</NOLOC></H1>
+
+<H2>Issue</H2>
+
+<P>This check determines whether the <NOLOC>MSADC</NOLOC> (sample data access scripts) and Scripts virtual directories are installed on a scanned computer running Internet Information Services (IIS). These directories typically contain scripts that, if not required, should be removed to help reduce the attack surface of the computer.</P>
+
+<H2>Solution</H2>
+
+<P>We recommend that you remove these virtual directories if they are not required 
+on the computer running <NOLOC>IIS</NOLOC>.</P>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>Earlier versions of <NOLOC>Microsoft Project Server</NOLOC> (<NOLOC>Project Central</NOLOC>, <NOLOC>Project Server&nbsp;2002</NOLOC> and <NOLOC>Project Server&nbsp;2003</NOLOC>) require the <NOLOC>MSADC</NOLOC> virtual directory. <NOLOC>Project Server</NOLOC> setup will create the <NOLOC>MSADC</NOLOC> virtual directory if not already created and will set minimum permissions required for <NOLOC>Project Server</NOLOC> functionality. Additional information is available in KB article&nbsp;316398.</LI>
+</UL>
+
+<H2>Instructions</H2>
+
+<P><B>To remove these virtual directories in <NOLOC>Microsoft&reg; Windows&reg;&nbsp;XP</NOLOC> Professional</B></P>
+
+<OL>
+  <LI>Click <B>Start</B>, point to <B>Control Panel</B>, point to <B>Administrative Tools</B>, and then click <B>Internet Information Services</B>.</LI>
+  <LI>In the Internet Information Services Manager, right-click the virtual 
+directories to remove, and then click <B>Delete</B>.</LI>
+</OL>
+<BR>
+
+<P><B>To remove these virtual directories in <NOLOC>Windows&nbsp;2000</NOLOC></B></P> 
+
+<OL>
+<LI>Click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, and then click <B>Internet Services Manager</B>.</LI>
+<LI>In the Internet Information Services Manager, right-click the virtual 
+directories to remove, and then click <B>Delete</B>.</LI>
+</OL> 
+<BR>
+
+<H2>Additional Resources</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16536" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>IIS</NOLOC> Lockdown Tool</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5324fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>IIS</NOLOC> Sample Applications">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>IIS</NOLOC> Sample Applications</H1>
+
+<H2>Issue</H2>
+
+<P>The Internet Information Services (IIS) sample applications are useful learning tools, but they can be exploited by hackers to break into an <NOLOC>IIS</NOLOC> system because they contain sample scripts. A production Web server should not have any sample code or scripts on the system.</P> 
+
+<H2>Solution</H2>
+
+<P>Remove the <CODE>IISsamples</CODE>, <CODE>IISHelp</CODE>, and <CODE>MSADC</CODE> virtual directories which map to the following folders:</P>
+
+<UL>
+  <LI><CODE>\Inetpub\iissamples</CODE></LI>
+  <LI><CODE>\Winnt\help\iishelp</CODE></LI>
+  <LI><CODE>\Program Files\common files\system\msadc</CODE></LI>
+</UL>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>New installations of <NOLOC>IIS</NOLOC>&nbsp;6.0 do not have virtual directories mapped to 
+these folders by default. Upgrades of <NOLOC>IIS</NOLOC>&nbsp;5.0 to <NOLOC>IIS</NOLOC>&nbsp;6.0 may still have these 
+virtual directories if they were not manually removed after the upgrade or through the <NOLOC>IIS</NOLOC> Lockdown Tool.</LI>
+</UL>
+
+<H2>Instructions</H2>
+<P><B>To remove the <CODE>IISsamples</CODE>, <CODE>IISHelp</CODE>, and <CODE>MSADC</CODE> virtual directories in <NOLOC>Microsoft&reg; Windows&reg; Server&nbsp;2003</NOLOC> (if upgraded from previous computers running <NOLOC>IIS</NOLOC>&nbsp;5.0)</B></P>
+
+<OL>
+  <LI>Click <B>Start</B>, point to <B>All Programs</B>, point to <B>Administrative Tools</B>, and then click <B>Internet Information Services (IIS) Manager</B>.</LI>
+  <LI>In Internet Information Services Manager, expand the Computer Name, then expand Web Sites, and expand the Default Web Site.</LI>
+  <LI>Right-click <CODE>IISSAMPLES</CODE> (if listed), and then click <B>Delete</B>. Repeat this step to delete the <CODE>IISHELP</CODE> and <CODE>MSADC</CODE> virtual directories, if listed.</LI>
+</OL>
+
+<BR>
+<P><B>To remove the <CODE>IISsamples</CODE>, <CODE>IISHelp</CODE>, and <CODE>MSADC</CODE> virtual directories in <NOLOC>Windows&nbsp;XP</NOLOC> Professional</B></P>
+
+<OL>
+  <LI>Click <B>Start</B>, point to <B>Control Panel</B>, point to <B>Administrative Tools</B>, and then click <B>Internet Information Services</B>.</LI>
+  <LI>In Internet Information Services Manager, expand the Computer Name, then expand Web Sites, and expand the Default Web Site.</LI>
+  <LI>Right-click <CODE>IISSAMPLES</CODE> (if listed), and then click <B>Delete</B>. Repeat this step to delete the <CODE>IISHELP</CODE> and <CODE>MSADC</CODE> virtual directories, if listed.</LI>
+</OL>
+<BR>
+
+<P><B>To remove the <CODE>IISsamples</CODE>, <CODE>IISHelp</CODE>, and <CODE>MSADC</CODE> virtual directories in <NOLOC>Windows&nbsp;2000</NOLOC></B></P>
+
+<OL>
+  <LI>Click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, and then click <B>Internet Services Manager</B>.</LI> 
+  <LI>In Internet Information Services Manager, right-click <CODE>IISSAMPLES</CODE>, and then click <B>Delete</B>. Repeat this step to delete the <CODE>IISHELP</CODE> and <CODE>MSADC</CODE> virtual directories.</LI>
+</OL>
+
+<BR>
+
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+</BODY>
+</HTML>

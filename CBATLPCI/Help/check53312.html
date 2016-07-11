@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53312">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>SQL Server</NOLOC> Directory Access">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>SQL Server</NOLOC> Directory Access</H1>
+
+<H2>Check Description</H2>
+
+<P>This check verifies that the following <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> directories have limited access to <NOLOC>SQL Server</NOLOC> service accounts and local Administrators only:</P>
+
+<UL>
+  <LI><CODE>C:\Program Files\Microsoft <NOLOC>SQL Server</NOLOC>\MSSQL$InstanceName\Binn</CODE></LI>
+  <LI><CODE>C:\Program Files\Microsoft <NOLOC>SQL Server</NOLOC>\MSSQL$InstanceName\Data</CODE></LI>
+  <LI><CODE>C:\Program Files\Microsoft <NOLOC>SQL Server</NOLOC>\MSSQL\Binn</CODE></LI>
+  <LI><CODE>C:\Program Files\Microsoft <NOLOC>SQL Server</NOLOC>\MSSQL\Data</CODE></LI>
+</UL>
+
+<p>Note folders used by MSDE may appear similar to the following when viewing reports.  MBSA will obtain the location of each instance of <NOLOC>SQL</NOLOC> or MSDE from the registry and check all appropriate folders.</p>
+
+<p>Note: MSDE is not supported on <NOLOC>Windows Vista</NOLOC> or <NOLOC>Windows Server 2008</NOLOC></p>
+
+<UL>
+  <LI><CODE>C:\Program Files\MSDE2000aInstance01MSSQL$MSDE2KINST01\Binn</CODE></LI>
+  <LI><CODE>C:\Program Files\MSDE2000aInstance01DataMSSQL$MSDE2KINST01\Data</CODE></LI>
+</UL>
+  
+<P>The tool scans the access control list (ACL) on each of these folders and 
+enumerates the users contained in the ACL. If any other users (that is, aside from the 
+<NOLOC>SQL Server</NOLOC> service accounts and Administrators) have access to read or modify these folders, the tool marks this check as a vulnerability in the security 
+report.</P>
+
+<H2>Additional Resources</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16547" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft SQL Server</NOLOC>&nbsp;Security</A></P>
+
+<BR>
+
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

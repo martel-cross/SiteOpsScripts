@@ -1,0 +1,3306 @@
+;
+;  Database file (null) for Default zone scope in zone atl.careerbuilder.com.
+;      Zone version:  163498
+;
+
+@                       IN  SOA qtxad2.atl.careerbuilder.com. admin.atl.careerbuilder.com. (
+                        		163498       ; serial number
+                        		900          ; refresh
+                        		600          ; retry
+                        		86400        ; expire
+                        		3600       ) ; default TTL
+
+;
+;  Zone NS records
+;
+
+@                       NS	luigiad1.atl.careerbuilder.com.
+@                       NS	bearad2.atl.careerbuilder.com.
+@                       NS	qtwad2.atl.careerbuilder.com.
+@                       NS	qtmad1.atl.careerbuilder.com.
+@                       NS	qtxad1.atl.careerbuilder.com.
+@                       NS	qtxad2.atl.careerbuilder.com.
+@                       NS	qtwad1.atl.careerbuilder.com.
+@                       NS	devad2.atl.careerbuilder.com.
+@                       NS	devad1.atl.careerbuilder.com.
+@                       NS	qtmad2.atl.careerbuilder.com.
+@                       NS	bearad1.atl.careerbuilder.com.
+@                       NS	luigiad2.atl.careerbuilder.com.
+
+;
+;  Zone records
+;
+
+@                       600	A	10.198.10.9
+@                       600	A	10.240.70.9
+@                       600	A	10.237.10.9
+@                       600	A	10.230.10.9
+@                       600	A	10.240.10.9
+@                       600	A	10.230.10.10
+@                       600	A	10.237.10.10
+@                       600	A	10.210.10.9
+@                       600	A	10.240.10.10
+@                       600	A	10.198.10.10
+@                       600	A	10.240.70.10
+@                       600	A	10.210.10.10
+3PARREPORT              1200	A	10.245.110.184
+3PARREPORT1             1200	A	10.240.70.104
+3PARREPORT2             1200	A	10.240.70.106
+3PARSSMC1               1200	A	10.240.70.105
+_gc._tcp.AMS._sites     600	SRV	0 100 3268	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+_kerberos._tcp.AMS._sites 600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AMS._sites   600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+_gc._tcp.AWS-DEV._sites 600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+_kerberos._tcp.AWS-DEV._sites 600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-DEV._sites 600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_gc._tcp.AWS-EAST._sites 600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad2.atl.careerbuilder.com.
+_kerberos._tcp.AWS-EAST._sites 600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-EAST._sites 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+_gc._tcp.AWS-IR._sites  600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+_kerberos._tcp.AWS-IR._sites 600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-IR._sites 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+_gc._tcp.AWS-SG._sites  600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad2.atl.careerbuilder.com.
+_kerberos._tcp.AWS-SG._sites 600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-SG._sites 600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_gc._tcp.chi._sites     600	SRV	0 100 3268	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	bearad1.atl.careerbuilder.com.
+_kerberos._tcp.chi._sites 600	SRV	0 100 88	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad1.atl.careerbuilder.com.
+_ldap._tcp.chi._sites   600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+_gc._tcp.DEV._sites     600	SRV	0 100 3268	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	devad1.atl.careerbuilder.com.
+_kerberos._tcp.DEV._sites 600	SRV	0 100 88	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad1.atl.careerbuilder.com.
+_ldap._tcp.DEV._sites   600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+_gc._tcp.LUIGI._sites   600	SRV	0 100 3268	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	luigiad2.atl.careerbuilder.com.
+_kerberos._tcp.LUIGI._sites 600	SRV	0 100 88	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad2.atl.careerbuilder.com.
+_ldap._tcp.LUIGI._sites 600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+_gc._tcp.qtm._sites     600	SRV	0 100 3268	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+_kerberos._tcp.qtm._sites 600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.qtm._sites   600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+_gc._tcp.qtw._sites     600	SRV	0 100 3268	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad1.atl.careerbuilder.com.
+_kerberos._tcp.qtw._sites 600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad1.atl.careerbuilder.com.
+_ldap._tcp.qtw._sites   600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+_gc._tcp                600	SRV	0 100 3268	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	awseastad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad1.atl.careerbuilder.com.
+_ikeyserver-seal._tcp   0	SRV	1 100 20004	10.240.70.134.
+                        0	SRV	1 100 20004	vascoid.atl.careerbuilder.com.
+                        0	SRV	1 100 20004	10.240.65.25.
+_kerberos._tcp          600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad1.atl.careerbuilder.com.
+_kpasswd._tcp           600	SRV	0 100 464	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtmad1.atl.careerbuilder.com.
+_ldap._tcp              600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+_vlmcs._tcp             SRV	0 0 1688	bearad10.atl.careerbuilder.com.
+                        SRV	0 0 1688	qtmad2.atl.careerbuilder.com.
+                        SRV	0 0 1688	bearad1.atl.careerbuilder.com.
+_kerberos._udp          600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad2.atl.careerbuilder.com.
+_kpasswd._udp           600	SRV	0 100 464	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 464	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 464	qtmad1.atl.careerbuilder.com.
+ace-manager             A	10.240.65.130
+akira1                  A	10.240.65.211
+akira2                  A	10.240.65.210
+ATEDRONE00              1200	A	10.198.55.20
+ATEDRONE01              1200	A	10.198.52.93
+ATEDRONE03              1200	A	10.198.52.120
+ATEDRONE04              1200	A	10.198.52.119
+ATEDRONE05              1200	A	10.198.54.1
+ATEDRONE06              1200	A	10.198.54.2
+ATEDRONE07              1200	A	10.198.55.8
+ATEDRONE08              1200	A	10.198.55.1
+ATEDRONETEST01          1200	A	10.198.55.2
+AUTO                    1200	A	10.245.110.163
+AUTOA                   1200	A	10.245.110.160
+AUTOB                   1200	A	10.245.110.161
+AUTOCL                  1200	A	10.245.110.162
+bearad1                 A	10.230.10.9
+bearad2                 A	10.230.10.10
+bearasync1              1200	A	10.230.110.101
+bearasync2              1200	A	10.230.110.102
+bearasync3              1200	A	10.230.110.103
+bearasync4              1200	A	10.230.110.104
+bearasync5              1200	A	10.230.110.105
+bearasync6              1200	A	10.230.110.106
+BEARASYNC7              1200	A	10.230.110.107
+BEARASYNC8              1200	A	10.230.110.108
+bearbat1                1200	A	10.230.105.101
+bearbat2                1200	A	10.230.105.102
+bearbat3                1200	A	10.230.105.103
+bearbat4                1200	A	10.230.105.104
+bearbkp1                1200	A	10.235.110.50
+bearbkp1-1              A	10.230.245.51
+bearbkp1-2              A	10.230.245.52
+bearblast1              1200	A	10.230.10.111
+BEARBOEXWS1             1200	A	10.230.45.102
+BEARBOEXWS2             1200	A	10.230.45.103
+bearbuildvm1            A	10.230.15.119
+bearcl                  A	10.230.65.251
+beardbvm1               A	10.198.70.51
+beardeployvm1           A	10.230.15.96
+BEARDHCP1               1200	A	10.253.103.254
+beardns                 A	10.230.77.106
+beardoc1                1200	A	10.230.215.101
+BEARDOC10               1200	A	10.230.215.54
+BEARDOC11               1200	A	10.230.215.53
+BEARDOC12               1200	A	10.230.215.52
+beardoc2                1200	A	10.230.215.102
+beardoc3                1200	A	10.230.215.103
+beardoc4                1200	A	10.230.215.104
+beardoc5                1200	A	10.230.215.105
+beardoc6                1200	A	10.230.215.106
+BEARDOC7                1200	A	10.230.215.107
+BEARDOC8                1200	A	10.230.215.108
+BEARDOC9                1200	A	10.230.215.55
+beardpibatch1           1200	A	10.230.105.201
+beardpibatch2           1200	A	10.230.105.202
+BEARDPIBATCH3           1200	A	10.230.105.203
+beardpisvc1             1200	A	10.230.213.101
+beardpisvc2             1200	A	10.230.213.102
+beardpiweb1             1200	A	10.230.212.101
+beardpiweb2             1200	A	10.230.212.102
+BEARDRDOC1              1200	A	10.230.215.51
+beardrhost1             A	10.230.15.95
+BEARDRWS1               1200	A	10.230.205.53
+BEARIMG01               1200	A	10.230.205.64
+BEARIMG02               1200	A	10.230.205.66
+bearjapi1               A	10.230.121.101
+bearjapi2               A	10.230.121.102
+bearjdio1               1200	A	10.230.64.101
+bearjdio10              1200	A	10.230.64.110
+BEARJDIO11              1200	A	10.230.64.111
+BEARJDIO12              1200	A	10.230.64.141
+BEARJDIO13              1200	A	10.230.64.113
+BEARJDIO14              1200	A	10.230.64.114
+BEARJDIO15              1200	A	10.230.64.115
+BEARJDIO16              1200	A	10.230.64.116
+BEARJDIO17              1200	A	10.230.64.117
+BEARJDIO18              1200	A	10.230.64.118
+BEARJDIO19              1200	A	10.230.64.119
+bearjdio2               1200	A	10.230.64.102
+BEARJDIO20              1200	A	10.230.64.136
+BEARJDIO21              1200	A	10.230.64.135
+BEARJDIO22              1200	A	10.230.64.134
+BEARJDIO23              1200	A	10.230.64.132
+BEARJDIO24              1200	A	10.230.64.133
+BEARJDIO25              1200	A	10.230.64.121
+BEARJDIO26              1200	A	10.230.64.120
+BEARJDIO27              1200	A	10.230.64.124
+BEARJDIO28              1200	A	10.230.64.131
+BEARJDIO29              1200	A	10.230.64.130
+bearjdio3               1200	A	10.230.64.103
+BEARJDIO30              1200	A	10.230.64.129
+BEARJDIO31              1200	A	10.230.64.128
+BEARJDIO32              1200	A	10.230.64.139
+BEARJDIO33              1200	A	10.230.64.127
+BEARJDIO34              1200	A	10.230.64.126
+BEARJDIO35              1200	A	10.230.64.137
+BEARJDIO36              1200	A	10.230.64.125
+BEARJDIO37              1200	A	10.230.64.123
+BEARJDIO38              1200	A	10.230.64.122
+bearjdio4               1200	A	10.230.64.104
+bearjdio5               1200	A	10.230.64.105
+bearjdio6               1200	A	10.230.64.106
+bearjdio7               1200	A	10.230.64.107
+bearjdio8               1200	A	10.230.64.108
+bearjdio9               1200	A	10.230.64.109
+BEARLOGIC1A             1200	A	10.230.65.66
+BEARLOGIC1B             1200	A	10.230.65.67
+BEARLOGIC2A             1200	A	10.230.65.68
+BEARLOGIC2B             1200	A	10.230.65.69
+BEARLS01                1200	A	10.230.65.111
+BEARLS1                 1200	A	10.230.65.115
+BEARNXS01               1200	A	10.230.45.98
+BEARNXS02               1200	A	10.230.45.99
+bearparse04             86400	A	10.230.222.53
+bearparse05             86400	A	10.230.222.54
+bearpmta100             A	10.230.193.100
+bearpmta100a            A	10.230.193.103
+                        A	10.230.193.102
+                        A	10.230.193.101
+bearpmta110             A	10.230.193.110
+bearpmta110a            A	10.230.193.113
+                        A	10.230.193.112
+                        A	10.230.193.111
+bearpmta120             A	10.230.193.120
+bearpmta120a            A	10.230.193.123
+                        A	10.230.193.122
+                        A	10.230.193.121
+bearpmta130             A	10.230.193.130
+bearpmta130a            A	10.230.193.133
+                        A	10.230.193.132
+                        A	10.230.193.131
+bearpmta200             A	10.230.193.200
+bearpmta210             A	10.230.193.210
+bearpmta220             A	10.230.193.220
+bearpmta230             A	10.230.193.230
+bearpsbhive1            A	10.230.107.100
+bearpsbhive2            A	10.230.107.101
+bearpxe                 A	10.230.15.81
+BEARRDIO07              1200	A	10.230.64.41
+BEARRDIO08              1200	A	10.230.64.40
+BEARRDIO1               1200	A	10.230.64.201
+BEARRDIO2               1200	A	10.230.64.202
+BEARRDIO3               1200	A	10.230.64.203
+BEARRDIO4               1200	A	10.230.64.204
+BEARRDIO5               1200	A	10.230.64.138
+BEARRDIO6               1200	A	10.230.64.140
+bearrelay               A	10.230.77.102
+bearres                 86400	A	10.230.76.187
+BEARRPROC11             1200	A	10.230.230.111
+bearsc1                 1200	A	10.230.60.101
+BEARSC10                1200	A	10.230.60.110
+BEARSC11                1200	A	10.230.60.111
+bearsc2                 1200	A	10.230.60.102
+bearsc3                 1200	A	10.230.60.103
+bearsc4                 1200	A	10.230.60.104
+bearsc5                 1200	A	10.230.60.105
+bearsc6                 1200	A	10.230.60.106
+bearsc7                 1200	A	10.230.60.107
+bearsc8                 1200	A	10.230.60.108
+bearsc9                 1200	A	10.230.60.109
+bearshark               A	10.230.77.104
+bearsniff               1200	A	10.230.1.120
+bearsolrapi1            A	10.230.214.136
+bearsolrapi11           86400	A	10.230.106.113
+bearsolrapi12           86400	A	10.230.106.114
+bearsolrapi13           A	10.230.106.115
+bearsolrapi2            A	10.230.214.137
+bearsolrapi3            A	10.230.214.140
+bearsolrapi4            A	10.230.214.142
+bearsolrapi5            A	10.230.214.144
+bearsolrapi6            A	10.230.214.146
+bearsolrapi7            86400	A	10.230.214.148
+bearsolrapi8            A	10.230.214.150
+bearsolrapi9            86400	A	10.230.106.111
+bearsolrapim1           A	10.230.214.154
+bearsolrapim11          86400	A	10.230.106.107
+bearsolrapim12          86400	A	10.230.106.108
+bearsolrapim13          86400	A	10.230.106.109
+bearsolrapim2           A	10.230.106.216
+bearsolrapim3           A	10.230.214.139
+bearsolrapim4           86400	A	10.230.214.141
+bearsolrapim5           86400	A	10.230.214.143
+bearsolrapim6           A	10.230.214.145
+bearsolrapim7           86400	A	10.230.214.147
+bearsolrapim8           86400	A	10.230.214.149
+bearsolrapim9           86400	A	10.230.106.105
+bearsolrcmp1            A	10.230.86.123
+bearsolrcmp2            A	10.230.86.124
+bearsolrcmp3            A	10.230.86.153
+bearsolrcmp4            A	10.230.86.154
+bearsolrcmp5            A	10.230.86.155
+bearsolrcmp6            A	10.230.86.156
+bearsolrcmpm1           A	10.230.86.122
+bearsolrcmpm2           A	10.230.86.142
+bearsolrcmpm3           A	10.230.86.143
+bearsolrdp1             A	10.230.86.101
+bearsolrdp10            A	10.230.86.110
+bearsolrdp11            86400	A	10.230.86.112
+bearsolrdp12            A	10.230.86.113
+bearsolrdp13            A	10.230.86.114
+bearsolrdp14            A	10.230.86.115
+bearsolrdp15            86400	A	10.230.86.116
+bearsolrdp16            86400	A	10.230.86.117
+bearsolrdp17            A	10.230.86.118
+bearsolrdp18            A	10.230.86.119
+bearsolrdp19            86400	A	10.230.86.120
+bearsolrdp2             A	10.230.86.102
+bearsolrdp20            A	10.230.86.121
+bearsolrdp21            86400	A	10.230.86.126
+bearsolrdp22            86400	A	10.230.86.127
+bearsolrdp23            86400	A	10.230.86.128
+bearsolrdp24            A	10.230.86.129
+bearsolrdp25            86400	A	10.230.86.130
+bearsolrdp3             A	10.230.86.103
+bearsolrdp4             A	10.230.86.104
+bearsolrdp5             A	10.230.86.105
+bearsolrdp6             A	10.230.86.106
+bearsolrdp7             A	10.230.86.107
+bearsolrdp8             A	10.230.86.108
+bearsolrdp9             A	10.230.86.109
+bearsolrdpm1            A	10.230.86.100
+bearsolrdpm2            86400	A	10.230.86.111
+bearsolrdpm3            A	10.230.86.131
+bearsolredge01          A	10.230.106.112
+bearsolredge02          A	10.230.106.166
+bearsolredge03          A	10.230.106.167
+bearsolredge04          A	10.230.106.173
+bearsolredge05          86400	A	10.230.106.176
+bearsolredge06          86400	A	10.230.106.177
+bearsolredge07          A	10.230.106.178
+bearsolredge08          86400	A	10.230.106.179
+bearsolredge09          86400	A	10.230.106.180
+bearsolredge10          86400	A	10.230.106.181
+bearsolredgem1          A	10.230.106.106
+bearsolredgem2          86400	A	10.230.106.182
+bearsolrjob17           86400	A	10.230.214.151
+bearsolrjob18           A	10.230.214.152
+bearsolrjob19           A	10.230.214.153
+bearsolrmsi1            A	10.230.106.117
+bearsolrmsi10           A	10.230.106.126
+bearsolrmsi2            A	10.230.106.118
+bearsolrmsi3            A	10.230.106.119
+bearsolrmsi4            A	10.230.106.120
+bearsolrmsi5            A	10.230.106.121
+bearsolrmsi6            A	10.230.106.122
+bearsolrmsi7            A	10.230.106.123
+bearsolrmsi8            A	10.230.106.124
+bearsolrmsi9            A	10.230.106.125
+bearsolrmsim1           A	10.230.106.116
+bearsolrmsim2           A	10.230.106.127
+bearsolrmsp1            A	10.230.106.122
+bearsolrmsp2            A	10.230.106.123
+bearsolrmsp3            A	10.230.106.124
+bearsolrmsp4            A	10.230.105.125
+bearsolrmsp5            A	10.230.106.126
+bearsolrmvm             86400	A	10.230.214.250
+bearsolrmys01           86400	A	10.230.106.131
+bearsolrmys02           86400	A	10.230.106.132
+bearsolrmys03           86400	A	10.230.106.133
+bearsolrmys04           86400	A	10.230.106.134
+bearsolrmys05           86400	A	10.230.106.135
+bearsolrmys06           86400	A	10.230.106.136
+bearsolrmys07           86400	A	10.230.106.137
+bearsolrmys08           86400	A	10.230.106.138
+bearsolrmys09           86400	A	10.230.106.139
+bearsolrmys10           86400	A	10.230.106.140
+bearsolrmysm1           86400	A	10.230.106.130
+bearsolrone03           86400	A	10.230.106.168
+bearsolrone04           86400	A	10.230.106.169
+bearsolrone05           86400	A	10.230.106.170
+bearsolrone06           86400	A	10.230.106.171
+bearsolrone07           86400	A	10.230.106.172
+bearsolronem1           86400	A	10.230.106.165
+bearsolrres1            A	10.230.76.160
+bearsolrres10           A	10.230.76.169
+bearsolrres11           A	10.230.76.170
+bearsolrres12           A	10.230.76.171
+bearsolrres13           A	10.230.76.172
+bearsolrres14           A	10.230.76.173
+bearsolrres15           A	10.230.76.174
+bearsolrres16           A	10.230.76.175
+bearsolrres17           A	10.230.76.176
+bearsolrres18           A	10.230.76.177
+bearsolrres19           A	10.230.76.178
+bearsolrres2            A	10.230.76.161
+bearsolrres20           A	10.230.76.179
+bearsolrres21           A	10.230.76.180
+bearsolrres22           A	10.230.76.140
+bearsolrres23           A	10.230.76.141
+bearsolrres24           A	10.230.76.142
+bearsolrres25           86400	A	10.230.76.143
+bearsolrres26           86400	A	10.230.76.144
+bearsolrres27           A	10.230.76.145
+bearsolrres28           A	10.230.76.146
+bearsolrres29           86400	A	10.230.77.157
+bearsolrres3            A	10.230.76.162
+bearsolrres30           86400	A	10.230.77.158
+bearsolrres31           86400	A	10.230.77.159
+bearsolrres32           86400	A	10.230.77.160
+bearsolrres37           A	10.230.77.151
+bearsolrres38           A	10.230.77.152
+bearsolrres4            A	10.230.76.163
+bearsolrres5            A	10.230.76.164
+bearsolrres6            A	10.230.76.165
+bearsolrres7            A	10.230.76.166
+bearsolrres8            A	10.230.76.167
+bearsolrres9            A	10.230.76.168
+bearsolrresm1           A	10.230.76.150
+bearsolrresm2           A	10.230.76.151
+bearsolrresm3           A	10.230.76.152
+bearsolrresm4           86400	A	10.230.76.153
+bearsolrresm5           86400	A	10.230.76.100
+bearsolrrpp1            A	10.230.77.138
+bearsolrrpp10           86400	A	10.230.77.154
+bearsolrrpp2            A	10.230.77.139
+bearsolrrpp3            A	10.230.77.140
+bearsolrrpp4            86400	A	10.230.77.141
+bearsolrrpp5            A	10.230.77.142
+bearsolrrpp6            A	10.230.77.143
+bearsolrrpp7            A	10.230.77.144
+bearsolrrpp8            A	10.230.77.145
+bearsolrrpp9            86400	A	10.230.77.153
+bearsolrrppm1           A	10.230.76.147
+bearsolrrppm2           A	10.230.76.148
+bearsolrtmp             86400	A	10.230.214.252
+bearsolrtmpm            86400	A	10.230.214.253
+bearsolrtn1             86400	A	10.230.76.149
+bearsolrtn10            A	10.230.77.174
+bearsolrtn11            A	10.230.77.175
+bearsolrtn12            A	10.230.77.176
+bearsolrtn2             86400	A	10.230.77.146
+bearsolrtn3             A	10.230.77.147
+bearsolrtn4             A	10.230.77.148
+bearsolrtn5             A	10.230.77.149
+bearsolrtn6             86400	A	10.230.77.150
+bearsolrtn7             A	10.230.77.171
+bearsolrtn8             A	10.230.77.172
+bearsolrtn9             A	10.230.77.173
+bearsolrtnm1            A	10.230.77.155
+bearsolrtnm2            A	10.230.77.170
+bearsolrutil1           A	10.230.214.112
+bearsolrutil2           A	10.230.214.113
+bearsolrvm              86400	A	10.230.214.249
+BEARSRCHBAT01           1200	A	10.230.105.120
+BEARSRCHBAT02           1200	A	10.230.105.121
+BEARSRCHBAT03           1200	A	10.230.105.122
+BEARSRCHBAT04           1200	A	10.230.105.123
+BEARSRCHBAT05           1200	A	10.230.105.124
+BEARSRCHBAT06           1200	A	10.230.105.125
+BEARSRCHBAT07           1200	A	10.230.105.126
+BEARSRCHBAT08           1200	A	10.230.105.127
+BEARSRCHBAT09           1200	A	10.230.105.128
+BEARSRCHBAT10           1200	A	10.230.105.129
+BEARSTAPI1              1200	A	10.230.205.161
+BEARSTAPI10             1200	A	10.230.205.170
+BEARSTAPI11             1200	A	10.230.205.172
+BEARSTAPI12             1200	A	10.230.205.173
+BEARSTAPI13             1200	A	10.230.205.173
+BEARSTAPI14             1200	A	10.230.205.174
+BEARSTAPI15             1200	A	10.230.205.175
+BEARSTAPI16             1200	A	10.230.205.176
+BEARSTAPI17             1200	A	10.230.205.177
+BEARSTAPI18             1200	A	10.230.205.178
+BEARSTAPI19             1200	A	10.230.205.179
+BEARSTAPI2              1200	A	10.230.205.162
+BEARSTAPI20             1200	A	10.230.205.175
+BEARSTAPI21             1200	A	10.230.205.176
+BEARSTAPI3              1200	A	10.230.205.163
+BEARSTAPI4              1200	A	10.230.205.164
+BEARSTAPI5              1200	A	10.230.205.165
+BEARSTAPI6              1200	A	10.230.205.166
+BEARSTAPI7              1200	A	10.230.205.167
+BEARSTAPI8              1200	A	10.230.205.168
+BEARSTAPI9              1200	A	10.230.205.169
+bearstats               86400	A	10.230.65.65
+bearvm1                 A	10.230.70.51
+bearvm2                 A	10.230.70.52
+bearvm3                 A	10.230.70.53
+bearvm4                 A	10.230.70.54
+bearvm5                 A	10.230.70.55
+bearvm6                 A	10.230.70.56
+BearVMHost01            A	10.230.15.101
+BearVMHost02            A	10.230.15.102
+BEARWEB01               1200	A	10.230.205.201
+BEARWEB02               1200	A	10.230.205.202
+BEARWEB03               1200	A	10.230.205.203
+BEARWEB04               1200	A	10.230.205.204
+BEARWEB05               1200	A	10.230.205.205
+BEARWEB06               1200	A	10.230.205.206
+BEARWEB07               1200	A	10.230.205.207
+BEARWEB08               1200	A	10.230.205.208
+BEARWEB09               1200	A	10.230.205.209
+BEARWEB10               1200	A	10.230.205.110
+BEARWEB11               1200	A	10.230.205.111
+BEARWEB12               1200	A	10.230.205.112
+BEARWEB13               1200	A	10.230.205.113
+BEARWEB14               1200	A	10.230.205.114
+BEARWEB15               1200	A	10.230.205.115
+BEARWEB16               1200	A	10.230.205.116
+BEARWEB17               1200	A	10.230.205.117
+BEARWEB18               1200	A	10.230.205.118
+BEARWEB19               1200	A	10.230.205.119
+BEARWEB20               1200	A	10.230.205.120
+BEARWEB21               1200	A	10.230.205.121
+BEARWEB22               1200	A	10.230.205.122
+BEARWEB23               1200	A	10.230.205.123
+BEARWEB24               1200	A	10.230.205.124
+BEARWEB25               1200	A	10.230.205.125
+BEARWEB26               1200	A	10.230.205.126
+BEARWEB27               1200	A	10.230.205.127
+BEARWEB28               1200	A	10.230.205.128
+BEARWEB29               1200	A	10.230.205.129
+BEARWEB30               1200	A	10.230.205.130
+BEARWEB31               1200	A	10.230.205.131
+BEARWEB32               1200	A	10.230.205.132
+BEARWEB33               1200	A	10.230.205.133
+BEARWEB34               1200	A	10.230.205.134
+BEARWEB35               1200	A	10.230.205.135
+BEARWEB36               1200	A	10.230.205.136
+BEARWEB37               1200	A	10.230.205.137
+BEARWEB38               1200	A	10.230.205.138
+BEARWEB39               1200	A	10.230.205.139
+BEARWEB40               1200	A	10.230.205.140
+BEARWEB41               1200	A	10.230.205.141
+BEARWEB42               1200	A	10.230.205.142
+BEARWEB43               1200	A	10.230.205.143
+BEARWEB44               1200	A	10.230.205.144
+BEARWEB45               1200	A	10.230.205.145
+BEARWEB46               1200	A	10.230.205.146
+BEARWEB47               1200	A	10.230.205.147
+BEARWEB48               1200	A	10.230.205.148
+BEARWEB49               1200	A	10.230.205.149
+BEARWEB50               1200	A	10.230.205.150
+BEARWEB51               1200	A	10.230.205.151
+BEARWEB52               1200	A	10.230.205.152
+BEARWEB53               1200	A	10.230.205.153
+BEARWEB54               1200	A	10.230.205.154
+BEARWEB55               1200	A	10.230.205.155
+BEARWEB56               1200	A	10.230.205.156
+BEARWEB57               1200	A	10.230.205.157
+BEARWEB58               1200	A	10.230.205.158
+BEARWEB59               1200	A	10.230.205.159
+BEARWEB60               1200	A	10.230.205.160
+bearws1                 1200	A	10.230.205.71
+bearws2                 1200	A	10.230.205.72
+biospxetest1            86400	A	10.198.110.95
+bizdevdb                CNAME	bizdevdb.biz.careerbuilder.com.
+bizdevsn1               CNAME	bizdevsn1.biz.careerbuilder.com.
+bizdevsn2               CNAME	bizdevsn2.biz.careerbuilder.com.
+bizdevtestsn1           CNAME	bizdevtestsn1.biz.careerbuilder.com.
+bob                     CNAME	bob.careerbuilder.com.
+BOBA                    1200	A	10.245.110.83
+BOBAA                   1200	A	10.245.110.80
+BOBAB                   1200	A	10.245.110.81
+BOBACL                  1200	A	10.245.110.82
+BOBATCH102              1200	A	10.240.105.165
+boss                    CNAME	boss.careerbuilder.com.
+bossvm2                 1200	A	10.240.10.199
+brock                   A	10.230.65.230
+BUZZB                   1200	A	10.245.110.116
+CAUqtmmg8x7             1200	A	10.240.70.94
+                        1200	A	10.240.70.93
+CBASYNC200              1200	A	10.240.110.200
+CBASYNC201              1200	A	10.240.110.201
+CBASYNC202              1200	A	10.240.110.202
+CBASYNC203              1200	A	10.240.110.203
+CBASYNC204              1200	A	10.240.110.204
+CBASYNC205              1200	A	10.240.110.205
+CBASYNC206              1200	A	10.240.110.206
+CBASYNC207              1200	A	10.240.110.207
+CBASYNC208              1200	A	10.240.110.208
+CBASYNC209              1200	A	10.240.110.209
+CBASYNC210              1200	A	10.240.110.210
+CBASYNC211              1200	A	10.240.110.121
+CBASYNC212              1200	A	10.240.110.212
+CBASYNC213              1200	A	10.240.110.213
+CBASYNC214              1200	A	10.240.110.214
+CBASYNC215              1200	A	10.240.110.215
+CBASYNC216              1200	A	10.240.110.216
+CBASYNC217              1200	A	10.240.110.217
+CBASYNC218              1200	A	10.240.110.120
+CBASYNC219              1200	A	10.240.110.219
+CBASYNC220              1200	A	10.240.110.220
+CBASYNC221              1200	A	10.240.110.221
+CBASYNC222              1200	A	10.240.110.117
+CBASYNC223              1200	A	10.240.110.223
+CBASYNC224              1200	A	10.240.110.224
+CBASYNC225              1200	A	10.240.110.225
+CBASYNC226              1200	A	10.240.110.226
+CBASYNC227              1200	A	10.240.110.227
+CBASYNC228              1200	A	10.240.110.228
+CBASYNC229              1200	A	10.240.110.229
+CBASYNC230              1200	A	10.240.110.107
+CBASYNC231              1200	A	10.240.110.116
+CBASYNC232              1200	A	10.240.110.115
+CBASYNC233              1200	A	10.240.110.113
+CBASYNC234              1200	A	10.240.110.112
+CBASYNC235              1200	A	10.240.110.111
+CBASYNC236              1200	A	10.240.110.114
+CBASYNC237              1200	A	10.240.110.110
+CBASYNC238              1200	A	10.240.110.109
+CBASYNC239              1200	A	10.240.110.108
+CBAUTH1                 1200	A	10.240.101.104
+CBAUTH2                 1200	A	10.240.101.105
+CBAUTH3                 1200	A	10.240.101.106
+CBAUTH4                 1200	A	10.240.101.107
+CBBATCH28               1200	A	10.240.105.160
+CBBATCH29               1200	A	10.240.105.164
+CBBATCH30               1200	A	10.240.105.163
+CBBATCH31               1200	A	10.240.105.162
+CBBATCH32               1200	A	10.240.105.161
+CBBLAST100              1200	A	10.240.10.110
+cbcassweb01             A	10.240.205.101
+cbcassweb02             A	10.240.205.102
+cbcassweb03             A	10.240.205.103
+cbcassweb04             A	10.240.205.104
+cbcassweb05             86400	A	10.240.205.105
+cbcassweb06             86400	A	10.240.205.106
+cbcassweb07             86400	A	10.240.205.107
+cbcassweb08             86400	A	10.240.205.108
+CBDEPUPDATE01           1200	A	10.198.55.4
+CBDepUpdate02           1200	A	10.198.55.150
+cbjeproc100             1200	A	10.240.84.100
+cbjeproc101             1200	A	10.240.84.101
+cbjeproc102             1200	A	10.240.84.102
+cbjeproc103             1200	A	10.240.84.103
+cbjeproc104             1200	A	10.240.84.104
+cbjeproc105             1200	A	10.240.84.140
+cbjeproc106             1200	A	10.240.84.106
+cbjeproc107             1200	A	10.240.84.107
+CBJEPROC108             1200	A	10.240.84.108
+CBJEPROC109             1200	A	10.240.84.109
+CBJEPROC110             1200	A	10.240.84.110
+CBJEPROC111             1200	A	10.240.84.111
+CBJEPROC112             1200	A	10.240.84.112
+CBJEPROC113             1200	A	10.240.84.113
+CBJEPROC114             1200	A	10.240.84.114
+CBJEPROC115             1200	A	10.240.84.115
+CBJEPROC116             1200	A	10.240.84.120
+CBJEPROC117             1200	A	10.240.84.124
+CBJEPROC118             1200	A	10.240.84.123
+CBJEPROC119             1200	A	10.240.84.122
+CBJEPROC120             1200	A	10.240.84.121
+CBJEPROC121             1200	A	10.240.84.135
+CBJEPROC122             1200	A	10.240.84.131
+CBJEPROC123             1200	A	10.240.84.130
+CBJEPROC124             1200	A	10.240.84.134
+CBJEPROC125             1200	A	10.240.84.132
+CBJEPROC126             1200	A	10.240.84.129
+CBJEPROC127             1200	A	10.240.84.127
+CBJEPROC128             1200	A	10.240.84.128
+CBJEPROC129             1200	A	10.240.84.126
+CBJEPROC130             1200	A	10.240.84.133
+CBJEPROC131             1200	A	10.240.84.125
+CBLS                    1200	A	10.240.20.75
+cbpxe                   86400	A	10.240.20.77
+CBSOASRCHBAT01          1200	A	10.240.105.125
+CBSOASRCHBAT02          1200	A	10.240.105.126
+CBSOASRCHBAT03          1200	A	10.240.105.127
+CBSOASRCHBAT04          1200	A	10.240.105.128
+CBSOASRCHBAT05          1200	A	10.240.105.129
+CBSOASRCHBAT06          1200	A	10.240.105.130
+CBSOASRCHBAT07          1200	A	10.240.105.131
+CBSOASRCHBAT08          1200	A	10.240.105.132
+CBSOASRCHBAT09          1200	A	10.240.105.133
+CBSOASRCHBAT10          1200	A	10.240.105.134
+CBSOASRCHBAT11          1200	A	10.240.105.137
+CBSOASRCHBAT12          1200	A	10.240.105.138
+CBSOASRCHBAT13          1200	A	10.240.105.139
+CBSOASRCHBAT14          1200	A	10.240.105.140
+CBSOASRCHBAT15          1200	A	10.240.105.141
+CBSOASRCHBAT16          1200	A	10.240.105.142
+CBSOASRCHBAT17          1200	A	10.240.105.143
+CBSOASRCHBAT18          1200	A	10.240.105.144
+CBSOASRCHBAT19          1200	A	10.240.105.145
+CBSOASRCHBAT20          1200	A	10.240.105.146
+CBSRCHBAT01             1200	A	10.240.105.120
+CBSRCHBAT02             1200	A	10.240.105.121
+CBSRCHBAT03             1200	A	10.240.105.122
+CBSRCHBAT04             1200	A	10.240.105.123
+CBSRCHBAT5              1200	A	10.240.105.116
+CBSRCHBAT6              1200	A	10.240.105.117
+CBSRCHBAT7              1200	A	10.240.105.118
+CBSRCHBAT8              1200	A	10.240.105.119
+cbstats                 A	10.240.65.65
+CBSTATSBATCH01          1200	A	10.240.105.135
+CBSTATSBATCH02          1200	A	10.240.105.136
+CBSVC1                  1200	A	10.240.100.109
+CBSVC10                 1200	A	10.240.100.43
+CBSVC11                 1200	A	10.240.100.41
+CBSVC12                 1200	A	10.240.100.42
+CBSVC13                 1200	A	10.240.100.40
+CBSVC14                 1200	A	10.240.100.45
+CBSVC2                  1200	A	10.240.100.110
+CBSVC3                  1200	A	10.240.100.111
+CBSVC4                  1200	A	10.240.100.112
+CBSVC5                  1200	A	10.240.100.113
+CBSVC6                  1200	A	10.240.100.114
+CBSVC7                  1200	A	10.240.100.115
+CBSVC8                  1200	A	10.240.100.116
+CBSVC9                  1200	A	10.240.100.117
+centos66-v1b            86400	A	10.210.15.240
+centvm1                 A	10.198.75.101
+CHEETAHTEST             1200	A	10.240.65.223
+chi-a10-primary         86400	A	10.230.65.13
+chi-a10-standby         86400	A	10.230.65.12
+chi-acs-dot19           1200	A	10.230.1.19
+chi-centos66-v1b        86400	A	10.230.107.200
+chi-col-ns              86400	A	10.230.65.195
+chi-lmc-130             A	10.230.65.130
+chi-log-dot151          A	10.230.65.151
+chi-pan-dot160          A	10.230.65.160
+chi-pan-dot161          A	10.230.65.161
+chi-sp-dot205           A	10.230.65.205
+chi-tmc-131             A	10.230.65.131
+chi108c1                A	10.231.200.51
+chi108c1-a1             A	10.231.200.111
+chi108c1-a2             A	10.231.200.112
+chi108c1-b1             A	10.231.200.113
+chi108c1-b2             A	10.231.200.114
+chi108c1bl01            A	10.253.101.51
+chi108c1bl02            A	10.253.101.52
+chi108c1bl03            A	10.253.101.53
+chi108c1bl04            A	10.253.101.54
+chi108c1bl05            A	10.253.101.55
+chi108c1bl06            A	10.253.101.56
+chi108c1bl07            A	10.253.101.57
+chi108c1bl08            A	10.253.101.58
+chi108c1bl09            A	10.253.101.59
+chi108c1bl10            A	10.253.101.60
+chi108c1bl11            A	10.253.101.61
+chi108c1bl12            A	10.253.101.62
+chi108c1bl13            A	10.253.101.63
+chi108c1bl14            A	10.253.101.64
+chi108c1bl15            A	10.253.101.65
+chi108c1bl16            A	10.253.101.66
+chi108c2                A	10.231.200.52
+chi108c2-a1             A	10.231.200.115
+chi108c2-a2             A	10.231.200.116
+chi108c2-b1             A	10.231.200.117
+chi108c2-b2             A	10.231.200.118
+chi108c2bl01            A	10.253.101.81
+chi108c2bl02            A	10.253.101.82
+chi108c2bl03            A	10.253.101.83
+chi108c2bl04            A	10.253.101.84
+chi108c2bl05            A	10.253.101.85
+chi108c2bl06            A	10.253.101.86
+chi108c2bl07            A	10.253.101.87
+chi108c2bl08            A	10.253.101.88
+chi108c2bl09            A	10.253.101.89
+chi108c2bl10            A	10.253.101.90
+chi108c2bl11            A	10.253.101.91
+chi108c2bl12            A	10.253.101.92
+chi108c2bl13            A	10.253.101.93
+chi108c2bl14            A	10.253.101.94
+chi108c2bl15            A	10.253.101.95
+chi108c2bl16            A	10.253.101.96
+chi109c1                A	10.231.200.53
+chi109c1-a1             A	10.231.200.119
+chi109c1-a2             A	10.231.200.120
+chi109c1-b1             A	10.231.200.121
+chi109c1-b2             A	10.231.200.122
+chi109c1bl01            1200	A	10.253.101.111
+chi109c1bl02            A	10.253.101.112
+chi109c1bl03            A	10.253.101.113
+chi109c1bl04            A	10.253.101.114
+chi109c1bl05            A	10.253.101.115
+chi109c1bl06            A	10.253.101.116
+chi109c1bl07            A	10.253.101.117
+chi109c1bl08            A	10.253.101.118
+chi109c1bl09            A	10.253.101.119
+chi109c1bl10            A	10.253.101.120
+chi109c1bl11            A	10.253.101.121
+chi109c1bl12            A	10.253.101.122
+chi109c1bl13            A	10.253.101.123
+chi109c1bl14            A	10.253.101.124
+chi109c1bl15            A	10.253.101.125
+chi109c1bl16            A	10.253.101.126
+chi109c2                A	10.231.200.54
+chi109c2-a1             A	10.231.200.123
+chi109c2-a2             A	10.231.200.124
+chi109c2-b1             A	10.231.200.125
+chi109c2-b2             A	10.231.200.126
+chi109c2bl01            A	10.253.101.127
+chi109c2bl02            A	10.253.101.128
+chi109c2bl03            A	10.253.101.129
+chi109c2bl04            A	10.253.101.130
+chi109c2bl05            A	10.253.101.131
+chi109c2bl06            A	10.253.101.132
+chi109c2bl07            A	10.253.101.133
+chi109c2bl08            A	10.253.101.134
+chi109c2bl09            A	10.253.101.135
+chi109c2bl10            A	10.253.101.136
+chi109c2bl11            A	10.253.101.137
+chi109c2bl12            A	10.253.101.138
+chi109c2bl13            A	10.253.101.139
+chi109c2bl14            A	10.253.101.140
+chi109c2bl15            A	10.253.101.141
+chi109c2bl16            A	10.253.101.142
+chi_dr_vmhosts          1200	A	10.237.15.100
+CHIAPP01SAN01           A	10.230.65.82
+CHIAPP01SAN02           A	10.230.65.85
+CHIAPP01VM01            A	10.253.103.44
+CHIAPP01VM02            A	10.253.103.45
+CHIAPP01VM03            A	10.253.103.46
+CHIAPP01VM04            A	10.253.103.47
+CHIAPP01VM05            A	10.253.103.48
+CHIAPP01VM06            A	10.253.103.49
+CHIAPP01VM07            A	10.253.103.50
+CHIAPP01VM08            A	10.253.103.51
+CHIAPP01VM09            A	10.253.103.52
+CHIAPP01VM10            A	10.253.103.53
+CHIAPP01VM11            A	10.253.103.54
+CHIAPP01VM12            A	10.253.103.55
+CHIAPP01VM13            A	10.253.103.56
+CHIAPP01VM14            A	10.253.103.57
+CHIAPP01VM15            A	10.253.103.58
+CHIAPP01VM16            A	10.253.103.59
+CHIAPP01VM17            A	10.253.103.60
+CHIAPP01VM18            A	10.253.103.61
+CHIAPP01VM19            A	10.253.103.62
+CHIAPP01VM20            A	10.253.103.63
+CHIAPP01VM21            A	10.253.103.64
+CHIAPP01VM22            A	10.253.103.65
+CHIAPP01VM23            A	10.253.103.66
+CHIAPP01VM24            A	10.253.103.67
+CHIAPP01VM25            A	10.253.103.68
+CHIAPP01VM26            A	10.253.103.69
+CHIAPP01VM27            A	10.253.103.70
+CHIAPP01VM28            A	10.253.103.71
+CHIAPP01VM29            A	10.253.103.72
+CHIAPP01VM30            A	10.253.103.73
+CHIAPP01VM31            A	10.253.103.74
+CHIAPP01VM32            A	10.253.103.75
+chiapp02san01           A	10.230.65.80
+CHIAPP02SAN02           A	10.230.65.88
+chiapp02sw01            A	10.231.217.11
+chiapp02sw02            A	10.231.217.12
+CHIAPP02VM01            A	10.253.103.11
+CHIAPP02VM02            A	10.253.103.12
+CHIAPP02VM03            A	10.253.103.13
+CHIAPP02VM04            A	10.253.103.14
+CHIAPP02VM05            A	10.253.103.15
+CHIAPP02VM06            A	10.253.103.16
+CHIAPP02VM07            A	10.253.103.17
+CHIAPP02VM08            A	10.253.103.18
+CHIAPP02VM09            A	10.253.103.19
+CHIAPP02VM10            A	10.253.103.20
+CHIAPP02VM11            A	10.253.103.21
+CHIAPP02VM12            A	10.253.103.22
+CHIAPP02VM13            A	10.253.103.23
+CHIAPP02VM14            A	10.253.103.24
+CHIAPP02VM15            A	10.253.103.25
+CHIAPP02VM16            A	10.253.103.26
+CHIAPP02VM17            A	10.253.103.27
+CHIAPP02VM18            A	10.253.103.28
+CHIAPP02VM19            A	10.253.103.29
+CHIAPP02VM20            A	10.253.103.30
+CHIAPP02VM21            A	10.253.103.31
+CHIAPP02VM22            A	10.253.103.32
+CHIAPP02VM23            A	10.253.103.33
+CHIAPP02VM24            A	10.253.103.34
+CHIAPP02VM25            A	10.253.103.35
+CHIAPP02VM26            A	10.253.103.36
+CHIAPP02VM27            A	10.253.103.37
+CHIAPP02VM28            A	10.253.103.38
+CHIAPP02VM29            A	10.253.103.39
+CHIAPP02VM30            A	10.253.103.40
+CHIAPP02VM31            A	10.253.103.41
+CHIAPP02VM32            A	10.253.103.42
+chiapp02vsp01           A	10.230.65.81
+CHIAPP03VM01            A	10.253.103.80
+CHIAPP03VM02            A	10.253.103.81
+CHIAPP03VM03            A	10.253.103.82
+CHIAPP03VM04            A	10.253.103.83
+CHIAPP03VM05            A	10.253.103.84
+CHIAPP03VM06            A	10.253.103.85
+CHIAPP03VM07            A	10.253.103.86
+CHIAPP03VM08            A	10.253.103.87
+CHIAPP03VM09            A	10.253.103.88
+CHIAPP03VM10            A	10.253.103.89
+CHIAPP03VM11            A	10.253.103.90
+CHIAPP03VM12            A	10.253.103.91
+CHIAPP03VM13            A	10.253.103.92
+CHIAPP03VM14            A	10.253.103.93
+CHIAPP03VM15            A	10.253.103.94
+CHIAPP03VM16            A	10.253.103.95
+CHIAPP03VM17            A	10.253.103.96
+CHIAPP03VM18            A	10.253.103.97
+CHIAPP03VM19            A	10.253.103.98
+CHIAPP03VM20            A	10.253.103.99
+CHIAPP03VM21            A	10.253.103.100
+CHIAPP03VM22            A	10.253.103.101
+CHIAPP03VM23            A	10.253.103.102
+CHIAPP03VM24            A	10.253.103.103
+CHIAPP03VM25            A	10.253.103.104
+CHIAPP03VM26            A	10.253.103.105
+CHIAPP03VM27            A	10.253.103.106
+CHIAPP03VM28            A	10.253.103.107
+CHIAPP03VM29            A	10.253.103.108
+CHIAPP03VM30            A	10.253.103.109
+CHIAPP03VM31            A	10.253.103.110
+CHIAPP03VM32            A	10.253.103.111
+chib1s1                 A	10.231.100.50
+chib1s2                 A	10.231.100.80
+chib2s1                 A	10.231.100.110
+chib2s2                 A	10.231.100.140
+CHICTRL1                1200	A	10.235.110.103
+CHICTRL1A               1200	A	10.235.110.100
+CHICTRL1B               1200	A	10.235.110.101
+CHICTRL1CL              1200	A	10.235.110.102
+CHIDSRV1                1200	A	10.235.110.107
+CHIDSRV1A               1200	A	10.235.110.104
+CHIDSRV1B               1200	A	10.235.110.105
+CHIDSRV1CL              1200	A	10.235.110.106
+chiflume1               A	10.230.77.201
+chiflume2               A	10.230.77.202
+chiflume3               A	10.230.77.203
+CHILM02                 1200	A	10.230.65.73
+CHILM03                 1200	A	10.230.65.74
+CHILM04                 1200	A	10.230.65.76
+CHILM05                 1200	A	10.230.65.77
+CHILM05-0               1200	A	10.230.65.44
+CHILM06                 1200	A	10.230.65.78
+CHILM07                 1200	A	10.230.65.79
+CHILM08                 1200	A	10.230.65.63
+CHILM09                 1200	A	10.230.65.45
+chilogic3a              1200	A	10.230.65.70
+chilogic3b              1200	A	10.230.65.71
+CHIMSG1                 1200	A	10.235.110.129
+CHIMSG1A                1200	A	10.235.110.126
+CHIMSG1B                1200	A	10.235.110.127
+CHIMSG1CL               1200	A	10.235.110.128
+CHIMSG2                 1200	A	10.235.110.140
+chipigitauditfe1        A	10.230.205.92
+chipilifeapi1           A	10.230.205.40
+chipilifefe1            A	10.230.205.41
+CHIPtoV1                1200	A	10.230.65.210
+CHIPtoV2                1200	A	10.230.65.211
+CHIPtoV3                1200	A	10.230.65.212
+CHIPtoV4                1200	A	10.230.65.213
+chipxe                  A	10.230.15.100
+chipxe1                 A	10.230.15.120
+chipxehost              A	10.230.15.80
+chisan1                 A	10.235.110.44
+chisansw1               A	10.235.110.38
+chisansw2               A	10.235.110.39
+CHISC1                  1200	A	10.235.110.133
+CHISC1A                 1200	A	10.235.110.130
+CHISC1B                 1200	A	10.235.110.131
+CHISC1CL                1200	A	10.235.110.132
+chismokeping            A	10.230.205.42
+chisnpxe                86400	A	10.231.254.50
+chisnrad01              1200	A	10.230.65.18
+chisolrfst01            A	10.230.106.174
+chisolrfst02            A	10.230.106.175
+chisolrjob01            86400	A	10.230.214.163
+chisolrjob02            86400	A	10.230.214.164
+chisolrjob03            86400	A	10.230.214.165
+chisolrjob04            86400	A	10.230.214.166
+chisolrjob05            86400	A	10.230.214.167
+chisolrjob06            86400	A	10.230.214.168
+chisolrjob07            86400	A	10.230.214.169
+chisolrjob08            86400	A	10.230.214.170
+chisolrjob09            86400	A	10.230.214.171
+chisolrjob10            86400	A	10.230.214.172
+chisolrjob11            86400	A	10.230.214.173
+chisolrjob12            86400	A	10.230.214.174
+chisolrjob13            86400	A	10.230.214.175
+chisolrjob14            86400	A	10.230.214.176
+chisolrjob15            86400	A	10.230.214.177
+chisolrjob16            86400	A	10.230.214.178
+chisolrjob17            86400	A	10.230.214.179
+chisolrjob18            86400	A	10.230.214.180
+chisolrjob19            86400	A	10.230.214.181
+chisolrjob31            86400	A	10.230.214.193
+chisolrjob32            86400	A	10.230.214.194
+chisolrjob33            86400	A	10.230.214.195
+chisolrjob34            86400	A	10.230.214.196
+chisolrjob35            86400	A	10.230.214.197
+chisolrjob36            86400	A	10.230.214.198
+chisolrjob37            86400	A	10.230.214.199
+chisolrjob38            86400	A	10.230.214.200
+chisolrjob39            86400	A	10.230.214.201
+chisolrjob40            86400	A	10.230.214.202
+chisolrjob41            86400	A	10.230.214.203
+chisolrjob42            86400	A	10.230.214.204
+chisolrjob43            86400	A	10.230.214.205
+chisolrjob44            86400	A	10.230.214.206
+chisolrjob45            86400	A	10.230.214.207
+chisolrjob46            86400	A	10.230.214.208
+chisolrjob47            86400	A	10.230.214.209
+chisolrjob48            86400	A	10.230.214.210
+chisolrjob49            86400	A	10.230.214.211
+chisolrjob61            86400	A	10.230.214.223
+chisolrjob62            86400	A	10.230.214.224
+chisolrjob63            86400	A	10.230.214.225
+chisolrjob64            86400	A	10.230.214.226
+chisolrjob65            86400	A	10.230.214.227
+chisolrjob66            86400	A	10.230.214.228
+chisolrjob67            86400	A	10.230.214.229
+chisolrjob68            86400	A	10.230.214.230
+chisolrjob69            86400	A	10.230.214.231
+chisolrjob70            86400	A	10.230.214.232
+chisolrjob71            86400	A	10.230.214.233
+chisolrjob72            86400	A	10.230.214.234
+chisolrjob73            86400	A	10.230.214.235
+chisolrjob74            86400	A	10.230.214.236
+chisolrjob75            86400	A	10.230.214.237
+chisolrjob76            86400	A	10.230.214.238
+chisolrjob77            86400	A	10.230.214.239
+chisolrjob78            86400	A	10.230.214.240
+chisolrjob79            86400	A	10.230.214.241
+chisolrjobaux01         86400	A	10.230.214.80
+chisolrjobaux02         86400	A	10.230.214.81
+chisolrjobaux03         86400	A	10.230.214.82
+chisolrjobaux08         86400	A	10.230.214.87
+chisolrjobaux09         86400	A	10.230.214.88
+chisolrjobaux10         86400	A	10.230.214.89
+chisolrjobaux15         86400	A	10.230.214.94
+chisolrjobaux16         86400	A	10.230.214.95
+chisolrjobaux17         86400	A	10.230.214.96
+chisolrjobm01           86400	A	10.230.214.160
+chisolrjobm02           86400	A	10.230.214.161
+chisolrjobm03           86400	A	10.230.214.162
+CHISPACEM1              A	10.230.15.101
+CHISPACES1              A	10.230.15.141
+chisw1                  A	10.231.110.44
+chisw2                  A	10.231.110.45
+Chitacrad01             1200	A	10.230.70.18
+chivctr1                1200	A	10.253.101.48
+chivmhost01             A	10.230.15.121
+CLOUDLOGIC1B            1200	A	10.198.52.111
+CLOUDLOGIC2A            1200	A	10.198.52.112
+cloudspace1             A	10.198.52.185
+cloudzilla              A	10.198.52.186
+computron               86400	A	10.198.70.150
+DALEKTEST               1200	A	10.240.65.102
+dbmonitor               1200	A	10.240.245.179
+DELLOME                 1200	A	10.240.70.127
+DELLSAN1                A	10.240.65.57
+dev-log-dot151          CNAME	qtm-log-dot151.atl.careerbuilder.com.
+dev_kstest01            A	10.198.55.200
+DEVAD1                  A	10.198.10.9
+DEVAD2                  A	10.198.10.10
+devapm01                A	10.198.55.190
+devapm02                A	10.198.55.191
+devapm03                A	10.198.55.192
+devapp01c1              A	10.241.200.51
+devapp01c1-a1           A	10.241.200.111
+devapp01c1-a2           A	10.241.200.112
+devapp01c1-b1           A	10.241.200.113
+devapp01c1-b2           A	10.241.200.114
+devapp01c2              A	10.241.200.52
+devapp01c2-a1           A	10.241.200.115
+devapp01c2-a2           A	10.241.200.116
+devapp01c2-b1           A	10.241.200.117
+devapp01c2-b2           A	10.241.200.118
+devapp01s1              A	10.241.244.50
+devapp01s2              A	10.241.244.80
+devapp01vm01            A	10.198.50.11
+devapp01vm02            A	10.198.50.12
+devapp01vm03            A	10.198.50.13
+devapp01vm04            A	10.198.50.14
+devapp01vm05            A	10.198.50.15
+devapp01vm06            A	10.198.50.16
+devapp01vm07            A	10.198.50.17
+devapp01vm08            A	10.198.50.18
+devapp01vm09            A	10.198.50.19
+devapp01vm10            A	10.198.50.20
+devapp01vm11            A	10.198.50.21
+devapp01vm12            A	10.198.50.22
+devapp01vm13            A	10.198.50.23
+devapp01vm14            A	10.198.50.24
+devapp01vm15            A	10.198.50.25
+devapp01vm16            A	10.198.50.26
+devapp01vm17            A	10.198.50.27
+devapp01vm18            A	10.198.50.28
+devapp01vm19            A	10.198.50.29
+devapp01vm20            A	10.198.50.30
+devapp01vm21            A	10.198.50.31
+devapp01vm22            A	10.198.50.32
+devapp01vm23            A	10.198.50.33
+devapp01vm24            A	10.198.50.34
+devapp01vm25            A	10.198.50.35
+devapp01vm26            A	10.198.50.36
+devapp01vm27            A	10.198.50.37
+devapp01vm28            A	10.198.50.38
+devapp01vm29            A	10.198.50.39
+devapp01vm30            A	10.198.50.40
+devapp01vm31            A	10.198.50.41
+devapp01vm32            A	10.198.50.42
+DEVBACKEND              1200	A	10.198.110.50
+DEVBKP1                 1200	A	10.198.245.101
+DEVBOBA                 1200	A	10.198.110.94
+DEVBOBAA                1200	A	10.198.110.91
+DEVBOBAB                1200	A	10.198.110.92
+DEVBOBACL               1200	A	10.198.110.93
+devcass1                A	10.198.70.71
+devcass2                86400	A	10.198.70.72
+devcass3                A	10.198.70.73
+devcass4                86400	A	10.198.70.74
+devcassweb1             86400	A	10.198.70.61
+devcassweb2             86400	A	10.198.70.62
+devcassweb3             A	10.198.70.63
+devcassweb4             86400	A	10.198.70.64
+devcb1ci                86400	A	10.199.60.161
+DEVCB1SQL1              1200	A	10.199.60.150
+DEVCTRLDB1              1200	A	10.198.110.84
+DEVCTRLDB2              1200	A	10.198.110.85
+DEVDBTFS                CNAME	devdbtfs.cb.careerbuilder.com.
+devdbvm1                A	10.198.70.51
+devdbvm2                A	10.198.70.52
+devdbvm3                A	10.198.70.53
+devdbvm4                A	10.198.70.54
+devdbvm5                A	10.198.70.55
+devdbvm6                A	10.198.70.56
+DEVDFS1                 1200	A	10.198.30.145
+DEVEKM1                 1200	A	10.198.245.99
+DEVHAN                  1200	A	10.198.110.104
+DEVHANA                 1200	A	10.198.110.101
+DEVHANB                 1200	A	10.198.110.102
+DEVHANCL                1200	A	10.198.110.103
+devhd1d1                86400	A	10.199.60.183
+devhd1d2                86400	A	10.199.60.184
+devhd1m1                A	10.199.60.181
+devhd2d1                86400	A	10.199.60.185
+devhd2d2                86400	A	10.199.60.186
+devhd2m1                86400	A	10.199.60.182
+devhd3m1                86400	A	10.199.60.187
+devhdchef1              A	10.198.52.237
+devhdjk1                86400	A	10.199.60.179
+devhdks01               A	10.198.55.240
+devid1                  86400	A	10.198.52.160
+DEVJEDI                 1200	A	10.198.110.83
+devkace                 A	10.198.54.189
+DEVLM01                 1200	A	10.198.52.114
+DEVLM02                 1200	A	10.198.52.117
+DEVLM03                 1200	A	10.198.52.121
+DEVLM04                 1200	A	10.198.52.122
+DEVLMEMS                1200	A	10.198.30.240
+                        1200	A	10.198.30.200
+DEVMACE                 1200	A	10.198.110.82
+DEVMEGA                 1200	A	10.198.110.71
+DEVMEGAA                1200	A	10.198.110.68
+DEVMEGAB                1200	A	10.198.110.69
+DEVMEGACL               1200	A	10.198.110.70
+DEVMONITORDB1           1200	A	10.198.110.90
+DEVMSGDB1               1200	A	10.198.110.86
+DEVMSGDB2               1200	A	10.198.110.87
+DEVOBI                  1200	A	10.198.110.145
+devopscenter1           A	10.199.60.101
+DEVOPTIMUS              1200	A	10.198.110.63
+DEVOPTIMUSA             1200	A	10.198.110.60
+DEVOPTIMUSB             1200	A	10.198.110.61
+DEVOPTIMUSCL            1200	A	10.198.110.62
+devpxe1                 A	10.198.110.100
+devpxe2                 A	10.198.30.86
+DEVSAN01                A	10.198.65.42
+devsan1                 A	10.198.65.44
+devsansw1               A	10.241.15.7
+devsansw2               A	10.241.15.8
+devsansw3               A	10.198.65.36
+devsansw4               A	10.198.65.37
+devsbvm3                A	10.198.70.108
+devsbvm4                A	10.198.70.109
+devsbvm5                A	10.198.70.110
+DEVSCDB1                1200	A	10.198.110.88
+DEVSCDB2                1200	A	10.198.110.89
+DEVSOUNDA               A	10.198.110.72
+devstats                86400	A	10.199.65.65
+DEVVCTR1                1200	A	10.198.70.50
+DEVWAR                  1200	A	10.198.110.79
+DEVWARA                 1200	A	10.198.110.76
+DEVWARB                 1200	A	10.198.110.77
+DEVWARCL                1200	A	10.198.110.78
+DIS-VASCOID             1200	A	10.239.65.25
+dis-vascoidvm           A	10.239.15.110
+DOCTOR                  1200	A	10.245.110.100
+DOCTORA                 1200	A	10.245.110.97
+DOCTORB                 1200	A	10.245.110.98
+DOCTORCL                1200	A	10.245.110.99
+domaindnszones          600	A	10.240.70.9
+                        600	A	10.210.10.10
+                        600	A	10.210.10.9
+                        600	A	10.237.10.10
+                        600	A	10.240.10.9
+                        600	A	10.240.10.10
+                        600	A	10.237.10.9
+                        600	A	10.198.10.9
+                        600	A	10.198.10.10
+                        600	A	10.230.10.9
+                        600	A	10.230.10.10
+                        600	A	10.240.70.10
+_ldap._tcp.AMS._sites.domaindnszones 600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-DEV._sites.domaindnszones 600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-EAST._sites.domaindnszones 600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	awstestad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-IR._sites.domaindnszones 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	awstestad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-SG._sites.domaindnszones 600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	awstestad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.chi._sites.domaindnszones 600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+_ldap._tcp.DEV._sites.domaindnszones 600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+_ldap._tcp.LUIGI._sites.domaindnszones 600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+_ldap._tcp.qtm._sites.domaindnszones 600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.qtw._sites.domaindnszones 600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+_ldap._tcp.domaindnszones 600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+dpibatch1q              1200	A	10.240.105.150
+dpibatch2q              1200	A	10.240.105.151
+DPIBATCH3Q              1200	A	10.240.105.152
+dpiblast1q              1200	A	10.240.212.200
+DPIFEED1Q               1200	A	10.240.91.152
+DPIFEED2Q               1200	A	10.240.91.153
+DPIMAIL01Q              1200	A	10.240.212.172
+                        1200	A	10.240.212.192
+                        1200	A	10.240.212.182
+DPIMAIL02Q              1200	A	10.240.212.173
+                        1200	A	10.240.212.193
+                        1200	A	10.240.212.183
+dpimail1q               1200	A	10.240.212.170
+                        1200	A	10.240.212.190
+                        1200	A	10.240.212.180
+dpimail2q               1200	A	10.240.212.171
+                        A	10.240.212.191
+                        A	10.240.212.181
+DPISVC01Q               1200	A	10.240.213.106
+DPISVC02Q               1200	A	10.240.213.107
+DPISVC03Q               1200	A	10.240.213.108
+DPISVC04Q               1200	A	10.240.213.109
+DPISVC5Q                1200	A	10.240.213.104
+DPISVC6Q                1200	A	10.240.213.105
+DRAUTO                  1200	A	10.236.110.163
+DRAUTOA                 1200	A	10.236.110.160
+DRAUTOB                 1200	A	10.236.110.161
+DRAUTOCL                1200	A	10.236.110.162
+DRbkp1                  1200	A	10.236.110.205
+DRBOBA                  1200	A	10.236.110.83
+DRBOBAA                 1200	A	10.236.110.80
+DRBOBAB                 1200	A	10.236.110.81
+DRBOBACL                1200	A	10.236.110.82
+DRBUMBLE                1200	A	10.236.110.89
+DRBUMBLEA               1200	A	10.236.110.86
+DRBUMBLEB               1200	A	10.236.110.87
+DRBUMBLECL              1200	A	10.236.110.88
+DRCLIFF                 1200	A	10.236.110.118
+DRCLIFFA                1200	A	10.236.110.115
+DRCLIFFB                1200	A	10.236.110.116
+DRCLIFFCL               1200	A	10.236.110.117
+DRDBTFS                 CNAME	drdbtfs.cb.careerbuilder.com.
+DRDOCTOR                1200	A	10.236.110.100
+DRDOCTORA               1200	A	10.236.110.97
+DRDOCTORB               1200	A	10.236.110.98
+DRDOCTORCL              1200	A	10.236.110.99
+drg-log-dot151          CNAME	qtm-log-dot151.atl.careerbuilder.com.
+DRHAN                   1200	A	10.236.110.93
+DRHANA                  1200	A	10.236.110.90
+DRHANB                  1200	A	10.236.110.91
+DRHANCL                 1200	A	10.236.110.92
+drhive                  A	10.237.62.160
+drjapimdb1              A	10.239.121.101
+DRMEGA                  1200	A	10.236.110.159
+DRMEGAA                 1200	A	10.236.110.156
+DRMEGAB                 1200	A	10.236.110.157
+DRMEGACL                1200	A	10.236.110.158
+drmgmtsan1              A	10.232.70.80
+DRMGMTVM1               A	10.239.70.91
+DRMGMTVM2               A	10.239.70.92
+DRMGMTVM3               A	10.239.70.93
+DRMGMTVM4               A	10.239.70.94
+DRMGMTVM5               A	10.239.70.95
+drmt1sw1                A	10.232.111.45
+drmt1sw2                A	10.232.111.46
+drmt2sw1                A	10.232.111.47
+drmt2sw2                A	10.232.111.48
+drmt3sw1                A	10.232.111.49
+drmt3sw2                A	10.232.111.50
+drmtsan1                A	10.239.65.40
+drmtsan1sp              A	10.239.65.41
+drmtsan2                A	10.239.65.51
+drmtsan2sp              A	10.239.65.52
+drmtsan3                A	10.239.65.42
+drmtsan3sp              A	10.239.65.43
+DROBI                   1200	A	10.236.110.122
+DROBIA                  1200	A	10.236.110.119
+DROBIB                  1200	A	10.236.110.120
+DROBICL                 1200	A	10.236.110.121
+DROPTIMUS               1200	A	10.236.110.155
+DROPTIMUSA              1200	A	10.236.110.152
+DROPTIMUSB              1200	A	10.236.110.153
+DROPTIMUSCL             1200	A	10.236.110.154
+DRSIDE                  1200	A	10.236.110.108
+DRSIDEA                 1200	A	10.236.110.105
+DRSIDEB                 1200	A	10.236.110.106
+DRSIDECL                1200	A	10.236.110.107
+DRSOUND                 1200	A	10.236.110.79
+DRSOUNDA                1200	A	10.236.110.76
+DRSOUNDB                1200	A	10.236.110.77
+DRSOUNDCL               1200	A	10.236.110.78
+DRVMHOST1               1200	A	10.239.15.151
+DRVMHOST2               1200	A	10.239.15.152
+DRWAR                   1200	A	10.236.110.132
+DRWARA                  1200	A	10.236.110.129
+DRWARB                  1200	A	10.236.110.130
+DRWARCL                 1200	A	10.236.110.131
+eaglepmta100            86400	A	10.210.193.100
+eaglepmta110            86400	A	10.210.193.110
+eaglepmta120            86400	A	10.210.193.120
+eaglepmta130            86400	A	10.210.193.130
+eaglepmta200            86400	A	10.210.193.200
+eaglepmta210            86400	A	10.210.193.210
+eaglepmta220            86400	A	10.210.193.220
+eaglepmta230            86400	A	10.210.193.230
+epsilon                 A	10.198.30.89
+flintstone              1200	A	10.240.20.60
+forestdnszones          600	A	10.240.70.9
+                        600	A	10.210.10.10
+                        600	A	10.210.10.9
+                        600	A	10.237.10.10
+                        600	A	10.240.10.9
+                        600	A	10.240.10.10
+                        600	A	10.237.10.9
+                        600	A	10.198.10.9
+                        600	A	10.198.10.10
+                        600	A	10.230.10.9
+                        600	A	10.230.10.10
+                        600	A	10.240.70.10
+_ldap._tcp.AMS._sites.forestdnszones 600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-DEV._sites.forestdnszones 600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-EAST._sites.forestdnszones 600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	awstestad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-IR._sites.forestdnszones 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	awstestad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-SG._sites.forestdnszones 600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	awstestad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.chi._sites.forestdnszones 600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+_ldap._tcp.DEV._sites.forestdnszones 600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+_ldap._tcp.LUIGI._sites.forestdnszones 600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+_ldap._tcp.qtm._sites.forestdnszones 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+_ldap._tcp.qtw._sites.forestdnszones 600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+_ldap._tcp.forestdnszones 600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+GHQ2012TEST01           1200	A	10.198.55.213
+GHQ2NICWEB02            1200	A	10.198.55.3
+ghqbatman               86400	A	10.198.52.92
+GHQBearPSBHive1         86400	A	10.198.52.81
+ghqbity                 86400	A	10.198.52.45
+GHQBLAST01              1200	A	10.198.40.135
+GHQBLAST01B             1200	A	10.198.40.137
+GHQBLAST02              1200	A	10.198.55.5
+GHQBLAST02B             1200	A	10.198.55.119
+GHQBlast02C             1200	A	10.198.55.128
+ghqcdbuild01            A	10.198.52.123
+ghqcdchef01             86400	A	10.198.52.125
+ghqcdpostgres01         86400	A	10.198.52.152
+ghqchef01               A	10.198.52.98
+ghqchef02               86400	A	10.198.30.77
+GHQCHIIMG01             A	10.199.205.202
+ghqchipsbhive01         86400	A	10.198.52.229
+ghqchipsbhive02         86400	A	10.198.52.230
+ghqchipsbkeep01         86400	A	10.198.52.227
+ghqchipsbkeep02         86400	A	10.198.52.228
+ghqchipsbkeep3          A	10.198.55.141
+ghqchipsbkeep4          A	10.198.55.142
+ghqchisolrapi1          A	10.198.52.90
+ghqchisolrapi2          A	10.199.60.162
+ghqchisolrfst1          A	10.198.55.131
+ghqchisolrjob1          A	10.198.52.83
+ghqchisolrjob2          A	10.198.52.88
+ghqchisolrres1          A	10.198.52.87
+ghqchisolrres2          A	10.198.52.132
+GHQCLS                  1200	A	10.198.52.115
+ghqdccbparse01          86400	A	10.198.52.208
+GHQDCCHEF02             A	10.198.52.97
+ghqdcchefstation        86400	A	10.198.52.165
+ghqdcparse01            A	10.198.52.39
+ghqdpibatch01           1200	A	10.198.55.140
+ghqdpibatch02           1200	A	10.198.55.152
+ghqdpidepupd            1200	A	10.198.55.9
+GHQDPIDevBlast          1200	A	10.198.55.153
+ghqdpifeed01            1200	A	10.198.55.139
+ghqdpifeed02            1200	A	10.198.55.13
+ghqdpimail01            1200	A	10.198.55.138
+ghqdpimail02            1200	A	10.198.55.161
+ghqdpimap01             1200	A	10.198.55.137
+ghqdpimap02             1200	A	10.198.55.162
+ghqdpimybatch01         1200	A	10.198.55.134
+ghqdpimybatch02         1200	A	10.198.55.163
+ghqdpimysvc01           1200	A	10.198.55.133
+ghqdpimysvc02           1200	A	10.198.55.164
+GHQDPIProdBlast         1200	A	10.198.55.118
+ghqdpisvc01             1200	A	10.198.55.15
+ghqdpisvc02             1200	A	10.198.55.166
+GHQDPITEST              1200	A	10.198.55.148
+ghqdpiwww01             1200	A	10.198.55.129
+ghqdpiwww02             1200	A	10.198.55.165
+GHQDRGASYNC             CNAME	ghqdrgasync1.atl.careerbuilder.com.
+GHQDRGBATCH             CNAME	ghqdrgbatch1.atl.careerbuilder.com.
+GHQDRGDIO               CNAME	ghqdrgdio1.atl.careerbuilder.com.
+GHQDRGMAIL              CNAME	ghqdrgmail1.atl.careerbuilder.com.
+GHQDRGWWW               CNAME	ghqdrgwww1.atl.careerbuilder.com.
+GHQFLASH                1200	A	10.198.30.154
+ghqgraphomatic          86400	A	10.198.30.92
+GHQIACPSLG1             A	10.198.52.49
+ghqiacpslg2             A	10.198.52.181
+ghqiacpsts01            86400	A	10.198.52.173
+ghqiacpsts02            86400	A	10.198.52.174
+ghqjdjenkins01          86400	A	10.198.52.167
+GHQMAIL01               1200	A	10.198.30.233
+GHQMAIL01-0             1200	A	10.198.55.24
+GHQMT2012TEST-0         1200	A	10.198.55.15
+GHQMT2012TEST01         1200	A	10.198.55.17
+ghqparse1               A	10.198.30.150
+ghqpiartifact03         86400	A	10.198.52.141
+ghqpiartifact04         86400	A	10.198.52.188
+ghqpiauditdb1           A	10.198.55.71
+ghqpiauditfe02          A	10.198.55.149
+ghqpiauditfe03          A	10.198.55.167
+ghqpiauditfe04          A	10.198.55.148
+ghqpiauditfe05          A	10.198.55.156
+ghqpiauditfe06          A	10.198.55.115
+ghqpiawsupload1         A	10.198.55.160
+ghqpiawsupload2         A	10.198.55.119
+ghqpibackup01           A	10.198.55.158
+GHQPIBLOG               1200	A	10.198.55.141
+ghqpichefcora           A	10.198.54.4
+ghqpichefcp             86400	A	10.198.52.236
+ghqpichefcp2            A	10.198.52.201
+ghqpichefcp3            86400	A	10.198.52.203
+ghqpichefcp4            A	10.198.52.204
+ghqpichefcrp1           86400	A	10.198.52.233
+ghqpichefcrp2           86400	A	10.198.52.202
+ghqpichefcrp3           86400	A	10.198.52.45
+ghqpichefcrp4           86400	A	10.198.52.82
+ghqpichefcrp5           86400	A	10.198.52.92
+ghqpichefcrp6           A	10.198.52.81
+ghqpichefcrp7           A	10.198.52.80
+ghqpichefdb2            86400	A	10.198.52.39
+ghqpichefdrone01        86400	A	10.198.52.181
+ghqpicheffe01           86400	A	10.198.52.153
+ghqpicheffe02           86400	A	10.198.52.154
+ghqpichefflay           86400	A	10.198.52.159
+ghqpichefghp1           A	10.198.55.125
+ghqpichefghp2           A	10.198.55.126
+ghqpichefghp3           A	10.198.55.127
+ghqpichefghp4           A	10.198.55.155
+ghqpichefghrp1          A	10.198.55.120
+ghqpichefghrp2          A	10.198.55.121
+ghqpichefghrp3          A	10.198.55.122
+ghqpichefghrp4          A	10.198.55.123
+ghqpichefghrp5          A	10.198.55.124
+ghqpichefopen           A	10.198.55.55
+ghqpichefopt1           86400	A	10.198.52.7
+ghqpichefopt2           86400	A	10.198.52.196
+ghqpichefproxy2         A	10.198.54.3
+ghqpichefpuck           A	10.198.52.147
+ghqpigitbackup1         A	10.198.55.4
+ghqpigitbackup2         A	10.198.55.168
+ghqpigitsumbackup       86400	A	10.198.52.198
+ghqpigraphite01         86400	A	10.198.52.213
+ghqpilifeapi1           A	10.198.55.170
+ghqpilifeapi2           A	10.198.55.169
+ghqpilifebe01           A	10.198.55.22
+ghqpilifedb1            A	10.198.55.41
+ghqpilifefe01           A	10.198.55.23
+ghqpilifefe1            A	10.198.55.25
+ghqpilifefe2            A	10.198.55.49
+ghqpimongodb            A	10.198.55.21
+ghqpimorimoto           A	10.198.52.45
+ghqpimzungu             A	10.198.55.2
+ghqpiochefbe01          A	10.198.55.114
+ghqpiopenchef           86400	A	10.198.52.70
+ghqpiopenchef01         A	10.198.55.105
+ghqpiopenchef02         A	10.198.55.113
+ghqpipkgrepo01          86400	A	10.198.52.142
+ghqpipkgrepo02          86400	A	10.198.52.145
+ghqpirailsapp1          A	10.198.52.199
+ghqpirailsdb2           A	10.198.55.42
+ghqpireport04           1200	A	10.199.65.103
+GHQPRODBLAST2           1200	A	10.198.52.9
+ghqpsapitest            86400	A	10.198.52.168
+ghqpsapitest1           86400	A	10.198.52.169
+ghqpsapitester          86400	A	10.198.52.168
+ghqpsbeehive            86400	A	10.198.30.160
+ghqpsbeehive2           86400	A	10.198.30.163
+ghqpsbeekeeper          A	10.198.30.161
+ghqpsbhive1             86400	A	10.198.52.104
+ghqpsgraphite1          86400	A	10.198.52.6
+ghqpsjeeves             86400	A	10.198.52.226
+ghqpsstresstest         86400	A	10.198.52.209
+ghqqtwpsbhive01         86400	A	10.198.52.227
+ghqqtwpsbhive02         86400	A	10.198.52.228
+ghqqtwpsbkeep01         86400	A	10.198.52.229
+ghqqtwpsbkeep02         86400	A	10.198.52.230
+ghqqtwpsbkeep3          A	10.198.55.131
+ghqqtwpsbkeep4          A	10.198.55.132
+ghqqtwres1              A	10.198.52.85
+ghqqtwsolrapi1          A	10.198.52.91
+ghqqtwsolrapi2          86400	A	10.199.60.163
+ghqqtwsolrfst1          A	10.198.55.130
+ghqqtwsolrjob1          A	10.198.52.84
+ghqqtwsolrjob2          A	10.198.52.89
+ghqqtwsolrres1          A	10.198.52.86
+ghqqtwsolrres2          A	10.198.52.133
+ghqrabbit03             A	10.198.30.91
+ghqrabbit1              86400	A	10.198.30.52
+ghqrabbit2              86400	A	10.198.30.53
+ghqrabbit3              86400	A	10.198.30.54
+GHQREBELWEB01           1200	A	10.198.55.117
+GHQREBELWEB02           1200	A	10.198.55.112
+GHQREBELWEB03           1200	A	10.198.55.128
+GHQREBELWEB04           1200	A	10.198.55.116
+GHQREBIMG01             A	10.199.205.241
+GHQREBWS01              1200	A	10.199.205.240
+ghqrelay1               A	10.198.30.142
+ghqrelay2               86400	A	10.198.30.90
+GHQSelfService          1200	A	10.199.205.246
+ghqsijenkins            A	10.198.52.117
+GHQSNC                  1200	A	10.198.30.130
+GHQSO2012R200           1200	A	10.198.55.21
+ghqsolrmirror           A	10.198.52.94
+ghqstartifact           A	10.198.52.95
+ghqstbabel              A	10.198.52.167
+ghqstbootstrap          A	10.198.52.126
+ghqstcassweb            A	10.198.52.92
+ghqstdeploy             A	10.198.52.85
+ghqstintegration        86400	A	10.198.52.14
+ghqstjenkins            86400	A	10.198.52.118
+ghqstproxy              86400	A	10.198.52.37
+ghqstproxy01            A	10.198.52.105
+ghqstproxy02            A	10.198.52.116
+GHQSTSTRESS5            1200	A	10.198.52.151
+ghqsttest               A	10.198.52.12
+ghqsttest2              A	10.198.52.18
+GHQSTWINJENK            1200	A	10.198.52.5
+ghqtest                 A	10.198.52.99
+GHQTEST2                1200	A	10.198.30.102
+GHQTest24               1200	A	10.198.52.13
+GHQTEST3                1200	A	10.198.30.103
+GHQTEST9                1200	A	10.198.30.109
+GHQVASYNC01             1200	A	10.198.55.104
+GHQVASYNC02             1200	A	10.198.55.51
+GHQVASYNC03             1200	A	10.198.55.28
+GHQVASYNC04             1200	A	10.198.55.27
+GHQVAUTH01              1200	A	10.198.55.103
+GHQVAUTH02              1200	A	10.198.55.102
+GHQVAUTH03              1200	A	10.198.55.34
+GHQVBATCHA01            1200	A	10.198.55.106
+GHQVBATCHB01            1200	A	10.198.55.101
+GHQVBatchC01            1200	A	10.198.55.52
+GHQVBATCHD01            1200	A	10.198.55.53
+GHQVBATCHE01            1200	A	10.198.55.40
+GHQVBATCHF01            1200	A	10.198.55.39
+GHQVBATCHG01            1200	A	10.198.55.151
+GHQVCHIASYNC01          1200	A	10.198.55.100
+GHQVCHIASYNC02          1200	A	10.198.55.54
+GHQVCHIASYNC03          1200	A	10.198.55.30
+GHQVCHIBATCH01          1200	A	10.198.55.99
+GHQVCHIDIO01            1200	A	10.198.55.56
+GHQVCHIDIO02            1200	A	10.198.55.98
+GHQVCHIDIO03            1200	A	10.198.55.37
+GHQVCHIDOC01            1200	A	10.198.55.97
+GHQVCHIDOC02            1200	A	10.198.55.96
+GHQVCHIDOC03            1200	A	10.198.55.36
+GHQVCHIIMG01            1200	A	10.198.55.109
+GHQVCHISC01             1200	A	10.198.55.57
+GHQVCHISC02             1200	A	10.198.55.59
+GHQVCHISC03             1200	A	10.198.55.35
+GHQVCHISTAPI01          1200	A	10.198.55.60
+GHQVCHISTAPI02          1200	A	10.198.55.58
+GHQVCHISTAPI03          1200	A	10.198.55.33
+GHQVCHIWS01             1200	A	10.198.55.95
+GHQVCHIWS02             1200	A	10.198.55.61
+GHQVCHIWS03             1200	A	10.198.55.29
+GHQVCHIWWW01            1200	A	10.198.55.63
+GHQVCHIWWW02            1200	A	10.198.55.145
+GHQVCHIWWW03            1200	A	10.198.55.62
+GHQVCHIWWW04            1200	A	10.198.55.65
+GHQVCHIWWW05            1200	A	10.198.55.143
+GHQVCHIWWW06            1200	A	10.198.55.18
+GHQVJEProc01            1200	A	10.198.55.66
+GHQVJEProc02            1200	A	10.198.55.94
+GHQVJEPROC03            1200	A	10.198.55.64
+GHQVMAIL01              1200	A	10.198.55.108
+GHQVMailSM01            1200	A	10.198.55.67
+GHQVMailSM02            1200	A	10.198.55.93
+GHQVMailSM03            1200	A	10.198.55.92
+GHQVMailSM04            1200	A	10.198.55.26
+GHQVMailSM05            1200	A	10.198.55.69
+GHQVMailSM06            1200	A	10.198.55.72
+GHQVMailSM07            1200	A	10.198.55.68
+GHQVMailSM08            1200	A	10.198.55.73
+GHQVORKIN01             1200	A	10.198.55.76
+GHQVORKIN02             1200	A	10.198.55.74
+GHQVREBASYNC01          1200	A	10.198.55.91
+GHQVREBASYNC02          1200	A	10.198.55.78
+GHQVREBASYNC03          1200	A	10.198.55.31
+GHQVREBBATCH01          1200	A	10.198.55.90
+GHQVREBDIO01            1200	A	10.198.55.75
+GHQVREBDIO02            1200	A	10.198.55.89
+GHQVREBDIO03            1200	A	10.198.55.24
+GHQVREBDOC01            1200	A	10.198.55.77
+GHQVREBDOC02            1200	A	10.198.55.80
+GHQVrebdoc03            1200	A	10.198.55.88
+GHQVREBIMG01            1200	A	10.198.55.107
+GHQVREBSC01             1200	A	10.198.55.87
+GHQVREBSC02             1200	A	10.198.55.81
+GHQVrebsc03             1200	A	10.198.55.79
+GHQVREBSTAPI01          1200	A	10.198.55.82
+GHQVREBSTAPI02          1200	A	10.198.55.83
+GHQVREBSTAPI03          1200	A	10.198.55.32
+GHQVREBWS01             1200	A	10.198.55.86
+GHQVREBWS02             1200	A	10.198.55.85
+GHQVREBWS03             1200	A	10.198.55.147
+GHQVREBWWW01            1200	A	10.198.55.47
+GHQVREBWWW02            1200	A	10.198.55.146
+GHQVREBWWW03            1200	A	10.198.55.45
+GHQVREBWWW04            1200	A	10.198.55.48
+GHQVREBWWW05            1200	A	10.198.55.144
+GHQVREBWWW07            1200	A	10.198.55.3
+GHQVREBWWW08            1200	A	10.198.55.7
+GHQVSVC01               1200	A	10.198.55.46
+GHQVSVC02               1200	A	10.198.55.84
+GHQVSVC03               1200	A	10.198.55.43
+GHQVSVC04               1200	A	10.198.55.44
+GHQWEB2008TEST1         1200	A	10.198.55.10
+GHQWEBBATMAN            1200	A	10.198.55.30
+GHQWEBJeff121           1200	A	10.198.55.29
+ghqwebjeffbat1          1200	A	10.198.55.24
+GHQWEBTESTJEFF2         1200	A	10.198.55.25
+GHQWEBTESTJEFF9         1200	A	10.198.55.28
+gitgaugedb1             A	10.210.205.75
+gitgaugefe1             A	10.210.205.90
+gitgaugefe2             A	10.210.205.91
+gitsumbackup            86400	A	10.199.60.164
+gms                     A	10.240.65.206
+gn-2k8tstdev            1200	A	10.198.55.156
+gn-chi2k12altst         1200	A	10.230.65.40
+gn-chi2k8-1             1200	A	10.230.65.42
+gn-chiprod2012-         1200	A	10.230.65.40
+gn-chiuactst1           1200	A	10.230.65.47
+gn-chiupgrtst1          1200	A	10.230.65.41
+gn-devntwktest          1200	A	10.198.55.112
+gn-dpi2k8svc1           1200	A	10.230.213.40
+gn-dpichibat1           1200	A	10.230.105.40
+gn-dpiqtwbat1           1200	A	10.210.105.150
+gn-dpiqtxmail2          1200	A	10.240.212.130
+gn-dpiqtxmap1           1200	A	10.240.91.170
+gn-qtw2k8tst-2          1200	A	10.210.65.30
+gn-qtwaltst1            1200	A	10.210.65.29
+gn-qtwsvc1              1200	A	10.210.213.130
+gn-qtwuactst2           1200	A	10.210.65.33
+gn-qtwuactst3           1200	A	10.210.65.34
+gn-qtxaltst1            1200	A	10.240.65.101
+gn-qtxdpibat1           1200	A	10.240.105.81
+gn-qtxuac1              1200	A	10.210.65.32
+gn-qtxuactst2           1200	A	10.240.65.101
+gn-schdtsktst1          1200	A	10.198.55.158
+gn-testuac2             1200	A	10.198.55.160
+gn-tstuac1              1200	A	10.198.55.155
+gn-upgtst3              1200	A	10.198.55.152
+greg-2012imgtst         1200	A	10.198.55.7
+greg-test123456         1200	A	10.198.55.9
+GREG-TEST2008           1200	A	10.198.55.19
+greg-test2012AD         1200	A	10.198.55.16
+Greg-tst2012            1200	A	10.198.55.22
+hackathon_idea          86400	A	10.198.30.96
+HAN                     1200	A	10.245.110.93
+HANA                    1200	A	10.245.110.90
+HANB                    1200	A	10.245.110.91
+HANCL                   1200	A	10.245.110.92
+hat-centos6-1           86400	A	10.198.55.243
+hat-centos6-2           86400	A	10.198.55.244
+hive                    CNAME	qtmhd2m1.atl.careerbuilder.com.
+hive2                   A	10.240.62.160
+IACBATCH03              1200	A	10.240.105.42
+IACBATCH04              1200	A	10.240.105.43
+integrationsolr         A	10.198.52.92
+IssaTest01              1200	A	10.230.205.40
+JEFF2012Test04          1200	A	10.198.55.9
+JEFFTESTMT01            1200	A	10.198.55.129
+jeffubuntu02            A	10.198.55.142
+jmunoz2                 1200	A	10.236.110.236
+                        1200	A	10.236.110.235
+jmunoz3                 1200	A	10.236.110.234
+jmunoz4                 1200	A	10.236.110.105
+JSTEST1                 1200	A	10.198.30.200
+jsvcmdr01               A	10.198.55.50
+jt-2008test             1200	A	10.198.55.159
+jt-nametest2            1200	A	10.230.65.40
+jt-namingtest4          1200	A	10.230.65.41
+jt-namingtest5          1200	A	10.230.65.42
+jt-namingtest8          1200	A	10.198.55.173
+jt-test-centos6         A	10.198.56.3
+jt-test1                1200	A	10.198.55.173
+jt-test2                1200	A	10.198.55.175
+jumbo                   CNAME	qtmhd3m1.atl.careerbuilder.com.
+JURASSIC                1200	A	10.245.110.59
+JURASSICA               1200	A	10.245.110.56
+JURASSICB               1200	A	10.245.110.57
+JURASSICCL              1200	A	10.245.110.58
+kalilin1                A	10.198.70.140
+KASEYA                  CNAME	qtmkaseya1.atl.careerbuilder.com.
+LABMGT1                 1200	A	10.240.65.181
+LABWEB1                 1200	A	10.240.65.182
+LAUNGUARD               1200	A	10.240.65.181
+log-dot151              A	10.240.65.151
+luigi_test              86400	A	10.239.65.80
+LUIGIAD1                A	10.237.10.9
+LUIGIAD2                A	10.237.10.10
+LUIGIASYNC1             1200	A	10.239.110.101
+LUIGIASYNC10            1200	A	10.239.110.110
+LUIGIASYNC2             1200	A	10.239.110.102
+LUIGIASYNC3             1200	A	10.239.110.103
+LUIGIASYNC4             1200	A	10.239.110.104
+LUIGIASYNC5             1200	A	10.239.110.105
+LUIGIASYNC6             1200	A	10.239.110.106
+LUIGIASYNC7             1200	A	10.239.110.107
+LUIGIASYNC8             1200	A	10.239.110.108
+LUIGIASYNC9             1200	A	10.239.110.109
+LUIGIAUTH1              1200	A	10.239.101.101
+LUIGIAUTH2              1200	A	10.239.101.102
+LUIGIBATCH1             1200	A	10.239.105.101
+LUIGIBATCH10            1200	A	10.239.105.110
+LUIGIBATCH11            1200	A	10.239.105.111
+LUIGIBATCH12            1200	A	10.239.105.112
+LUIGIBATCH13            1200	A	10.239.105.113
+LUIGIBATCH14            1200	A	10.239.105.114
+LUIGIBATCH15            1200	A	10.239.105.115
+LUIGIBATCH16            1200	A	10.239.105.116
+LUIGIBATCH2             1200	A	10.239.105.102
+LUIGIBATCH3             1200	A	10.239.105.103
+LUIGIBATCH4             1200	A	10.239.105.104
+LUIGIBATCH5             1200	A	10.239.105.105
+LUIGIBATCH6             1200	A	10.239.105.106
+LUIGIBATCH7             1200	A	10.239.105.107
+LUIGIBATCH8             1200	A	10.239.105.108
+LUIGIBATCH9             1200	A	10.239.105.109
+LUIGIBLAST              1200	A	10.239.70.100
+LUIGIBOASYNC1           1200	A	10.239.110.100
+LUIGIBOBATCH1           1200	A	10.239.105.157
+LUIGIBOBLAST            1200	A	10.239.40.105
+LUIGIBOWS1              1200	A	10.239.40.100
+luigideploy1            1200	A	10.239.15.76
+luigideployvm1          A	10.239.15.96
+LUIGIDFS                1200	A	10.239.15.150
+LUIGIDPIBATCH1          1200	A	10.239.105.201
+LUIGIDPIBLAST1          1200	A	10.239.212.200
+LUIGIDPIFEED1           1200	A	10.239.91.152
+LUIGIDPIMAIL1           1200	A	10.239.212.190
+LUIGIDPISVC1            1200	A	10.239.213.100
+LUIGIDPISVC2            1200	A	10.239.213.101
+LUIGIHD1D1              A	10.239.99.101
+LUIGIHD1D10             A	10.239.99.110
+LUIGIHD1D11             A	10.239.99.111
+LUIGIHD1D12             A	10.239.99.112
+LUIGIHD1D13             A	10.239.99.113
+LUIGIHD1D14             A	10.239.99.114
+LUIGIHD1D2              A	10.239.99.102
+LUIGIHD1D3              A	10.239.99.103
+LUIGIHD1D4              A	10.239.99.104
+LUIGIHD1D5              A	10.239.99.105
+LUIGIHD1D6              A	10.239.99.106
+LUIGIHD1D7              A	10.239.99.107
+LUIGIHD1D8              A	10.239.99.108
+LUIGIHD1D9              A	10.239.99.109
+LUIGIHD1M1              A	10.239.99.200
+LUIGIHD2D1              A	10.239.99.116
+LUIGIHD2D10             A	10.239.99.125
+LUIGIHD2D11             A	10.239.99.126
+LUIGIHD2D12             A	10.239.99.127
+LUIGIHD2D13             A	10.239.99.128
+LUIGIHD2D14             A	10.239.99.129
+LUIGIHD2D2              A	10.239.99.117
+LUIGIHD2D3              A	10.239.99.118
+LUIGIHD2D4              A	10.239.99.119
+LUIGIHD2D5              A	10.239.99.120
+LUIGIHD2D6              A	10.239.99.121
+LUIGIHD2D7              A	10.239.99.122
+LUIGIHD2D8              A	10.239.99.123
+LUIGIHD2D9              A	10.239.99.124
+LUIGIHD2M1              A	10.239.99.115
+LUIGIHD3D1              A	10.239.99.131
+LUIGIHD3D10             A	10.239.99.140
+LUIGIHD3D11             A	10.239.99.141
+LUIGIHD3D12             A	10.239.99.142
+LUIGIHD3D13             A	10.239.99.143
+LUIGIHD3D14             A	10.239.99.144
+LUIGIHD3D2              A	10.239.99.132
+LUIGIHD3D3              A	10.239.99.133
+LUIGIHD3D4              A	10.239.99.134
+LUIGIHD3D5              A	10.239.99.135
+LUIGIHD3D6              A	10.239.99.136
+LUIGIHD3D7              A	10.239.99.137
+LUIGIHD3D8              A	10.239.99.138
+LUIGIHD3D9              A	10.239.99.139
+LUIGIHD3M1              A	10.239.99.130
+luigihdchef1            A	10.239.70.110
+luigihdjk1              A	10.239.70.85
+luigihdoozie1           86400	A	10.239.70.119
+luigihdweb1             86400	A	10.239.70.120
+luigihdweb2             86400	A	10.239.70.121
+LUIGIJEPROC1            1200	A	10.239.84.101
+LUIGIJEPROC2            1200	A	10.239.84.102
+LUIGIJEPROC3            1200	A	10.239.84.103
+LUIGIJEPROC4            1200	A	10.239.84.104
+LUIGIJEPROC5            1200	A	10.239.84.105
+LUIGIJEPROC6            1200	A	10.239.84.106
+LUIGILM01               1200	A	10.239.70.150
+LUIGILM02               1200	A	10.239.70.151
+LUIGILM03               1200	A	10.239.70.152
+LUIGILM04               1200	A	10.239.70.153
+LUIGILOGIC1A            1200	A	10.239.65.66
+LUIGILOGIC1B            1200	A	10.239.65.67
+LUIGIMAIL1              1200	A	10.239.186.101
+LUIGIMAIL10             1200	A	10.239.40.52
+                        1200	A	10.239.40.51
+                        1200	A	10.239.40.50
+                        1200	A	10.239.40.54
+                        1200	A	10.239.40.53
+LUIGIMAIL100            1200	A	10.239.188.50
+LUIGIMAIL101            1200	A	10.239.188.70
+LUIGIMAIL102            1200	A	10.239.188.90
+LUIGIMAIL11             1200	A	10.239.40.70
+LUIGIMAIL12             1200	A	10.239.40.91
+                        1200	A	10.239.40.90
+                        1200	A	10.239.40.93
+                        1200	A	10.239.40.92
+LUIGIMAIL2              1200	A	10.239.186.102
+LUIGIMAIL200            1200	A	10.239.187.100
+LUIGIMAIL201            1200	A	10.239.187.101
+LUIGIMAIL202            1200	A	10.239.187.102
+LUIGIMAIL203            1200	A	10.239.187.103
+LUIGIMAIL204            1200	A	10.239.187.104
+LUIGIMAIL205            1200	A	10.239.187.105
+LUIGIMAIL300            1200	A	10.239.192.100
+LUIGIMAIL301            1200	A	10.239.192.101
+LUIGIMAILBOSM1          1200	A	10.239.192.200
+LUIGIMAP1               1200	A	10.239.91.131
+LUIGIMAP2               1200	A	10.239.91.132
+LUIGIMAP3               1200	A	10.239.91.133
+LUIGIMAP4               1200	A	10.239.91.134
+LUIGIMX1                1200	A	10.239.40.102
+LUIGIMXWS1              1200	A	10.239.40.103
+luigiorkin1             1200	A	10.239.65.71
+luigipi01               A	10.239.70.19
+LUIGIPXE                A	10.239.15.81
+LUIGIRPROC1             1200	A	10.239.230.101
+LUIGIRPROC2             1200	A	10.239.230.102
+LUIGIRPROC3             1200	A	10.239.230.103
+LUIGIRPROC4             1200	A	10.239.230.104
+luigisnpi01             A	10.239.70.19
+luigisnpxe              A	10.232.254.50
+LUIGISPACES1            A	10.239.70.141
+luigistats              86400	A	10.239.65.65
+LUIGISVC1               1200	A	10.239.100.101
+LUIGISVC2               1200	A	10.239.100.102
+LUIGISVC3               1200	A	10.239.100.103
+LUIGISVC4               1200	A	10.239.100.104
+LUIGISVC5               1200	A	10.239.100.105
+LUIGISVC6               1200	A	10.239.100.106
+LUIGIVCTR1              1200	A	10.239.70.90
+luigivmhost1            A	10.239.15.153
+luigivmhost10           A	10.239.15.162
+luigivmhost11           A	10.239.15.163
+luigivmhost12           A	10.239.15.164
+luigivmhost13           A	10.239.15.165
+luigivmhost2            A	10.239.15.154
+luigivmhost3            A	10.239.15.155
+luigivmhost4            A	10.239.15.156
+luigivmhost5            A	10.239.15.157
+luigivmhost6            A	10.239.15.158
+luigivmhost7            A	10.239.15.159
+luigivmhost8            A	10.239.15.160
+luigivmhost9            A	10.239.15.161
+mailhubs1               A	10.240.40.101
+mailhubs2               A	10.240.40.102
+mailhubs3               A	10.240.40.103
+mailhubs4               A	10.240.40.104
+mailpsa100              A	10.240.193.104
+mailpsa100a             A	10.240.193.103
+                        A	10.240.193.102
+                        A	10.240.193.101
+                        A	10.240.193.100
+mailpsa110              A	10.240.193.114
+mailpsa110a             A	10.240.193.113
+                        A	10.240.193.112
+                        A	10.240.193.111
+                        A	10.240.193.110
+mailpsa120              A	10.240.193.124
+mailpsa120a             A	10.240.193.123
+                        A	10.240.193.122
+                        A	10.240.193.121
+                        A	10.240.193.120
+mailpsa150              A	10.240.193.154
+mailpsa150a             A	10.240.193.153
+                        A	10.240.193.152
+                        A	10.240.193.151
+                        A	10.240.193.150
+mailpsa160              A	10.240.193.164
+mailpsa160a             A	10.240.193.163
+                        A	10.240.193.162
+                        A	10.240.193.161
+                        A	10.240.193.160
+mailpsa170              A	10.240.193.174
+mailpsa170a             A	10.240.193.173
+                        A	10.240.193.172
+                        A	10.240.193.171
+                        A	10.240.193.170
+mailpsa180              A	10.240.193.184
+mailpsa180a             A	10.240.193.183
+                        A	10.240.193.182
+                        A	10.240.193.181
+                        A	10.240.193.180
+mailpsa190              A	10.240.193.192
+                        A	10.240.193.193
+                        A	10.240.193.194
+                        A	10.240.193.190
+                        A	10.240.193.191
+mailpsa190a             A	10.240.193.193
+                        A	10.240.193.192
+                        A	10.240.193.191
+                        A	10.240.193.190
+mailrelay100            A	10.240.10.150
+mailrelay101            A	10.240.191.103
+                        A	10.240.191.101
+MAILSM01                1200	A	10.240.186.111
+MAILSM02                1200	A	10.240.186.112
+MAILSM03                1200	A	10.240.186.113
+MAILSM04                1200	A	10.240.186.114
+mailsm1                 1200	A	10.240.186.50
+mailsm10                1200	A	10.240.189.50
+mailsm100               1200	A	10.240.188.51
+                        1200	A	10.240.188.50
+                        1200	A	10.240.188.53
+                        1200	A	10.240.188.52
+mailsm101               1200	A	10.240.188.70
+mailsm102               1200	A	10.240.188.90
+mailsm11                1200	A	10.240.189.70
+mailsm12                1200	A	10.240.189.90
+mailsm13                1200	A	10.240.189.110
+mailsm2                 1200	A	10.240.186.70
+mailsm3                 1200	A	10.240.186.90
+mailsm300               1200	A	10.240.192.50
+mailsm301               1200	A	10.240.192.70
+mailsm4                 1200	A	10.240.186.110
+ManEng-Patch            1200	A	10.198.55.142
+MEGA                    1200	A	10.245.110.159
+MEGAA                   1200	A	10.245.110.156
+MEGAB                   1200	A	10.245.110.157
+MEGACL                  1200	A	10.245.110.158
+megamagikarp            A	10.198.52.45
+metroplex               A	10.198.52.196
+mistyjr                 86400	A	10.240.65.230
+monitorme               A	10.240.70.145
+MSUpdates               1200	A	10.240.65.250
+mw5516-1                A	10.240.70.161
+mwchi-3141              A	10.230.205.40
+mwcn041904              A	10.240.110.122
+mwcn042104              A	10.198.56.4
+mwcnqtm02               A	10.240.70.162
+mwcnqtmtst              A	10.240.70.161
+mwub041901              86400	A	10.198.55.159
+mwub041902              86400	A	10.198.55.172
+mwub4261                86400	A	10.198.56.5
+nassite                 1200	A	10.240.245.75
+netscalervpx            A	10.198.110.110
+NewFormDEV              1200	A	10.198.55.13
+NewFormQTW              1200	A	10.210.215.30
+novamahmoud             A	10.198.52.124
+OBI                     1200	A	10.245.110.122
+OBIA                    1200	A	10.245.110.119
+OBIB                    1200	A	10.245.110.120
+OBICL                   1200	A	10.245.110.121
+ODSBOBA                 1200	A	10.240.245.139
+ODSBOBAA                1200	A	10.240.245.136
+ODSBOBAB                1200	A	10.240.245.137
+ODSBOBACL               1200	A	10.240.245.138
+ODSBUMBLEB              1200	A	10.240.245.129
+ODSHAN                  1200	A	10.240.245.131
+ODSHANA                 1200	A	10.240.245.128
+ODSHANB                 1200	A	10.240.245.129
+ODSHANCL                1200	A	10.240.245.130
+ODSMEGA                 1200	A	10.240.245.127
+ODSMEGAA                1200	A	10.240.245.124
+ODSMEGAB                1200	A	10.240.245.125
+ODSMEGACL               1200	A	10.240.245.126
+ODSOPTIMUS              1200	A	10.240.245.123
+ODSOPTIMUSA             1200	A	10.240.245.120
+ODSOPTIMUSB             1200	A	10.240.245.121
+ODSOPTIMUSCL            1200	A	10.240.245.122
+ODSWAR                  1200	A	10.240.245.135
+ODSWARA                 1200	A	10.240.245.132
+ODSWARB                 1200	A	10.240.245.133
+ODSWARCL                1200	A	10.240.245.134
+oozie                   CNAME	qtmhdoozie1.atl.careerbuilder.com.
+opschef                 A	10.255.10.3
+OPTIMUS                 1200	A	10.245.110.155
+OPTIMUSA                1200	A	10.245.110.152
+OPTIMUSB                1200	A	10.245.110.153
+OPTIMUSCL               1200	A	10.245.110.154
+orca                    CNAME	qtmorca1.atl.careerbuilder.com.
+orkinweb1               1200	A	10.199.231.101
+orkinweb2               1200	A	10.199.231.102
+password                1200	A	10.240.70.124
+pichef                  A	10.198.52.164
+PIREPORT02              1200	A	10.199.65.101
+PIREPORT03              1200	A	10.199.65.102
+PIREPORT1               1200	A	10.199.65.100
+playground              86400	A	10.198.99.150
+pmtaconsole             A	10.240.193.50
+poochie                 A	10.198.75.203
+profdb1                 CNAME	profdb1.biz.careerbuilder.com.
+profsn1                 CNAME	profsn1.biz.careerbuilder.com.
+prtg                    1200	A	10.240.70.129
+q1radar                 A	10.240.65.150
+qtm-acs-dot119          1200	A	10.240.1.119
+qtm-con-dot150          CNAME	q1radar.atl.careerbuilder.com.
+qtm-con-ns              86400	A	10.240.65.196
+qtm-flow-dot152         A	10.240.65.152
+qtm-lmc-130             A	10.240.65.130
+qtm-log-dot151          A	10.240.65.151
+qtm-ns-bkp              86400	A	10.240.65.197
+qtm-ns-i-196            A	10.240.65.196
+qtm-ns-storage          86400	A	10.240.65.197
+qtm-pan-dot160          A	10.240.65.160
+qtm-pan-dot161          A	10.240.65.161
+qtm-sp-dot205           A	10.240.65.205
+qtm-tmc-131             A	10.240.65.131
+qtm-vascoidvm           A	10.240.70.110
+qtm-wanscaler-dot102    A	10.240.10.102
+qtmad1                  A	10.240.10.9
+qtmad2                  A	10.240.10.10
+qtmatlas01              A	10.240.70.200
+qtmbkp1                 1200	A	10.240.245.50
+QTMBKP2                 1200	A	10.240.245.155
+qtmbkp3                 1200	A	10.240.245.100
+qtmcass1                86400	A	10.240.205.171
+qtmcass10               86400	A	10.240.205.180
+qtmcass11               86400	A	10.240.205.181
+qtmcass12               86400	A	10.240.205.182
+qtmcass13               86400	A	10.240.205.183
+qtmcass14               86400	A	10.240.205.184
+qtmcass15               86400	A	10.240.205.185
+qtmcass16               86400	A	10.240.205.186
+qtmcass17               86400	A	10.240.205.187
+qtmcass18               86400	A	10.240.205.188
+qtmcass19               86400	A	10.240.205.189
+qtmcass2                86400	A	10.240.205.172
+qtmcass20               86400	A	10.240.205.190
+qtmcass21               86400	A	10.240.205.191
+qtmcass22               A	10.240.205.192
+qtmcass23               A	10.240.205.193
+qtmcass24               A	10.240.205.194
+qtmcass3                86400	A	10.240.205.173
+qtmcass4                A	10.240.205.174
+qtmcass5                86400	A	10.240.205.175
+qtmcass6                86400	A	10.240.205.176
+qtmcass7                86400	A	10.240.205.177
+qtmcass8                86400	A	10.240.205.178
+qtmcass9                86400	A	10.240.205.179
+qtmchefs1               86400	A	10.240.65.80
+qtmchefw1               86400	A	10.240.65.81
+QTMDATAPRO              A	10.240.70.144
+qtmdeploy1              1200	A	10.240.20.76
+qtmdeployvm1            A	10.240.70.111
+QTMDHCP1                1200	A	10.240.70.40
+QTMEKM1                 1200	A	10.240.245.150
+QTMEPO1                 1200	A	10.240.70.121
+qtmhb1d1                86400	A	10.240.99.193
+qtmhb1d2                86400	A	10.240.99.194
+qtmhb1m1                86400	A	10.240.99.190
+qtmhb2d1                86400	A	10.240.99.195
+qtmhb2d2                86400	A	10.240.99.196
+qtmhb2m1                86400	A	10.240.99.191
+qtmhb3d1                86400	A	10.240.99.197
+qtmhb3d2                86400	A	10.240.99.198
+qtmhb3m1                86400	A	10.240.99.192
+qtmhd1d1                86400	A	10.240.99.131
+qtmhd1d2                86400	A	10.240.99.132
+qtmhd1d3                86400	A	10.240.99.133
+qtmhd1d4                86400	A	10.240.99.134
+qtmhd1d5                86400	A	10.240.99.138
+qtmhd1d6                86400	A	10.240.99.141
+qtmhd1d7                86400	A	10.240.99.142
+qtmhd1d8                86400	A	10.240.99.143
+qtmhd1d9                86400	A	10.240.99.149
+qtmhd1m1                86400	A	10.240.99.117
+qtmhd2d1                86400	A	10.240.99.135
+qtmhd2d2                86400	A	10.240.99.136
+qtmhd2d3                86400	A	10.240.99.137
+qtmhd2d4                86400	A	10.240.99.145
+qtmhd2d5                86400	A	10.240.99.146
+qtmhd2d6                86400	A	10.240.99.144
+qtmhd2d7                86400	A	10.240.99.147
+qtmhd2d8                86400	A	10.240.99.148
+qtmhd2d9                86400	A	10.240.99.153
+qtmhd2m1                86400	A	10.240.99.118
+qtmhd3d1                86400	A	10.240.99.129
+qtmhd3d2                86400	A	10.240.99.164
+qtmhd3d3                86400	A	10.240.99.165
+qtmhd3d4                86400	A	10.240.99.166
+qtmhd3d5                A	10.240.99.167
+qtmhd3d6                86400	A	10.240.99.168
+qtmhd3d7                86400	A	10.240.99.169
+qtmhd3d8                86400	A	10.240.99.170
+qtmhd3d9                86400	A	10.240.99.188
+qtmhd3m1                86400	A	10.240.99.119
+qtmhd3m2                86400	A	10.240.99.128
+qtmhd4d1                86400	A	10.240.99.200
+qtmhd4d2                86400	A	10.240.99.201
+qtmhd4d3                86400	A	10.240.99.202
+qtmhd4d4                86400	A	10.240.99.203
+qtmhd4d5                86400	A	10.240.99.204
+qtmhd4d6                A	10.240.99.215
+qtmhd4d7                A	10.240.99.216
+qtmhd5d1                86400	A	10.240.99.205
+qtmhd5d2                86400	A	10.240.99.206
+qtmhd5d3                86400	A	10.240.99.207
+qtmhd5d4                86400	A	10.240.99.208
+qtmhd5d5                86400	A	10.240.99.209
+qtmhd5d6                A	10.240.99.217
+qtmhd5d7                A	10.240.99.218
+qtmhd6d1                86400	A	10.240.99.210
+qtmhd6d2                86400	A	10.240.99.211
+qtmhd6d3                86400	A	10.240.99.212
+qtmhd6d4                86400	A	10.240.99.213
+qtmhd6d5                86400	A	10.240.99.214
+qtmhd6d6                A	10.240.99.219
+qtmhd6d7                A	10.240.99.220
+qtmhdfsm1               A	10.240.99.130
+qtmhdjk1                A	10.240.70.51
+qtmhdoozie1             86400	A	10.240.99.110
+qtmhdtest1              86400	A	10.240.99.240
+qtmhdweb1               A	10.240.99.105
+qtmhdweb2               A	10.240.99.106
+QTMHEATTEST             1200	A	10.240.70.100
+qtmhgate01              86400	A	10.240.99.98
+qtmhgate02              86400	A	10.240.99.99
+qtmhgate03              A	10.240.99.103
+qtmhgate1               86400	A	10.240.99.100
+qtmhgate2               86400	A	10.240.99.101
+QTMHPIRS1               1200	A	10.240.70.138
+qtmjapimdb1             86400	A	10.240.121.101
+qtmjapimdb2             86400	A	10.240.121.102
+qtmjapimms1             A	10.199.60.160
+QTMKaseya1              1200	A	10.240.70.130
+QTMLM01                 1200	A	10.240.70.125
+QTMLM02                 1200	A	10.240.70.133
+QTMLM03                 1200	A	10.240.70.139
+QTMLM04                 1200	A	10.240.70.142
+QTMMAP1                 1200	A	10.240.91.131
+QTMMAP10                1200	A	10.240.91.140
+QTMMAP11                1200	A	10.240.91.141
+QTMMAP12                1200	A	10.240.91.142
+QTMMAP2                 1200	A	10.240.91.132
+QTMMAP3                 1200	A	10.240.91.133
+QTMMAP4                 1200	A	10.240.91.134
+QTMMAP5                 1200	A	10.240.91.135
+QTMMAP6                 1200	A	10.240.91.136
+QTMMAP7                 1200	A	10.240.91.137
+QTMMAP8                 1200	A	10.240.91.138
+QTMMAP9                 1200	A	10.240.91.139
+QTMMGMT1                1200	A	10.240.70.122
+QTMMGMT2                1200	A	10.240.70.123
+QTMMGMT3                1200	A	10.240.70.124
+qtmmgmtdb1              1200	A	10.240.70.120
+qtmmgmtsan1             A	10.240.70.80
+qtmmgmtvctr             A	10.240.70.100
+qtmmgmtvm1              A	10.240.70.91
+qtmmgmtvm2              A	10.240.70.92
+QTMMGMTVM3              A	10.240.70.93
+qtmmgmtvm4              A	10.240.70.94
+qtmmgmtvm5              A	10.240.70.95
+qtmmt1sw1               A	10.241.15.23
+qtmmt1sw2               A	10.241.15.24
+qtmmt2sw1               A	10.241.15.9
+qtmmt2sw2               A	10.241.15.10
+qtmmt3sw1a              A	10.241.15.11
+qtmmt3sw1b              A	10.241.15.12
+qtmmt3sw2a              A	10.241.15.13
+qtmmt3sw2b              A	10.241.15.14
+qtmmtsan1               A	10.240.65.48
+qtmmtsan2               A	10.240.65.50
+qtmmtsan3               A	10.240.65.46
+qtmodssw1a              A	10.241.15.15
+qtmodssw1b              A	10.241.15.16
+qtmodssw2a              A	10.241.15.17
+qtmodssw2b              A	10.241.15.18
+QTMOME1                 1200	A	10.240.70.11
+qtmopscenter1           86400	A	10.240.205.170
+QTMOPSCLOUD1            1200	A	10.240.70.150
+QTMORCA1                1200	A	10.240.70.136
+QTMPASS01               1200	A	10.240.70.139
+qtmpxe1                 A	10.240.70.142
+qtmrabbit1              86400	A	10.240.205.132
+qtmrabbit2              86400	A	10.240.205.133
+qtmrabbit3              86400	A	10.240.205.134
+qtmrabbit4              86400	A	10.240.205.135
+qtmrabbit5              86400	A	10.240.205.136
+qtmrabbit6              86400	A	10.240.205.137
+qtmrabbit7              86400	A	10.240.205.138
+QTMSANHQ1               1200	A	10.240.70.137
+qtmscanner              A	10.240.65.254
+qtmsnpxe                86400	A	10.241.254.50
+qtmspace1               86400	A	10.240.70.86
+QTMSPACEM1              A	10.240.70.101
+QTMSPACES1              A	10.240.70.141
+qtmspare2               1200	A	10.240.15.105
+QTMSTATSLS              1200	A	10.240.20.70
+QTMSTATSLS1             1200	A	10.240.20.71
+QTMUPDATE01             1200	A	10.240.70.128
+QTMVCMDR1               1200	A	10.240.70.151
+QTMVCMDR2               1200	A	10.240.70.152
+qtmvctr1                1200	A	10.240.70.90
+QTMWSUS                 1200	A	10.240.70.143
+qts-sniff               1200	A	10.210.1.130
+qtw-centos66-v1b        86400	A	10.210.107.200
+qtw-col-ns              86400	A	10.210.65.195
+qtw-gtm-18              A	10.210.10.18
+qtw-lmc-130             A	10.210.65.130
+qtw-log-dot151          A	10.210.65.130
+QTW-LUMENSION           1200	A	10.210.64.137
+qtw-pan-dot161          A	10.210.65.161
+qtw-pandot160           A	10.210.65.160
+qtw-tmc-131             A	10.210.65.131
+qtw-tmc-135             A	10.210.65.135
+qtw-waf-dot25           A	10.210.65.25
+qtw-wanscaler-dot102    A	10.210.10.102
+qtwad1                  A	10.210.10.9
+qtwad2                  A	10.210.10.10
+QTWAPP01VM01            A	10.213.103.44
+QTWAPP01VM02            A	10.213.103.45
+QTWAPP01VM03            A	10.213.103.46
+QTWAPP01VM04            A	10.213.103.47
+QTWAPP01VM05            A	10.213.103.48
+QTWAPP01VM06            A	10.213.103.49
+QTWAPP01VM07            A	10.213.103.50
+QTWAPP01VM08            A	10.213.103.51
+QTWAPP01VM09            A	10.213.103.52
+QTWAPP01VM10            A	10.213.103.53
+QTWAPP01VM11            A	10.213.103.54
+QTWAPP01VM12            A	10.213.103.55
+QTWAPP01VM13            A	10.213.103.56
+QTWAPP01VM14            A	10.213.103.57
+QTWAPP01VM15            A	10.213.103.58
+QTWAPP01VM16            A	10.213.103.59
+QTWAPP01VM17            A	10.213.103.60
+QTWAPP01VM18            A	10.213.103.61
+QTWAPP01VM19            A	10.213.103.62
+QTWAPP01VM20            A	10.213.103.63
+QTWAPP01VM21            A	10.213.103.64
+QTWAPP01VM22            A	10.213.103.65
+QTWAPP01VM23            A	10.213.103.66
+QTWAPP01VM24            A	10.213.103.67
+QTWAPP01VM25            A	10.213.103.68
+QTWAPP01VM26            A	10.213.103.69
+QTWAPP01VM27            A	10.213.103.70
+QTWAPP01VM28            A	10.213.103.71
+QTWAPP01VM29            A	10.213.103.72
+QTWAPP01VM30            A	10.213.103.73
+QTWAPP01VM31            A	10.213.103.74
+QTWAPP01VM32            A	10.213.103.75
+QTWAPP02SAN01           A	10.210.65.80
+QTWAPP02SAN02           A	10.210.65.88
+QTWAPP02VM01            A	10.213.103.11
+QTWAPP02VM02            A	10.213.103.12
+QTWAPP02VM03            A	10.213.103.13
+QTWAPP02VM04            A	10.213.103.14
+QTWAPP02VM05            A	10.213.103.15
+QTWAPP02VM06            A	10.213.103.16
+QTWAPP02VM07            A	10.213.103.17
+QTWAPP02VM08            A	10.213.103.18
+QTWAPP02VM09            A	10.213.103.19
+QTWAPP02VM10            A	10.213.103.20
+QTWAPP02VM11            A	10.213.103.21
+QTWAPP02VM12            A	10.213.103.22
+QTWAPP02VM13            A	10.213.103.23
+QTWAPP02VM14            A	10.213.103.24
+QTWAPP02VM15            A	10.213.103.25
+QTWAPP02VM16            A	10.213.103.26
+QTWAPP02VM17            A	10.213.103.27
+QTWAPP02VM18            A	10.213.103.28
+QTWAPP02VM19            A	10.213.103.29
+QTWAPP02VM20            A	10.213.103.30
+QTWAPP02VM21            A	10.213.103.31
+QTWAPP02VM22            A	10.213.103.32
+QTWAPP02VM23            A	10.213.103.33
+QTWAPP02VM24            A	10.213.103.34
+QTWAPP02VM25            A	10.213.103.35
+QTWAPP02VM26            A	10.213.103.36
+QTWAPP02VM27            A	10.213.103.37
+QTWAPP02VM28            A	10.213.103.38
+QTWAPP02VM29            A	10.213.103.39
+QTWAPP02VM30            A	10.213.103.40
+QTWAPP02VM31            A	10.213.103.41
+QTWAPP02VM32            A	10.213.103.42
+QTWAPP03VM01            A	10.213.103.75
+qtwb1c1                 A	10.211.200.51
+qtwb1c1-a1              A	10.211.200.111
+qtwb1c1-a2              A	10.211.200.112
+qtwb1c1-b1              A	10.211.200.113
+qtwb1c1-b2              A	10.211.200.114
+qtwb1c1bl01             A	10.213.101.51
+qtwb1c1bl02             A	10.213.101.52
+qtwb1c1bl03             A	10.213.101.53
+qtwb1c1bl04             A	10.213.101.54
+qtwb1c1bl05             A	10.213.101.55
+qtwb1c1bl06             A	10.213.101.56
+qtwb1c1bl07             A	10.213.101.57
+qtwb1c1bl08             A	10.213.101.58
+qtwb1c1bl09             A	10.213.101.59
+qtwb1c1bl10             A	10.213.101.60
+qtwb1c1bl11             A	10.213.101.61
+qtwb1c1bl12             A	10.213.101.62
+qtwb1c1bl13             A	10.213.101.63
+qtwb1c1bl14             A	10.213.101.64
+qtwb1c1bl15             A	10.213.101.65
+qtwb1c1bl16             A	10.213.101.66
+qtwb1c2                 A	10.211.200.52
+qtwb1c2-a1              A	10.211.200.115
+qtwb1c2-a2              A	10.211.200.116
+qtwb1c2-b1              A	10.211.200.117
+qtwb1c2-b2              A	10.211.200.118
+qtwb1c2bl01             A	10.213.101.81
+qtwb1c2bl02             A	10.213.101.82
+qtwb1c2bl03             A	10.213.101.83
+qtwb1c2bl04             A	10.213.101.84
+qtwb1c2bl05             A	10.213.101.85
+qtwb1c2bl06             A	10.213.101.86
+qtwb1c2bl07             A	10.213.101.87
+qtwb1c2bl08             A	10.213.101.88
+qtwb1c2bl09             A	10.213.101.89
+qtwb1c2bl10             A	10.213.101.90
+qtwb1c2bl11             A	10.213.101.91
+qtwb1c2bl12             A	10.213.101.92
+qtwb1c2bl13             A	10.213.101.93
+qtwb1c2bl14             A	10.213.101.94
+qtwb1c2bl15             A	10.213.101.95
+qtwb1c2bl16             A	10.213.101.96
+qtwb1s1                 A	10.211.214.50
+qtwb1s2                 A	10.211.214.80
+qtwb2c1                 A	10.211.200.53
+qtwb2c1-a1              A	10.211.200.119
+qtwb2c1-a2              A	10.211.200.120
+qtwb2c1-b1              A	10.211.200.121
+qtwb2c1-b2              A	10.211.200.122
+qtwb2c1bl01             86400	A	10.211.213.111
+                        A	10.213.101.111
+qtwb2c1bl02             A	10.213.101.112
+qtwb2c1bl03             A	10.213.101.113
+qtwb2c1bl04             A	10.213.101.114
+qtwb2c1bl05             A	10.213.101.115
+qtwb2c1bl06             A	10.213.101.116
+qtwb2c1bl07             A	10.213.101.117
+qtwb2c1bl08             A	10.213.101.118
+qtwb2c1bl09             A	10.213.101.119
+qtwb2c1bl10             A	10.213.101.120
+qtwb2c1bl11             A	10.213.101.121
+qtwb2c1bl12             A	10.213.101.122
+qtwb2c1bl13             A	10.213.101.123
+qtwb2c1bl14             A	10.213.101.124
+qtwb2c1bl15             A	10.213.101.125
+qtwb2c1bl16             A	10.213.101.126
+qtwb2c2                 A	10.211.200.54
+qtwb2c2-a1              A	10.211.200.123
+qtwb2c2-a2              A	10.211.200.124
+qtwb2c2-b1              A	10.211.200.125
+qtwb2c2-b2              A	10.211.200.126
+qtwb2c2bl01             A	10.213.101.127
+qtwb2c2bl02             A	10.213.101.128
+qtwb2c2bl03             A	10.213.101.129
+qtwb2c2bl04             A	10.213.101.130
+qtwb2c2bl05             A	10.213.101.131
+qtwb2c2bl06             A	10.213.101.132
+qtwb2c2bl07             A	10.213.101.133
+qtwb2c2bl08             A	10.213.101.134
+qtwb2c2bl09             A	10.213.101.135
+qtwb2c2bl10             A	10.213.101.136
+qtwb2c2bl11             A	10.213.101.137
+qtwb2c2bl12             A	10.213.101.138
+qtwb2c2bl13             A	10.213.101.139
+qtwb2c2bl14             A	10.213.101.140
+qtwb2c2bl15             A	10.213.101.141
+qtwb2c2bl16             A	10.213.101.142
+qtwb2s1                 A	10.211.214.110
+qtwb2s2                 A	10.211.214.140
+qtwbkp1                 1200	A	10.210.67.71
+qtwcephm1               86400	A	10.255.1.53
+qtwcephn1               86400	A	10.255.1.58
+QTWCTRL1                1200	A	10.210.67.57
+qtwctrl1a               1200	A	10.210.67.54
+qtwctrl1b               1200	A	10.210.67.55
+QTWCTRL1CL              1200	A	10.210.67.56
+QTWDHCP1                1200	A	10.213.103.254
+QTWDSRV1                1200	A	10.210.67.61
+qtwdsrv1a               1200	A	10.210.67.58
+qtwdsrv1b               1200	A	10.210.67.59
+QTWDSRV1CL              1200	A	10.210.67.60
+qtwflume1               A	10.210.77.201
+qtwflume2               A	10.210.77.202
+qtwflume3               A	10.210.77.203
+qtwgitcom01             A	10.210.205.68
+qtwjapi1                86400	A	10.210.121.101
+qtwjapi2                86400	A	10.210.121.102
+QTWJeffTest1120         1200	A	10.198.55.25
+QTWJeffTest1201         1200	A	10.198.55.27
+QTWLM01                 1200	A	10.210.65.70
+QTWLM02                 1200	A	10.210.65.71
+QTWLM03                 1200	A	10.210.65.72
+QTWLM04                 1200	A	10.210.65.73
+QTWLM05                 1200	A	10.210.65.75
+QTWLM06                 1200	A	10.210.65.76
+QTWLM07                 1200	A	10.210.65.77
+QTWLM08                 1200	A	10.210.65.79
+QTWMSG1                 1200	A	10.210.67.69
+QTWMSG1A                1200	A	10.210.67.66
+QTWMSG1B                1200	A	10.210.67.67
+qtwmsg1cl               1200	A	10.210.67.68
+QTWMSG2                 1200	A	10.210.67.70
+QTWNXS01                1200	A	10.210.45.98
+QTWNXS02                1200	A	10.210.45.99
+qtwopstv                A	10.255.10.9
+qtwpigitauditfe1        A	10.210.205.92
+qtwpilifeapi1           A	10.210.205.53
+qtwpilifefe1            A	10.210.205.50
+QTWPtoV1                1200	A	10.210.65.210
+QTWPtoV2                1200	A	10.210.65.211
+QTWPtoV3                1200	A	10.210.65.212
+QTWPtoV4                1200	A	10.210.65.213
+qtwpxe1                 A	10.210.15.80
+qtwpxehost              A	10.210.15.80
+QTWR410                 1200	A	10.210.64.110
+QTWR415                 1200	A	10.210.64.115
+qtwsan1                 A	10.210.67.84
+QTWSC1                  1200	A	10.210.67.65
+QTWSC1A                 1200	A	10.210.67.62
+QTWSC1B                 1200	A	10.210.67.63
+QTWSC1CL                1200	A	10.210.67.64
+qtwsnpxe                A	10.211.254.50
+qtwsolrfst01            A	10.210.106.174
+qtwsolrfst02            A	10.210.106.175
+qtwsolrjob01            86400	A	10.210.214.157
+qtwsolrjob02            86400	A	10.210.214.158
+qtwsolrjob03            86400	A	10.210.214.159
+qtwsolrjob04            86400	A	10.210.214.160
+qtwsolrjob05            86400	A	10.210.214.161
+qtwsolrjob06            86400	A	10.210.214.162
+qtwsolrjob07            86400	A	10.210.214.163
+qtwsolrjob08            86400	A	10.210.214.164
+qtwsolrjob09            86400	A	10.210.214.165
+qtwsolrjob10            86400	A	10.210.214.166
+qtwsolrjob11            86400	A	10.210.214.167
+qtwsolrjob12            86400	A	10.210.214.168
+qtwsolrjob13            86400	A	10.210.214.169
+qtwsolrjob14            86400	A	10.210.214.170
+qtwsolrjob15            86400	A	10.210.214.171
+qtwsolrjob31            86400	A	10.210.214.187
+qtwsolrjob32            86400	A	10.210.214.188
+qtwsolrjob33            86400	A	10.210.214.189
+qtwsolrjob34            86400	A	10.210.214.190
+qtwsolrjob35            86400	A	10.210.214.191
+qtwsolrjob36            86400	A	10.210.214.192
+qtwsolrjob37            86400	A	10.210.214.193
+qtwsolrjob38            86400	A	10.210.214.194
+qtwsolrjob39            86400	A	10.210.214.195
+qtwsolrjob40            86400	A	10.210.214.196
+qtwsolrjob41            86400	A	10.210.214.197
+qtwsolrjob42            86400	A	10.210.214.198
+qtwsolrjob43            86400	A	10.210.214.199
+qtwsolrjob44            86400	A	10.210.214.200
+qtwsolrjob45            86400	A	10.210.214.201
+qtwsolrjob61            86400	A	10.210.214.217
+qtwsolrjob62            86400	A	10.210.214.218
+qtwsolrjob63            86400	A	10.210.214.219
+qtwsolrjob64            86400	A	10.210.214.220
+qtwsolrjob65            86400	A	10.210.214.221
+qtwsolrjob66            86400	A	10.210.214.222
+qtwsolrjob67            86400	A	10.210.214.223
+qtwsolrjob68            86400	A	10.210.214.224
+qtwsolrjob69            86400	A	10.210.214.225
+qtwsolrjob70            86400	A	10.210.214.226
+qtwsolrjob71            86400	A	10.210.214.227
+qtwsolrjob72            86400	A	10.210.214.228
+qtwsolrjob73            86400	A	10.210.214.229
+qtwsolrjob74            86400	A	10.210.214.230
+qtwsolrjob75            86400	A	10.210.214.231
+qtwsolrjobaux01         86400	A	10.210.214.80
+qtwsolrjobaux02         86400	A	10.210.214.81
+qtwsolrjobaux03         86400	A	10.210.214.82
+qtwsolrjobaux08         86400	A	10.210.214.87
+qtwsolrjobaux09         86400	A	10.210.214.88
+qtwsolrjobaux10         86400	A	10.210.214.89
+qtwsolrjobaux15         86400	A	10.210.214.94
+qtwsolrjobaux16         86400	A	10.210.214.95
+qtwsolrjobaux17         86400	A	10.210.214.96
+qtwsolrjobm01           86400	A	10.210.214.152
+qtwsolrjobm02           86400	A	10.210.214.153
+qtwsolrjobm03           86400	A	10.210.214.154
+QTWSPACES1              A	10.210.15.141
+qtwspares16             A	10.210.110.110
+qtwspares17             A	10.210.110.111
+qtwstache1              A	10.210.212.97
+qtwstache2              86400	A	10.210.212.98
+qtwstratus1             A	10.255.1.51
+qtwstratus2             A	10.255.1.52
+qtwstratus4             A	10.255.1.54
+qtwstratus5             A	10.255.1.55
+qtwstratus6             A	10.255.1.56
+qtwstratus7             A	10.255.1.57
+qtwstratusm1            A	10.255.1.25
+qtwsw1                  A	10.211.67.78
+qtwsw2                  A	10.211.67.79
+qtwvctr1                1200	A	10.213.101.48
+qtx-lmc-130             A	10.240.65.130
+qtx-tmc-131             A	10.240.65.131
+qtx-tmc-132             A	10.240.65.132
+qtxad1                  A	10.240.70.9
+qtxad2                  A	10.240.70.10
+QTXAPP01SAN01           A	10.240.65.82
+QTXAPP01SAN02           A	10.240.65.85
+qtxapp01vm01            A	10.243.103.44
+qtxapp01vm02            A	10.243.103.45
+qtxapp01vm03            A	10.243.103.46
+qtxapp01vm04            A	10.243.103.47
+qtxapp01vm05            A	10.243.103.48
+qtxapp01vm06            A	10.243.103.49
+qtxapp01vm07            A	10.243.103.50
+qtxapp01vm08            A	10.243.103.51
+qtxapp01vm09            A	10.243.103.52
+qtxapp01vm10            A	10.243.103.53
+qtxapp01vm11            A	10.243.103.54
+qtxapp01vm12            A	10.243.103.55
+qtxapp01vm13            A	10.243.103.56
+qtxapp01vm14            A	10.243.103.57
+qtxapp01vm15            A	10.243.103.58
+qtxapp01vm16            A	10.243.103.59
+qtxapp01vm17            A	10.243.103.60
+qtxapp01vm18            A	10.243.103.61
+qtxapp01vm19            A	10.243.103.62
+qtxapp01vm20            A	10.243.103.63
+qtxapp01vm21            A	10.243.103.64
+qtxapp01vm22            A	10.243.103.65
+qtxapp01vm23            A	10.243.103.66
+qtxapp01vm24            A	10.243.103.67
+qtxapp01vm25            A	10.243.103.68
+qtxapp01vm26            A	10.243.103.69
+qtxapp01vm27            A	10.243.103.70
+qtxapp01vm28            A	10.243.103.71
+qtxapp01vm29            A	10.243.103.72
+qtxapp01vm30            A	10.243.103.73
+qtxapp01vm31            A	10.243.103.74
+qtxapp01vm32            A	10.243.103.75
+QTXAPP02SAN01           A	10.240.65.40
+QTXAPP02SAN02           A	10.240.65.88
+QTXAPP02VM01            A	10.243.103.11
+QTXAPP02VM02            A	10.243.103.12
+QTXAPP02VM03            A	10.243.103.13
+QTXAPP02VM04            A	10.243.103.14
+QTXAPP02VM05            A	10.243.103.15
+QTXAPP02VM06            A	10.243.103.16
+QTXAPP02VM07            A	10.243.103.17
+QTXAPP02VM08            A	10.243.103.18
+QTXAPP02VM09            A	10.243.103.19
+QTXAPP02VM10            A	10.243.103.20
+QTXAPP02VM11            A	10.243.103.21
+QTXAPP02VM12            A	10.243.103.22
+QTXAPP02VM13            A	10.243.103.23
+QTXAPP02VM14            A	10.243.103.24
+QTXAPP02VM15            A	10.243.103.25
+QTXAPP02VM16            A	10.243.103.26
+QTXAPP02VM17            A	10.243.103.27
+QTXAPP02VM18            A	10.243.103.28
+QTXAPP02VM19            A	10.243.103.29
+QTXAPP02VM20            A	10.243.103.30
+QTXAPP02VM21            A	10.243.103.31
+QTXAPP02VM22            A	10.243.103.32
+QTXAPP02VM23            A	10.243.103.33
+QTXAPP02VM24            A	10.243.103.34
+QTXAPP02VM25            A	10.243.103.35
+QTXAPP02VM26            A	10.243.103.36
+QTXAPP02VM27            A	10.243.103.37
+QTXAPP02VM28            A	10.243.103.38
+QTXAPP02VM29            A	10.243.103.39
+QTXAPP02VM30            A	10.243.103.40
+QTXAPP02VM31            A	10.243.103.41
+QTXAPP02VM32            A	10.243.103.42
+QTXBATCH1               1200	A	10.240.105.46
+QTXBATCH10              1200	A	10.240.105.55
+QTXBATCH11              1200	A	10.240.105.56
+QTXBATCH12              1200	A	10.240.105.112
+QTXBATCH13              1200	A	10.240.105.57
+QTXBATCH14              1200	A	10.240.105.58
+QTXBATCH15              1200	A	10.240.105.59
+QTXBATCH16              1200	A	10.240.105.60
+QTXBATCH17              1200	A	10.240.105.61
+QTXBATCH18              1200	A	10.240.105.62
+QTXBATCH19              1200	A	10.240.105.63
+QTXBATCH2               1200	A	10.240.105.48
+QTXBATCH20              1200	A	10.240.105.64
+QTXBATCH21              1200	A	10.240.105.65
+QTXBATCH22              1200	A	10.240.105.66
+QTXBATCH23              1200	A	10.240.105.67
+QTXBATCH24              1200	A	10.240.105.68
+QTXBATCH25              1200	A	10.240.105.69
+QTXBATCH26              1200	A	10.240.105.70
+QTXBATCH27              1200	A	10.240.105.71
+QTXBATCH28              1200	A	10.240.105.72
+QTXBATCH29              1200	A	10.240.105.73
+QTXBATCH3               1200	A	10.240.105.47
+QTXBATCH30              1200	A	10.240.105.74
+QTXBATCH31              1200	A	10.240.105.77
+QTXBATCH32              1200	A	10.240.105.78
+QTXBATCH33              1200	A	10.240.105.79
+QTXBATCH34              1200	A	10.240.105.80
+QTXBATCH4               1200	A	10.240.105.49
+QTXBATCH5               1200	A	10.240.105.50
+QTXBATCH6               1200	A	10.240.105.51
+QTXBATCH7               1200	A	10.240.105.52
+QTXBATCH8               1200	A	10.240.105.53
+QTXBATCH9               1200	A	10.240.105.54
+QTXBLOG01               1200	A	10.240.110.123
+QTXBOASYNC01            1200	A	10.240.183.100
+QTXBOASYNC02            1200	A	10.240.183.101
+QTXBOBATCH01            1200	A	10.240.105.155
+QTXBOBATCH02            1200	A	10.240.105.156
+QTXBOBLAST01            1200	A	10.240.10.99
+QTXBOMX01               1200	A	10.240.160.201
+QTXBOMX02               1200	A	10.240.160.202
+QTXBOWS01               1200	A	10.240.181.92
+QTXBOWS02               1200	A	10.240.181.93
+QTXDHCP1                1200	A	10.243.103.254
+QTXDPIPRODBLAST         1200	A	10.240.213.40
+QTXLM01                 1200	A	10.240.65.73
+QTXLM02                 1200	A	10.240.65.74
+QTXLM03                 1200	A	10.240.65.75
+QTXLM04                 1200	A	10.240.65.76
+QTXLM05                 1200	A	10.240.65.77
+QTXLM06                 1200	A	10.240.65.78
+QTXLM07                 1200	A	10.240.65.79
+QTXLM08                 1200	A	10.240.65.64
+QTXMAILBOSM01           1200	A	10.240.182.102
+QTXMAILBOSM02           1200	A	10.240.182.103
+QTXMAILHIGH01           1200	A	10.240.186.111
+QTXMAILHIGH02           1200	A	10.240.186.112
+QTXMAILHIGH03           1200	A	10.240.186.113
+QTXMAILHIGH04           1200	A	10.240.186.114
+QTXMAILLOW200           1200	A	10.240.187.230
+QTXMAILLOW201           1200	A	10.240.187.231
+QTXMAILLOW202           1200	A	10.240.187.232
+QTXMAILLOW203           1200	A	10.240.187.233
+QTXMAILLOW204           1200	A	10.240.187.234
+QTXMAILLOW205           1200	A	10.240.187.235
+QTXMAILLOW206           1200	A	10.240.187.236
+QTXMAILLOW207           1200	A	10.240.187.237
+QTXMAILSVC100           1200	A	10.240.188.111
+                        1200	A	10.240.188.110
+                        1200	A	10.240.188.100
+                        1200	A	10.240.188.113
+                        1200	A	10.240.188.112
+QTXMAILSVC101           1200	A	10.240.188.114
+                        1200	A	10.240.188.101
+                        1200	A	10.240.188.116
+                        1200	A	10.240.188.115
+QTXMAILSVC102           1200	A	10.240.188.117
+                        1200	A	10.240.188.102
+                        1200	A	10.240.188.119
+                        1200	A	10.240.188.118
+QTXMXWS100              1200	A	10.240.160.104
+QTXMXWS101              1200	A	10.240.160.105
+QTXMXWS102              1200	A	10.240.160.106
+qtxpigitauditdb1        A	10.240.110.92
+qtxpijenkins            86400	A	10.240.70.88
+QTXPtoV1                1200	A	10.240.65.210
+QTXPtoV2                1200	A	10.240.65.211
+QTXPTOV3                1200	A	10.240.65.212
+qtxrabbit1              A	10.240.205.140
+qtxrad01                A	10.240.70.19
+qtxsnpi01               A	10.240.70.19
+qtxsnrad01              1200	A	10.240.65.18
+QTXSTATBATCH1           1200	A	10.240.105.75
+QTXSTATBATCH2           1200	A	10.240.105.76
+QTXStatBatch3           1200	A	10.240.105.82
+QTXStatBatch4           1200	A	10.240.105.81
+qtxstats                86400	A	10.240.65.72
+Qtxtacrad01             1200	A	10.240.70.18
+qtxvctr1                1200	A	10.243.101.48
+QuestMgt01              1200	A	10.240.70.160
+QUESTMGT1               CNAME	questmgt01.atl.careerbuilder.com.
+rdbrelay120             A	10.240.191.128
+rdbrelay130             A	10.240.191.138
+rdbrelay140             A	10.240.191.148
+rdbrelay150             A	10.240.191.158
+rdc                     1200	A	10.240.65.240
+rdc6500                 A	10.240.65.240
+REBELASYNC01            1200	A	10.210.110.201
+REBELASYNC02            1200	A	10.210.110.202
+REBELASYNC03            1200	A	10.210.110.203
+REBELASYNC04            1200	A	10.210.110.204
+REBELASYNC05            1200	A	10.210.110.205
+REBELASYNC06            1200	A	10.210.110.206
+REBELASYNC7             1200	A	10.210.110.107
+REBELASYNC8             1200	A	10.210.110.108
+REBELBAT1               1200	A	10.210.105.101
+REBELBAT2               1200	A	10.210.105.104
+REBELBAT3               1200	A	10.210.105.105
+REBELBAT4               1200	A	10.210.105.106
+REBELBLAST1             1200	A	10.210.10.102
+REBELBOEXWS1            1200	A	10.210.45.102
+REBELBOEXWS2            1200	A	10.210.45.103
+rebelchefc1             A	10.255.10.5
+rebelchefn1             A	10.255.10.6
+rebelclouddb2           A	10.255.1.29
+REBELDOC01              1200	A	10.210.215.201
+REBELDOC02              1200	A	10.210.215.202
+REBELDOC03              1200	A	10.210.215.203
+REBELDOC04              1200	A	10.210.215.204
+REBELDOC05              1200	A	10.210.215.205
+REBELDOC06              1200	A	10.210.215.206
+REBELDOC07              1200	A	10.210.215.126
+REBELDOC08              1200	A	10.210.215.31
+REBELDOC09              1200	A	10.210.215.103
+REBELDOC10              1200	A	10.210.215.102
+REBELDOC11              1200	A	10.210.215.101
+REBELDOC12              1200	A	10.210.215.100
+REBELDOC7               1200	A	10.210.215.106
+REBELDOC8               1200	A	10.210.215.107
+rebeldpibatch1          1200	A	10.210.105.201
+rebeldpibatch2          1200	A	10.210.105.202
+REBELDPIBATCH3          1200	A	10.210.105.203
+rebeldpisvc1            1200	A	10.210.213.101
+rebeldpisvc2            1200	A	10.210.213.102
+REBELDPIWEB02           1200	A	10.210.212.104
+rebeldpiweb1            1200	A	10.210.212.101
+rebeldpiweb2            1200	A	10.210.212.102
+rebelfastadm            A	10.210.76.200
+rebelfastqr             A	10.210.76.201
+rebelfastsn1            A	10.210.76.202
+rebelfastsn2            A	10.210.76.203
+rebelfastsn3            A	10.210.76.204
+REBELIMG01              A	10.210.205.64
+REBELIMG02              1200	A	10.210.205.66
+REBELJDIO01             1200	A	10.210.64.82
+REBELJDIO02             1200	A	10.210.64.81
+REBELJDIO03             1200	A	10.210.64.80
+REBELJDIO04             1200	A	10.210.64.79
+REBELJDIO05             1200	A	10.210.64.78
+REBELJDIO06             1200	A	10.210.64.77
+REBELJDIO07             1200	A	10.210.64.76
+REBELJDIO08             1200	A	10.210.64.75
+REBELJDIO09             1200	A	10.210.64.74
+rebeljdio1              1200	A	10.210.64.201
+rebeljdio10             1200	A	10.210.64.210
+REBELJDIO11             1200	A	10.210.64.211
+REBELJDIO12             1200	A	10.210.64.212
+REBELJDIO13             1200	A	10.210.64.213
+REBELJDIO14             1200	A	10.210.64.214
+REBELJDIO15             1200	A	10.210.64.215
+REBELJDIO16             1200	A	10.210.64.216
+REBELJDIO17             1200	A	10.210.64.217
+REBELJDIO18             1200	A	10.210.64.218
+REBELJDIO19             1200	A	10.210.64.219
+rebeljdio2              1200	A	10.210.64.202
+REBELJDIO20             1200	A	10.210.64.55
+REBELJDIO21             1200	A	10.210.64.62
+REBELJDIO22             1200	A	10.210.64.60
+REBELJDIO23             1200	A	10.210.64.59
+REBELJDIO24             1200	A	10.210.64.65
+REBELJDIO25             1200	A	10.210.64.67
+REBELJDIO26             1200	A	10.210.64.51
+REBELJDIO27             1200	A	10.210.64.52
+REBELJDIO28             1200	A	10.210.64.54
+REBELJDIO29             1200	A	10.210.64.64
+rebeljdio3              1200	A	10.210.64.203
+REBELJDIO30             1200	A	10.210.64.68
+REBELJDIO31             1200	A	10.210.64.66
+REBELJDIO32             1200	A	10.210.64.69
+REBELJDIO33             1200	A	10.210.64.63
+REBELJDIO34             1200	A	10.210.64.61
+REBELJDIO35             1200	A	10.210.64.58
+REBELJDIO36             1200	A	10.210.64.57
+REBELJDIO37             1200	A	10.210.64.53
+REBELJDIO38             1200	A	10.210.64.56
+rebeljdio4              1200	A	10.210.64.204
+rebeljdio5              1200	A	10.210.64.205
+rebeljdio6              1200	A	10.210.64.206
+rebeljdio7              1200	A	10.210.64.207
+rebeljdio8              1200	A	10.210.64.208
+rebeljdio9              1200	A	10.210.64.209
+REBELLOGIC2B            1200	A	10.210.65.69
+REBELLS                 1200	A	10.210.245.203
+rebelmlow100            1200	A	10.210.30.155
+rebelmlow101            1200	A	10.210.30.156
+rebelmlow102            1200	A	10.210.30.157
+rebelmlow103            1200	A	10.210.30.158
+rebelpsbhive1           A	10.210.107.100
+rebelpsbhive2           A	10.210.107.101
+rebelpxe                A	10.210.15.81
+REBELRDIO01             1200	A	10.210.64.86
+REBELRDIO02             1200	A	10.210.64.85
+REBELRDIO03             1200	A	10.210.64.84
+REBELRDIO04             1200	A	10.210.64.83
+REBELRDIO5              1200	A	10.210.64.73
+REBELRDIO6              1200	A	10.210.64.72
+REBELRDIO7              1200	A	10.210.64.71
+REBELRDIO8              1200	A	10.210.64.70
+REBELSC01               1200	A	10.210.60.201
+REBELSC02               1200	A	10.210.60.202
+REBELSC03               1200	A	10.210.60.203
+REBELSC04               1200	A	10.210.60.204
+REBELSC05               1200	A	10.210.60.205
+REBELSC06               1200	A	10.210.60.206
+REBELSC07               1200	A	10.210.60.207
+REBELSC08               1200	A	10.210.60.208
+REBELSC09               1200	A	10.210.60.209
+REBELSC10               1200	A	10.210.60.110
+REBELSC11               1200	A	10.210.60.111
+REBELSC7                1200	A	10.210.60.107
+rebelsolr1              A	10.210.76.111
+rebelsolrapi1           A	10.210.106.123
+rebelsolrapi11          A	10.210.106.136
+rebelsolrapi12          86400	A	10.210.106.137
+rebelsolrapi13          A	10.210.106.138
+rebelsolrapi2           A	10.210.106.124
+rebelsolrapi3           A	10.210.106.117
+rebelsolrapi4           A	10.210.106.111
+rebelsolrapi5           A	10.210.106.112
+rebelsolrapi6           A	10.210.106.121
+rebelsolrapi7           A	10.210.106.126
+rebelsolrapi8           A	10.210.106.128
+rebelsolrapi9           A	10.210.106.134
+rebelsolrapim1          A	10.210.106.109
+rebelsolrapim11         86400	A	10.210.106.131
+rebelsolrapim12         A	10.210.106.132
+rebelsolrapim13         A	10.210.106.133
+rebelsolrapim2          A	10.210.106.110
+rebelsolrapim3          A	10.210.106.116
+rebelsolrapim4          86400	A	10.210.106.118
+rebelsolrapim5          A	10.210.106.119
+rebelsolrapim6          86400	A	10.210.106.120
+rebelsolrapim7          A	10.210.106.122
+rebelsolrapim8          86400	A	10.210.106.127
+rebelsolrapim9          A	10.210.106.129
+rebelsolrbeast          A	10.210.76.170
+rebelsolrcmp1           86400	A	10.210.86.123
+rebelsolrcmp2           A	10.210.86.124
+rebelsolrcmp3           A	10.210.86.153
+rebelsolrcmp4           A	10.210.86.154
+rebelsolrcmp5           A	10.210.86.155
+rebelsolrcmp6           A	10.210.86.156
+rebelsolrcmpm1          86400	A	10.210.86.122
+rebelsolrcmpm2          A	10.210.86.142
+rebelsolrcmpm3          A	10.210.86.143
+rebelsolrcp1            86400	A	10.210.86.123
+rebelsolrcp2            86400	A	10.210.86.124
+rebelsolrcpm1           86400	A	10.210.86.122
+rebelsolrdp1            A	10.210.86.101
+rebelsolrdp10           A	10.210.86.110
+rebelsolrdp11           A	10.210.86.112
+rebelsolrdp12           86400	A	10.210.86.113
+rebelsolrdp13           86400	A	10.210.86.114
+rebelsolrdp14           A	10.210.86.115
+rebelsolrdp15           A	10.210.86.116
+rebelsolrdp16           86400	A	10.210.86.117
+rebelsolrdp17           A	10.210.86.118
+rebelsolrdp18           A	10.210.86.119
+rebelsolrdp19           A	10.210.86.120
+rebelsolrdp2            A	10.210.86.102
+rebelsolrdp20           A	10.210.86.121
+rebelsolrdp21           86400	A	10.210.86.126
+rebelsolrdp22           A	10.210.86.127
+rebelsolrdp23           86400	A	10.210.86.128
+rebelsolrdp24           86400	A	10.210.86.129
+rebelsolrdp25           A	10.210.86.130
+rebelsolrdp3            A	10.210.86.103
+rebelsolrdp4            A	10.210.86.104
+rebelsolrdp5            A	10.210.86.105
+rebelsolrdp6            A	10.210.86.106
+rebelsolrdp7            A	10.210.86.107
+rebelsolrdp8            A	10.210.86.108
+rebelsolrdp9            A	10.210.86.109
+rebelsolrdpm1           A	10.210.86.100
+rebelsolrdpm2           A	10.210.86.111
+rebelsolrdpm3           A	10.210.86.131
+rebelsolredge01         A	10.210.106.135
+rebelsolredge02         A	10.210.106.166
+rebelsolredge03         A	10.210.106.167
+rebelsolredge04         A	10.210.106.173
+rebelsolredge05         86400	A	10.210.106.176
+rebelsolredge06         86400	A	10.210.106.177
+rebelsolredge07         86400	A	10.210.106.178
+rebelsolredge08         86400	A	10.210.106.179
+rebelsolredge09         86400	A	10.210.106.180
+rebelsolredge10         86400	A	10.210.106.181
+rebelsolredgem1         A	10.210.106.130
+rebelsolredgem2         86400	A	10.210.106.182
+rebelsolrmsi1           A	10.210.106.140
+rebelsolrmsi10          A	10.210.106.149
+rebelsolrmsi2           86400	A	10.210.106.141
+rebelsolrmsi3           86400	A	10.210.106.142
+rebelsolrmsi4           86400	A	10.210.106.143
+rebelsolrmsi5           A	10.210.106.144
+rebelsolrmsi6           A	10.210.106.145
+rebelsolrmsi7           A	10.210.106.146
+rebelsolrmsi8           A	10.210.106.147
+rebelsolrmsi9           A	10.210.106.148
+rebelsolrmsim1          86400	A	10.210.106.139
+rebelsolrmsim2          A	10.210.106.137
+rebelsolrmsp5           86400	A	10.210.106.149
+rebelsolrmvm            86400	A	10.210.214.240
+rebelsolrmys01          A	10.210.106.151
+rebelsolrmys02          A	10.210.106.152
+rebelsolrmys03          A	10.210.106.153
+rebelsolrmys04          A	10.210.106.154
+rebelsolrmys05          A	10.210.106.155
+rebelsolrmys06          A	10.210.106.156
+rebelsolrmys07          A	10.210.106.157
+rebelsolrmys08          A	10.210.106.158
+rebelsolrmys09          A	10.210.106.159
+rebelsolrmys10          A	10.210.106.160
+rebelsolrmysm1          A	10.210.106.150
+rebelsolrnt1            A	10.210.77.147
+rebelsolrone03          86400	A	10.210.106.168
+rebelsolrone04          86400	A	10.210.106.169
+rebelsolrone05          86400	A	10.210.106.170
+rebelsolrone06          86400	A	10.210.106.171
+rebelsolrone07          86400	A	10.210.106.172
+rebelsolronem1          A	10.210.106.165
+rebelsolrres1           A	10.210.77.110
+rebelsolrres10          A	10.210.77.119
+rebelsolrres11          A	10.210.77.120
+rebelsolrres12          A	10.210.77.121
+rebelsolrres13          A	10.210.77.122
+rebelsolrres14          A	10.210.77.123
+rebelsolrres15          A	10.210.77.124
+rebelsolrres16          A	10.210.77.125
+rebelsolrres17          A	10.210.77.126
+rebelsolrres18          A	10.210.77.127
+rebelsolrres19          A	10.210.77.128
+rebelsolrres2           A	10.210.77.111
+rebelsolrres20          A	10.210.77.129
+rebelsolrres21          A	10.210.77.130
+rebelsolrres22          A	10.210.77.131
+rebelsolrres23          A	10.210.77.132
+rebelsolrres24          A	10.210.77.133
+rebelsolrres25          A	10.210.77.134
+rebelsolrres26          A	10.210.77.135
+rebelsolrres27          A	10.210.77.136
+rebelsolrres28          A	10.210.77.137
+rebelsolrres29          A	10.210.77.157
+rebelsolrres3           A	10.210.77.112
+rebelsolrres30          A	10.210.77.158
+rebelsolrres31          A	10.210.77.159
+rebelsolrres32          A	10.210.77.160
+rebelsolrres35          A	10.210.77.153
+rebelsolrres4           A	10.210.77.113
+rebelsolrres5           A	10.210.77.114
+rebelsolrres6           A	10.210.77.115
+rebelsolrres7           A	10.210.77.116
+rebelsolrres8           A	10.210.77.117
+rebelsolrres9           A	10.210.77.118
+rebelsolrresm1          A	10.210.77.101
+rebelsolrresm2          A	10.210.77.102
+rebelsolrresm3          A	10.210.77.103
+rebelsolrresm4          A	10.210.77.104
+rebelsolrresm5          A	10.210.77.100
+rebelsolrrpp1           A	10.210.77.138
+rebelsolrrpp10          A	10.210.77.150
+rebelsolrrpp2           A	10.210.77.139
+rebelsolrrpp3           A	10.210.77.140
+rebelsolrrpp4           A	10.210.77.141
+rebelsolrrpp5           A	10.210.77.142
+rebelsolrrpp6           A	10.210.77.143
+rebelsolrrpp7           A	10.210.77.144
+rebelsolrrpp8           A	10.210.77.145
+rebelsolrrpp9           A	10.210.77.155
+rebelsolrrppm1          A	10.210.77.105
+rebelsolrrppm2          A	10.210.77.106
+rebelsolrtmp            86400	A	10.210.214.240
+rebelsolrtmpm           86400	A	10.210.214.241
+rebelsolrtn1            A	10.210.77.147
+rebelsolrtn10           A	10.210.77.174
+rebelsolrtn11           A	10.210.77.175
+rebelsolrtn12           A	10.210.77.176
+rebelsolrtn2            A	10.210.77.148
+rebelsolrtn3            A	10.210.77.149
+rebelsolrtn4            A	10.210.77.156
+rebelsolrtn5            A	10.210.77.151
+rebelsolrtn6            A	10.210.77.152
+rebelsolrtn7            A	10.210.77.171
+rebelsolrtn8            A	10.210.77.172
+rebelsolrtn9            A	10.210.77.173
+rebelsolrtnm1           A	10.210.77.146
+rebelsolrtnm2           A	10.210.77.170
+rebelsolrutil1          A	10.210.76.171
+rebelsolrutil2          A	10.210.76.172
+rebelsolrutil3          A	10.210.76.173
+rebelsparenic3          86400	A	10.210.110.110
+REBELSRCHBAT01          1200	A	10.210.105.121
+REBELSRCHBAT02          1200	A	10.210.105.122
+REBELSRCHBAT03          1200	A	10.210.105.123
+REBELSRCHBAT04          1200	A	10.210.105.124
+REBELSRCHBAT05          1200	A	10.210.105.125
+REBELSRCHBAT06          1200	A	10.210.105.126
+REBELSRCHBAT07          1200	A	10.210.105.127
+REBELSRCHBAT08          1200	A	10.210.105.128
+REBELSRCHBAT09          1200	A	10.210.105.129
+REBELSRCHBAT10          1200	A	10.210.105.130
+REBELSTAPI1             1200	A	10.210.205.161
+REBELSTAPI10            1200	A	10.210.205.170
+REBELSTAPI11            1200	A	10.210.205.100
+REBELSTAPI12            1200	A	10.210.205.101
+REBELSTAPI13            1200	A	10.210.205.171
+REBELSTAPI14            1200	A	10.210.205.172
+REBELSTAPI2             1200	A	10.210.205.162
+REBELSTAPI20            1200	A	10.210.205.103
+REBELSTAPI21            1200	A	10.210.205.104
+REBELSTAPI3             1200	A	10.210.205.163
+REBELSTAPI4             1200	A	10.210.205.164
+REBELSTAPI5             1200	A	10.210.205.165
+REBELSTAPI6             1200	A	10.210.205.166
+REBELSTAPI7             1200	A	10.210.205.167
+REBELSTAPI8             1200	A	10.210.205.168
+REBELSTAPI9             1200	A	10.210.205.169
+rebelstats              86400	A	10.210.65.65
+rebelstratus1           A	10.255.1.30
+rebelstratus2           A	10.255.1.31
+rebelstratusdb1         A	10.255.1.28
+rebelstratusdb2         A	10.255.1.29
+rebelvmhost01           A	10.210.15.120
+RebelVMHost02           A	10.210.15.121
+RebelVMHost03           A	10.210.15.122
+rebelvmhost04           86400	A	10.210.15.117
+REBELWEB01              1200	A	10.210.205.201
+REBELWEB02              1200	A	10.210.205.202
+REBELWEB03              1200	A	10.210.205.203
+REBELWEB04              1200	A	10.210.205.204
+REBELWEB05              1200	A	10.210.205.205
+REBELWEB06              1200	A	10.210.205.206
+REBELWEB07              1200	A	10.210.205.207
+REBELWEB08              1200	A	10.210.205.208
+REBELWEB09              1200	A	10.210.205.209
+REBELWEB10              1200	A	10.210.205.210
+REBELWEB11              1200	A	10.210.205.211
+REBELWEB12              1200	A	10.210.205.212
+REBELWEB13              1200	A	10.210.205.213
+REBELWEB14              1200	A	10.210.205.214
+REBELWEB15              1200	A	10.210.205.215
+REBELWEB16              1200	A	10.210.205.216
+REBELWEB17              1200	A	10.210.205.217
+REBELWEB18              1200	A	10.210.205.218
+REBELWEB19              1200	A	10.210.205.219
+REBELWEB20              1200	A	10.210.205.220
+REBELWEB21              1200	A	10.210.205.221
+REBELWEB22              1200	A	10.210.205.222
+REBELWEB23              1200	A	10.210.205.223
+REBELWEB24              1200	A	10.210.205.224
+REBELWEB25              1200	A	10.210.205.225
+REBELWEB26              1200	A	10.210.205.226
+REBELWEB27              1200	A	10.210.205.227
+REBELWEB28              1200	A	10.210.205.228
+REBELWEB29              1200	A	10.210.205.229
+REBELWEB30              1200	A	10.210.205.231
+REBELWEB31              1200	A	10.210.205.232
+REBELWEB32              1200	A	10.210.205.233
+REBELWEB33              1200	A	10.210.205.234
+REBELWEB34              1200	A	10.210.205.235
+REBELWEB35              1200	A	10.210.205.236
+REBELWEB36              1200	A	10.210.205.237
+REBELWEB37              1200	A	10.210.205.238
+REBELWEB38              1200	A	10.210.205.239
+REBELWEB39              1200	A	10.210.205.240
+REBELWEB40              1200	A	10.210.205.241
+REBELWEB41              1200	A	10.210.205.181
+REBELWEB42              1200	A	10.210.205.182
+REBELWEB43              1200	A	10.210.205.183
+REBELWEB44              1200	A	10.210.205.184
+REBELWEB45              1200	A	10.210.205.185
+REBELWEB46              1200	A	10.210.205.186
+REBELWEB47              1200	A	10.210.205.187
+REBELWEB48              1200	A	10.210.205.188
+REBELWEB49              1200	A	10.210.205.189
+REBELWEB50              1200	A	10.210.205.190
+REBELWEB51              1200	A	10.210.205.191
+REBELWEB52              1200	A	10.210.205.192
+REBELWEB53              1200	A	10.210.205.193
+REBELWEB54              1200	A	10.210.205.194
+REBELWEB55              1200	A	10.210.205.195
+REBELWEB56              1200	A	10.210.205.196
+REBELWEB57              1200	A	10.210.205.197
+REBELWEB58              1200	A	10.210.205.198
+REBELWEB59              1200	A	10.210.205.199
+REBELWEB60              1200	A	10.210.205.200
+REBELWS01               1200	A	10.210.205.51
+REBELWS02               1200	A	10.210.205.52
+rhvbearapi1             A	10.230.106.205
+rhvbearapi2             A	10.230.106.206
+RussellChefBox          1200	A	10.198.55.19
+sag                     A	10.240.65.250
+SEARCH                  CNAME	ghqstjenkins.atl.careerbuilder.com.
+SEARCH-WINDOWS          CNAME	ghqstwinjenk.atl.careerbuilder.com.
+SEARCHHQ                1200	A	10.240.65.221
+searchwiki              CNAME	\040ec2-54-172-139-67.compute-1.amazonaws.com.
+secureid                A	10.240.10.245
+ServerView              1200	A	10.240.70.135
+SIDE                    1200	A	10.245.110.53
+SIDEA                   1200	A	10.245.110.50
+SIDEB                   1200	A	10.245.110.51
+SIDECL                  1200	A	10.245.110.52
+silverchef              86400	A	10.198.30.72
+silverdash              A	10.198.30.73
+silverlining            CNAME	ghqpssilverdash.atl.careerbuilder.com.
+sitecloud               A	10.240.70.151
+SiteDBLM01              1200	A	10.230.65.46
+SiteDBLM02              1200	A	10.210.65.31
+SITEOPSNEWS             1200	A	10.198.55.200
+SITEOPSNEWSDB           1200	A	10.198.55.201
+skynetdb                86400	A	10.240.70.84
+smokeping               A	10.240.65.140
+smokey                  86400	A	10.210.65.230
+smokeyjr                86400	A	10.210.65.230
+smokin                  86400	A	10.230.65.231
+smtprelay100            A	10.240.191.108
+smtprelay101            A	10.240.191.109
+smtprelay120            A	10.240.191.129
+smtprelay130            A	10.240.191.139
+smtprelay140            A	10.240.191.149
+smtprelay150            A	10.240.191.159
+solarwinds              1200	A	10.240.70.131
+SOLARWINDSAPP           1200	A	10.240.70.131
+teamtrack               CNAME	teamtrack.cb.careerbuilder.com.
+techblog                A	10.198.55.230
+Test4NewFormWin         1200	A	10.198.55.11
+testcass1               A	10.198.70.77
+testchef                A	10.198.52.183
+testjapi1               A	10.198.55.135
+testjapi2               A	10.198.55.136
+testpxe1                A	10.198.110.99
+testpxe2                A	10.198.110.98
+testspacem1             A	10.198.30.97
+tfs                     A	10.197.62.200
+time                    A	10.240.62.150
+ubuntu-vmtest           A	10.198.55.245
+unicron                 86400	A	10.240.70.140
+vaultchife1             86400	A	10.230.205.230
+vaultqtwfe1             86400	A	10.210.205.230
+vaultqtwfrontend1       86400	A	10.210.205.230
+vm-panorama             A	10.240.65.162
+WAR                     1200	A	10.245.110.104
+WARA                    1200	A	10.245.110.101
+WARB                    1200	A	10.245.110.102
+WARCL                   1200	A	10.245.110.103
+webops                  CNAME	prtg.atl.careerbuilder.com.
+WIN-RUHSMQ79HD0         1200	A	10.198.55.128

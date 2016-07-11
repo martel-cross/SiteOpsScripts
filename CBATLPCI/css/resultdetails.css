@@ -1,0 +1,65 @@
+body{ 
+	font-family: Tahoma; 
+	font-size: 8pt;
+	border-width: 20px; 
+	border-style: solid; 
+	border-color: #416FA6; 
+}
+
+h1{ 
+	font-weight: bold; 
+	font-size: 10pt
+}
+
+h2{ 
+	font-weight: bold; 
+	font-size: 9pt
+}
+
+.banner{ 
+	background-color: #416FA6; 
+	height: 65;
+	vertical-align :middle; 
+}
+
+.DetailHeader{
+	background-color:#DDDDDD;
+	border:1px solid;
+	border-color:#a6a6a6
+	color: #000000;
+	font-weight : bold;
+	font-family : Tahoma;
+	font-size: 10pt;
+	HEIGHT : 20px
+}
+
+h3{ 
+	font-weight: bold; 
+	font-size: 8pt
+}
+
+p{
+	font-size: 8pt;
+}
+
+td{
+	font-size: 8pt;
+	padding: 3 5 3 5;
+}
+
+.DetailsTable{
+	border:0px solid;
+	border-color:#a6a6a6
+	color: #000000;
+	padding-left: 10px; 
+	padding-right: 10px;
+}
+
+.tdText{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.nodeclink{
+	cursor: hand;
+}

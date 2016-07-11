@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5339">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>SQL Server</NOLOC> Guest Account">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>SQL Server</NOLOC> Guest Account</H1>
+
+<H2>Check Description</H2>
+
+<P>This check determines whether the <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> Guest account has access to databases 
+(excluding <NOLOC>master</NOLOC>, <NOLOC>tempdb</NOLOC>, and <NOLOC>msdb</NOLOC>). All databases to which the account has 
+access are listed in the security report.</P>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>If you get the "No permissions to access database" error message, you might not have permissions to the master database.</LI>
+</UL>
+
+<P>In <NOLOC>SQL Server</NOLOC>, a user logon account must be authorized to access a database and its objects in one of the following ways:</P>
+
+<UL>
+  <LI>The logon account can be specified as a database user.</LI>
+  <LI>The logon account can use a Guest account in the database.</LI>
+  <LI>A <NOLOC>Windows</NOLOC> group logon can be mapped to a database role. Individual <NOLOC>Windows</NOLOC> accounts that are members of that group can then connect to the database.</LI>
+</UL>
+      
+<P>Members of the <NOLOC>db_owner</NOLOC> or <NOLOC>db_accessadmin</NOLOC> database roles, or the <NOLOC>Sysadmin</NOLOC> fixed server role, create the database user account roles. An account can include several parameters: the <NOLOC>SQL Server</NOLOC> logon ID, database user name (optional), and up to one role name (optional). The database user name does not have to be the same as the user's logon ID. If a database user name is not provided, the user's logon ID and database user name are identical. After creating the database user, the user can be assigned to as many roles as necessary. If a role name is not provided, the database user is only a member of the public role.</P>
+
+<P>Members of the <NOLOC>db_owner</NOLOC>, <NOLOC>db_accessadmin</NOLOC>, or <NOLOC>Sysadmin</NOLOC> roles can also create a Guest account. The Guest account allows any valid <NOLOC>SQL Server</NOLOC> logon account to access a database, even without a database user account. By default, the Guest account inherits any privileges that have been assigned to the public role. However, these privileges can be changed to be greater or less than that of the public role.</P>
+      
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16953" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>SQL Server</NOLOC> Security Strategies</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16954" TITLE="http://www.microsoft.com/" TARGET="_blank">Establishing 
+Application Security and Application Roles</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+
+</BODY>
+</HTML>

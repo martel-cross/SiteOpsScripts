@@ -1,0 +1,66 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5333fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>SQL Server</NOLOC> Authentication Mode">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>SQL Server</NOLOC> Authentication Mode</H1>             
+      
+<H2>Issue</H2>
+
+<P>In Mixed Mode, user name and password information is stored in <NOLOC>Microsoft&reg;</NOLOC> <NOLOC>SQL Server&trade;</NOLOC>. 
+Mixed Mode is only intended for use in networks in which the servers, clients, 
+and network infrastructure are physically protected, and all users are trusted. 
+It is included in <NOLOC>SQL Server</NOLOC>&nbsp;7.0 to provide backward 
+compatibility with previous releases and to allow interoperability with products 
+that do not support <NOLOC>Windows&nbsp;NT&reg;</NOLOC> authentication.</P>
+      
+<P>In contrast, <NOLOC>Windows&nbsp;NT</NOLOC> Authentication Mode uses the typical <NOLOC>Windows&nbsp;NT</NOLOC> authentication mechanism, which was built for use in environments where security is important. All authentication information is housed on the domain controller rather than <NOLOC>SQL Server</NOLOC>, and it is protected because the information is encrypted.</P>
+      
+<H2>Solution</H2>
+
+<P>Change <NOLOC>SQL Server</NOLOC> on your system that uses Mixed Mode to <NOLOC>Windows</NOLOC> Authentication Mode, if possible.</P>
+
+<H2>Instructions</H2>
+<P><B>To change <NOLOC>SQL Server</NOLOC> from Mixed Mode to <NOLOC>Windows</NOLOC> Authentication Mode</B></P>     
+<OL>
+<LI>Click <B>Start</B>, point to <B>Programs</B>, point to <B><NOLOC>Microsoft SQL Server</NOLOC></B>, and then click <B>Enterprise Manager</B>.</LI>
+<LI>Double-click <B><NOLOC>Microsoft SQL Server</NOLOC>s and <NOLOC>SQL Server</NOLOC> Group</B>, right-click the server that you want to secure, and then click <B>Properties</B>. </LI>
+<LI>In the <B><NOLOC>SQL Server</NOLOC> Properties</B> dialog box, click the <B>Security</B> tab.</LI>
+<LI>Under <B>Authentication</B>, click <B><NOLOC>Windows</NOLOC> only</B>.</LI>
+</OL>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>If the server is not currently running, it may take several moments to start.</LI>
+</UL>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16547" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft SQL Server</NOLOC>&nbsp;Security</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16549" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft</NOLOC> 
+Security Bulletin (MS00-035): Frequently Asked Questions</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+</BODY>
+</HTML>

@@ -1,0 +1,3 @@
+Careerbuilder Actionsonaccounts Inactive Account Report for CBATL Domain (Site) January2016
+Name,Sam Account Name,Distinguished Name,When Created,Last Logon Date,Last Logon Timestamp,Action Taken
+Test Account,test.site,"CN=Test Account,CN=Users,DC=atl,DC=careerbuilder,DC=com",05/24/2012 11:19:41,09/29/2015 11:57:55,09/29/2015 11:57:55,90 Day Inactive - Disabled Account

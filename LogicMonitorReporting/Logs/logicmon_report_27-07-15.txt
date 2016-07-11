@@ -1,0 +1,15 @@
+Please have the following systems moved to the correct group. They are currently in the default API folder.
+
+
+
+Host IACBATCH04 has been in API group for more than 14 days (total days: 166).
+
+Host IACBATCH03 has been in API group for more than 14 days (total days: 167).
+
+Host devstats has been in API group for more than 14 days (total days: 1006).
+
+Host IACBATCH02 has been in API group for more than 14 days (total days: 167).
+
+Host GHQWEB2008TEST1 has been in API group for more than 14 days (total days: 100).
+
+Host ATEDRONETEST01 has been in API group for more than 14 days (total days: 100).

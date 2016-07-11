@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML DIR="ltr">
+	<HEAD>
+		<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+		<META NAME="MS-HAID" CONTENT="a_optionshelp">
+		<META NAME="MS.LOCALE" CONTENT="EN-US">
+		<META NAME="DESCRIPTION" LOCCONTENT="Scan Options">
+		<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="css\coUA.css">
+			<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="css\coUAprint.css">
+	</HEAD>
+	<BODY>
+		<P CLASS="banner"><IMG SRC="Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+		<H1>Scanning Options</H1>
+		<P>For each scan, the following options can be enabled or disabled as 
+		needed in the 
+			<NOLOC>Microsoft</NOLOC> Baseline Security Analyzer (MBSA) user interface:</P>
+		<UL>
+			<LI>
+			Check for
+			<NOLOC>Windows</NOLOC> administrative vulnerabilities
+			<LI>
+			Check for weak passwords
+			<LI>
+			Check for Internet Information Services (IIS) administrative vulnerabilities
+			<LI>
+			Check for
+			<NOLOC>SQL</NOLOC> administrative vulnerabilities
+			<LI>
+				Check for security updates (missing updates)</LI>
+		</UL>
+		<H2><NOLOC>Windows</NOLOC> administrative vulnerability checks</H2>
+<P>
+			This group of checks scans for security issues in the <NOLOC>Windows</NOLOC> operating system, such as Guest account status, file-system type, 
+			available file shares, and members of the Administrators group. Descriptions of 
+			each <NOLOC>Windows</NOLOC> check are shown in the security report, with instructions on how 
+			to fix any issues that are found.</P>
+		<H2>Weak passwords check</H2>
+<P>
+		MBSA checks computers for blank and weak 
+		passwords during a scan. This check can take a long time, depending on the 
+		number of user accounts on the computer. This check has been disabled 
+		when the target client is a domain controller to reduce the number of 
+		passwords that are checked. Note that this check may 
+		produce event-log entries in the Security log if auditing is enabled on the 
+		computer for logon/logoff events. If this option is not selected, the Windows 
+		and <NOLOC>SQL Server</NOLOC> account password checks are not performed.
+		<H2><NOLOC>IIS</NOLOC> administrative vulnerability checks</H2>
+<P>
+			This group of checks scans for security issues in <NOLOC>IIS</NOLOC>&nbsp;such as sample applications and certain 
+			virtual directories present on the computer. MBSA also checks if the <A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16536" TARGET="_blank">
+				<NOLOC>IIS</NOLOC> Lockdown tool</A> has been run on the computer, which can help an 
+			administrator configure and secure servers running <NOLOC>IIS</NOLOC>. Descriptions of each 
+			<NOLOC>IIS</NOLOC> check are shown in the security reports, with instructions on how to fix 
+			any issues that are found.</P>
+		<H2><NOLOC>SQL Server</NOLOC> administrative vulnerability checks</H2>
+<P>
+			This group of checks scans for administrative vulnerabilities on each instance 
+			of <NOLOC>SQL Server</NOLOC> and <NOLOC>Microsoft</NOLOC> Data Engine (MSDE) found on the computer, such as the type 
+			of authentication mode, sa account password status, and service account 
+			memberships. All individual checks are performed on each instance of <NOLOC>SQL Server</NOLOC> and MSDE. Descriptions of each check are shown in the security reports, with 
+			instructions on how to fix any issues that are found.</P>
+			
+		<p>MSDE is a data engine built and based on core <NOLOC>SQL Server</NOLOC> technology. It is a 
+			redistributable database engine that supports single- and dual-processor 
+			desktop computers. MSDE is packaged in a self-extracting archive for ease of 
+			distribution and embedding. Since it is fully compatible with other editions of 
+			<NOLOC>SQL Server</NOLOC>, users can upgrade from MSDE to <NOLOC>SQL Server</NOLOC> if an application grows 
+			beyond the storage and scalability limits of MSDE. MSDE is not 
+		supported on <NOLOC>Windows Vista</NOLOC> or higher operating systems.</p>
+
+		<H2>Security updates check</H2>
+<P>
+			Scanning computers for security updates uses <NOLOC>Microsoft Update</NOLOC> and 
+			<NOLOC>WSUS</NOLOC> technologies. MBSA 
+			provides integration for unmanaged clients that use <NOLOC>Microsoft Update</NOLOC> and 
+			clients managed by <NOLOC>WSUS</NOLOC>, SMS or SCCM administrators and is a comprehensive 
+			standalone tool for the information technology professional.  When 
+			needed, MBSA also uses an offline catalog that is updated by <NOLOC>Microsoft</NOLOC> every time new security updates are 
+			released.  This catalog is used to check the status of security updates on the computers being 
+			scanned.  If any security updates in the catalog are not installed on the 
+			scanned computer, MBSA flags these updates in the security report. MBSA 
+			scans for missing security updates, service packs and update rollups for 
+			all products supported by Microsoft 
+			Update. For information regarding products not 
+			supported by <NOLOC>Microsoft Update</NOLOC> and <NOLOC>WSUS</NOLOC> server, see the
+			<a href="http://go.microsoft.com/fwlink/?LinkID=16534">MBSA home 
+			page</a>.</P>
+		<p><b>Note:</b> For products that are not installed on a scanned computer, the 
+			security updates check is not performed for those products and is not listed in the Security Update Scan Results table in the report. 
+		<p><b>Note:</b> For products that are not supported by <NOLOC>Microsoft Update</NOLOC>, 
+		no security update check will be performed. Since MBSA will not 
+		report missing security updates for products not supported by Microsoft 
+		Update, it is critical to determine whether all products in the scanned 
+		environment are supported by <NOLOC>Microsoft Update</NOLOC> and WSUS technologies. For 
+		information regarding products not supported by <NOLOC>Microsoft Update</NOLOC> and 
+		WSUS technologies, see the
+		<a href="http://go.microsoft.com/fwlink/?LinkID=16534">MBSA home page</a>.</p>
+		<DL>
+			<DT><B>Configure computers for <NOLOC>Microsoft Update</NOLOC> and scanning prerequisites</B></DT>
+<DD>
+				This option is off by default in MBSA. When enabled, this option 
+				allows MBSA to automatically install or update the <NOLOC>Windows</NOLOC> Update Agent 
+				on each target client to 
+				the WUA version needed for a security update scan to be 
+				successful. <NOLOC>Windows</NOLOC> Installer is also 
+				required for scanning certain products and the scan will report whether 
+				<NOLOC>Windows</NOLOC> Installer needs to be updated or other prerequisites for 
+				performing a successful scan are missing. Computers with an Internet connection 
+				with Automatic Updates enabled are updated automatically. 
+				Target clients that do not meet the requirements for a 
+				successful scan cannot be scanned for updates without the correct 
+				version of these needed WUA client components. Keeping this 
+				option in its default state (not selected) ensures that the 
+				scanning process does not alter the target computer configuration, but could 
+				result in some computers or products not being scanned until the 
+				Windows Update Agent is updated.<P>If the computer is managed by a <NOLOC>WSUS</NOLOC> server, using this option 
+			does not interfere with managed updates or settings. Computers that 
+			have Automatic Updates turned off continue to be turned off. 
+			Computers that have Automatic Updates turned on may begin to receive 
+			Automatic Updates reminders if this option is used unless the client 
+			is assigned to a
+			<NOLOC>WSUS</NOLOC> 
+			server. Administrators that have configured the 
+				Automatic Updates service to be disabled should first ensure the Automatic 
+				Updates setting is turned off before using this option if they are using another 
+				update management solution.</P>
+			<P>Computers that are not managed by <NOLOC>Windows Server Update Services</NOLOC> may receive Automatic Updates reminders 
+				for the additional content published to <NOLOC>Microsoft Update</NOLOC> depending upon how 
+				Automatic Updates has been configured. These additional items may include 
+				updates for <NOLOC>Microsoft Office</NOLOC> or <NOLOC>SQL Server</NOLOC>, for example.</P>
+			<P>These features can be controlled separately when scanning from the command 
+				line.</P>
+			<P>By default, scanning uses <NOLOC>Microsoft Update</NOLOC> and the client's 
+			<NOLOC>WSUS</NOLOC> 
+			server if it is assigned one. Using advanced <NOLOC>Update Services</NOLOC> options, you can perform a security update 
+				check that uses only the list of approved updates from your local 
+			<NOLOC>WSUS</NOLOC> server, 
+				or ignore that list and scan using only <NOLOC>Microsoft Update</NOLOC>.  By default, 
+				items not in the list of approved updates on the assigned <NOLOC>WSUS</NOLOC>
+			server are given only 
+				an informational score.</P>
+</DD>
+			<DT><B>Use additional catalogs</B></DT>
+<DD>
+				This option is only available when additional <NOLOC>Microsoft</NOLOC> catalogs 
+				are available.&nbsp; If this option is not selected, MBSA will 
+				not use additional catalogs in the security update check, even if they are present.</DD>
+		<DT><B>Advanced <NOLOC>Update Services</NOLOC> options:</B></DT>
+		<DD>
+		<DL>
+		<DT><B>Scan using assigned <NOLOC>Windows Update Services</NOLOC> servers only</B></DT>
+		<DD>Use this option in managed <NOLOC>WSUS</NOLOC> server 
+		environments. With this option selected, clients that are not 
+		assigned to a <NOLOC>WSUS</NOLOC> server will receive an error message in 
+			the report indicating they could not be scanned.  This option allows a 
+		<NOLOC>WSUS</NOLOC>
+		server 
+		administrator a way to ensure that only managed computers are included, and as a result, only approved updates are included and graded in 
+			the reports.</DD>
+		<DT><B>Scan using <NOLOC>Microsoft Update</NOLOC> only</B></DT>
+			
+			<DD>Use this option to assess security updates using the <NOLOC>Microsoft Update</NOLOC> site and ignore any approved updates on  
+			computers that are assigned to a <NOLOC>WSUS</NOLOC> server. If the 
+			<NOLOC>Microsoft Update</NOLOC> site is not accessible, the offline catalog will be 
+			used. This  option causes all updates to be graded using 
+			critical or noncritical warnings instead of the informational score used for 
+			unapproved <NOLOC>WSUS</NOLOC> updates.</DD>
+		<DT><B>Scan using offline cata<NOLOC>log </NOLOC>
+		only</B></DT>
+			
+			<DD>Use this option to assess security updates using the offline 
+			catalog only and ignore the <NOLOC>Microsoft Update</NOLOC> site and any approved updates on  
+			computers that are assigned to a <NOLOC>WSUS</NOLOC> server.</DD>
+		<DT><B>Scan using additional catalogs only</B></DT>
+			
+			<DD>This option is only available when additional <NOLOC>Microsoft</NOLOC> catalogs 
+			are available. Use this option to assess security updates using 
+			additional catalogs only and ignore the <NOLOC>Microsoft Update</NOLOC> site and any approved updates on  
+			computers that are assigned to a <NOLOC>WSUS</NOLOC> server.</DD>
+</DL>
+</DD>
+</DL>
+
+	</BODY>
+</HTML>

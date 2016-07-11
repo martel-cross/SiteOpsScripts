@@ -1,0 +1,118 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+-->
+<html>
+    <head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+        <SCRIPT LANGUAGE="javascript">
+        <!--
+
+        var max_height = 45;
+        var cur_height = 0;
+        var show_delay = 20;
+        var hide_delay = 0;
+        var hiding = false;
+        var new_version_detected = false;
+
+        
+        document.onmousewheel = onmousescroll;
+        document.onkeydown = keyHit;
+        function onmousescroll()
+        {
+            if (window.event.shiftKey) 
+            {
+                return false;
+            }
+            return true;
+        }
+        function keyHit() 
+        {
+            return top.keyHit(event);
+        }
+        function growWindow()
+        {
+            if (hiding)
+            {
+                hideWindow();
+            }
+            else if (cur_height < max_height)
+            {
+                cur_height++;
+                top.verWndHeight = cur_height;
+                top.Header.ShowFrames();
+                setTimeout(growWindow, show_delay);
+            }
+        }
+
+        function NewVersionDetected(NewVersionUrl)
+        {
+            // Make sure that the new version window gets opened only once
+            if (new_version_detected)
+                return;
+            else
+                new_version_detected = true;
+            
+            verlink.href = NewVersionUrl;
+            verlink.title = NewVersionUrl;
+
+            // make the frame tabable into
+            parent.document.getElementById('NewVersionFrame').style.display = "block";
+
+            growWindow();
+        }
+
+        function checkForNewVersion()
+        {
+            parent.Scanner.StartAsyncCheckForNewVersion();
+        }
+
+        
+        function hideWindow()
+        {
+            hiding = true;
+
+            // hide the frame
+            top.verWndHeight = 0;
+            top.Header.ShowFrames();
+
+            // remove the frame from tab order
+            parent.document.getElementById('NewVersionFrame').style.display = "none";
+        }
+
+        //-->
+
+        </SCRIPT>
+
+        <link rel="stylesheet" type="text/css" href="css/Scanner.css" />
+
+    </head>
+    <body class="updatewindow" nowrap oncontextmenu="return false" onload="setTimeout(checkForNewVersion, 1000);" tabindex = "-1">
+    <table width="100%" height="100%" class="updateinfo">
+        <tr>
+            <td align="left">
+                <table height="100%">
+                    <tr>
+                        <td style="VERTICAL-ALIGN: middle;"><img src='graphics/blueinfo32.gif'></td>
+                        <td style="VERTICAL-ALIGN: middle;">
+                            A new version of MBSA is available! Click <a name="verlink" target="_blank" href="" 
+                                    title="" class="sys-link-normal" style="PADDING-LEFT:0px; PADDING-RIGHT:0px">here</a> to go to the download page
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="right">
+                <a href="javascript:void();" class='sys-link-normal' style='PADDING-LEFT:0px; PADDING-RIGHT:0px'
+                    onClick="hideWindow(); return false;"
+                    onMouseDown="document.images['x'].src='graphics/close_3.gif'"
+                    onMouseUp  ="document.images['x'].src='graphics/close_2.gif'"
+                    onMouseOver="document.images['x'].src='graphics/close_2.gif'"
+                    onMouseOut ="document.images['x'].src='graphics/close_1.gif'"
+                ><img name="x" src="graphics/close_1.gif" height="14" width="14" 
+                        alt="Close" 
+                        title="Close"
+                ></a>
+            </td>
+        </tr>
+    </table>
+    </body>
+</html>

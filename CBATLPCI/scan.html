@@ -1,0 +1,328 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<HTML>
+<head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+<link REL="stylesheet" type="text/css" href="css/scanner.css" />
+<script LANGUAGE="javascript">
+<!--
+var TotalCells = 40;
+var ScansStarted = 0;
+var ErrorCount = 0;
+var completedcnt = 0;
+var cellsToDisplay = 0;
+var MainIncrementer = 0;
+var VisibleCells = 1;
+var TotalCPUcnt =0;
+var TotalProgressBarcnt = 0;
+var CpuCompletecnt = 0;
+var passwordCompleteCnt = 0;
+//remove this
+var TestTotalProgress = 0;
+var ProgressEnabled = 0;
+
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit(evt) 
+{
+    return false;
+}
+
+function initPage()
+{
+    if(top.ScanInProgress)
+    {
+        top.nDirection = 0;
+    }
+    else
+    {
+        if(top.nDirection == 1)
+        {
+            top.nBack++;
+            top.nFwd--; 
+            history.forward(1);
+        }
+        else if(top.nDirection == -1)
+        {
+            top.nBack--;
+            top.nFwd++;
+            history.back(1);
+        }
+        return false;
+    }
+    top.Header.ShowFrames();
+    window.focus();
+    top.Header.OnNewLink('scan.html');
+    top.scan = true;
+    ProgressEnabled = 1;
+    parent.DisableAll();
+    setupProgressBar();
+    //set the cursor
+    parent.SetAllCursors(this, "wait", stop);
+    
+    //store the settings.
+    parent.Scanner.CheckHotFix = parent.CheckHotFix;
+    parent.Scanner.CheckIIS = parent.CheckIIS; 
+    parent.Scanner.CheckOS = parent.CheckOS;
+    parent.Scanner.CheckPasswords = parent.CheckPasswords;
+    parent.Scanner.CheckSQL = parent.CheckSQL;
+    parent.Scanner.HotfixOption = parent.gblOptSuppress + parent.gblOptBaseline + parent.gblOptNoSum;
+    parent.Scanner.WUSMode = !parent.gblOptAdvanced ? 0 : (parent.gblOptAdvSelected == 0 ? 1 : 2);
+    parent.Scanner.InstallAgent = parent.gblConfigTarget;
+    parent.Scanner.ConfigureMU = parent.gblConfigTarget;
+    
+    parent.Scanner.CheckAdditCatalogs = parent.CheckAdditCabs;
+    var bCheckOfflineOnly = parent.gblOptAdvanced ? (2 == parent.gblOptAdvSelected) : false;
+    var bCheckAdditCatalogsOnly = parent.gblOptAdvanced ? (3 == parent.gblOptAdvSelected) : false;
+    parent.Scanner.CheckOfflineOnly = bCheckOfflineOnly;
+    parent.Scanner.CheckAdditCatalogsOnly = bCheckAdditCatalogsOnly;
+    parent.Scanner.CheckMU =  !bCheckOfflineOnly && !bCheckAdditCatalogsOnly;
+        
+    var Started = parent.Scanner.StartScan(parent.gblScanMode,parent.gblScanParams,parent.gblReportName);
+    if(Started == 0)//failed to start
+    {
+       Proceed()
+    }
+}
+
+function Right(str, n)
+{
+        if (n <= 0)     // Invalid bound, return blank string
+           return "";
+        else if (n > String(str).length)   // Invalid bound, return
+           return str;                     // entire string
+        else { // Valid bound, return appropriate substring
+           var iLen = String(str).length;
+           return String(str).substring(iLen, iLen - n);
+        }
+}
+
+function ScanProgress(OptionID, NumEvents, Message)
+{
+    if (ProgressEnabled == 1) {
+        if(OptionID == 0)
+        {
+            TotalProgressBarcnt = NumEvents;
+
+        }
+        else if (OptionID == 1)
+        {
+            TestTotalProgress ++;
+            for(i = 1; i <= NumEvents; i++)
+            {
+                completedcnt += 1;
+                IncrementProgressBar();
+            }
+            
+        } 
+        else if (OptionID == 2)
+        {
+            // messages having to do with downloading of
+            // security update information
+            CurrentlyScanning.innerText = Message;
+        }
+    }
+}
+
+function ScanStart(ComputerName)
+{
+        if (ProgressEnabled == 1) {
+        ScansStarted ++;
+        
+        if(TotalCPUcnt == 1)
+        {
+            Heading.innerText = "Currently scanning " + ComputerName + "";
+        }
+        else
+        {
+            if(ScansStarted <= TotalCPUcnt)
+            { 
+                Heading.innerText = "Scanning...";
+                CurrentlyScanning.innerText = "Started scanning " + ScansStarted + " of " + TotalCPUcnt +""; 
+            }
+        }
+    }
+}
+
+function ScanEnd(ComputerName,Grade)
+{    
+        if (ProgressEnabled == 1) {    
+        CpuCompletecnt ++;
+        
+        if(Grade == 0 || Grade == 1 || Grade == 6) // GRADE_RESERVED or GRADE_BYPASS
+        {
+            if(ScansStarted < TotalCPUcnt)
+            {
+                //simulate the scan start
+                ScanStart(ComputerName);
+            }
+        }
+        if (Grade==0 || Grade==1) {  // GRADE_RESERVED or GRADE_ERROR
+            ScanError();
+        }
+        
+        if(TotalCPUcnt > 1)
+        {
+            CompletedScanning.innerText = "Completed scanning " + CpuCompletecnt + " of " + TotalCPUcnt + "";
+
+        }
+    }
+}
+
+function ScanSetEnd(Grade)
+{
+    parent.EnableAll();
+
+    Proceed();
+}
+
+function ScanSetStart(Computers)
+{
+    TotalCPUcnt = Computers;
+    parent.rptCount = 0;
+}
+
+function ScanError()
+{
+    ErrorCount ++;
+    ErrorText.innerText = "Critical scanning problems found: " + ErrorCount + "";
+}
+
+function IncrementProgressBar()
+{
+    var cnt;
+    cellsToDisplay = Math.floor((TotalCells/TotalProgressBarcnt) * completedcnt);
+    if(cellsToDisplay <= TotalCells)
+    {
+        if(VisibleCells <= cellsToDisplay)
+        {
+            for(cnt = VisibleCells; cnt <= cellsToDisplay; cnt++)
+            {
+                document.all["IMG" + cnt].src = "Graphics/progress.gif";
+            }
+            VisibleCells = cnt;
+        }    
+    }
+    
+}
+
+function setupProgressBar()
+{
+    var i;
+    var progStr = "<TABLE cellSpacing='0' cellPadding='0' width='100%' border=0><TR><TD><IMG src='Graphics/LeftCorner.gif'></TD>";
+    
+    for(i = 1; i <= TotalCells; i++)
+    {
+        progStr += "<td><img id='IMG" + i + "' src='Graphics/progress_empty.gif'></td>"
+    }
+    
+    progStr += "<TD><IMG src='Graphics/RightCorner.gif'><TD></TR></TABLE>";
+    document.all["progressTD"].innerHTML = progStr;
+}
+
+function Proceed()
+{
+    var Current;
+    var Errors;
+
+    //reset cursor
+    parent.SetAllCursors(this, null, stop);
+
+    Errors = parent.Scanner.ErrorCount;
+    Current = parent.Scanner.ReportCount(1);
+    parent.rptCount = Current;
+
+    if (Current > 0) {
+        parent.bHaveFullList = false; // we no longer have the full list
+    }
+
+    if(Errors > 0)
+    {
+        top.Header.OnNewLink('viewerrors.html');
+        setTimeout("parent.Content.location.assign('viewerrors.html')",1000);
+    }
+    else
+    {    
+        if(Current > 0)
+        {
+            setTimeout("parent.ViewReports(true)",1000);
+        }
+        else
+        {
+            parent.EnableAll();
+            top.Content.location.replace('welcome.html');
+        }
+    }
+}
+
+function StopScan()
+{    
+    //reset cursor
+    parent.SetAllCursors(this, null, stop);
+    
+    ProgressEnabled = 0;
+    CompletedScanning.innerText = " ";
+    CurrentlyScanning.innerText = " ";
+    
+    Heading.innerText="Canceling Scan...";
+    stop.disabled = true;
+    parent.Scanner.StopScan();
+        top.ScanInProgress = false;
+    // Continue on waiting for ScanSetEnd
+}
+
+//-->
+</script>
+
+</head>
+<body onload="initPage()" onUnload = "top.ScanInProgress = false;top.Header.DisableButtons();"oncontextmenu="return false" style = "MARGIN-LEFT:100;MARGIN-TOP:35;MARGIN-BOTTOM:100" tabindex = "-1">
+<span id="Heading" class="sys-font-heading3 sys-rhp-color-title">Scanning...</span><br><br>
+<TABLE id="table" style="WIDTH: 10px; HEIGHT: 22px;MARGIN-TOP:30" cellSpacing="0" cellPadding="1" border="0">
+  <TR>
+    <TD id="progressTD" style = "padding-left:150">
+    </TD>
+  </TR>
+</TABLE>
+<br>
+<div id="scan" style = "padding-left:150">
+<table>
+    <tr>
+        <td class="sys-font-heading3 ">
+        <span id="CurrentlyScanning">&nbsp;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="sys-font-heading3 ">
+        <span id="CompletedScanning">&nbsp;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="sys-font-heading3 ">
+        <span id="PasswordsScanned">&nbsp;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="sys-font-heading3 ">
+        <span id="ErrorText">&nbsp;</span>
+        </td>
+    </tr>
+</table>
+</div>
+<br>
+<div id="stopscan" align = right style = "padding-right:100">
+<input id="stop" type="button" value="Cancel" onclick="StopScan();" style="width: 80px;height: 23px;padding: 0px 5px 1px 6px;overflow: visible;" name="Cancel"></input>
+
+</div>
+
+</body>
+</html>

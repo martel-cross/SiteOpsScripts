@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53311fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Restricting <NOLOC>CmdExec</NOLOC> Rights to <NOLOC>Sysadmin</NOLOC>">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Restricting <CODE>CmdExec</CODE> Rights to <NOLOC>Sysadmin</NOLOC></H1>
+
+<H2>Issue</H2>
+
+<P>To secure your database, you should only allow members of the <NOLOC>Sysadmin</NOLOC> role to execute <CODE>CmdExec</CODE> and ActiveScripting job steps. <CODE>CmdExec</CODE> job steps are operating system commands or executable programs that end with <NOLOC>.bat</NOLOC>, <NOLOC>.cmd</NOLOC>, <NOLOC>.com</NOLOC>, or <NOLOC>.exe</NOLOC>. <NOLOC>ActiveScripting</NOLOC> job steps are scripts that are written in a scripting language, such as <NOLOC>VBScript</NOLOC> or <NOLOC>PerlScript</NOLOC>.</P>
+
+<P>If you allow users who are not system administrators to run job steps, the specified proxy account is used.</P>
+
+
+<H2>Solution</H2>
+      
+<P>Change your <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> Agent properties to specify that only members of the <NOLOC>Sysadmin</NOLOC> role can execute <CODE>CmdExec</CODE> or <NOLOC>Microsoft ActiveX&reg;</NOLOC> scripting job steps. After you change this setting, if a user who is not a member of the <NOLOC>Sysadmin</NOLOC> role attempts to execute a task that includes these types of job steps, the <CODE>CmdExec</CODE> or <NOLOC>ActiveScripting</NOLOC> job steps will fail.</P>
+
+<H2>Instructions</H2>
+<P>Note: MSDE is not supported on <NOLOC>Windows Vista</NOLOC> or <NOLOC>Windows Server 2008</NOLOC></P>
+  
+<P><B>To restrict <CODE>CmdExec</CODE> rights to <NOLOC>Sysadmin</NOLOC></B></P>
+  
+<OL>
+<LI>Click <B>Start</B>, point to <B>Programs</B>, point to <B><NOLOC>Microsoft SQL Server</NOLOC></B>, and then click <B>Enterprise Manager</B>.</LI>
+<LI>Double-click <B><NOLOC>Microsoft SQL Servers</NOLOC> and <NOLOC>SQL Server</NOLOC> Group</B>, and then double-click the <NOLOC>SQL Server</NOLOC> that you want to secure. </LI>
+<LI>Click the <B>Management</B> folder, right-click <B><NOLOC>SQL Server</NOLOC> Agent</B>, and then click <B>Properties</B>.</LI>     
+<LI>In the <B><NOLOC>SQL Server</NOLOC> Agent Properties</B> dialog box, click the <B>Job System</B> tab. </LI>
+<LI>Select the <B>Only users with <NOLOC>Sysadmin</NOLOC> privileges can execute <CODE>CmdExec</CODE> and <NOLOC>ActiveScripting</NOLOC> job steps</B> check box.</LI> 
+</OL>
+
+<p>For MSDE, the following steps can be performed:</p>
+<ol>
+	<li>Open a command prompt window.</li>
+	<li>Use the <a href="http://go.microsoft.com/fwlink/?LinkId=19764"><CODE>osql</CODE> 
+	utility</a> to connect to the <NOLOC>SQL</NOLOC> instance using a valid login that is a 
+	<NOLOC>Sysadmin</NOLOC>.</li>
+	<li>Issue the following command to stop non-<NOLOC>Sysadmin</NOLOC>s from running <CODE>CmdExec</CODE> 
+	jobs and <CODE>xp_cmdshell</CODE>:<p>a. <CODE>exec msdb.dbo.sp_set_sqlagent_properties @Sysadmin_only 
+	= 1</CODE><br>
+	b. <CODE>go</CODE></li>
+	<li>Issue the following command to remove the proxy account that is set:<p>
+	a. <CODE>exec master.dbo.xp_sqlagent_proxy_account N'DEL'</CODE><br>
+	b. <CODE>go</CODE></li>
+</ol>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16968" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>SQL Server</NOLOC> Agent Properties</A></P>
+
+<BR>
+<P> <FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+</BODY>
+</HTML>

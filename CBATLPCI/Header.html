@@ -1,0 +1,251 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+<head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="css/Scanner.css" />
+<SCRIPT LANGUAGE=javascript>
+
+var init = /Default.html/i;
+var pickcomputer = /pickcomputer.html/i;
+var pickcomputers = /pickcomputers.html/i;
+var pickreport = /pickreport.html/i;
+var viewreport = /viewreport.html/i;
+var showreport = /showreport.html/i;
+var scan = /scan.html/i;
+var welcome = /welcome.html/i;
+var backDisable = true , fwdDisable = true;
+
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit()
+{
+    var curFrame = top.Content.location.pathname;
+    if(curFrame.search(scan)>=0)
+        return false;
+    return top.keyHit(event);
+}
+
+function initPage()
+{
+    window.focus();
+    top.DisableActions();
+}
+
+function ShowFrames()
+{
+    var check = false;
+    var str = top.Content.location.pathname;
+    var topFrame = top.location.pathname;
+
+    if(topFrame.search(showreport)<0)
+    {
+        if(str.search(scan)>=0)
+        {
+            check = true;
+        }
+
+        if(str.search(welcome)>=0)
+        {
+            parent.document.all.ToolFrame.cols = "200,75%"
+            top.document.all.ContentFrame.rows = "*," + top.verWndHeight + ",0,0,0"; 
+            top.document.all["ToolBar"].style.display = "inline";
+            top.document.all["Edit"].style.display = "none";
+            top.document.all["Footer"].style.display = "none";
+            top.HideActions();
+        }
+        else if(str.search(viewreport)>=0 || str.search(pickreport)>=0 || str.search(pickcomputer)>=0 ||str.search(pickcomputers)>=0)
+        {
+            parent.document.all.ToolFrame.cols = "0,*";
+            top.document.all["ToolBar"].style.display = "none"
+            top.ShowActions(false);
+            alterContent();
+        }
+        else
+        {
+            parent.document.all.ToolFrame.cols = "0,*";
+            top.document.all.ContentFrame.rows = "*," + top.newVersionHt + ",0,0,0"; 
+            top.document.all["ToolBar"].style.display = "none";
+            top.document.all["Edit"].style.display = "none";
+            top.document.all["Footer"].style.display = "none"; 
+            top.HideActions();
+        }
+    }
+}
+
+function SetNavigationState()
+{
+    var topFrame = top.location.pathname;
+    if(topFrame.search(showreport)<0)
+    {
+        if(top.nFwd<0)
+        {
+                document.all["Forward"].src = "Graphics/disabled_fwd.png";
+                document.all["Forward"].disabled = true;
+                fwdDisable = true;
+        }
+        else  
+        {
+                document.all["Forward"].src = "Graphics/up_fwd.png";
+                document.all["Forward"].disabled = false;
+                fwdDisable = false;
+        }
+        if(top.nBack<0)
+        {
+                document.all["Back"].src = "Graphics/disabled_back.png";
+                document.all["Back"].disabled = true;
+                backDisable = true;
+        }
+        else  
+        {
+                document.all["Back"].src = "Graphics/up_back.png";
+                document.all["Back"].disabled = false;
+                backDisable = false;
+        }
+    }
+}
+
+function alterContent()
+{
+    //used hide or show buttons in footer frame with respect to current page
+     var curFrame = top.Content.location.pathname;
+    if(curFrame.search(pickcomputer)>=0 || curFrame.search(pickcomputers)>=0)
+    {
+        top.document.all.ContentFrame.rows = "*," + top.verWndHeight + ",0,0,75";
+        top.document.all["Edit"].style.display = "none";
+        top.document.all["Footer"].style.display = "inline";
+        top.Footer.document.all["StartScan"].style.display = "inline";
+        top.Footer.document.all["Cancel"].style.display = "inline";
+        top.Footer.document.all["OK"].style.display = "none";
+    }
+    else if(curFrame.search(pickreport)>=0 || curFrame.search(viewreport)>=0)
+    {
+        top.document.all.ContentFrame.rows = "*," + top.verWndHeight + ",50,0,75"; 
+        top.document.all["Edit"].style.display = "inline";
+        top.document.all["Footer"].style.display = "inline";
+        top.Footer.document.all["StartScan"].style.display = "none";
+        top.Footer.document.all["Cancel"].style.display = "none";
+        top.Footer.document.all["OK"].style.display = "inline";
+    }
+}
+function DisableButtons()
+{
+    document.all["Forward"].src = "Graphics/disabled_fwd.png";
+    document.all["Forward"].disabled = true;
+    document.all["Back"].src = "Graphics/disabled_back.png";
+    document.all["Back"].disabled = true;
+    backDisable = fwdDisable = true;
+}
+
+function GoHome()
+{
+    top.nBack = -1;
+    top.nFwd = -1;
+    top.nDirection = 0;
+    top.Content.location.replace('welcome.html');
+}
+
+function GoBack()
+{
+    if(top.nBack >= 0 && !backDisable)
+    {
+        top.nDirection = -1;
+        top.nBack--;
+        top.nFwd++;
+        history.back(1);
+    }
+} 
+function GoForward()
+{
+    if(top.nFwd >= 0 && !fwdDisable)
+    {
+        top.nDirection = 1;
+        top.nBack++;
+        top.nFwd--; 
+        history.forward(1);
+    }
+}
+
+function OnNewLink(currentFrame)
+{
+    //Called whenever New Link is pressed.
+    top.nBack++;
+    top.nFwd =-1;
+    top.nDirection = 0;
+} 
+
+function SetState(state)
+{
+    switch(state)
+    {
+        case 1: if(top.nBack>=0 && backDisable==false)
+                    document.all["Back"].src = "Graphics/up_back.png"
+                else
+                    document.all["Back"].src = "Graphics/disabled_back.png"
+                break;
+        case 2: if(top.nBack>=0 && backDisable==false)
+                     document.all["Back"].src = "Graphics/hover_back.png"
+                else
+                     document.all["Back"].src = "Graphics/disabled_back.png"
+                break;
+        case 3: if(top.nBack>=0 && backDisable==false)
+                    document.all["Back"].src = "Graphics/down_back.png"
+                else
+                    document.all["Back"].src = "Graphics/disabled_back.png"
+                break;
+        case 4: if(top.nFwd>=0)
+                    document.all["Forward"].src = "Graphics/up_fwd.png"
+                else
+                    document.all["Forward"].src = "Graphics/disabled_fwd.png"
+                break;
+        case 5: if(top.nFwd>=0)
+                    document.all["Forward"].src = "Graphics/hover_fwd.png"
+                else
+                    document.all["Forward"].src = "Graphics/disabled_fwd.png"
+                break;
+        case 6: if(top.nFwd>=0)
+                document.all["Forward"].src = "Graphics/down_fwd.png"
+                else
+                document.all["Forward"].src = "Graphics/disabled_fwd.png"
+                break;
+    }
+}
+</SCRIPT>
+</head>
+    <body  class="header" style="MARGIN: 0px" oncontextmenu="return false" ondragstart="return false" onselectstart="return false" tabindex = "-1">
+        <base target="_blank">
+        <table id="eToolbar" height = 57 cellspacing="0">
+            <tr>
+                <td>
+                    <table width="60" style = "MARGIN-TOP:13;MARGIN-BOTTOM:11" >
+                        <tr>
+                            <td background = "Graphics/button_dimple.png" height="27" width="60">
+                                <form>
+                                    <A href="" class="Navigation" onclick="GoBack();return false;" tabindex = "-1" onmousedown="SetState(3);return false;" onmousemove="SetState(2);return false;" onmouseout="SetState(1);return false;" onmouseover="SetState(2);return false;" onmouseup="SetState(2);return false;"><img src="Graphics/disabled_back.png" class = "arrow" id="Back" title="Back" border="0" /></A>
+                                    <A href="" class="Navigation" onclick="GoForward();return false;" tabindex = "-1" onmousedown="SetState(6);return false;" onmousemove="SetState(5);return false;" onmouseout="SetState(4);return false;" onmouseover="SetState(5);return false;" onmouseup="SetState(5);return false;"><img src="Graphics/disabled_fwd.png" class="arrow" id="Forward" title="Forward" border="0" /></A>
+                                </form>
+                            </td>
+                        </tr>
+                        </table>
+                </td>
+
+                <td id="eICPBanner">
+                    <img name = "Banner" alt="Microsoft Baseline Security Analyzer" src="Graphics/banner.jpg">
+                </td>
+                <td width="100%" align="right" >
+                    <img align="absMiddle" src="Graphics/mstoolbar_ms.gif" WIDTH="87" HEIGHT="15" style="MARGIN-TOP: 10px;MARGIN-RIGHT: 10px">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5315fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Local Account Passwords">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Local Account Passwords</H1>
+
+<H2>Issue</H2>
+
+<P>Weak passwords are one of the main causes of security breaches. Examples of weak passwords are names of children or pets, or common words found in the dictionary, such as "happy."</P>
+
+<P>It is outside the scope of this tool to check for all possible weak passwords on accounts. Rather, this tool only checks for a few commonly used weak passwords as follows:</P>
+
+<UL>
+<LI>Password is blank.</LI>
+<LI>Password is the same as the user account name. </LI>
+<LI>Password is the same as the computer name. </LI>
+<LI>Password uses the word "password."</LI>
+<LI>Password uses the word "admin" or "administrator."</LI>
+</UL>
+
+<P>This check also notifies you of any accounts that have been disabled, or are currently locked out.</P>
+
+<P>This check is not performed on domain controllers.</P>
+
+<P>For <NOLOC>Microsoft&reg; Windows&reg;&nbsp;XP</NOLOC> computers that use simple file sharing (includes <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition and <NOLOC>Windows&nbsp;XP</NOLOC> Professional computers not joined to a domain), MBSA will not flag local accounts with blank passwords. To help protect users who do not password-protect their accounts, <NOLOC>Windows&nbsp;XP</NOLOC> Professional accounts without passwords can only be used to log on at the physical computer console. By default, accounts with blank passwords can no longer be used to log on to the 
+computer remotely over the network, or for any other logon activity <i>except</i> at the main physical console logon screen.</P>
+
+
+<H2>Solution</H2>
+
+<P>Adopt a strong password policy. This is one of the most effective ways to ensure system security. For guidance on implementing strong passwords, refer to the articles in the Additional Resources section.</P>
+
+<H2>Instructions</H2>
+
+<P><B>To change password policy settings in <NOLOC>Windows Server 2008</NOLOC>, <NOLOC>Windows 
+Vista</NOLOC>, <NOLOC>Windows Server&nbsp;2003</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC> Professional, or <NOLOC>Windows&nbsp;2000</NOLOC></B></P>
+
+<OL>
+<LI>Open the <B>Control Panel</B>.</LI>
+<LI>Double-click <B>Administrative Tools</B>, and then double click <B>Local Security Policy</B>.</LI>
+<LI>Double-click the <B>Account Policies</B> folder, and then select the <B>Password Policy</B> folder.</LI>
+<LI>Double-click the policy that you want to change and then specify the new policy setting.</LI>
+</OL>
+
+<BR>
+<P><B>To change password policy settings in <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition</B></P>
+<OL>
+<LI>Open the <B>Control Panel</B>.</LI>
+<LI>Select <B>User Accounts</B>.</LI>
+<LI>Click the user account you would like to change and select the Password 
+function.</LI>
+</OL>
+
+<BR>
+
+<H2>Additional Resources</H2>
+
+<P>
+<A ID="MSUrl0" HREF="http://go.microsoft.com/fwlink/?LinkID=16501" TITLE="http://www.microsoft.com/" TARGET="_blank">What's New in Security for <NOLOC>Windows&nbsp;XP</NOLOC> Professional and <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition</A></P>
+
+<P>
+<A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16498" TITLE="http://www.microsoft.com/" TARGET="_blank">Creating Strong Passwords</A></P>
+
+<BR>
+<P> <FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>
+

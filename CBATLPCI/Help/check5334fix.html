@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5334fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Service Accounts on <NOLOC>SQL Server</NOLOC>">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+
+</head>
+<body>
+
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<h1>Service Accounts on <NOLOC>SQL Server</NOLOC></h1>
+
+<h2>Issue</h2>
+
+<P>All services log on under an account, with some services running as <NOLOC>LocalSystem</NOLOC>. 
+This can be a potential security vulnerability because a bug in the service code 
+could be exploited by a malicious user to gain system-level access, which is possible because the service runs in the context of the local computer. We recommend that you run 
+services that do not require full system access under a lesser-privileged account, 
+and that this account is not a member of the local Administrators group.</P>
+
+<h2>Solution</h2>
+
+<P>Ensure that the <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> service is not running as <NOLOC>LocalSystem</NOLOC> and is not running under an account that is a member of the local Administrators or Domain Admins groups. We recommend that you run the service under a domain user account. <NOLOC>Windows&reg;&nbsp;XP</NOLOC> introduces two new service accounts: <NOLOC>LocalService</NOLOC> and <NOLOC>NetworkService</NOLOC>. Services running under the LocalService account have minimum privileges on the local computer, and they present anonymous credentials on the network. Services running under the NetworkService account have minimum privileges on the local computer, and they act as the computer on the network. For more information, see Additional Resources.</P>
+
+<P CLASS="note">Notes</P>
+<UL>
+    <LI>While it is recommended that the service run as a low privileged 
+account, the application that installed <NOLOC>SQL Server</NOLOC>/MSDE may require it to run with higher privileges. For example, instances of WMSDE currently are required 
+to run as <NOLOC>LocalSystem</NOLOC>, and therefore need to be exempt from this check. WMSDE is 
+a derivative of MSDE meant for use by <NOLOC>Windows Server</NOLOC>&nbsp;2003 operating system components, such as <NOLOC>Windows SharePoint</NOLOC> Services. Check the documentation accompanying the application for information on the minimum level of privileges required. </LI>
+</UL>
+
+<h2>Instructions</h2>
+
+<p><B>To ensure that services are not running as <NOLOC>LocalSystem</NOLOC> accounts in <NOLOC>Windows</NOLOC>&nbsp;2000</B></P> 
+
+<OL>
+<LI>Click <b>Start</b>, point to <b>Settings</b>, and then click <b>Control</b> <b>Panel</b>. </LI>
+<LI>Double-click <b>Administrative Tools</b>, and then double-click <b>Computer Management</b>.</LI>
+<LI>Under the <b> Services and Applications</b> node, click <b> Services</b>. </LI>
+<LI>Double-click the service that was flagged in the security report.</LI>
+<LI>In the dialog box that appears, click the <b> Log On</b> tab.</LI>
+<LI>Under <b>Log On As</b>, select the <b>This account </b>option and specify a 
+local account under which the service should run.</LI>
+</OL>
+
+<P CLASS="important"><Font color="red">Important:</FONT></P>
+<UL>
+<LI>Changing the service account for any <NOLOC>SQL Server</NOLOC> services outside of <NOLOC>SQL Server</NOLOC> Enterprise Manager could cause <NOLOC>SQL Server</NOLOC> to stop functioning.</LI>
+</UL>
+<BR>
+<p><b>To create a new domain user account under which the <NOLOC>SQL Server</NOLOC> services will run</b></p>
+
+<ol>
+  <li>Click <b>Start</b>, point to <b>Programs</b>, click <b>Administrative Tools</b>, and then click 
+<b><NOLOC>Active Directory</NOLOC> Users and Computers</b>.</li>
+  <li>Click the <b>Users container</b> and create a new domain user account.</li>
+  <li>Set the password to never expire.</li>
+  <li>Choose to create a mailbox if you are planning on using <NOLOC>SQL Server</NOLOC> mail.</li>
+</ol>
+<BR>
+<P><b>To change the service account for the <NOLOC>MSSQLServer</NOLOC> Service for <NOLOC>SQL Server</NOLOC></b></p>
+
+<ol>
+  <li>Click <b>Start</b>, point to <b>Programs</b>, point to <b><NOLOC>Microsoft SQL Server</NOLOC></b>, and then click 
+<b>Enterprise Manager</b>.</li>
+  <li>In <NOLOC>SQL Server</NOLOC> Enterprise Manager, double-click <b><NOLOC>SQL Server</NOLOC> Group</b>, right-click the <NOLOC>SQL Server</NOLOC> that you want to secure, and then click <b>Properties</b>.</li>
+  <li>Click the <b>Security</b> tab, and in the <b>startup service account</b> section, select <b>this account</b> and enter the logon information for the domain user created in the previous step.</li>
+</ol>
+<BR>
+<p><b>To change the service account for the <NOLOC>SQL Server</NOLOC> Agent Service for <NOLOC>SQL Server</NOLOC></b></p>
+
+<ol>
+  <li>Click <b>Start</b>, point to <b>Programs</b>, point to <b><NOLOC>Microsoft SQL Server</NOLOC></b>, and then click 
+<b>Enterprise Manager</b>.</li>
+  <li>In <NOLOC>SQL Server</NOLOC> Enterprise Manager, double-click <b><NOLOC>SQL Server</NOLOC> Group</b>, and then double-click the <NOLOC>SQL Server</NOLOC> that you want to configure.</li>
+  <li>Click the <b>Management</b> folder, right-click <b><NOLOC>SQL Server</NOLOC> Agent</b>, and 
+then click <b>Properties</b>.</li>
+  <li>In the <b>startup service account</b> section, select <b>this account</b> and enter the logon information for the domain user created in the previous step.</li>
+</ol>
+<BR>
+<p>To change the service account for <NOLOC>SQL Server</NOLOC> or MSDE without using Enterprise Manager, refer to <a href="http://go.microsoft.com/fwlink/?LinkId=19752">
+Knowledge Base article Q283811</a>.</p>
+
+<h2>Additional Resources</h2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16947" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>LocalService</NOLOC> Account</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16948" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>NetworkService</NOLOC> Account</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16547" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft SQL Server</NOLOC>&nbsp;2000 Security</A></P>
+
+<BR>
+<P> <font size="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</font></p>
+
+</body>
+</html>

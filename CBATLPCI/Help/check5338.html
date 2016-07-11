@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5338">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>SQL Server</NOLOC> Local Account Passwords">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</head>
+
+<body>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<h1><NOLOC>SQL Server</NOLOC> Local Account Passwords</h1>
+
+<h2>Check Description</h2>
+
+<p>This check identifies any blank or simple passwords for each local <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> account on the computer.</p>
+
+<p><NOLOC>Microsoft Windows&reg;&nbsp;Server&nbsp;2008</NOLOC>, <NOLOC>Microsoft Windows&reg;&nbsp;Server 2003</NOLOC>, <NOLOC>Windows Vista</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, <NOLOC>Windows&nbsp;2000</NOLOC>, and <NOLOC>Windows&nbsp;NT&reg;</NOLOC> operating systems all require user 
+authentication through passwords. In general, users are permitted to choose their 
+own passwords. The security of their account depends on the choice of the 
+password. This check enumerates all user accounts and checks for the following 
+password conditions:</p>
+
+<UL>
+<li>Password is blank. </li>
+<li>Password is the same as the user account name. </li>
+<li>Password is the same as the computer name. </li>
+<li>Password uses the word "password."</li>
+<li>Password uses the word "sa."</li>
+<li>Password uses the word "admin" or "administrator."</li>
+</UL>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI><NOLOC>Microsoft</NOLOC> Baseline Security Analyzer does not attempt to crack passwords during this check, and 
+instead attempts a password change request using each condition in the preceding 
+list. Account lockout policy counts will be reset if in effect on the 
+scanned computer.</LI>
+</UL>
+
+<h2>Additional Information</h2>
+
+<p><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16945" TITLE="http://www.microsoft.com/" TARGET="_blank">Implementing Guidelines for Strong Passwords</A>
+</P>
+
+<p><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16946" TITLE="http://www.microsoft.com/" TARGET="_blank">Assigning an sa Password</A>
+</P>
+
+
+<BR>
+<P> <font size="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</font></p>
+</body>
+</html>

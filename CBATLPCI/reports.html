@@ -1,0 +1,230 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+    <head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+        <link REL="stylesheet" type="text/css" href="css/scanner.css" />
+        <script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+
+<script language="javascript">
+var xml = null;
+var xsl = null;
+var ENTER = 13;
+
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit() 
+{
+    return top.keyHit(event);
+}
+function keydown(fileName,position)
+{
+    var key = event.keyCode;
+    if (key == ENTER)
+    {
+        top.Header.OnNewLink(fileName);    
+        parent.parent.OpenReport(fileName,position);
+    }
+    return false;
+}
+function onlinkenabled(fileName,position)
+{
+    top.Header.OnNewLink(fileName);    
+    parent.parent.OpenReport(fileName,position);
+    return false;
+}
+function initPage()
+{
+        window.focus();
+    // set hourglass for this page
+    parent.parent.SetAllCursors(this, "wait");
+
+    // Load XML
+    xml = XCreateObject("MSXML2.DOMDocument")
+    xsl = XCreateObject("MSXML2.DOMDocument")
+
+    xml.async = false
+    xsl.async = false
+}
+
+function finishPage()
+{
+}
+
+
+function LoadReportList(OptionID)
+{
+    var curReportCount = parent.parent.Scanner.ReportCount(0);
+    //If no reports are available donot allow forward navigation.
+    if(curReportCount == 0)
+    {
+        top.nFwd--;
+	    top.Content.document.all["toggleList"].className = "sys-link-disabled";
+	    top.Content.document.all["toggleList"].href = "javascript:void(0);";
+    }
+
+    if(parent.parent.prevReportCount == curReportCount || OptionID==1)
+    {
+        xml.loadXML(parent.parent.Scanner.GetReportList(OptionID))
+    }
+    else
+    {
+        //Get the report list from the disk if the user manually adds/removes some files.
+        //To keep track of changes in  no. of files on the disk prevReportCount & curReportCount are used
+        xml.loadXML(parent.parent.Scanner.GetReportList(3))
+        parent.parent.prevReportCount = curReportCount; 
+    }
+    
+    //now store the list
+    var nodes = xml.selectNodes("Reports/Report/@file");
+    xsl.load("reports.xsl")
+    xsl.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+    //display the page
+    var sortArr = parent.document.all["SortOrder"].value.split("|");
+    var sortKey = sortArr[0];
+    var sortOrder = sortArr[1];
+
+    // escape all report names
+    s = xml.selectNodes("/Reports/Report/@file");
+    for (var i = s.nextNode(); i != null; i = s.nextNode())
+    {
+        i.value = escape(i.value);
+    }
+
+    Sort(sortKey,sortOrder);
+
+    // restore default cursor
+    parent.parent.SetAllCursors(this, null);
+}
+
+function Sort(key,order)
+{
+/*1. Sorting Issue on Computername:
+Sorting on computername has limitations when hyphen is present in the computer name. 
+This is a known limitation. Pl. refer link :  
+http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/7cc1c9a2-7873-424d-b37c-59419ecb1aff.asp
+XSL sort handles other characters like '+',';','@', etc. well which are not allowed as valid characters 
+in the computer name by OS. The idea here is to replace the hyphen character with character
+such as '+' before sending the data to sorting.The replacement does not have any effect on 
+the reportlist data and the corresponding display(i.e. hyphen is shown as it is).
+The character '+' is choosen arbitrarily out of the set '+',';','@', etc.
+
+2. Sorting Issue on IP:
+Similarly issue on IP sorting is handled by removing '.' and then Ip is treated as a number 
+for sorting purposes. 
+*/
+    //I need to store the report names in an array with the sort order applied
+    var tmpXSL = XCreateObject("MSXML2.DOMDocument")
+    var sortDataType = "text";
+    tmpXSL.async = false;
+
+    var s = xsl.selectNodes("//xsl:sort/@select");
+    // Replace the values with the new sort key.
+    for (var i = s.nextNode(); i != null; i = s.nextNode())
+    {
+        if(key == "@ip")
+        {
+            sortDataType = "number";
+            /*When a IP sub-field has different unit places  earlier fix(i.e. just declaring that it is an integer. ) wont work.
+            Ex: 172.25.207.19 and 162.25.207.199 will be read as 1722520719 & 162252207199 and sorting will fail.
+            This is overcome by internally prepending zero(s) to make a subfield to a 3 digit no.always. Thus the IP number 
+            now will be converted to a 12 digit no. irresepective individual subfield lengths.*/
+           i.value = "concat(  concat(substring(\'000\',1,3-string-length(substring-before(@ip,\'.\'))),substring-before(@ip,\'.\')),concat(substring(\'000\',1,3-string-length(substring-before(substring-after(@ip,\'.\'),\'.\'))),substring-before(substring-after(@ip,\'.\'),\'.\')), concat(substring(\'000\',1,3-string-length(substring-before(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\'))),substring-before(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\')), concat(substring(\'000\',1,3-string-length(substring-after(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\'))),substring-after(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\'))  )";
+        }
+        else if(key == "@computer")
+        {
+            i.value = "translate(@computer,\'-\' ,\'+\')";
+        }
+        else
+        {
+            i.value = key;
+        }
+    }
+    s = xsl.selectNodes("//xsl:sort/@order");
+    // Replace the values with the new sort Order.
+    for (var i = s.nextNode(); i != null; i = s.nextNode())
+    {
+        i.value = order;
+    }
+
+    s = xsl.selectNodes("//xsl:sort/@data-type");
+    // Replace the values with the new sort data-type.
+    for (var i = s.nextNode(); i != null; i = s.nextNode())
+    {
+        i.value = sortDataType;
+    }
+
+    //now apply sort order to the reportname list
+    tmpXSL.load("reportnamelist.xsl");  
+    tmpXSL.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+    s = tmpXSL.selectNodes("//xsl:sort/@select");
+    // Replace the values with the new sort key.
+    for (var i = s.nextNode(); i != null; i = s.nextNode())
+    {
+        if(key == "@ip")
+        {
+            sortDataType = "number";
+           i.value = "concat(  concat(substring(\'000\',1,3-string-length(substring-before(@ip,\'.\'))),substring-before(@ip,\'.\')),concat(substring(\'000\',1,3-string-length(substring-before(substring-after(@ip,\'.\'),\'.\'))),substring-before(substring-after(@ip,\'.\'),\'.\')), concat(substring(\'000\',1,3-string-length(substring-before(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\'))),substring-before(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\')), concat(substring(\'000\',1,3-string-length(substring-after(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\'))),substring-after(substring-after(substring-after(@ip,\'.\'),\'.\'),\'.\'))  )";
+        }
+        else if(key == "@computer")
+        {
+            i.value = "translate(@computer,\'-\' ,\'+\')";
+        }
+        else
+        {
+            i.value = key;
+        }
+    }
+
+    s = tmpXSL.selectNodes("//xsl:sort/@order");
+    // Replace the values with the new sort Order.
+    for (var i = s.nextNode(); i != null; i = s.nextNode())
+    {
+        i.value = order;
+    }
+
+    s = tmpXSL.selectNodes("//xsl:sort/@data-type");
+    // Replace the values with the new sort data-type.
+
+    for (var i = s.nextNode(); i != null; i = s.nextNode())
+    {
+        i.value = sortDataType;
+    }
+
+    var ReportNames = xml.transformNode(tmpXSL)
+    //trim the first part off, and the trailing comma
+    var rptNamesLength = ReportNames.length;
+    var startidx = ReportNames.search(">") + 1
+    var tmpARR = ReportNames.substring(startidx,rptNamesLength).split(",");
+    parent.parent.ReportListArr = new Array(tmpARR.length);
+    for (var z=0; z < tmpARR.length-1; z++)
+    {
+        parent.parent.ReportListArr[z] =  tmpARR[z];
+    }
+    if(parent.parent.rptCount == 1) 
+    {
+        parent.parent.ReportToView = parent.parent.ReportListArr[0]; 
+        parent.parent.ReportListArrIndex = 0; 
+        parent.parent.Content.location.replace("viewreport.html"); 
+        parent.parent.rptCount = 0; 
+    }
+    document.all["DisplayList"].innerHTML = xml.transformNode(xsl);
+
+    delete tmpXSL;
+}
+</script>        
+    </head>
+    <body onload="initPage()" onunload="finishPage()" oncontextmenu="return false" style="BORDER-RIGHT: 0px; MARGIN: 0px; OVERFLOW: auto" tabindex = "-1">
+        <span id="DisplayList" name="DisplayList"></span>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML DIR="ltr">
+	<HEAD>
+		<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+		<META NAME="MS-HAID" CONTENT="a_check5326fix">
+		<META NAME="MS.LOCALE" CONTENT="EN-US">
+		<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>IIS</NOLOC> Parent Paths">
+		<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+			<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css">
+	</HEAD>
+	<BODY>
+		<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+		<H1><NOLOC>IIS</NOLOC> Parent Paths</H1>
+		<H2>Issue</H2>
+		<P>If <CODE>ASPEnableParentPaths</CODE> is enabled and the parent directories have 
+			execute access, a script could run an unauthorized program in a parent 
+			directory.</P>
+		<H2>Solution</H2>
+		<P>Disable the <CODE>ASPEnableParentPaths</CODE> option on Internet Information Services 
+			(IIS).</P>
+		<P CLASS="note">Note</P>
+		<UL>
+			<LI>
+				<NOLOC>Microsoft Project Central</NOLOC> and
+				<NOLOC>Project Server</NOLOC>&nbsp;2002 require parent paths to be enabled. 
+				Additional information is available in KB article&nbsp;316398.</LI>
+		</UL>
+		<H2>Instructions</H2>
+		<P><B>To disable the <CODE>ASPEnableParentPaths</CODE> option in
+				<NOLOC>Microsoft&reg; Windows&reg; Server 2003</NOLOC> or
+				<NOLOC>Windows&reg;&nbsp;XP</NOLOC> Professional</B></P>
+		<OL>
+			<LI>
+				Click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, 
+				and then click <B>Internet Information Services</B>.
+			<LI>
+				In the Internet Information Services Manager, right-click the root of the Web 
+				site that you want to secure, and then click <B>Properties</B>.
+			<LI>
+				In the <B>Default Web Site Properties</B> dialog box, click the <B>Home Directory</B>
+				tab, and then click <B>Configuration</B>.
+			<LI>
+				In the <B>Application Configuration</B> dialog box, click the <B>Options</B> tab, 
+				and then clear the <B>Enable parent paths</B> check box.</LI>
+		</OL>
+		<BR>
+		<P><B>To disable the <CODE>ASPEnableParentPaths</CODE> option in
+				<NOLOC>Windows&nbsp;2000</NOLOC></B></P>
+		<OL>
+			<LI>
+				Click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, 
+				and then click <B>Internet Services Manager</B>.
+			<LI>
+				In the Internet Information Services Manager, right-click the root of the Web 
+				site that you want to secure, and then click <B>Properties</B>.
+			<LI>
+				In the <B>Default Web Site Properties</B> dialog box, click the <B>Home Directory</B>
+				tab, and then click <B>Configuration</B>.
+			<LI>
+				In the <B>Application Configuration</B> dialog box, click the <B>App Options</B>
+				tab, and then clear the <B>Enable parent paths</B> check box.</LI>
+		</OL>
+		<BR>
+		<P><B>To disable the <CODE>ASPEnableParentPaths</CODE> option if you are running
+				<NOLOC>Microsoft Small Business Server&nbsp;2000</NOLOC></B></P>
+		<OL>
+			<LI>
+				Follow the previous steps for
+				<NOLOC>Windows&nbsp;2000</NOLOC>.
+			<LI>
+				Click <B>OK</B>. The <B>Inheritance Overrides</B> dialog box appears.<BR>
+				<P CLASS="note">Note</P>
+				<UL>
+					<LI>
+						The following three nodes should be listed in the Child Nodes section: Public,
+						<NOLOC>Exchange</NOLOC>, and <CODE>Exadmin</CODE>.&nbsp; If none of these child nodes are 
+						listed, run the <NOLOC>IIS</NOLOC> Lockdown tool, and then re-run the
+						<NOLOC>Microsoft</NOLOC> Baseline Security Analyzer.</LI>
+				</UL>
+			<LI>
+				Click <B>OK</B> to close the <B>Inheritance Overrides</B>
+			dialog box.
+			<LI>
+				Click <B>OK</B> to close the <B>Web Site Properties</B> dialog box.</LI>
+		</OL>
+		<P CLASS="important"><FONT COLOR="red">Important</FONT></P>
+		<UL>
+			<LI>
+				If done incorrectly,
+				<NOLOC>Exchange</NOLOC>
+				(specifically
+				<NOLOC>Outlook Web Access</NOLOC>) will no longer function. If this occurs, run 
+				the <NOLOC>IIS</NOLOC> Lockdown tool again and after verifying the three child nodes in the 
+				previous steps appear in the Inheritance Overrides dialog box, click OK to 
+				accept these settings.</LI>
+		</UL>
+		<H2>Additional Information</H2>
+		<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16541" TITLE="http://www.microsoft.com/"
+				TARGET="_blank"><CODE>ASPEnableParentPaths</CODE> MetaBase Property Should Be Set To False 
+				(184717)</A></P>
+		<BR>
+		<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007
+				<NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+	</BODY>
+</HTML>

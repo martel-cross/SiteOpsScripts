@@ -1,0 +1,436 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<HTML DIR="LTR">
+    <HEAD>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+    <object ID="Scanner" CLASSID="clsid:D86984D6-5AA7-11D9-89C9-000BDB08B646" width="0" height="0"></object>
+        <SCRIPT LANGUAGE=javascript>
+        <!--
+        // If true, then we have already request build of full report list
+        var bHaveFullList = false;
+        //store the Bool value to show most recent or not on the reports.html page
+        var ShowMostRecentRpt = false;
+        // stores the file name that the report.html will open (always escape()ed)
+        var ReportToView;
+        //this is an array of report Names -- used for the view report page -- the next and previous buttons
+        var ReportListArr; // always escape()ed
+        var ReportListArrIndex;
+        //stores the current check id for when a user click view report details
+        var gblrptCheckID;
+        var gblrptGroupId;
+        var gblIEZonesId;
+        var gblHotFixCheck = false;   // Bool used for the result details xsl to determine which XSL to use
+        var gblSQLInstanceName = ''; // Used in details to choose correct instance
+        var gblIEZones = false;       // Bool used for the result details xsl to determine which XSL to use
+        var gblIEZoneName = '';
+        var gblSUS = false;
+        var gblReportName;//report name
+        //for scan Mode here is the definition
+        //gblScanMode = 0 : ScanThisComputer
+        //gblScanMode = 1 : ScanComputerByName
+        //gblScanMode = 2 : ScanComputerByIP
+        //gblScanMode = 3 : ScanComputersByDomain
+        //gblScanMode = 4 : ScanComputersByIPRange
+        var gblScanMode //this computer... ComputersByIP
+        var gblScanParams//stores the different parameters for the scan
+        //global options, for remembering them
+        var gblOptSuppress = 0; // 0=no suppress; 1=suppress notes; 2=suppress notes&warnings
+        var gblOptBaseline = 0; // 0=not baseline only; 4=baseline only
+        var gblOptNoSum = 8;    // 0=use checksum; 8=no checksum
+        var CheckHotFix = true;
+        var CheckIIS = true; 
+        var CheckOS = true;
+        var CheckPasswords = true;
+        var CheckSQL = true;
+        var rptCount=0; //global to know whether or not to disable the PickReport link
+        var prevReportCount=0; //global to judge when to refresh the list from harddisk
+        var gblOptAdvanced = false;
+        var gblOptAdvSelected = 0;
+        var gblConfigTarget = false;
+        var PartialRefresh = false;
+        var ComputerName = "";
+        var additCabsAvailable = Scanner.DetectAdditionalCabs(""); 
+        var CheckAdditCabs = additCabsAvailable;
+        var IPAddress1 = "";
+        var IPAddress2 = "";
+        var IPAddress3 = "";
+        var IPAddress4 = "";
+        var IPAddress5 = "";
+        var IPAddress6 = "";
+        var IPAddress7 = "";
+        var IPAddress8 = "";
+        var ReportName = "";
+        var newLink = true;
+        var scan = false;
+        var verWndHeight = 0;
+        var ScanInProgress = false;
+        var BACKSPACE = 8;
+        var LEFTARROW = 37 , RIGHTARROW = 39 , HOME = 36 , ENTER = 13;
+        var nBack = -1 , nFwd = -1 , nDirection = 0;//nDirection = -1  ->Backward;
+                                  //nDirection = 1 -> Forward;
+        function keyHit(evt)
+        {
+        var retVal = true;
+        var key = evt.keyCode;
+
+        //check if user presses "shift"
+        if(evt.shiftKey) 
+        {
+            //Navigates to next page , when user presses "Shift + Backspace".
+            if (key == BACKSPACE)
+            {
+                Header.GoForward();
+                retVal = false;
+            }
+        }
+        //check if user presses "alt"
+        else if(evt.altKey) 
+        {
+            //Navigates to previous page , when user presses "Alt + <-" (LeftArrow).
+            if(key == LEFTARROW) 
+            {
+                Header.GoBack();
+                retVal = false;
+            }
+            //Navigates to next page , when user presses "Alt + ->" (RightArrow).
+            else if(key == RIGHTARROW)
+            {
+                Header.GoForward();
+                retVal = false;
+            }
+                 else if(key == HOME)
+                 {// Navigates to Home page , when user presses "Alt + Home" (Home Key).
+                     Header.GoHome();
+                     retVal = false;
+                 } 
+             }
+             else if (key == BACKSPACE  && nBack>=0)
+             {// Navigates to previous page , when user presses Backspace.
+                  if(!Header.backDisable)
+                  {
+                      nBack--;
+                      nFwd++;
+                      nDirection = -1;
+                  }
+                  else
+                  {
+                      retVal = false;//Disable backspace when buttons are disabled.
+                  }
+             }
+             return retVal;
+        }
+
+        //set the appropriate toolbar selected css, and Undo the selection of the previous
+        function Settb(id)
+        {
+            try
+            {
+                if(ToolBar.document.all["tbselectedinnertext"] != null && ToolBar.document.all["tbselectedinnertext"] != 'undefined' && (id != "viewreport"))
+                {
+                    if(ToolBar.document.all["tbselectedinnertext"].value != id)
+                    {
+                        if(ToolBar.document.all["tbselectedinnertext"].value == "")
+                        {
+                            //if its empty dont undo a previous selection
+                            ToolBar.document.all[id].className = "link-normal sys-toppane-selection";
+                        }
+                        else
+                        {
+                            //set the selection and undo the previous selection
+                            ToolBar.document.all[id].className = "link-normal sys-toppane-selection";
+                            ToolBar.document.all[ToolBar.frmToolBar.tbselectedinnertext.value].className = "link-normal";
+                        }
+                        //store the new selected id
+                        ToolBar.document.all["tbselectedinnertext"].value = id;
+                    }
+                }
+            }
+            catch(e) { }
+        }
+
+        //disables all menu Items
+        function DisableAll()
+        {
+            //if(Scanner.ReportCount(0) <= 0)
+            //{
+                //ToolBar.document.frmToolBar.tbselectedinnertext.value = "";//none selected
+            //}
+
+            //ToolBar.document.all['welcome'].className = "sys-link-disabled";
+            //ToolBar.document.all['welcome'].href = "javascript:void(0);";
+
+            ToolBar.document.all['pickcomputer'].className = "sys-link-disabled";
+            ToolBar.document.all['pickcomputer'].href = "javascript:void(0);";
+
+            ToolBar.document.all['pickcomputers'].className = "sys-link-disabled";
+            ToolBar.document.all['pickcomputers'].href = "javascript:void(0);";
+
+            ToolBar.document.all['pickreport'].className = "sys-link-disabled";
+            ToolBar.document.all['pickreport'].href = "javascript:void(0);";
+
+            ToolBar.document.all['viewreport'].className = "sys-link-disabled";
+            ToolBar.document.all['viewreport'].href = "javascript:void(0);";
+
+            ToolBar.document.all['about'].className = "sys-link-disabled";
+            ToolBar.document.all['about'].href = "javascript:void(0);";
+
+            ToolBar.document.all['help'].className = "sys-link-disabled";
+            ToolBar.document.all['help'].href = "javascript:void(0);";
+            ToolBar.document.all['help'].target = "";
+
+            ToolBar.document.all['microsoftwebsite'].className = "sys-link-disabled";
+            ToolBar.document.all['microsoftwebsite'].href = "javascript:void(0);";
+            ToolBar.document.all['microsoftwebsite'].target = "";
+
+            Header.document.all['Forward'].disabled = true;
+            Header.document.all['Forward'].src = "Graphics/disabled_fwd.png";
+
+            Header.document.all['Back'].disabled = true;
+            Header.document.all['Back'].src = "Graphics/disabled_back.png";
+        }
+
+        //enables all menu items
+        function EnableAll()
+        {
+            //ToolBar.document.all['welcome'].className = "sys-link-normal";
+            //ToolBar.document.all['welcome'].href = "welcome.html";
+
+            ToolBar.document.all['pickcomputer'].className = "link-normal";
+            ToolBar.document.all['pickcomputer'].href = "pickcomputer.html";
+
+            ToolBar.document.all['pickcomputers'].className = "link-normal";
+            ToolBar.document.all['pickcomputers'].href = "pickcomputers.html";
+            if(Scanner.ReportCount(0) > 0)
+            {
+                //ToolBar.document.all['pickreport'].className = "sys-link-normal sys-toppane-selection";
+                ToolBar.document.all['pickreport'].className = "link-normal";
+                ToolBar.document.all['pickreport'].href = "javascript:parent.ViewReports(false);";
+            }
+            else
+            {
+                ToolBar.document.all['pickreport'].className = "sys-link-disabled";
+                ToolBar.document.all['pickreport'].href = "javascript:void(0);";
+            }
+
+            ToolBar.document.all['about'].className = "link-normal";
+            ToolBar.document.all['about'].href = "about.html";
+
+            ToolBar.document.all['help'].className = "link-normal";
+            ToolBar.document.all['help'].href = "help/mbsahelp.html";
+            ToolBar.document.all['help'].target = "_blank";
+
+            ToolBar.document.all['microsoftwebsite'].className = "link-normal";
+            ToolBar.document.all['microsoftwebsite'].href = "http://go.microsoft.com/fwlink/?LinkId=16558";
+            ToolBar.document.all['microsoftwebsite'].target = "_blank";
+
+            //Donot enable Navigation buttons during scan.
+            if(!scan)
+            {
+                Header.document.all['Forward'].disabled = false;
+                Header.document.all['Forward'].src = "Graphics/up_fwd.png";
+
+                Header.document.all['Back'].disabled = false;
+                Header.document.all['Back'].src = "Graphics/up_back.png";
+            }
+
+        }
+
+        function OpenReport(file,index)
+        {
+            //the index is for the report list array "ReportListArr" -- to maintain the current report for the next and previous reports
+            try
+            {
+                ReportFileName = unescape(file);
+
+                //load the new xm
+                strXML = Scanner.GetUserXML(ReportFileName, true);
+
+                if(strXML == "")
+                {
+                    nBack--;
+                    alert("Not able to load report file. Report file may have been removed or corrupted.");
+                    Scanner.GetReportList(2);
+                    return;
+                }
+            }
+            catch(e)
+            {
+                alert("Not able to load report file. Report file may have been removed or corrupted.");
+                Scanner.GetReportList(2);
+                return;
+            }
+
+            //set the file name variable
+            ReportToView = file;
+            ReportListArrIndex = index;
+            Content.location.assign("viewreport.html");
+            return "viewreport.html";
+        }
+
+        function ViewReports(MostRecent)
+        {
+            //if MostRecent is true, switch to most-recent mode, else leave the mode as is
+            if(MostRecent == true)
+            {
+                ShowMostRecentRpt = true;
+            }
+
+            top.Header.OnNewLink('pickreport.html');
+            Content.location.assign("pickreport.html");
+
+        }
+
+        function ShowActions(ReportListPage)
+        {
+            //actions are only shown on two pages, depending on the page, I need to call 2 different methods
+            //ReportListPage is a bool, if its the list page call these 2 methods, otherwise the other two
+
+            if(Edit.document.all["Actions"] != null && Edit.document.all["Actions"] != 'undefined')
+            {
+                Edit.document.all["Actions"].style.display = "block";
+                if(ReportListPage)
+                {
+                    Edit.document.all["Print"].href = "javascript:parent.PrintReportList();";
+                    Edit.document.all["Copy"].href = "javascript:parent.CopyReportList();";
+                }
+                else
+                {
+                    Edit.document.all["Print"].href = "javascript:parent.PrintReport();";
+                    Edit.document.all["Copy"].href = "javascript:parent.CopyReport();";
+                }
+
+                Edit.document.all["Print"].className = "sys-link-normal";
+                Edit.document.all["Copy"].className = "sys-link-normal";
+            }
+        }
+
+        function HideActions()
+        {
+            try
+            {
+                if(Edit.document.all["Actions"] != null && Edit.document.all["Actions"] != 'undefined')
+                {
+                    Edit.document.all["Actions"].style.display = "none";
+                }
+            }
+            catch(e) { }
+        }
+        function DisableActions()
+        {
+            Edit.document.all["Print"].className = "sys-link-disabled";
+            Edit.document.all["Print"].href = "javascript:void(0);";
+            Edit.document.all["Copy"].className = "sys-link-disabled";
+            Edit.document.all["Copy"].href = "javascript:void(0);";
+        }
+
+        function PrintReportList()
+        {
+            ReportListSortOrder = Content.document.all["SortOrder"].value;
+            Print.location = "PrintReportList.html";
+        }
+
+        function CopyReportList()
+        {
+            ReportListSortOrder = Content.document.all["SortOrder"].selectedIndex;
+            ReportListSortOrder ++;
+            Scanner.CopyReportList(ShowMostRecentRpt,ReportListSortOrder);
+        }
+
+        function PrintReport()
+        {
+            Print.location = "PrintReport.html";
+        }
+
+        function CopyReport()
+        {
+            ReportSortOrder = Content.document.all["SortOrder"].selectedIndex;
+            ReportSortOrder ++;
+            Scanner.CopyReport(unescape(ReportToView),ReportSortOrder);
+        }
+
+        function SetCursor(page, inCursor, exclude)
+        {
+            var cursor = (inCursor == null ? "" : inCursor);
+            for( i in page.document.styleSheets )
+            {
+                for( j in page.document.styleSheets[i].rules )
+                {
+                    try
+                    {
+                        page.document.styleSheets[i].rules[j].style.cursor = cursor;
+                    }
+                    catch( e ) { }
+                }
+            }
+
+            // Process exclusions
+            if( typeof exclude != "undefined" )
+            {
+                if( typeof exclude == "array" )
+                {
+                    // process array of elements
+                }
+                else
+                {
+                    // process a single element
+                    exclude.style.cursor = "default";
+                }
+            }
+        }
+
+        function SetAllCursors(me, cursor, exclude)
+        {
+            parent.SetCursor(parent.Header, cursor, exclude);
+            parent.SetCursor(parent.Footer, cursor, exclude);
+            parent.SetCursor(parent.Content, cursor, exclude);
+            parent.SetCursor(parent.ToolBar, cursor, exclude);
+            parent.SetCursor(parent.NewVersion, cursor, exclude);
+            parent.SetCursor(me, cursor, exclude);
+        }
+        //-->
+        </SCRIPT>
+        
+        <SCRIPT LANGUAGE="VBS">
+            'capture scanner events
+            sub Scanner_ScanStart(bstrName)
+                Content.ScanStart bstrName
+            end sub
+            
+            sub Scanner_ScanEnd(bstrName,Grade)
+                Content.ScanEnd bstrName,Grade
+            end sub
+            
+            sub Scanner_ScanSetStart(NumberOfCPUs)
+                Content.ScanSetStart NumberOfCPUs
+            end sub
+            
+            sub Scanner_ScanSetEnd(Grade)
+                Content.ScanSetEnd Grade
+            end sub
+            
+            sub Scanner_ScanProgress(OptionID,NumEvents,NotUsed)
+                Content.ScanProgress OptionID,NumEvents,NotUsed
+            end sub
+
+            sub Scanner_NewVersionDetected(NewVersionUrl)
+                NewVersion.NewVersionDetected NewVersionUrl
+            end sub
+        </script>
+        
+    </HEAD>
+    <frameset id = "MainFrame" rows="65,*" border="0" frameSpacing="0" frameBorder="0" onload = "Header.initPage();">
+        <frame name="Header" src="Header.html" noresize scrolling="no" tabindex="-1" target="_blank">
+        <frameset border = 0 id = "ToolFrame" cols="200,75%" framespacing="0">
+            <frame name="ToolBar" src="ToolBar.html" target="Content">
+            <frameset border = 0 id="ContentFrame" rows="*,0,0,0,0" framespacing="0">
+                <frame name="Content" src="welcome.html">
+                <frame name="NewVersion" src="newversion.html" id="NewVersionFrame" noresize="true" scrolling="no" style="display: none;">
+                <frame name="Edit" src="viewreport_footer.html" id="EditFrame" noresize="true" scrolling="no">
+                <frame name="Print" src="about:blank" id="Print" noresize="true" scrolling="no">
+                <frame name="Footer" src="Footer.html" noresize scrolling="no">
+            </frameset>
+        </frameset>
+    </frameset>
+</HTML>

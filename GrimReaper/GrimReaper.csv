@@ -1,0 +1,47 @@
+Path,days,function,recursive
+d:\Spool\HHMail\backup\,7,delete,TRUE
+d:\Spool\HHMail\,45,delete,TRUE
+d:\mailarchive\,4,delete,TRUE
+d:\mailarchive\oddbounces\,6,delete,TRUE
+d:\inetpub\mailroot\,7,delete,TRUE
+d:\inetpub\mailroot\Drop\,2,delete,TRUE
+d:\inetpub\mailsite\,7,delete,TRUE
+d:\inetpub\mailsite\Drop\,2,delete,TRUE
+d:\inetpub\mailemail\,7,delete,TRUE
+d:\inetpub\mailemail\Drop\,2,delete,TRUE
+d:\inetpub\mailapply\,10,delete,TRUE
+d:\infectedmail\mailapply\,0,delete,TRUE
+d:\infectedmail\mailemail\,0,delete,TRUE
+d:\infectedmail\mailsite\,0,delete,TRUE
+d:\infectedmail\mailroot\,0,delete,TRUE
+d:\Abbott\Archive\,2,delete,TRUE
+d:\Abbott\Attachments\,2,delete,TRUE
+d:\Newman\Archive\,2,delete,TRUE
+d:\Newman\Error\,2,delete,TRUE
+d:\recruiter\archive\,7,delete,FALSE
+d:\recruiter\failed\,7,delete,FALSE
+d:\EmailAnonymousResume\archive\,7,delete,FALSE
+d:\EmailAnonymousResume\failed\,7,delete,FALSE
+c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\,10,delete,TRUE
+C:\Program Files (x86)\Cloudera\Flume 0.9.4\log\,7,delete,TRUE
+d:\iislogs\,5,delete,TRUE
+c:\Logs\,5,delete,FALSE
+d:\iislogs\w3svc1\,90,delete,FALSE
+d:\Logs\,5,delete,TRUE
+d:\Logs\stats\drop\,1,delete,FALSE
+d:\Logs\stats\processed\,0,delete,FALSE
+D:\Deployment\logs\,14,delete,TRUE
+D:\DeploymentV3\logs\,14,delete,TRUE
+D:\Deployment\tempFiles\,1,delete,TRUE
+D:\DeploymentV3\tempFiles\,1,delete,TRUE
+D:\deploymentv3\TallyAndTimings\,2,delete,TRUE
+d:\Logs\stats\,2,delete,FALSE
+D:\platformstats\stat\processed\,0,delete,TRUE
+D:\platformstats\stat\,2,delete,TRUE
+c:\Program Files\DebugDiag\Logs\,3,delete,TRUE
+D:\matrixservices\MatrixDefs\SettingControl.xml_*_bck,0,Delete,FALSE
+D:\matrixservices\MatrixDefs\SettingControlAB.xml_*_bck,0,Delete,FALSE
+D:\matrixservices\CBSys\MatrixDefs\SettingControl.xml_*_bck,0,Delete,FALSE
+D:\matrixservices\CBSys\MatrixDefs\SettingControlAB.xml_*_bck,0,Delete,FALSE
+c:\windows\temp\,7,Delete,FALSE
+C:\temp\,0,delete,FALSE

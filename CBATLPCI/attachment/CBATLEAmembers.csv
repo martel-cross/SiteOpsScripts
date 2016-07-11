@@ -1,0 +1,6 @@
+#TYPE Selected.Microsoft.ActiveDirectory.Management.ADPrincipal
+"name","samaccountname","distinguishedname","objectclass","sid"
+"AliShahzad","ashahzad","CN=AliShahzad,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-1258"
+"ColinField","cfield","CN=ColinField,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-27198"
+"MahmoudHarb","mharb","CN=MahmoudHarb,CN=Users,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-27247"
+"Windows","windows","CN=Windows,CN=Builtin,DC=atl,DC=careerbuilder,DC=com","user","S-1-5-21-839522115-261903793-1417001333-500"

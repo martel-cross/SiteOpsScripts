@@ -1,0 +1,182 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<HTML>
+    <HEAD>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+
+    <object ID="Scanner" CLASSID="clsid:D86984D6-5AA7-11D9-89C9-000BDB08B646" width="0" height="0"></object>
+        <SCRIPT LANGUAGE=javascript>
+        <!--
+        // If true, then we have already request build of full report list
+        var bHaveFullList = false;
+        //store the Bool value to show most recent or not on the reports.html page
+        var ShowMostRecentRpt = false;
+        //stores the file name that the report.html will open (always escape()ed)
+        var ReportToView;
+        //this is an array of report Names -- used for the view report page -- the next and previous buttons
+        var ReportListArr;
+        var ReportListArrIndex;
+        //stores the current check id for when a user click view report details
+        var gblrptCheckID;
+        
+        var gblReportName;//report name
+        //for scan Mode here is the definition
+        //gblScanMode = 0 : ScanThisComputer
+        //gblScanMode = 1 : ScanComputerByName
+        //gblScanMode = 2 : ScanComputerByIP
+        //gblScanMode = 3 : ScanComputersByDomain
+        //gblScanMode = 4 : ScanComputersByIPRange
+        var gblScanMode //this computer... ComputersByIP
+        var gblScanParams//stores the different parameters for the scan
+        //global options, for remembering them
+        var CheckHotFix = true;
+        var CheckIIS = true; 
+        var CheckOS = true;
+        var CheckPasswords = true;
+        var CheckSQL = true;
+        var rptCount=0; //global to know wether or not to disable the PickReport link
+        var BACKSPACE = 8;
+        var LEFTARROW = 37;
+        var ENTER = 13;
+        
+        document.onmousewheel = onmousescroll;
+        function onmousescroll()
+        {
+            if (window.event.shiftKey) 
+            {
+                return false;
+            }
+            return true;
+        }
+        function keyHit(evt)
+        {
+            //Handles Keyboard Operations when MBSA report is invoked from Explorer.
+            var retVal = true;
+            var key = evt.keyCode;
+
+        if(evt.shiftKey) 
+        {
+            //Do nothing when user presses Shift + Enter.(ENTER - 13)
+            if (key == 13)
+            {
+                retVal = false;
+            }
+        }
+            //check if user presses "alt"
+            else if(evt.altKey)
+            {
+                //Performs no action when user presses "Alt + <-" (LeftArrow).
+                if(key == LEFTARROW)
+                {
+                    retVal = false;
+                }
+            }
+            //Performs no action when user presses Backspace.
+            if(key == BACKSPACE)
+                retVal = false;
+            return retVal;
+        }
+        // No toolbar in show report mode; stub function for compatibility
+        function Settb(id)
+        {
+        }
+
+        //disables all menu Items
+        function DisableAll()
+        {
+        }
+        
+        //enables all menu items
+        function EnableAll()
+        {
+        }
+        
+        function OpenReport(file,index)
+        {//the index is for the report list array "ReportListArr" -- to maintain the current report for the next and previous reports
+            ReportToView = file;
+            ReportListArrIndex = index;
+            Content.location.assign("viewreport.html");
+            top.Header.OnNewLink("viewreport.html");
+        }
+        
+        function ViewReports(MostRecent)
+        {
+            // if MostRecent is true, switch to most-recent mode, else leave the mode as is
+            if(MostRecent == true)
+            {
+                ShowMostRecentRpt = true;
+            }
+            top.Header.OnNewLink("pickreport.html");
+            Content.location.assign("pickreport.html");
+        }
+        
+        function ShowActions(ReportListPage)
+        {
+        }
+        
+        function HideActions()
+        {
+        }
+        function DisableActions()
+        {
+        }
+        
+        function PrintReportList()
+        {
+            ReportListSortOrder = Content.document.all["SortOrder"].value;
+            
+            var PrintWindow = window.open('PrintReportList.html','PrintWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=1,height=1,left=10000,top=10000'); 
+        }
+        
+        function CopyReportList()
+        {    
+            ReportListSortOrder = Content.document.all["SortOrder"].selectedIndex;
+            ReportListSortOrder ++;
+            Scanner.CopyReportList(ShowMostRecentRpt,ReportListSortOrder);
+        }
+        
+        function PrintReport()
+        {
+            var PrintWindow = window.open('PrintReport.html','PrintWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=1,height=1,left=10000,top=10000'); 
+        }
+        
+        function CopyReport()
+        {
+            ReportSortOrder = Content.document.all["SortOrder"].selectedIndex;
+            ReportSortOrder ++;
+            Scanner.CopyReport(unescape(ReportToView),ReportSortOrder);
+        }
+        //-->
+        </SCRIPT>
+        
+        <SCRIPT LANGUAGE="VBS">
+            'capture scanner events
+            sub Scanner_ScanStart(bstrName)
+                Content.ScanStart bstrName
+            end sub
+            
+            sub Scanner_ScanEnd(bstrName,Grade)
+                Content.ScanEnd bstrName,Grade
+            end sub
+            
+            sub Scanner_ScanSetStart(NumberOfCPUs)
+                Content.ScanSetStart NumberOfCPUs
+            end sub
+            
+            sub Scanner_ScanSetEnd(Grade)
+                Content.ScanSetEnd Grade
+            end sub
+            
+            sub Scanner_ScanProgress(OptionID,NumEvents,NotUsed)
+                Content.ScanProgress OptionID,NumEvents,NotUsed
+            end sub
+        </script>
+        
+    </HEAD>
+    <frameset rows="65,*" border="0" frameSpacing="0" frameBorder="0">
+        <frame name="Header" src="Header.html" noresize style="BORDER-BOTTOM: white 1px solid">
+        <frame name="Content" src="onereport.html">
+    </frameset>
+</HTML>

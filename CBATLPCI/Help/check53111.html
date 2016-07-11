@@ -1,0 +1,81 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53111">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>Internet Explorer</NOLOC> Security Zones">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>Internet Explorer</NOLOC> Security Zones</H1>
+
+<H2>Check Description</H2>
+
+<P>This check lists the current and recommended security settings for the <NOLOC>Microsoft&reg;</NOLOC> <NOLOC>Internet Explorer</NOLOC> zones 
+for each local user on the scanned computer.</P>
+
+<P>When the security level is customized or when individual settings have been 
+modified through means other than the <B>Internet Options</B> dialog box, 
+individual settings that are set below the recommended level will be identified.</P>
+
+<P CLASS="note">Note</P> 
+<UL>
+<LI>If you get the message "Error Reading Registry," the Remote Registry service might not be enabled.</LI></UL>
+ 
+<P>The <NOLOC>Microsoft Internet Explorer</NOLOC> Web content zones divide the Internet or intranet into zones with different levels of security. This capability permits you to set global default settings for the browser, to allow all content on trusted sites or to disallow certain types of content, such as Java applets or <NOLOC>ActiveX&reg;</NOLOC> controls, depending on the Web site of origin.</P>
+
+<P>The <NOLOC>Internet Explorer</NOLOC> browsing software comes with four predefined Web content zones: Internet, Local intranet, Trusted sites, and Restricted sites. 
+In the <B>Internet Options</B> dialog box, you can set the security 
+options you want for each zone, and then add or remove sites from any zone 
+(except Internet), depending on your level of trust in the site. In 
+corporate environments, administrators can set up zones for users. They can also add or remove (in advance) the authentication certificates of software 
+publishers that they do or do not trust, so that users do not have to make 
+security decisions while they are using the Internet.</P>
+
+<P>For each security zone, you can choose a high, medium, medium-low, low, or custom security settings. The high setting is recommended for sites in zones of uncertain trustworthiness. The custom choice provides advanced users and administrators with more control over all security options, including the following:</P>
+
+	<UL>
+        <LI>Access to files, <NOLOC>ActiveX</NOLOC> controls, and scripts.</LI> 
+        <LI>Level of capabilities given to <NOLOC>Java</NOLOC> applets.</LI>
+        <LI>Site identity designation with Secure Sockets Layer (SSL) authentication.</LI>
+        <LI>Password protection with <NOLOC>NTLM</NOLOC> authentication. (Depending on which
+zone a server is in, <NOLOC>Internet Explorer</NOLOC> can send password information automatically, prompt the user for user and password information, or deny any logon request.)</LI>
+	</UL>
+	
+<P>On systems that have <NOLOC>Internet Explorer</NOLOC> Enhanced Security Configuration 
+installed, the settings are checked against the default recommended levels for 
+this configuration.</P>
+    
+<P CLASS="note">Note</P>
+<UL><LI>MBSA checks are based on the latest recommendations for a product or component. These recommendations may differ from the defaults that were in effect when a product or component was installed. Consequently, MBSA may report problems with <NOLOC>Internet Explorer</NOLOC> security zone settings even though no changes were made to the initial default settings.</LI></UL>
+    
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16957" TITLE="http://www.microsoft.com/" TARGET="_blank">About URL Security Zones Templates</A>
+</P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16958" TITLE="http://www.microsoft.com/" TARGET="_blank">How to Use Security Zones in <NOLOC>Internet Explorer</NOLOC></A></P>
+
+<P><A HREF="http://go.microsoft.com/fwlink/?LinkId=19599">Managing <NOLOC>Internet 
+Explorer</NOLOC> Enhanced Security Configuration</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

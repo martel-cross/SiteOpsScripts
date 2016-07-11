@@ -1,0 +1,53 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<HTML>
+    <HEAD>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+        <script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+        <SCRIPT LANGUAGE="javascript">
+<!--
+
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit() 
+{
+    return top.keyHit(event);
+}
+
+
+function initPage()
+{
+        window.focus();
+    var xml = XCreateObject("MSXML2.DOMDocument")
+    var xsl = XCreateObject("MSXML2.DOMDocument")
+
+    xml.async = false
+    xsl.async = false
+    
+    xml.loadXML(parent.parent.Scanner.GetConfigXML("errors",false))
+    xsl.load("errors.xsl");
+    //set the file name variable
+    document.all["Display"].innerHTML = xml.transformNode(xsl)    
+    
+    delete xml;
+    delete xsl;
+}
+ 
+//-->
+        </SCRIPT>
+        <link REL="stylesheet" type="text/css" href="css/scanner.css" />
+    </HEAD>
+    <BODY onload="initPage();" oncontextmenu="return false" style="BORDER-RIGHT: 0px; MARGIN: 5px; OVERFLOW: auto" tabindex = "-1">
+        <span id="Display" name="Display"></span>
+    </BODY>
+</HTML>

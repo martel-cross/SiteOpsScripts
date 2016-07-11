@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5336fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Exposed sa or <NOLOC>SQL</NOLOC> Service Account Password">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Exposed sa or <NOLOC>SQL</NOLOC> Service Account Password</H1>
+
+<H2>Issue</H2>
+
+<P>Users with access to the <CODE>%windir%</CODE> or <CODE>%windir%\temp</CODE> directories can potentially obtain 
+the sa (system administrator) account passwords from the <NOLOC>Setup.iss</NOLOC> and <NOLOC>Sqlstp.log</NOLOC> files. These files may contain the <NOLOC>Microsoft&reg;</NOLOC> <NOLOC>SQL Server&trade;</NOLOC> administrator password (if the server is 
+configured to use Mixed Mode authentication) or a domain user ID and password 
+(if the administrator chooses to provide this information to automatically start 
+<NOLOC>SQL Server</NOLOC> services). Passwords in these files are stored in plaintext by 
+<NOLOC>SQL Server</NOLOC>&nbsp;7.0 versions prior to Service Pack&nbsp;4 (SP4). All versions of <NOLOC>SQL Server</NOLOC>&nbsp;2000 and <NOLOC>SQL Server</NOLOC>&nbsp;7.0 SP4 encrypt the passwords before storing them.</P>
+
+<H2>Solution</H2>
+
+<P>If the unattended installation file and log files are not needed, they should be 
+deleted. If the files must be retained, they should be moved to a folder 
+that is only accessible by administrators, or moved to offline storage.</P>
+
+<P>Additionally, the <NOLOC>KillPwd</NOLOC> utility provided by <NOLOC>Microsoft</NOLOC> can remove passwords from the <NOLOC>Setup.iss</NOLOC> and log files. This utility deletes any passwords that are 
+found in the setup and log files, whether encrypted or not. It does not, by 
+default, delete passwords in the <NOLOC>Setup.iss</NOLOC> file created by <NOLOC>SQL Server</NOLOC>&nbsp;2000 installations because this file is saved in a directory that only allows access to administrators and the individual user setting up <NOLOC>SQL Server</NOLOC>.</P>
+
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16943" TITLE="http://www.microsoft.com/" TARGET="_blank">FIX: Service Pack Installation May Save Standard Security Password in File (263968)</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16549" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft</NOLOC> Security Bulletin (MS00-035): Frequently Asked Questions</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+</BODY>
+</HTML>

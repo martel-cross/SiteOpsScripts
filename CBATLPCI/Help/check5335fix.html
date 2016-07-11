@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5335fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="BUILTIN\Administrators in <NOLOC>Sysadmin</NOLOC> Role">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>BUILTIN\Administrators in <NOLOC>Sysadmin</NOLOC> Role</H1>
+
+<H2>Issue</H2>
+
+<P>In many installations (particularly in enterprise scenarios) administrators like to see the distinction between the 
+roles of the operating system administrator and the <NOLOC>SQL Server&trade;</NOLOC> administrator. In such scenarios it might be useful to remove the local <NOLOC>Windows&reg;</NOLOC> administrators' membership in the <NOLOC>SQL</NOLOC> <NOLOC>Sysadmin</NOLOC> role. However, in smaller deployments of <NOLOC>SQL Server</NOLOC> or in local <NOLOC>Microsoft&reg;</NOLOC> <NOLOC>SQL Server</NOLOC> Desktop Engine (MSDE) or WMSDE scenarios, it may be acceptable to ignore this check and leave the local administrators inside the <NOLOC>Sysadmin</NOLOC> role.</P>
+
+<H2>Solution</H2>
+
+<P>Remove <B>BUILTIN\Administrators</B> from the <NOLOC>Sysadmin</NOLOC> role.</P>
+
+<P CLASS="note">Note:</P>
+<UL>
+<LI>There are special circumstances that require administrators to belong to the 
+<NOLOC>Sysadmin</NOLOC> role. These circumstances are outlined in the following <NOLOC>Microsoft</NOLOC> Knowledge Base articles:</LI>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16949" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>SQL Server</NOLOC> Agent Does Not Start and Displays Error&nbsp;18456 (237604)</A> </P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16950" TITLE="http://www.microsoft.com/" TARGET="_blank">How to 
+Prevent <NOLOC>Windows&nbsp;NT</NOLOC> Administrators from Administering a Clustered <NOLOC>SQL Server</NOLOC> (263712)</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16951" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>IsAlive</NOLOC> Check Does Not Run Under the Context of the BUILTIN\Administrators Account (291255)</A> </P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16952" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft</NOLOC> Search Service May Cause 100% CPU Usage if BUILTIN\Administrators Login is Removed (295034)</A></P> 
+
+</UL>
+
+<P CLASS="important"><Font color="red">Important</FONT></P>
+<UL>
+<LI>Before removing the BUILTIN\Administrators group from <NOLOC>SQL Server</NOLOC>, it is recommended that there be at least one other login that has administrative capabilities in <NOLOC>SQL Server</NOLOC>. Further, certain applications may rely on the ability of the BUILTIN\Administrators group to be able to administer <NOLOC>SQL Server</NOLOC>. Before proceeding with the solution below, ensure that your applications can work in this configuration.</LI></UL>
+
+<H2>Instructions</H2>
+
+<OL>
+<LI>Click <B>Start</B>, point to <B>Programs</B>, point to <B><NOLOC>Microsoft SQL Server</NOLOC></B>, and then click <B>Enterprise Manager</B>. </LI>
+<LI>In <NOLOC>SQL Server</NOLOC> Enterprise Manager, double-click <B><NOLOC>SQL Server</NOLOC> Group</B>, and then double-click the <NOLOC>SQL Server</NOLOC> that you want to secure. </LI>
+<LI>Click the <B>Security</B> folder, click <B>Server Roles</B>, and then double-click <B>System Administrators</B> in the right pane.</LI>
+<LI>In the <B>Server Role Properties</B> dialog box, click <B>BUILTIN\Administrators</B>, and then click <B>Remove</B>.</LI>
+</OL>
+
+<p>In scenarios where there is no Enterprise Manager (as in the case of MSDE or 
+WMSDE) or when it is desired to perform the above actions through a script, the 
+following can be done:</p>
+
+<ol>
+	<li>Open a command prompt window.</li>
+	<li>Use the <a href="http://go.microsoft.com/fwlink/?LinkId=19764">osql 
+	utility</a> to connect to the <NOLOC>SQL</NOLOC> instance using a valid login.</li>
+	<li>Issue the following command to remove the BUILTIN\Administrators group 
+	from the <NOLOC>Sysadmin</NOLOC> role:</li>
+	<OL type="a">
+	<LI><CODE>sp_dropsrvrolemember '</CODE>builtin\administrators<CODE>','Sysadmin'</CODE></LI>
+	<LI><CODE>go</CODE></LI></OL>
+</ol>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16547" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft SQL Server</NOLOC>&nbsp;Security</A></P>
+
+<BR>
+
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

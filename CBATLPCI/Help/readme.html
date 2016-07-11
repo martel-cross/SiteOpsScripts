@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+	<HEAD>
+		<TITLE>Microsoft Baseline Security Analyzer Version 2.3 Release Notes</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+		<META NAME="MS-HAID" CONTENT="a_MBSAhelp">
+		<META NAME="MS.LOCALE" CONTENT="EN-US">
+		<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>Microsoft</NOLOC> Baseline Security Analyzer 2.3 Release Notes">
+		<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+			<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css">
+	</HEAD>
+	<body lang="EN-US" link="#f00020" vlink="blue">
+		<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+		<p class="banner">Thank you for installing <NOLOC>Microsoft&reg;</NOLOC> Baseline Security Analyzer 
+			2.3.</p>
+		<h1>Release notes for MBSA 2.3</h1>
+		<p class="banner">&nbsp;</p>
+		<UL>
+				<LI>
+					<a href="#CHANGES">Improvements and Changes in MBSA 2.3</a>
+
+					<UL>
+					<LI>
+						<a href="#FEATURES">Additional Features</a>
+					</LI>
+						<LI>
+						<a href="#Fixes">Fixes and Changes</a></LI>					
+					<LI>
+						<a href="#LOC">Localization</a>
+					</LI>
+					<LI>
+						<a href="#CONTENT">Products Supported</a>
+					</LI>
+					<LI>
+						<a href="#CHECKS">Additional Configuration Checks</a>
+					</LI>
+					<LI>
+						<a href="#ADDED">Additional MBSA CLI Switches</a>
+					</LI>
+					<LI>
+						<a href="#MODIFIED">Replaced or Modified MBSA CLI Switches</a>
+					</LI>
+					<LI>
+						<a href="#REMOVED">Removed MBSA CLI Switches</a>
+					</LI>
+					</UL>
+				</LI>
+				<LI>
+					<a href="#WORKAROUND">Dropped Features and Workarounds</a>
+				</LI>
+				<LI><a HREF="#howtocorrect">How to Correct Common Errors</a></LI>
+		</UL>
+		<H2><A name="CHANGES">Improvements and Changes in MBSA 2.3</A></H2>
+		<P>MBSA 2.3 includes the most popular scanning abilities of 
+			previous versions and adds these additional features:</P>
+		</UL>
+
+		<h2><a name="FEATURES">Additional Features:</a></h2>
+		<UL>
+			<LI>
+				Ability to choose offline mode from graphical and command-line 
+				interfaces (/<strong>offline</strong> option)</LI>
+			<LI>
+				Support for additional security catalogs (for future use)</LI>
+			<LI>
+				Command-line option to obtain catalogs from user-selected 
+				directory or network share using <strong>/cabpath</strong> 
+				option</LI>
+			<LI>
+				Compatibility with <NOLOC>WSUS</NOLOC> 3.0 technologies and the latest <NOLOC>Windows</NOLOC> 
+				Update Agent features</LI>
+			<li>All vulnerability assessment (VA) checks have been extended to 
+			work on x64 (64-bit) platforms</li>
+			<LI>Updated graphical user interface</LI>
+			<LI>
+				Command-line option to redirect reports to a user-selected 
+				directory or network share using /<strong>rd</strong> option</LI>
+			<LI>
+				Consistency with <NOLOC>Windows Update</NOLOC>, <NOLOC>Microsoft Update</NOLOC>, <NOLOC>Windows 
+				Server Update Services</NOLOC> (<NOLOC>WSUS</NOLOC>) server, 
+				Systems Management Server (SMS) 2003 and System Center 
+				Configuration Manager (SCCM)</LI>
+			<li>Access to the live <NOLOC>Microsoft Update</NOLOC> site for published 
+					content for live (online) security update assessment as well as an offline catalog for customers with 
+					limited or secure internet access. </li>
+			<LI>
+				Automatic determination of the client's assigned <NOLOC>WSUS</NOLOC> 
+				server, eliminating the need to specify the client's <NOLOC>WSUS</NOLOC> 
+				server before scanning to ensure the correct assigned <NOLOC>WSUS</NOLOC> server will be used
+			</LI>
+
+			<LI>
+				Ability to provide a "not yet approved" score for 
+				unapproved <NOLOC>WSUS</NOLOC> updates</LI>
+			<LI>
+				Ability to run multiple copies of MBSA for increased 
+				scanning performance
+			</LI>
+			<LI>
+				Current Update Compliance appears in the report; installed and 
+				needed updates are reported together in a single scan report
+			</LI>
+			<LI>
+				Updates that require a restart of the computer will be annotated as the reason for non-compliance
+				both in the GUI and command-line interface</LI>
+			<LI>
+				Accepts an input file of computers and IP addresses to be scanned
+			</LI>
+			<LI>
+				Reports can now be easily shared and viewed
+			</LI>
+			<LI>
+				Structured XML output offers simplified integration for update scanning
+			</LI>
+			<LI>
+				Ability to pass a specific username and password on the command
+ line for both update scanning and security misconfiguration scanning
+			</LI>
+			<LI>
+				Option to automatically configure clients with prerequisites to 
+				ensure the
+ latest required version of <NOLOC>Windows</NOLOC> Update Agent needed for scanning
+			</LI>
+			<LI>
+				Specific Web links for locating updates and taking necessary 
+					actions
+			</LI>
+			<LI>
+				Bulletin severity ratings available in report details
+			</LI>
+		</UL>
+
+		<h2><a name="Fixes">Fixes and changes from previous versions:</a></h2>
+		<UL>
+			<LI>
+				Corrects automatic fallback to offline mode if Microsoft Update 
+				or WSUS servers are unavailable (corrects an MBSA-specific issue 
+				introduced with the newest Windows Update Agent)</LI>
+			<LI>
+				Removed download link in completed scan reports since its no 
+				longer possible to accurately identify the correct package in a 
+				multi-package bundle, which is how the majority of updates are 
+				now released</LI>
+			<LI>
+				Removed product version from cache directory path (now <CODE>C:\Documents and 
+Settings\&lt;username&gt;\Local Settings\Application Data\Microsoft\MBSA\Cache)</CODE>.</LI>
+		</UL>
+
+		<h2><a name="loc">Localization:</a></h2>
+		<UL>
+			<LI>
+				MBSA releases are available for German, Japanese, and 
+					French.
+			</LI>
+			<LI>
+				The <NOLOC>WSUSSCN2.CAB</NOLOC> file is localized to all supported languages 
+					and will be automatically downloaded and used by the tool for any client 
+					language or locale being scanned. Results are stored in the report based on the 
+				MBSA installation language.
+			</LI>
+		</UL>
+		<h2><a name="content">MBSA can scan for security updates in the following products:</a></h2>
+		<UL>
+			<LI>
+				All products supported by Microsoft Update including:</LI>
+			<LI>
+				<NOLOC>Windows XP</NOLOC>, <NOLOC>Windows Server</NOLOC> 2003, <NOLOC>Windows Vista</NOLOC>, <NOLOC>Windows Server</NOLOC> 2008, <NOLOC>Windows 7</NOLOC>, <NOLOC>Windows Server 2008 R2</NOLOC>, <NOLOC>Windows 8</NOLOC>, <NOLOC>Windows Server 2012</NOLOC>, <NOLOC>Windows 8.1</NOLOC>, <NOLOC>Windows Server 2012 R2</NOLOC> - including 64-bit (x64 and ia64) support</LI>
+			<LI>
+				<NOLOC>Microsoft Windows&nbsp;XP</NOLOC> Embedded (limited to remote scanning
+and limited to local scanning via the /xmlout command line switch)
+			</LI>
+			<LI>
+				<NOLOC>Microsoft Office XP</NOLOC> and later
+			</LI>
+			<LI>
+				<NOLOC>Exchange Server</NOLOC> 2000 and later
+			</LI>
+			<LI>
+				All <NOLOC>Windows</NOLOC> components (such as MSXML, MDAC, <NOLOC>Windows Media</NOLOC> 
+				Player, <NOLOC>Outlook Express</NOLOC>/<NOLOC>Windows</NOLOC> Mail)
+			</LI>
+			<LI>
+				<NOLOC>.Net Framework</NOLOC> 1.0 and later</LI>
+			<LI>
+				<NOLOC>SQL Server</NOLOC> 2000 with service pack 3 and later
+			</LI>
+			<LI>
+				Additional and new <NOLOC>Microsoft</NOLOC> products as they are added to <NOLOC>Microsoft Update</NOLOC> 
+				(see the <a href="http://go.microsoft.com/fwlink/?LinkID=16534">
+				MBSA home page</a> for details)</LI>
+		</UL>
+		<h2><a name="checks">Additional Configuration Checks:</a></h2>
+		<UL>
+			<LI>
+				Incomplete Updates check - (for recently released updates that 
+					require a computer restart to take effect)
+			</LI>
+		</UL>
+		<h2><a name="added">Additional MBSA CLI Switches:</a></h2>
+		<UL>
+			<LI>
+				/offline - Forces offline mode; easier than using /wa (WSUS 
+				Approved) or /wi (WSUS Ignore) to force offline mode</LI>
+			<LI>
+				/addonly - Use only additional catalogs (if available)</LI>
+			<LI>
+				/noadd - Do not use additional catalogs (even if available)</LI>
+			<LI>
+				/cabpath - Location of additional catalogs (if available)</LI>
+			<LI>
+				/ia -   (Attempt to install a newer version of 
+					<NOLOC>Windows</NOLOC> Update Agent if one is required for scanning)
+			</LI>
+			<LI>
+				/mu - (Force target clients to use the live <NOLOC>Microsoft Update</NOLOC> site 
+				to determine security compliance regardless of <NOLOC>WSUS</NOLOC> server 
+				assignment)
+			</LI>
+		
+			<LI>
+				/nd - (Force target clients not to use files from the Microsoft Web site 
+				to determine security compliance; offline catalog will be used 
+				instead)
+			</LI>
+			<LI>
+				/rd - (Used to place completed scan reports in a user-selected 
+				directory or network share. Also to retrieve scan reports from a 
+				user-selected location)
+			</LI>
+		
+			<LI>
+				/qt - (do not display the report output automatically after 
+					a single computer scan)
+			</LI>
+		
+		</UL>
+		<h2><a name="modified">Replaced MBSA CLI Switches for MBSA 1.2.1 
+		compatibility:</a></h2>
+		<UL>
+			<LI>
+				/wi, /wa replace the /sus option
+			</LI>
+			<LI>
+				/catalog replaces the /x option
+			</LI>
+			<LI>
+				/xmlout replaces the /HF option
+			</LI>
+			<LI>
+				/target replaces the /i, /c and /h options
+			</LI>
+			<LI>
+				/listfile replaces the /fh and /fip options
+			</LI>
+			<LI>
+				/ld replaces the /v option
+			</LI>
+		</UL>
+		<h2><a name="removed">MBSA CLI switches removed from previous versions:</a></h2>
+		<UL>
+			<LI>
+				/n - (ranges and computer lists can be specified by the /r 
+					and /listfile options respectively)
+			</LI>
+			<LI>
+				/e - (structured output in XML can be parsed from the 
+					reports)
+			</LI>
+			<LI>
+				/history - (current update compliance is  
+					included by default when scanning)
+			</LI>
+			<LI>
+				/fq - (structured output in XML can be parsed from the 
+			reports)
+			</LI>
+			<LI>
+				/s, /sum, /nosum and /z - (Automatic Updates and <NOLOC>Microsoft 
+			Update</NOLOC> catalog detection logic is always used)
+			</LI>
+			<LI>
+				/o tab | wrap - (structured output in XML can be parsed from 
+			the reports)
+			</LI>
+			<LI>
+				/t - (multiple copies of MBSA may now be used on the same 
+			scanning computer)
+			</LI>
+			<LI>
+				/f - (console redirection can be used to write additional 
+			output to a file)
+			</LI>
+			<LI>
+				/nai - (Do not install a newer version of the <NOLOC>Windows</NOLOC> Update Agent 
+				even if required for scanning - which is the new default 
+				setting. Use the /ia switch to automatically install the 
+				required <NOLOC>Windows</NOLOC> Update Agent)
+			</LI>
+			<LI>
+				/nm - (Do not configure computers to use the <NOLOC>Microsoft Update</NOLOC> site for scanning by default. /mu switch is required to use <NOLOC>Microsoft Update</NOLOC> site)
+			</LI>
+		
+		</UL>
+
+		<p>&nbsp;</p>
+
+		<h1><a name="WORKAROUND">Dropped Features and Workarounds</a></h1>
+
+<p></p>
+			<h2>Issue</h2>
+			<p>Reasons why an update is considered missing are not provided in this version of MBSA, however when an update has been installed and a computer restart is required for it to take effect, this reason will be provided in the report.<br></p>
+			<h2>Workaround</h2>
+			<p>The built-in logging of the Automatic Updates service found in 
+			the <NOLOC>WindowsUpdate.log</NOLOC> file can be used to inspect the detection behavior for troubleshooting.<br></p>
+
+			<h2>Issue</h2>
+			<p>Installation history (explicitly installed / effectively installed) no longer reflect those updates that have been superseded by another update.  The behavior of this feature follows the behavior for missing updates, where only the most recent non-superseded update is shown.<br></p>
+			<h2>Workaround</h2>
+			<p>Refer to the bulletin, fixlist, or TechNet search page to identify each previous bulletin that has been included in the update in question from the Current Update Compliance listing.<br></p>
+
+			<h2>Issue</h2>
+			<p>Support for <NOLOC>SUS</NOLOC> 1.0 does not exist in MBSA 2.<br></p>
+			<h2>Workaround</h2>
+			<p>Upgrade from <NOLOC>SUS</NOLOC> 1.0 to <NOLOC>Windows Server Update Services</NOLOC>.<br></p>
+
+<H1><A NAME="howtocorrect">How to Correct Common Errors</A></H1>
+
+<P>For up-to-date information about troubleshooting MBSA setup and operations, see the Frequently Asked Questions at the <A href="http://go.microsoft.com/fwlink/?LinkID=45293"><NOLOC>Microsoft</NOLOC> Web site</A>.</p>
+
+		<p class="banner"><a href="MBSAhelp.html">Go to main help topics</a></p>
+	</body>
+</HTML>

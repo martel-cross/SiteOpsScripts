@@ -1,0 +1,27 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+<head>
+    <meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+    <link REL="stylesheet" type="text/css" href="css/scanner.css" />
+    <script language="javascript">
+    function initPage()
+    {
+        setTimeout("ShowReportList()",25);  // Allows screen to repaint
+    }
+
+    function ShowReportList() 
+    {
+        var myReport;
+        myReport = parent.Scanner.GetReportList(4);
+        // rptname.innerText = myReport;
+        parent.OpenReport(myReport,0);
+    }
+    </script>
+</head>
+<body onload="initPage()" oncontextmenu="return false" tabindex = "-1">
+    <span id="rptname" name="rptname"></span>
+</body>
+</html>

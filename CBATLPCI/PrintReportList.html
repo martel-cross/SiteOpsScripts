@@ -1,0 +1,21 @@
+<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+<head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+	<link REL="stylesheet" type="text/css" href="css/scanner.css" />
+	<script language="javascript">
+	function initPage()
+	{
+		document.all["Display"].innerHTML = parent.Content.frmreports.xml.transformNode(parent.Content.frmreports.xsl)
+		parent.Print.focus();
+		window.print();
+	}
+	</script>
+</head>
+<body onload="initPage()" oncontextmenu="return false" style="BORDER-RIGHT: 0px; MARGIN: 0px; OVERFLOW: auto">
+<span id="Display" name="Display"></span>
+</body>
+</html>

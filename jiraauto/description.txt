@@ -1,0 +1,21 @@
+
+New Employee CreationJoy Guerin has been entered into the CareerBuilder employee database.
+
+PC, Phone will be available within 10 business days after the employee record has been created. The new hire will get a standard PC configuration unless otherwise requested.
+
+Employee Information
+
+Field	Value
+Effective Date	2/22/2016 3:00:00 AM
+Last Name	Guerin
+First Name	Joy
+Preferred Name	
+Suggested Login ID	jguerin
+Suggested Email	joy.guerin@careerbuilder.com
+Title	
+Department	USA - GA - Norcross
+Manager	Randy Satterfield
+EmployeeID	103794
+Type	employee
+
+Once the employee is created in the Active Directory with a valid email address and phone number, employee's Axiom account will get activated automatically.

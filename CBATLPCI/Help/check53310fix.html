@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53310fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>SQL Server</NOLOC> Registry Key Security">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>SQL Server</NOLOC> Registry Key Security</H1>
+
+<H2>Issue</H2>
+
+<P>The Everyone group should not have more than read access to the <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> registry keys. For example, if an unauthorized person has write access to the registry, they could change the authentication type for your server from <NOLOC>Windows</NOLOC> 
+Authentication to Mixed Mode, and use this change to try to gain access to your 
+system through the sa (system administrator) account. If a blank or weak password was assigned to that account, the unauthorized person could log on as system administrator.</P>
+
+<H2>Solution</H2>
+
+<P>Ensure that the Everyone group is restricted to read access for the <NOLOC>SQL Server</NOLOC> registry keys:</P>
+
+<PRE><CODE>HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\MICROSOFT SQL Server</CODE></PRE>
+<PRE><CODE>HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\MSSQLSERVER</CODE></PRE>
+
+<P CLASS="caution"><FONT COLOR="red">Caution</FONT></P>
+<UL>
+    <LI>Using the Registry Editor incorrectly can cause serious, system-wide problems that may require you to reinstall <NOLOC>Microsoft Windows&reg;</NOLOC> to correct them. <NOLOC>Microsoft</NOLOC> cannot guarantee that problems resulting from the incorrect use of the Registry Editor can be solved.</LI>
+</UL>
+
+<H2>Instructions</H2>
+<P><B>To ensure that the Everyone group is restricted to read access for the <NOLOC>SQL Server</NOLOC> registry keys</B></P>
+
+<OL>
+<LI>Click <B>Start</B>, click <B>Run</B>, and then type <B>regedt32.exe</B>.</LI>
+<LI>Expand the following registry key: <CODE>HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\MICROSOFT SQL Server</CODE>.</LI>
+<LI>On the <B>Security</B> menu, click <B>Permissions</B>.</LI>
+<LI>Click <B>Everyone</B>, and make sure that only the <B>Read</B> check box is selected.</LI>
+<LI>Repeat for the following key: <CODE>HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\MSSQLSERVER</CODE>.</LI>
+</OL>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16547" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft SQL Server</NOLOC>&nbsp;2000 Security</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

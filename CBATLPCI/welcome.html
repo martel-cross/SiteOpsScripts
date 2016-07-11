@@ -1,0 +1,252 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<HTML DIR="LTR">
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html" CHARSET="UTF-8" />
+<link REL="stylesheet" type="text/css" href="css/scanner.css" />
+<script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+<script LANGUAGE="javascript">
+<!--
+
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit(evt) 
+{
+    return top.keyHit(event);
+}
+
+window.onresize = function() 
+{
+    SizeContentElement();//Handles window resizing.
+}
+function SizeContentElement()
+{
+    var wndHt = document.body.clientHeight ;//Actual Window Height = Window Height - Header Height;
+    if(wndHt - WelcomeFooter.offsetHeight < WelcomeHeader.offsetTop + WelcomeHeader.offsetHeight)
+    {
+        document.all["WelcomeFooter"].className = "welcome-footer-resize";
+    }
+    else
+    {
+        document.all["WelcomeFooter"].className = "welcome-footer-normal";
+    }
+}
+function initPage()
+{
+    if(top.document.all["Header"]!= null && top.document.all["Header"] != 'undefined')
+    {
+        top.Header.ShowFrames();
+    }
+    SizeContentElement();
+    if(parent.Scanner.ReportCount(1) == null || parent.Scanner.ReportCount(1)  == 'undefined')
+    {
+        alert("COM object did not get installed");
+    }
+    else
+    {
+        if(parent.Scanner.ReportCount(0) == 0)
+        {
+            top.nFwd--;
+            WelcomePickReport.className = "sys-link-disabled";
+            WelcomePickReport.href = "javascript:void(0);";
+            PickReportIMG.src = "Graphics/disabled_viewreport24.jpg";
+
+            try
+            {
+                parent.ToolBar.document.all["pickreport"].className = "sys-link-disabled";
+                parent.ToolBar.document.all["pickreport"].href = "javascript:void(0);";
+            }
+            catch(e) { }
+        }
+        else
+        {
+            try
+            {
+                parent.ToolBar.document.all["pickreport"].className = "link-normal";
+                parent.ToolBar.document.all['pickreport'].href = "javascript:parent.ViewReports(false);";
+
+            }
+            catch(e) { }
+            WelcomePickReport.className = "sys-link-normal";
+        }
+    }
+    if(top.document.all["Header"]!= null && top.document.all["Header"] != 'undefined')
+    {
+        top.Header.SetNavigationState();
+    }
+}
+
+function ScanThisComputer()
+{
+    parent.gblReportName = "";
+    parent.gblScanMode   = 0;
+    parent.gblScanParams = "";
+    parent.Content.navigate("scan.html");
+}
+function HaveXML()
+{
+    var xml = null;
+    try
+    {
+        xml = XCreateObject("MSXML2.DOMDocument");
+    }
+    catch (e)
+    { ; }
+
+    if( xml != null )
+    {
+        delete xml;
+        return true;
+    }
+    return false;
+}
+function Stale()
+{
+    return false;
+}
+//-->
+</script>
+</head>
+
+<body oncontextmenu="return false" onload='javascript:setTimeout("initPage()",5);' onUnload = " top.Header.DisableButtons();"style="MARGIN-LEFT: 23px" tabindex = "-1">
+<div id = "WelcomeHeader">
+    <span class="sys-font-heading3 sys-rhp-color-title">Check computers for common security misconfigurations.</span><br><br>
+<script language="javascript">
+<!--
+if (!HaveXML() || Stale())
+    document.write ("<span style='display:none'>");
+//-->
+</script>
+
+    <p align="left" style="line-height: 200%">
+    <span>
+    <font size="2" face="Tahoma">The Microsoft Baseline Security Analyzer can check computers running Microsoft Windows Server&nbsp;2012&nbsp;R2, Windows&nbsp;8.1, Windows Server&nbsp;2012, Windows&nbsp;8, Windows Server&nbsp;2008&nbsp;R2, Windows&nbsp;7, Windows®&nbsp;Server 2003, Windows Server&nbsp;2008, Windows&nbsp;Vista, or Windows&nbsp;XP. Scanning computers for security&nbsp;updates utilizes Windows&nbsp;Server&nbsp;Update Services. You must have administrator privileges for each computer you want to scan. <br/>
+    </font>
+    </span>
+    </p>
+
+    <div id="Welcome">
+    <TABLE>
+        <tr align = left >        
+            <td valign = vcenter align = left>
+                <font size = "2">
+                <A class=sys-link-normal style ="padding-left:6" onclick="top.Header.OnNewLink('pickcomputer.html');location.assign(this.href); return false;" href="pickcomputer.html" >
+                <IMG class=arrow title="Scan a computer" height=25 src="Graphics/scansingle24.jpg" width=30 align=Left >Scan a computer</A></font><br>
+                <font size = "2" face = "Tahoma" color = "#00000" style ="padding-left:6">
+                Check a computer using its name or IP Address.
+                </font>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr height = 14>
+            <td></td>
+        </tr>
+        <tr align = left>        
+            <td valign = vcenter>
+                <font size = "2">
+                <A class=sys-link-normal style ="padding-left:6" onclick="top.Header.OnNewLink('pickcomputers.html');location.assign(this.href); return false;" href="pickcomputers.html" >
+                <IMG class=arrow title="Scan multiple computers" height=25 src="Graphics/scanmultiple24.jpg" width=30 align=Left >Scan multiple computers</A></font><br>
+                <font size = "2" face = "Tahoma" color = "#000000" style ="padding-left:6">
+                Check multiple computers using a domain name or a range of IP addresses.
+                </font>
+            </td>
+            <td>
+            </td>
+        </tr>
+        </tr>
+        <tr height = 14>
+            <td></td>
+        </tr>
+        <tr align = left>
+            <td valign = vcenter>
+                <font size = "2">
+                <A class=sys-link-normal id=WelcomePickReport style ="padding-left:6" onclick="top.Header.OnNewLink('pickreport.html');parent.ShowMostRecentRpt=false; location.assign(this.href); return false;" href="pickreport.html" >
+                <IMG  class=arrow id=PickReportIMG title="View existing security scan reports" height=25 src="Graphics/viewreport24.jpg" width=30 align=Left>View existing security scan reports</A></font><br>
+                <font size = "2" face = "Tahoma" color = "#000000" style ="padding-left:6">
+                View, print and copy the results from the previous scans.
+                </font>
+            </td>
+            <td>
+            </td>
+        </tr>
+        </tr>
+        <tr height = 14>
+            <td></td>
+        </tr>
+    </TABLE>
+    <br>
+    </div>
+</div>
+<script language="javascript">
+<!--
+if (!HaveXML() || Stale())
+    document.write ("</span>");
+else
+    document.write ("<span style='display:none'>");
+//-->
+</script>
+
+
+<script language="javascript">
+<!--
+if (!Stale())
+    document.write ("<span style='display:none'>");
+//-->
+</script>
+
+<p>This version of Microsoft Baseline Security Analyzer has expired. Please upgrade to the released version.
+</p>
+
+<A class="sys-link-normal" target="_blank" href="http://go.microsoft.com/fwlink/?LinkId=16534"><IMG class=arrow 
+title="Go to Microsoft Baseline Security Analyzer Updates" height=25 src="Graphics/arrow.gif" width=30 align=absMiddle>Go to Microsoft Baseline Security Analyzer Updates</A>
+
+<script language="javascript">
+<!--
+if (!Stale())
+    document.write ("</span>");
+//-->
+</script>
+
+
+<script language="javascript">
+<!--
+if (HaveXML())
+    document.write ("<span style='display:none'>");
+//-->
+</script>
+<p>The Microsoft Baseline Security Analyzer requires MSXML. You must install MSXML before starting MBSA.
+</p>
+
+<A class="sys-link-normal" target="_blank" href="http://go.microsoft.com/fwlink/?LinkId=16533"><IMG class=arrow 
+title="Go to XML download page" height=25 src="Graphics/arrow.gif" width=30 align=absMiddle>Go to XML download page</A>
+
+
+<script language="javascript">
+<!--
+if (HaveXML())
+    document.write ("</span>");
+//-->
+</script>
+<script language="javascript">
+<!--
+if (!(!HaveXML() || Stale()))
+    document.write ("</span>");
+//-->
+</script>
+<div id = "WelcomeFooter" class = "welcome-footer-normal">
+    &#169; 2002-2013 <a href="http://go.microsoft.com/fwlink/?LinkId=42160" style = "padding-left:0;padding-right:0;" class ="welcome-footer-link" target=_blank tabindex = -1>Microsoft Corporation.</a> 
+    All rights reserved.
+</div>
+</body>
+</html>

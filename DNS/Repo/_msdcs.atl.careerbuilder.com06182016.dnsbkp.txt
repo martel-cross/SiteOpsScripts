@@ -1,0 +1,216 @@
+;
+;  Database file (null) for Default zone scope in zone _msdcs.atl.careerbuilder.com.
+;      Zone version:  1611
+;
+
+@                       IN  SOA qtxad2.atl.careerbuilder.com. hostmaster.atl.careerbuilder.com. (
+                        		1611         ; serial number
+                        		900          ; refresh
+                        		600          ; retry
+                        		86400        ; expire
+                        		3600       ) ; default TTL
+
+;
+;  Zone NS records
+;
+
+@                       NS	drawsad1.atl.careerbuilder.com.
+@                       NS	drawsad2.atl.careerbuilder.com.
+@                       NS	bearad2.atl.careerbuilder.com.
+@                       NS	bearad1.atl.careerbuilder.com.
+bearad1.atl.careerbuilder.com. A	10.230.10.9
+@                       NS	qtmad1.atl.careerbuilder.com.
+qtmad1.atl.careerbuilder.com. A	10.240.10.9
+@                       NS	luigiad2.atl.careerbuilder.com.
+@                       NS	devad1.atl.careerbuilder.com.
+@                       NS	devad2.atl.careerbuilder.com.
+@                       NS	qtwad1.atl.careerbuilder.com.
+qtwad1.atl.careerbuilder.com. A	10.210.10.9
+@                       NS	qtxad1.atl.careerbuilder.com.
+@                       NS	qtxad2.atl.careerbuilder.com.
+@                       NS	qtmad2.atl.careerbuilder.com.
+qtmad2.atl.careerbuilder.com. A	10.240.10.10
+@                       NS	luigiad1.atl.careerbuilder.com.
+luigiad1.atl.careerbuilder.com. A	10.237.10.9
+@                       NS	qtwad2.atl.careerbuilder.com.
+qtwad2.atl.careerbuilder.com. A	10.210.10.10
+
+;
+;  Zone records
+;
+
+2e4fe632-04d2-4812-8479-4a120be77182 600	CNAME	qtwad1.atl.careerbuilder.com.
+409da0f7-6301-4fdb-b75b-9dec030e5d74 600	CNAME	qtmad1.atl.careerbuilder.com.
+45751dba-b270-47ce-aa99-e6a509cacf66 600	CNAME	devad2.atl.careerbuilder.com.
+48154696-ea01-48af-ad5d-7549d1108fe6 600	CNAME	bearad2.atl.careerbuilder.com.
+542315f0-d335-4600-aa26-4798d330750f 600	CNAME	luigiad2.atl.careerbuilder.com.
+6d6c59b8-e307-45f8-85ec-0a079ca2fda7 600	CNAME	drawsad1.atl.careerbuilder.com.
+76bdc888-2746-4727-a034-a4c910d24c14 600	CNAME	qtmad2.atl.careerbuilder.com.
+b09f2a6e-a02c-4e8f-94ad-3daae04531ae 600	CNAME	qtwad2.atl.careerbuilder.com.
+bb1d7742-d736-485b-8173-877015c5b121 600	CNAME	drawsad2.atl.careerbuilder.com.
+c67c8f74-433d-4b11-9e4c-4d3a3fe077f5 600	CNAME	qtxad2.atl.careerbuilder.com.
+d1eb213f-c9e4-4e01-a5a2-9fb262b393d2 600	CNAME	qtxad1.atl.careerbuilder.com.
+d4a29d22-003d-44df-b037-4e2e12b26d31 600	CNAME	devad1.atl.careerbuilder.com.
+_kerberos._tcp.AMS._sites.dc 600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AMS._sites.dc 600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+_kerberos._tcp.AWS-DEV._sites.dc 600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-DEV._sites.dc 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+_kerberos._tcp.AWS-EAST._sites.dc 600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-EAST._sites.dc 600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_kerberos._tcp.AWS-IR._sites.dc 600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-IR._sites.dc 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+_kerberos._tcp.AWS-SG._sites.dc 600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-SG._sites.dc 600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+_kerberos._tcp.CHI._sites.dc 600	SRV	0 100 88	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad1.atl.careerbuilder.com.
+_ldap._tcp.CHI._sites.dc 600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+_kerberos._tcp.DEV._sites.dc 600	SRV	0 100 88	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad2.atl.careerbuilder.com.
+_ldap._tcp.DEV._sites.dc 600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+_kerberos._tcp.DRAWS._sites.dc 600	SRV	0 100 88	drawsad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	drawsad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.DRAWS._sites.dc 600	SRV	0 100 389	drawsad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	drawsad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_kerberos._tcp.LUIGI._sites.dc 600	SRV	0 100 88	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad2.atl.careerbuilder.com.
+_ldap._tcp.LUIGI._sites.dc 600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+_kerberos._tcp.QTM._sites.dc 600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.QTM._sites.dc 600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+_kerberos._tcp.QTMDEV._sites.dc 600	SRV	0 100 88	devad1.atl.careerbuilder.com.
+_ldap._tcp.QTMDEV._sites.dc 600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+_kerberos._tcp.QTW._sites.dc 600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad1.atl.careerbuilder.com.
+_ldap._tcp.QTW._sites.dc 600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+_kerberos._tcp.QTX._sites.dc 600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.QTX._sites.dc 600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+_kerberos._tcp.dc       600	SRV	0 100 88	drawsad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 88	drawsad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 88	qtwad1.atl.careerbuilder.com.
+_ldap._tcp.dc           600	SRV	0 100 389	drawsad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	drawsad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+_ldap._tcp.c12a099b-8d34-47de-9ff4-5eb7794e6eb9.domains 600	SRV	0 100 389	drawsad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 389	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 389	drawsad1.atl.careerbuilder.com.
+efa45a65-4fb8-4625-92de-d5cf3d1b8d09 600	CNAME	bearad1.atl.careerbuilder.com.
+f460e6a4-b681-4a3f-bad7-5f446cb73701 600	CNAME	luigiad1.atl.careerbuilder.com.
+gc                      600	A	10.237.10.10
+                        600	A	10.237.10.9
+                        600	A	10.220.100.10
+                        600	A	10.220.10.10
+                        600	A	10.240.10.9
+                        600	A	10.210.10.10
+                        600	A	10.198.10.9
+                        600	A	10.210.10.9
+                        600	A	10.230.10.10
+                        600	A	172.29.18.10
+                        600	A	10.230.10.9
+                        600	A	10.198.10.10
+                        600	A	10.240.70.9
+_ldap._tcp.AMS._sites.gc 600	SRV	0 100 3268	qtxad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-DEV._sites.gc 600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-EAST._sites.gc 600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.AWS-IR._sites.gc 600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.AWS-SG._sites.gc 600	SRV	0 100 3268	qtmad2.atl.careerbuilder.com.
+_ldap._tcp.CHI._sites.gc 600	SRV	0 100 3268	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	bearad1.atl.careerbuilder.com.
+_ldap._tcp.DEV._sites.gc 600	SRV	0 100 3268	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	devad2.atl.careerbuilder.com.
+_ldap._tcp.DRAWS._sites.gc 600	SRV	0 100 3268	drawsad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	drawsad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	luigiad2.atl.careerbuilder.com.
+_ldap._tcp.LUIGI._sites.gc 600	SRV	0 100 3268	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	luigiad1.atl.careerbuilder.com.
+_ldap._tcp.QTM._sites.gc 600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtxad1.atl.careerbuilder.com.
+_ldap._tcp.QTMDEV._sites.gc 600	SRV	0 100 3268	devad1.atl.careerbuilder.com.
+_ldap._tcp.QTW._sites.gc 600	SRV	0 100 3268	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad1.atl.careerbuilder.com.
+_ldap._tcp.QTX._sites.gc 600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+_ldap._tcp.gc           600	SRV	0 100 3268	luigiad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	luigiad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	drawsad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	drawsad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtmad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	bearad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	devad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad2.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtwad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	awseastad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	devad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	bearad1.atl.careerbuilder.com.
+                        600	SRV	0 100 3268	qtxad1.atl.careerbuilder.com.
+_ldap._tcp.pdc          600	SRV	0 100 389	qtmad2.atl.careerbuilder.com.

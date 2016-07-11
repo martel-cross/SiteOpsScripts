@@ -1,0 +1,1109 @@
+;
+;  Database file (null) for careerbuilder.com zone.
+;      Zone version:  44109
+;
+
+@                       IN  SOA qtxad2.atl.careerbuilder.com. dnsadmin.careerbuilder.com. (
+                        		44109        ; serial number
+                        		3600         ; refresh
+                        		900          ; retry
+                        		86400        ; expire
+                        		3600       ) ; default TTL
+
+;
+;  Zone NS records
+;
+
+@                       NS	bearad2.atl.careerbuilder.com.
+BEARAD2.atl             A	10.230.10.10
+@                       NS	qtwad1.atl.careerbuilder.com.
+qtwad1.atl              A	10.210.10.9
+@                       NS	devad1.atl.careerbuilder.com.
+devad1.atl              A	10.198.10.9
+@                       NS	luigiad1.atl.careerbuilder.com.
+LUIGIAD1.atl            A	10.237.10.9
+@                       NS	qtxad2.atl.careerbuilder.com.
+QTXAD2.atl              A	10.240.70.10
+@                       NS	qtxad1.atl.careerbuilder.com.
+QTXAD1.atl              A	10.240.70.9
+@                       NS	luigiad2.atl.careerbuilder.com.
+luigiad2.atl            A	10.237.10.10
+@                       NS	devad2.atl.careerbuilder.com.
+DEVAD2.atl              A	10.198.10.10
+@                       NS	qtmad2.atl.careerbuilder.com.
+qtmad2.atl              A	10.240.10.10
+@                       NS	qtmad1.atl.careerbuilder.com.
+qtmad1.atl              A	10.240.10.9
+@                       NS	bearad1.atl.careerbuilder.com.
+bearad1.atl             A	10.230.10.9
+@                       NS	qtwad2.atl.careerbuilder.com.
+qtwad2.atl              A	10.210.10.10
+
+;
+;  Zone records
+;
+
+@                       A	208.88.80.22
+@                       A	208.82.7.22
+@                       MX	10	cbmta.careerbuilder.com.
+@                       TXT	( "Record type Alias or Hostname Destination or Points to Address TTL"
+                        		"TXT @ or careerbuilder.com MS=ms37462367 1 Hour" )
+ac                      CNAME	www.careerbuilder.com.
+www.ac                  CNAME	www.careerbuilder.com.
+accounting              CNAME	www.careerbuilder.com.
+www.accounting          CNAME	www.careerbuilder.com.
+wwwtest.accounting      CNAME	wwwtest.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  accounts.careerbuilder.com.
+;
+accounts                0	NS	wasabigtm.careerbuilder.com.
+accounts                0	NS	qtsgtm.careerbuilder.com.
+;  End delegation
+
+ad                      CNAME	www.careerbuilder.com.
+admin-clerical          CNAME	www.careerbuilder.com.
+wwwtest.admin-clerical  CNAME	wwwtest.careerbuilder.com.
+adminandclerical        CNAME	www.careerbuilder.com.
+www.adminandclerical    CNAME	www.careerbuilder.com.
+adminclerical           CNAME	www.careerbuilder.com.
+www.adminclerical       CNAME	www.careerbuilder.com.
+agilemetrics            CNAME	cbagilemetrics.elasticbeanstalk.com.
+aios                    86400	A	10.197.63.126
+alerts                  A	10.240.62.250
+ams                     A	208.88.81.50
+amstel                  A	208.88.81.50
+aol                     CNAME	www.careerbuilder.com.
+accounting.aol          CNAME	www.careerbuilder.com.
+admin-clerical.aol      CNAME	www.careerbuilder.com.
+adminclerical.aol       CNAME	www.careerbuilder.com.
+banking-finance.aol     CNAME	www.careerbuilder.com.
+bankingfinance.aol      CNAME	www.careerbuilder.com.
+businessopportunity.aol CNAME	www.careerbuilder.com.
+college.aol             CNAME	www.careerbuilder.com.
+customer-service.aol    CNAME	www.careerbuilder.com.
+customerservice.aol     CNAME	www.careerbuilder.com.
+diversity.aol           CNAME	www.careerbuilder.com.
+engineering.aol         CNAME	www.careerbuilder.com.
+executive.aol           CNAME	www.careerbuilder.com.
+franchise.aol           CNAME	www.careerbuilder.com.
+gov.aol                 CNAME	www.careerbuilder.com.
+government.aol          CNAME	www.careerbuilder.com.
+health-care.aol         CNAME	www.careerbuilder.com.
+healthcare.aol          CNAME	www.careerbuilder.com.
+hospitality.aol         CNAME	www.careerbuilder.com.
+human-resources.aol     CNAME	www.careerbuilder.com.
+humanresources.aol      CNAME	www.careerbuilder.com.
+information-technology.aol CNAME	www.careerbuilder.com.
+informationtechnology.aol CNAME	www.careerbuilder.com.
+jobs.aol                CNAME	www.careerbuilder.com.
+www.jobs.aol            CNAME	www.careerbuilder.com.
+manufacturing.aol       CNAME	www.careerbuilder.com.
+my.aol                  CNAME	cbvip.careerbuilder.com.
+nonprofit.aol           CNAME	www.careerbuilder.com.
+part-time.aol           CNAME	www.careerbuilder.com.
+retail.aol              CNAME	www.careerbuilder.com.
+sales-marketing.aol     CNAME	www.careerbuilder.com.
+salesmarketing.aol      CNAME	www.careerbuilder.com.
+science-biotech.aol     CNAME	www.careerbuilder.com.
+sciencebiotech.aol      CNAME	www.careerbuilder.com.
+transportation.aol      CNAME	www.careerbuilder.com.careerbuilder.com.
+www.aol                 CNAME	cbvip.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  api.careerbuilder.com.
+;
+api                     0	NS	ns-1220.awsdns-24.org.
+ns-1220.awsdns-24.org.  A	205.251.196.196
+api                     0	NS	ns-2013.awsdns-59.co.uk.
+ns-2013.awsdns-59.co.uk. A	205.251.199.221
+api                     0	NS	ns-604.awsdns-11.net.
+ns-604.awsdns-11.net.   A	205.251.194.92
+api                     0	NS	ns-300.awsdns-37.com.
+ns-300.awsdns-37.com.   A	205.251.193.44
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  applicationtest.careerbuilder.com.
+;
+applicationtest         NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+applicationtest         NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+;  End delegation
+
+applink                 CNAME	gunslinger-puma.elasticbeanstalk.com.
+apply                   CNAME	apply.cbdr.com.
+ash                     A	208.82.5.22
+ashgtm                  A	208.82.5.229
+ashnet                  A	208.82.5.17
+
+;
+;  Delegated sub-zone:  atl.careerbuilder.com.
+;
+atl                     NS	bearad2.atl.careerbuilder.com.
+BEARAD2.atl             A	10.230.10.10
+atl                     NS	bearad1.atl.careerbuilder.com.
+bearad1.atl             A	10.230.10.9
+atl                     NS	luigiad2.atl.careerbuilder.com.
+luigiad2.atl            A	10.237.10.10
+atl                     NS	qtxad1.atl.careerbuilder.com.
+QTXAD1.atl              A	10.240.70.9
+atl                     NS	qtmad1.atl.careerbuilder.com.
+qtmad1.atl              A	10.240.10.9
+atl                     NS	devad2.atl.careerbuilder.com.
+DEVAD2.atl              A	10.198.10.10
+atl                     NS	devad1.atl.careerbuilder.com.
+devad1.atl              A	10.198.10.9
+atl                     NS	qtmad2.atl.careerbuilder.com.
+qtmad2.atl              A	10.240.10.10
+atl                     NS	qtwad2.atl.careerbuilder.com.
+qtwad2.atl              A	10.210.10.10
+atl                     NS	qtwad1.atl.careerbuilder.com.
+qtwad1.atl              A	10.210.10.9
+atl                     NS	qtxad2.atl.careerbuilder.com.
+QTXAD2.atl              A	10.240.70.10
+atl                     NS	luigiad1.atl.careerbuilder.com.
+LUIGIAD1.atl            A	10.237.10.9
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  atlas.careerbuilder.com.
+;
+atlas                   0	NS	atlasdns.careerbuilder.com.
+;  End delegation
+
+atlasdns                A	10.240.62.80
+auth                    CNAME	auth.careerbuilder.com.cdn.cloudflare.net.
+auth-staging            CNAME	auth-staging.careerbuilder.com.cdn.cloudflare.net.
+axiomcloud              A	54.225.171.9
+axiomcloudtest          A	54.197.236.145
+
+;
+;  Delegated sub-zone:  axiomesignws.careerbuilder.com.
+;
+axiomesignws            0	NS	wasabigtm.careerbuilder.com.
+axiomesignws            0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+banking-finance         CNAME	www.careerbuilder.com.
+wwwtest.banking-finance CNAME	wwwtest.careerbuilder.com.
+bankingfinance          CNAME	www.careerbuilder.com.
+www.bankingfinance      CNAME	www.careerbuilder.com.
+bdm                     CNAME	valid1.net.
+bear                    A	208.88.80.17
+
+;
+;  Delegated sub-zone:  beta.careerbuilder.com.
+;
+beta                    0	NS	ns-2045.awsdns-63.co.uk.
+ns-2045.awsdns-63.co.uk. A	205.251.199.253
+beta                    0	NS	ns-625.awsdns-14.net.
+ns-625.awsdns-14.net.   A	205.251.194.113
+beta                    0	NS	ns-1255.awsdns-28.org.
+ns-1255.awsdns-28.org.  A	205.251.196.231
+beta                    0	NS	ns-298.awsdns-37.com.
+ns-298.awsdns-37.com.   A	205.251.193.42
+;  End delegation
+
+bf                      CNAME	www.careerbuilder.com.
+www.bf                  CNAME	www.careerbuilder.com.
+bigdata                 A	10.240.62.111
+bilbo                   A	66.147.167.117
+
+;
+;  Delegated sub-zone:  birs.careerbuilder.com.
+;
+birs                    0	NS	10.10.2.63.
+10.10.2.63.             A	10.10.2.63
+birs                    0	NS	10.10.2.2.
+10.10.2.2.              A	10.10.2.2
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  biz.careerbuilder.com.
+;
+biz                     NS	bizad1.biz.careerbuilder.com.
+bizad1.biz              A	10.218.10.9
+biz                     NS	bizad2.biz.careerbuilder.com.
+bizad2.biz              A	10.218.10.10
+;  End delegation
+
+bob                     CNAME	bob.iac.cbdr.com.
+bobdr                   A	10.239.65.71
+bobtest                 A	10.197.62.99
+boss                    A	10.240.62.180
+
+;
+;  Delegated sub-zone:  bosstest.careerbuilder.com.
+;
+bosstest                NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+bosstest                NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+brock                   A	208.82.6.230
+btxbo03                 CNAME	qtxbo03.cb.careerbuilder.com.
+businessopportunity     CNAME	www.careerbuilder.com.
+wwwtest.businessopportunity CNAME	wwwtest.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  buzz.careerbuilder.com.
+;
+buzz                    0	NS	svr-at-dc2.cb.careerbuilder.com.
+svr-at-dc2.cb           A	10.10.2.2
+buzz                    NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+buzz                    NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  caexws.careerbuilder.com.
+;
+caexws                  0	NS	wasabigtm.careerbuilder.com.
+caexws                  0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+caexwstest              A	10.64.5.55
+
+;
+;  Delegated sub-zone:  cafexws.careerbuilder.com.
+;
+cafexws                 0	NS	wasabigtm.careerbuilder.com.
+cafexws                 0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+cafexwstest             A	10.64.5.47
+
+;
+;  Delegated sub-zone:  cafinexws.careerbuilder.com.
+;
+cafinexws               0	NS	wasabigtm.careerbuilder.com.
+cafinexws               0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+cafininws               CNAME	intra-wspool.careerbuilder.com.
+cafinws                 A	10.240.62.196
+cagit                   A	10.165.8.124
+cainws                  CNAME	intra-wspool.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  camobilews.careerbuilder.com.
+;
+camobilews              0	NS	wasabigtm.careerbuilder.com.
+camobilews              0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  candidates.careerbuilder.com.
+;
+candidates              0	NS	brock.careerbuilder.com.
+candidates              0	NS	misty.careerbuilder.com.
+;  End delegation
+
+candidatessv            CNAME	cbsearchsv-useast-prod-green.us-east-1.elasticbeanstalk.com.
+
+;
+;  Delegated sub-zone:  candidatestest.careerbuilder.com.
+;
+candidatestest          0	NS	brock.careerbuilder.com.
+candidatestest          0	NS	misty.careerbuilder.com.
+;  End delegation
+
+career-path             A	208.82.7.228
+careerpath              A	208.82.7.228
+careerx                 CNAME	cb.cb-crx.com.
+cawstest                CNAME	ingridlb.cb.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  cb.careerbuilder.com.
+;
+cb                      NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+cb                      NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  cbcloud.careerbuilder.com.
+;
+cbcloud                 NS	svr-at-dc2.cb.careerbuilder.com.
+svr-at-dc2.cb           A	10.10.2.2
+cbcloud                 NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  cbedge.careerbuilder.com.
+;
+cbedge                  0	NS	wasabigtm.careerbuilder.com.
+cbedge                  0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+cbftp                   A	10.64.4.220
+
+;
+;  Delegated sub-zone:  cbiws.careerbuilder.com.
+;
+cbiws                   0	NS	wasabigtm.careerbuilder.com.
+cbiws                   0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  cbmobilesvc.careerbuilder.com.
+;
+cbmobilesvc             NS	brock.careerbuilder.com.
+cbmobilesvc             NS	misty.careerbuilder.com.
+;  End delegation
+
+cbmta                   A	10.240.62.156
+
+;
+;  Delegated sub-zone:  cbrelay.careerbuilder.com.
+;
+cbrelay                 NS	svr-pr-dc2.cb.careerbuilder.com.
+cbrelay                 NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+CBRS2012                A	10.64.17.90
+cbrsdev                 CNAME	svr-dev-cbrs1.cb.careerbuilder.com.
+cbsitews                CNAME	intra-wspool.careerbuilder.com.
+cbts                    A	10.64.4.56
+
+;
+;  Delegated sub-zone:  cbu.careerbuilder.com.
+;
+cbu                     NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+cbu                     NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+cbvip                   A	208.82.7.228
+
+;
+;  Delegated sub-zone:  cbwww.careerbuilder.com.
+;
+cbwww                   NS	wasabigtm.careerbuilder.com.
+cbwww                   NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+chi                     A	208.88.80.22
+chigitauditvip          A	10.230.62.88
+china                   CNAME	www.careerbuilder.com.
+chinatest               CNAME	wwwtest.careerbuilder.com.cn.
+chinet                  A	208.88.80.17
+cnsrc                   CNAME	www.careerbuilder.com.
+co                      CNAME	www.careerbuilder.com.
+www.co                  CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  coach.careerbuilder.com.
+;
+coach                   0	NS	brock.careerbuilder.com.
+coach                   0	NS	misty.careerbuilder.com.
+;  End delegation
+
+college                 CNAME	www.careerbuilder.com.
+www.college             CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  comcast.careerbuilder.com.
+;
+comcast                 NS	misty.careerbuilder.com.
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  consumertest.careerbuilder.com.
+;
+consumertest            0	NS	wasabigtm.careerbuilder.com.
+consumertest            0	NS	qtsgtm.careerbuilder.com.
+;  End delegation
+
+crmws                   CNAME	intra-wspool.careerbuilder.com.
+cs                      CNAME	www.careerbuilder.com.
+www.cs                  CNAME	www.careerbuilder.com.
+csm                     A	10.240.65.26
+cubs                    A	65.61.186.68
+customer-service        CNAME	www.careerbuilder.com.
+wwwtest.customer-service CNAME	wwwtest.careerbuilder.com.
+customerservice         CNAME	www.careerbuilder.com.
+www.customerservice     CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  daredevil.careerbuilder.com.
+;
+daredevil               NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+daredevil               NS	svr-at-dc2.cb.careerbuilder.com.
+svr-at-dc2.cb           A	10.10.2.2
+;  End delegation
+
+dcomserver              A	10.64.4.32
+deployment              CNAME	pireport1.atl.careerbuilder.com.
+devbigdata              CNAME	devhdjk1.atl.careerbuilder.com.
+devdpi                  A	10.10.3.69
+diversity               CNAME	www.careerbuilder.com.
+www.diversity           CNAME	www.careerbuilder.com.
+wwwtest.diversity       CNAME	wwwtest.careerbuilder.com.
+dpi                     A	208.82.7.120
+dpiftp                  A	10.210.62.90
+dpitest                 A	10.197.62.196
+dragonweb1              CNAME	dragonweb1.atl.careerbuilder.com.
+dragonweb2              CNAME	dragonweb2.atl.careerbuilder.com.
+drbigdata               A	10.237.62.163
+
+;
+;  Delegated sub-zone:  drelay.careerbuilder.com.
+;
+drelay                  0	NS	svr-pr-dc2.cb.careerbuilder.com.
+drelay                  0	NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+drg                     A	202.177.199.200
+drjumbo                 CNAME	luigihd3m1.atl.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  eapi.careerbuilder.com.
+;
+eapi                    0	NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+eapi                    0	NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  edge.careerbuilder.com.
+;
+edge                    0	NS	brock.careerbuilder.com.
+edge                    0	NS	misty.careerbuilder.com.
+;  End delegation
+
+ema                     A	10.64.4.211
+email                   A	10.240.62.250
+
+;
+;  Delegated sub-zone:  employer.careerbuilder.com.
+;
+employer                0	NS	wasabigtm.careerbuilder.com.
+employer                0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+employertest            CNAME	cb4e-stage.vtlstack.com.
+en                      CNAME	www.careerbuilder.com.
+www.en                  CNAME	www.careerbuilder.com.
+engineering             CNAME	www.careerbuilder.com.
+www.engineering         CNAME	www.careerbuilder.com.
+wwwtest.engineering     CNAME	wwwtest.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  enterprisemobile.careerbuilder.com.
+;
+enterprisemobile        0	NS	wasabigtm.careerbuilder.com.
+enterprisemobile        0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+etime                   A	10.64.4.99
+
+;
+;  Delegated sub-zone:  events.careerbuilder.com.
+;
+events                  0	NS	brock.careerbuilder.com.
+events                  0	NS	misty.careerbuilder.com.
+;  End delegation
+
+ex                      CNAME	www.careerbuilder.com.
+www.ex                  CNAME	www.careerbuilder.com.
+executive               CNAME	www.careerbuilder.com.
+www.executive           CNAME	www.careerbuilder.com.
+wwwtest.executive       CNAME	wwwtest.careerbuilder.com.
+experts                 CNAME	careerbuilder.coolboard.com.
+financialws             CNAME	intra-wspool.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  flume.careerbuilder.com.
+;
+flume                   0	NS	wasabigtm.careerbuilder.com.
+flume                   0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+forums                  CNAME	www.careerbuilderforums.com.
+franchise               CNAME	www.careerbuilder.com.
+wwwtest.franchise       CNAME	wwwtest.careerbuilder.com.
+frodo                   A	204.246.246.27
+ftp                     CNAME	dpi.careerbuilder.com.
+gitaudit                A	10.210.62.88
+gitaudittest            A	10.197.62.89
+gitgauge                A	10.210.62.89
+gitsum                  CNAME	ghqgit01.cb.careerbuilder.com.
+gov                     CNAME	www.careerbuilder.com.
+wwwtest.gov             CNAME	wwwtest.careerbuilder.com.
+government              CNAME	www.careerbuilder.com.
+gprdc                   A	10.240.65.10
+gtwy                    CNAME	svr-pr-edge1.cb.careerbuilder.com.
+gtwy2                   A	10.30.2.53
+gunslinger              CNAME	gunslinger-puma.elasticbeanstalk.com.
+hawk                    A	10.10.5.48
+hc                      CNAME	www.careerbuilder.com.
+www.hc                  CNAME	www.careerbuilder.com.
+health-care             CNAME	www.careerbuilder.com.
+wwwtest.health-care     CNAME	wwwtest.careerbuilder.com.
+healthcare              CNAME	www.careerbuilder.com.
+www.healthcare          CNAME	www.careerbuilder.com.
+helpdesk                A	10.64.4.78
+hhowrld                 A	10.10.2.94
+
+;
+;  Delegated sub-zone:  hiring.careerbuilder.com.
+;
+hiring                  0	NS	brock.careerbuilder.com.
+hiring                  0	NS	misty.careerbuilder.com.
+;  End delegation
+
+hiring-asset            CNAME	d1t1ogyi4w0b04.cloudfront.net.
+dev.hiring-assets       CNAME	di5tj2xx4l83l.cloudfront.net.
+stg.hiring-assets       CNAME	d1np2lokymki80.cloudfront.net.
+
+;
+;  Delegated sub-zone:  hirings.careerbuilder.com.
+;
+hirings                 0	NS	brock.careerbuilder.com.
+hirings                 0	NS	misty.careerbuilder.com.
+;  End delegation
+
+hospitality             CNAME	www.careerbuilder.com.
+wwwtest.hospitality     CNAME	wwwtest.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  houston.careerbuilder.com.
+;
+houston                 0	NS	brock.careerbuilder.com.
+houston                 0	NS	misty.careerbuilder.com.
+;  End delegation
+
+hp                      CNAME	www.careerbuilder.com.
+www.hp                  CNAME	www.careerbuilder.com.
+hr                      CNAME	www.careerbuilder.com.
+www.hr                  CNAME	www.careerbuilder.com.
+human-resources         CNAME	www.careerbuilder.com.
+wwwtest.human-resources CNAME	wwwtest.careerbuilder.com.
+humanresources          CNAME	www.careerbuilder.com.
+www.humanresources      CNAME	www.careerbuilder.com.
+im                      CNAME	im.careerbuilder.ia0.net.
+imtest                  CNAME	imtest.careerbuilder.ia0.net.
+info                    A	208.50.150.230
+                        MX	10	mail.uptilt.com.
+                        MX	20	mail2.uptilt.com.
+information-technology  CNAME	www.careerbuilder.com.
+wwwtest.information-technology CNAME	wwwtest.careerbuilder.com.
+informationtechnology   CNAME	www.careerbuilder.com.
+www.informationtechnology CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  inteljs.careerbuilder.com.
+;
+inteljs                 0	NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+inteljs                 0	NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+;  End delegation
+
+internaltechblog        A	10.197.62.118
+interviewmastery        A	64.55.183.69
+intra-wspool            A	10.240.62.186
+
+;
+;  Delegated sub-zone:  intranet.careerbuilder.com.
+;
+intranet                0	NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+intranet                0	NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  intranetdev.careerbuilder.com.
+;
+intranetdev             0	NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+intranetdev             0	NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+iRMC0C3D72              900	A	10.241.205.158
+it                      CNAME	www.careerbuilder.com.
+www.it                  CNAME	www.careerbuilder.com.
+itrequest               A	10.64.4.90
+itrequests              A	10.64.4.90
+
+;
+;  Delegated sub-zone:  jdux.careerbuilder.com.
+;
+jdux                    0	NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+jdux                    0	NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+;  End delegation
+
+job                     CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  jobacquisition.careerbuilder.com.
+;
+jobacquisition          0	NS	brock.careerbuilder.com.
+jobacquisition          0	NS	misty.careerbuilder.com.
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  JobAPI.careerbuilder.com.
+;
+JobAPI                  0	NS	wasabigtm.careerbuilder.com.
+JobAPI                  0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+jobs                    CNAME	www.careerbuilder.com.
+www.jobs                CNAME	www.careerbuilder.com.
+jobsearch               CNAME	www.careerbuilder.com.
+jsbeta                  CNAME	beta.careerbuilder.com.
+jumbo                   CNAME	qtmhd3m1.atl.careerbuilder.com.
+lifeguard               A	10.197.62.101
+lists                   A	207.250.144.59
+local                   CNAME	www.careerbuilder.com.
+www.local               CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  m.careerbuilder.com.
+;
+m                       NS	brock.careerbuilder.com.
+m                       NS	misty.careerbuilder.com.
+;  End delegation
+
+mail                    CNAME	mxmrelay.careerbuilder.com.
+mail2                   CNAME	mxmrelay.careerbuilder.com.
+mailrelay100            A	10.240.191.100
+mailrelay101            A	10.240.191.101
+manufacturing           CNAME	www.careerbuilder.com.
+www.manufacturing       CNAME	www.careerbuilder.com.
+wwwtest.manufacturing   CNAME	wwwtest.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  mapping.careerbuilder.com.
+;
+mapping                 NS	atlasdns.careerbuilder.com.
+;  End delegation
+
+mc2                     A	10.64.4.64
+mf                      CNAME	www.careerbuilder.com.
+www.mf                  CNAME	www.careerbuilder.com.
+milhouse                A	10.10.6.69
+misty                   A	208.82.4.230
+wwwtest.mobile          A	10.197.62.114
+monty                   A	10.10.3.52
+ms                      CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  mscrm.careerbuilder.com.
+;
+mscrm                   NS	pivotaldns.careerbuilder.com.
+;  End delegation
+
+msn                     CNAME	www.careerbuilder.com.
+accounting.msn          CNAME	www.careerbuilder.com.
+admin-clerical.msn      CNAME	www.careerbuilder.com.
+adminclerical.msn       CNAME	www.careerbuilder.com.
+banking-finance.msn     CNAME	www.careerbuilder.com.
+bankingfinance.msn      CNAME	www.careerbuilder.com.
+businessopportunity.msn CNAME	www.careerbuilder.com.
+college.msn             CNAME	www.careerbuilder.com.
+customer-service.msn    CNAME	www.careerbuilder.com.
+customerservice.msn     CNAME	www.careerbuilder.com.
+diversity.msn           CNAME	www.careerbuilder.com.
+engineering.msn         CNAME	www.careerbuilder.com.
+executive.msn           CNAME	www.careerbuilder.com.
+franchise.msn           CNAME	www.careerbuilder.com.
+gov.msn                 CNAME	www.careerbuilder.com.
+government.msn          CNAME	www.careerbuilder.com.
+health-care.msn         CNAME	www.careerbuilder.com.
+healthcare.msn          CNAME	www.careerbuilder.com.
+hospitality.msn         CNAME	www.careerbuilder.com.
+human-resources.msn     CNAME	www.careerbuilder.com.
+humanresources.msn      CNAME	www.careerbuilder.com.
+information-technology.msn CNAME	www.careerbuilder.com.
+informationtechnology.msn CNAME	www.careerbuilder.com.
+jobs.msn                CNAME	www.careerbuilder.com.
+www.jobs.msn            CNAME	www.careerbuilder.com.
+manufacturing.msn       CNAME	www.careerbuilder.com.
+my.msn                  CNAME	cbvip.careerbuilder.com.
+nonprofit.msn           CNAME	www.careerbuilder.com.
+part-time.msn           CNAME	www.careerbuilder.com.
+retail.msn              CNAME	www.careerbuilder.com.
+sales-marketing.msn     CNAME	www.careerbuilder.com.
+salesmarketing.msn      CNAME	www.careerbuilder.com.
+science-biotech.msn     CNAME	www.careerbuilder.com.
+sciencebiotech.msn      CNAME	www.careerbuilder.com.
+transportation.msn      CNAME	www.careerbuilder.com.
+www.msn                 CNAME	cbvip.careerbuilder.com.
+wwwtest.msn             CNAME	wwwtest.careerbuilder.com.
+mxmrelay                A	10.30.2.53
+
+;
+;  Delegated sub-zone:  my.careerbuilder.com.
+;
+my                      NS	misty.careerbuilder.com.
+;  End delegation
+
+myaccount               CNAME	myaccount.cbplatform.link.
+myheadhunter            CNAME	cbvip.careerbuilder.com.
+                        CNAME	my.headhunter.net.
+mystuff                 CNAME	my.headhunter.net.
+mytest                  A	10.10.3.67
+netscaler               CNAME	east.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  nexus.careerbuilder.com.
+;
+nexus                   0	NS	wasabigtm.careerbuilder.com.
+nexus                   0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+nexustest               A	10.64.25.46
+nexusws                 CNAME	intra-wspool.careerbuilder.com.
+nnp                     CNAME	www.careerbuilder.com.
+nonprofit               CNAME	www.careerbuilder.com.
+www.nonprofit           CNAME	www.careerbuilder.com.
+wwwtest.nonprofit       CNAME	wwwtest.careerbuilder.com.
+np                      CNAME	www.careerbuilder.com.
+www.np                  CNAME	www.careerbuilder.com.
+ns                      A	208.82.4.230
+oascentral              CNAME	oasc05007.247realmedia.com.
+owa                     A	10.64.5.34
+
+;
+;  Delegated sub-zone:  oz.careerbuilder.com.
+;
+oz                      NS	pivotaldns.careerbuilder.com.
+;  End delegation
+
+part-time               CNAME	www.careerbuilder.com.
+www.part-time           CNAME	www.careerbuilder.com.
+wwwtest.part-time       CNAME	wwwtest.careerbuilder.com.
+partners                CNAME	cbvip.careerbuilder.com.
+password                CNAME	qtmpass01.atl.careerbuilder.com.
+pi                      CNAME	pi.cbdr.com.
+PIChef                  A	10.197.62.199
+pichefbackend           A	10.197.62.198
+pivotalanm              A	10.64.4.34
+pivotaldns              A	10.240.62.82
+pivotaldsm              A	10.64.4.33
+pivotalsql              A	10.64.4.31
+platformsoftware        CNAME	ghqpsapitest1.atl.careerbuilder.com.
+pli                     CNAME	www.careerbuilder.com.
+pn                      A	208.88.82.215
+podcast                 CNAME	podcast.careerbuildermarketing.com.
+pop3                    A	10.64.5.5
+powerhiring             CNAME	careerbuilder.powerhiring.com.
+PRCAS                   A	10.64.5.115
+
+;
+;  Delegated sub-zone:  proxy.careerbuilder.com.
+;
+proxy                   0	NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+proxy                   0	NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+;  End delegation
+
+qtm-col-ns              A	10.240.65.196
+qts                     A	10.210.62.59
+qtsgtm                  A	208.82.7.229
+qtw                     A	208.82.7.22
+qtwgitauditvip          A	10.210.62.88
+qtwnet                  A	208.82.7.17
+
+;
+;  Delegated sub-zone:  qtwnexus.careerbuilder.com.
+;
+qtwnexus                0	NS	wasabigtm.careerbuilder.com.
+qtwnexus                0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+qtxbo01                 CNAME	qtxbo01.cb.careerbuilder.com.
+qtxbo02                 CNAME	qtxbo02.cb.careerbuilder.com.
+rdc                     CNAME	rdc.atl.careerbuilder.com.
+rdc6500                 A	10.240.65.240
+rdctoken                A	10.240.70.19
+rebelgtm                A	208.82.4.229
+recruiter               A	10.240.62.172
+                        MX	10	recruiter.careerbuilder.com.
+relay                   A	10.240.62.150
+remote                  CNAME	rdc.atl.careerbuilder.com.
+replymgt                CNAME	reply.exacttarget.com.
+research                CNAME	careerbuilder-research.com.
+resfolio                CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  resources.careerbuilder.com.
+;
+resources               0	NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+resources               0	NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  retail.careerbuilder.com.
+;
+retail                  NS	brock.careerbuilder.com.
+retail                  NS	misty.careerbuilder.com.
+;  End delegation
+
+rl                      A	208.88.82.213
+rr                      CNAME	rrusmainsite-env.elasticbeanstalk.com.
+rt                      CNAME	www.careerbuilder.com.
+www.rt                  CNAME	www.careerbuilder.com.
+rtq                     CNAME	www.careerbuilder.com.
+rubix                   CNAME	svr-pr-ssas1.cb.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  salaries.careerbuilder.com.
+;
+salaries                0	NS	brock.careerbuilder.com.
+salaries                0	NS	misty.careerbuilder.com.
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  salarybuilder.careerbuilder.com.
+;
+salarybuilder           0	NS	misty.careerbuilder.com.
+;  End delegation
+
+sales                   CNAME	www.careerbuilder.com.
+sales-marketing         CNAME	www.careerbuilder.com.
+wwwtest.sales-marketing CNAME	wwwtest.careerbuilder.com.
+salesmarketing          CNAME	www.careerbuilder.com.
+www.salesmarketing      CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  sapi.careerbuilder.com.
+;
+sapi                    0	NS	misty.careerbuilder.com.
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  sb.careerbuilder.com.
+;
+sb                      0	NS	misty.careerbuilder.com.
+;  End delegation
+
+science-biotech         CNAME	www.careerbuilder.com.
+wwwtest.science-biotech CNAME	wwwtest.careerbuilder.com.
+sciencebiotech          CNAME	www.careerbuilder.com.
+www.sciencebiotech      CNAME	www.careerbuilder.com.
+searchapi               CNAME	searchapi.iac.cbdr.com.
+searchapitest           A	10.197.62.151
+site                    A	10.240.62.250
+sitecloud               A	10.240.70.151
+sitedb                  CNAME	qtxblog01.atl.careerbuilder.com.
+siteopssupport          A	10.240.70.200
+skynet                  A	10.240.62.141
+sm                      CNAME	www.careerbuilder.com.
+www.sm                  CNAME	www.careerbuilder.com.
+smokey                  A	208.82.7.230
+smokin                  A	208.82.5.230
+smokinash               A	208.82.5.22
+smtp1                   CNAME	cbmail-pr-fe1.cb.careerbuilder.com.
+smtp2                   CNAME	cbmail-pr-fe2.cb.careerbuilder.com.
+sologigws               CNAME	intra-wspool.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  source.careerbuilder.com.
+;
+source                  0	NS	wasabigtm.careerbuilder.com.
+source                  0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+sourcetest              A	10.197.62.114
+srctest                 A	10.197.62.125
+sre                     CNAME	ghqiacpslg2.atl.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  stream.careerbuilder.com.
+;
+stream                  0	NS	ns-1404.awsdns-47.org.
+ns-1404.awsdns-47.org.  A	205.251.197.124
+stream                  0	NS	ns-101.awsdns-12.com.
+ns-101.awsdns-12.com.   A	205.251.192.101
+stream                  0	NS	ns-555.awsdns-05.net.
+ns-555.awsdns-05.net.   A	205.251.194.43
+stream                  0	NS	ns-1983.awsdns-55.co.uk.
+ns-1983.awsdns-55.co.uk. A	205.251.199.191
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  sui.careerbuilder.com.
+;
+sui                     0	NS	misty.careerbuilder.com.
+;  End delegation
+
+svr-at-rootdc1          A	10.10.2.100
+svr-pr-ozdb             A	10.10.40.12
+svr-pr-oztib1           A	10.10.2.74
+svr-pr-oztib2           A	10.10.2.67
+svr-pr-ozweb1           A	10.10.2.70
+svr-pr-ozweb2           A	10.10.2.69
+svr-rs-av1              1200	A	10.64.4.77
+svr-rs-cspredv1         1200	A	10.64.4.75
+svr-rs-lawprod1         A	10.64.4.120
+svr-rs-pivts            1200	A	10.64.4.56
+svr-rs-pvdvexch         1200	A	10.64.4.43
+svr-rs-pvdvoffl         A	10.64.4.66
+
+;
+;  Delegated sub-zone:  swarm.careerbuilder.com.
+;
+swarm                   0	NS	wasabigtm.careerbuilder.com.
+swarm                   0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  teamtrack.careerbuilder.com.
+;
+teamtrack               0	NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+teamtrack               0	NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+tec                     CNAME	tec.nextwavemediagroup.com.
+technology              CNAME	www.careerbuilder.com.
+www.technology          CNAME	www.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  testjdux.careerbuilder.com.
+;
+testjdux                0	NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+testjdux                0	NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+;  End delegation
+
+testrecruiter           CNAME	ghqmail.atl.careerbuilder.com.
+tfs                     A	10.197.62.200
+tfstest                 A	10.197.63.220
+thehiringsite           CNAME	www.thehiringsite.com.
+www.thehiringsite       CNAME	www.thehiringsite.com.
+time                    A	10.240.62.150
+transportation          CNAME	www.careerbuilder.com.
+wwwtest.transportation  CNAME	wwwtest.careerbuilder.com.
+trix                    A	10.240.65.240
+trix2                   A	10.240.65.240
+tsesourceconfigtest     CNAME	tnsourcetrackingui-test.elasticbeanstalk.com.
+tsrstatus               CNAME	hosted.statuspage.io.
+
+;
+;  Delegated sub-zone:  vault.careerbuilder.com.
+;
+vault                   0	NS	wasabigtm.cbjobs.net.
+wasabigtm.cbjobs.net.   A	208.82.6.229
+vault                   0	NS	rebelgtm.cbjobs.net.
+rebelgtm.cbjobs.net.    A	208.82.4.229
+;  End delegation
+
+versionone              A	10.64.4.99
+
+;
+;  Delegated sub-zone:  visitor-hub.careerbuilder.com.
+;
+visitor-hub             0	NS	brock.careerbuilder.com.
+visitor-hub             0	NS	misty.careerbuilder.com.
+;  End delegation
+
+wasabigtm               A	208.82.6.229
+
+;
+;  Delegated sub-zone:  webmail.careerbuilder.com.
+;
+webmail                 0	NS	svr-at-dc1.cb.careerbuilder.com.
+svr-at-dc1.cb           A	10.10.2.63
+webmail                 0	NS	svr-pr-dc1.cb.careerbuilder.com.
+svr-pr-dc1.cb           A	10.64.5.11
+;  End delegation
+
+webops                  CNAME	prtg.atl.careerbuilder.com.
+west                    A	208.88.80.22
+
+;
+;  Delegated sub-zone:  wip.careerbuilder.com.
+;
+wip                     0	NS	wasabigtm.careerbuilder.com.
+wip                     0	NS	rebelgtm.careerbuilder.com.
+;  End delegation
+
+workat                  CNAME	www.careerbuilder.com.
+wwwtest.workat          CNAME	wwwtest.careerbuilder.com.
+workspace               CNAME	www.careerbuilder.com.
+ws                      CNAME	ws.iac.cbdr.com.
+wspool                  A	10.240.62.185
+wstest                  A	10.197.62.163
+wteu                    A	10.197.62.201
+wtsan1                  A	10.197.62.121
+wtsan2                  A	10.197.62.122
+wtsan3                  A	10.197.62.123
+www                     300	CNAME	www.careerbuilder.com.cdn.cloudflare.net.
+www1                    CNAME	cbvip.careerbuilder.com.
+www2                    CNAME	cbvip.careerbuilder.com.
+www3                    CNAME	cbvip.careerbuilder.com.
+wwweu                   A	10.197.62.201
+wwwhk                   A	10.197.62.125
+
+;
+;  Delegated sub-zone:  wwwtest.careerbuilder.com.
+;
+wwwtest                 0	NS	brock.careerbuilder.com.
+wwwtest                 0	NS	misty.careerbuilder.com.
+;  End delegation
+
+wwwtestaccounts         CNAME	sourcetest.careerbuilder.com.
+
+;
+;  Delegated sub-zone:  wwwtestemployer.careerbuilder.com.
+;
+wwwtestemployer         0	NS	brock.cbjobs.net.
+brock.cbjobs.net.       A	208.82.6.230
+wwwtestemployer         0	NS	misty.cbjobs.net.
+misty.cbjobs.net.       A	208.82.4.230
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  wwwtesthouston.careerbuilder.com.
+;
+wwwtesthouston          0	NS	misty.careerbuilder.com.
+wwwtesthouston          0	NS	brock.careerbuilder.com.
+;  End delegation
+
+wwwtestmyaccount        CNAME	test.myaccount.cbplatform.link.
+wwwtestsearchapi        A	10.197.62.151
+wwwtestswarm            A	10.197.62.157
+yourfuture              CNAME	cbvip.careerbuilder.com.

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5314fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Domain Controller">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Domain Controller</H1>  
+
+<H2>Issue</H2>
+
+<P>Because domain controllers are so critical, they must be well secured and they should not run any services other than those required by a domain controller. If you run <NOLOC>Microsoft&reg;</NOLOC> <NOLOC>SQL Server&trade;</NOLOC> or Internet Information Services (IIS) on a domain controller, there is a higher risk of it being compromised if an intruder is able to break into the <NOLOC>SQL Server</NOLOC> or <NOLOC>IIS</NOLOC> service. As a result, we recommend that you
+separate domain controllers from other services like <NOLOC>SQL Server</NOLOC> and <NOLOC>IIS</NOLOC>.</P>
+
+<H2>Solution</H2>
+
+<P>Make sure your domain controllers are well secured against physical and network-based access. We recommend that domain controllers be dedicated computers and not run other services, such as <NOLOC>IIS</NOLOC> and <NOLOC>SQL Server</NOLOC>.</P>
+
+<H2>Additional Information</H2>
+
+<p><a href="http://go.microsoft.com/fwlink/?LinkID=16497">How to set up a 
+<NOLOC>Windows</NOLOC> domain controller</a></p>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

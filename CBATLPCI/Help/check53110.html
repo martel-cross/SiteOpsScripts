@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53110">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Restrict Anonymous Users">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Restrict Anonymous Users</H1>
+
+<H2>Check Description</H2>
+
+<P>This check determines whether the <B><CODE>RestrictAnonymous</CODE></B> registry setting is used to restrict anonymous connections on the scanned computer.</P>
+
+<P>Anonymous users can list certain types of system information, including user names and details, account policies, and share names. Users who want enhanced security can restrict this function so that anonymous users cannot access this information.</P>
+
+<H2>Additional Information</H2>
+
+<P>The <B><CODE>RestrictAnonymous</CODE></B> registry setting controls the 
+level of enumeration that is granted to an anonymous user. You can set 
+this to any of the following values:</P>
+
+<BLOCKQUOTE>
+<P>0 - None. Rely on default permissions.</P>
+<P>1 - Do not allow enumeration of Security Accounts Manager (SAM) accounts and names.</P>
+<P>2 - No access without explicit anonymous permissions.</P>
+</BLOCKQUOTE>
+
+<P> We do not recommend setting <B><CODE>RestrictAnonymous</CODE></B> to 2 on domain controllers 
+or on computers running <NOLOC>Small Business Server (SBS)</NOLOC> unless they are in pure <NOLOC>Windows&reg;</NOLOC>&nbsp;2000 environments and have been tested for application compatibility. For more details on configuring <B><CODE>RestrictAnonymous</CODE></B>
+on domain controllers and in <NOLOC>Windows</NOLOC>&nbsp;2000 environments, and to better understand potential compatibility issues when using this setting, refer to the <NOLOC>Microsoft</NOLOC> Knowledge Base articles that are listed later in this document.</P>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>In <NOLOC>Windows&nbsp;XP</NOLOC>, there is a new registry setting (<CODE>EveryoneIncludesAnonymous</CODE>) that controls whether permissions given to the built-in Everyone group apply to anonymous users. By default, permissions granted to the Everyone group do not apply to anonymous users in <NOLOC>Windows&nbsp;XP</NOLOC>, which therefore provides the same level of anonymous user restrictions as the <B><CODE>RestrictAnonymous</CODE></B> setting in previous <NOLOC>Windows</NOLOC> operating systems.</LI>
+</UL> 
+
+<H2>Additional Resources</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16956" TITLE="http://www.microsoft.com/" TARGET="_blank">How to Use the <CODE>RestrictAnonymous</CODE> Registry Value in <NOLOC>Windows</NOLOC>&nbsp;2000 (246261)</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

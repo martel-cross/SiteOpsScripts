@@ -1,0 +1,43 @@
+Please have the following systems moved to the correct group. They are currently in the default API folder.
+
+
+
+Host greg-qtw2k8tst1 has been in API group for more than 14 days (total days: 23).
+
+Host IACBATCH04 has been in API group for more than 14 days (total days: 285).
+
+Host greg-qtx2k8tst1 has been in API group for more than 14 days (total days: 23).
+
+Host greg-test2k12-1 has been in API group for more than 14 days (total days: 25).
+
+Host greg-chi2k8tst1 has been in API group for more than 14 days (total days: 23).
+
+Host greg0test2k8-17 has been in API group for more than 14 days (total days: 25).
+
+Host greg-test2k8-6 has been in API group for more than 14 days (total days: 23).
+
+Host devstats has been in API group for more than 14 days (total days: 1125).
+
+Host greg-test2k12-9 has been in API group for more than 14 days (total days: 23).
+
+Host greg-test2k8-14 has been in API group for more than 14 days (total days: 25).
+
+Host GHQWEB2008TEST1 has been in API group for more than 14 days (total days: 219).
+
+Host ATEDRONETEST01 has been in API group for more than 14 days (total days: 219).
+
+Host GHQVREBWWW07 has been in API group for more than 14 days (total days: 23).
+
+Host REBELDOC08 has been in API group for more than 14 days (total days: 121).
+
+Host greg-test2k8-10 has been in API group for more than 14 days (total days: 26).
+
+Host greg-test2k8-12 has been in API group for more than 14 days (total days: 26).
+
+Host IACBATCH03 has been in API group for more than 14 days (total days: 286).
+
+Host NewFormDEV has been in API group for more than 14 days (total days: 123).
+
+Host NewFormQTW has been in API group for more than 14 days (total days: 123).
+
+Host greg-test2k8-13 has been in API group for more than 14 days (total days: 26).

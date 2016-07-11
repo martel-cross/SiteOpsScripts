@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53116fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Check for Unnecessary Services">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Check for Unnecessary Services</H1>
+
+<H2>Issue</H2>
+
+<P>Services that are listed in the security report are contained in the <NOLOC>Services.txt</NOLOC> file and were found to be installed on the scanned computers. The state of each of these services (enabled or disabled) is listed in the Results Details page. The user should 
+determine whether the services found to be installed or running are necessary. If unnecessary, they should be disabled. For example, if the Telnet service is found to be installed and enabled, but users are not required to remotely connect through Telnet to that specific computer, this service should be disabled.</P>
+
+<P>The <NOLOC>Services.txt</NOLOC> file, included with <NOLOC>Microsoft&reg;</NOLOC> Baseline Security Analyzer (MBSA) lists the services for which MBSA checks status. To add or change services from the default list, open <NOLOC>Services.txt</NOLOC>  with Notepad or <NOLOC>Microsoft</NOLOC> <NOLOC>Word</NOLOC> and type the service name for each additional service you would like to scan. The service names can be found by viewing the properties 
+of a service in Services in Control Panel.</P>
+
+<H2>Solution</H2>
+
+<P>Use Services in Control Panel to disable the running services that should not be running on the computer. Services that are enabled 
+but not required can pose a security risk to the computer.</P>
+
+<P CLASS="important"><FONT COLOR="red"><B>Important:</B></FONT></P>
+<UL>
+<LI>If you are running <NOLOC>Small Business Server (SBS)</NOLOC>, there are services listed in MBSA that are core to your server functionality. These are the Simple Mail Transport Protocol (SMTP) and World Wide Web Publishing services. Do not disable these services on computers running <NOLOC>SBS</NOLOC>.</LI></UL>
+
+
+<H2>Instructions</H2>
+
+<P><B>To disable services in <NOLOC>Windows&reg; Server&nbsp;2008</NOLOC>, <NOLOC>Windows&reg; Server&nbsp;2003</NOLOC>, <NOLOC>Windows&nbsp;Vista</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, or <NOLOC>Windows&nbsp;2000</NOLOC></B></P>
+ 
+<OL>
+<LI>Open the <B>Control Panel</B>.</LI>
+<LI>Double-click <B>Administrative Tools</B>, and then click <B>Services</B>.</LI>
+<LI>Double-click the service that you want to disable.</LI>
+<LI>Click <B>Stop</B> to stop the service.</LI>
+<LI>Under <B>Startup type</B>, click <B>Disabled</B>.</LI>
+</OL> 
+
+<BR>
+
+<P> <FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

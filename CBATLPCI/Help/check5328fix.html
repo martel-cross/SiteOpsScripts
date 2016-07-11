@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML DIR="ltr">
+	<HEAD>
+		<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+		<META NAME="MS-HAID" CONTENT="a_check5328fix">
+		<META NAME="MS.LOCALE" CONTENT="EN-US">
+		<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>IIS</NOLOC> Logging">
+		<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+			<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css">
+	</HEAD>
+	<BODY>
+		<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+		<H1><NOLOC>IIS</NOLOC> Logging</H1>
+		<H2>Issue</H2>
+		<P>It is essential to log your Web site events regularly to find invalid usage or 
+			identify malicious user activity and access.</P>
+		<H2>Solution</H2>
+		<P>Enable logging on your server running Internet Information Services (IIS) and 
+			use the <NOLOC>W3C</NOLOC> Extended Log File Format to log additional event properties.</P>
+		<H2>Instructions</H2>
+		<P><B>To enable <NOLOC>IIS</NOLOC> event logging in
+				<NOLOC>Microsoft&reg; Windows Server&reg;&nbsp;2003</NOLOC></B></P>
+		<OL>
+			<LI>
+				Click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, 
+				and then click <B>Internet Services Manager</B>.
+			<LI>
+				Double-click your server, right-click the Web site or <NOLOC>FTP</NOLOC> site, and then click <B>Properties</B>.
+			<LI>
+				On the <B>Website or <NOLOC>FTP</NOLOC> Site</B> tab, select the <B>Enable Logging</B>
+			check box.
+			<LI>
+				In the <B>Active log format</B> list, click <B><NOLOC>W3C</NOLOC> Extended Log File Format</B>.
+			<LI>
+				Click <B>Properties</B>.
+			<LI>
+				In the <B>Extended Logging Properties</B> dialog box, enable extended 
+				properties by selecting the check box, and then select the following: <B>Client IP 
+					Address, User Name, Method, URI Stem, Protocol Status, <CODE>Win32</CODE> Status, User 
+					Agent, Server IP Address,</B> and <B>Server Port</B>.</LI>
+		</OL>
+		<P><B>To enable <NOLOC>IIS</NOLOC> event logging in Microsoft
+				<NOLOC>Windows&nbsp;XP</NOLOC> Professional</B></P>
+		<OL>
+			<LI>
+				Click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, 
+				and then click <B>Internet Information Services</B>.
+			<LI>
+				Double-click your server, right-click the Web site or FTP site, and then click <B>Properties</B>.
+			<LI>
+				On the <B>Website or <NOLOC>FTP</NOLOC> Site</B> tab, select the <B>Enable Logging</B>
+			check box.
+			<LI>
+				In the <B>Active log format</B> list, click <B><NOLOC>W3C</NOLOC> Extended Log File Format</B>.
+			<LI>
+				Click <B>Properties</B>.
+			<LI>
+				In the <B>Extended Logging Properties</B> dialog box, enable extended 
+				properties by selecting the check box, and then select the following: <B>Client IP 
+					Address, User Name, Method, URI Stem, Protocol Status, <CODE>Win32</CODE> Status, User 
+					Agent, Server IP Address,</B> and <B>Server Port</B>.</LI>
+		</OL>
+		<BR>
+		<P><B>To enable <NOLOC>IIS</NOLOC> event logging in
+				<NOLOC>Windows&nbsp;2000</NOLOC></B></P>
+		<OL>
+			<LI>
+				Click <B>Start</B>, point to <B>Programs</B>, point to <B>Administrative Tools</B>, 
+				and then click <B>Internet Services Manager</B>.
+			<LI>
+				Double-click your server, right-click the Web site or <NOLOC>FTP</NOLOC> site, and then click <B>Properties</B>.
+			<LI>
+				On the <B>Website or <NOLOC>FTP</NOLOC> Site</B> tab, select the <B>Enable Logging</B>
+			check box.
+			<LI>
+				In the <B>Active log format</B> list, click <B><NOLOC>W3C</NOLOC> Extended Log File Format</B>.
+			<LI>
+				Click <B>Properties</B>.
+			<LI>
+				In the <B>Extended Logging Properties</B> dialog box, select the following 
+				check boxes: <B>Client IP Address, User Name, Method, URI Stem,&nbsp;Protocol 
+					Status, <CODE>Win32</CODE> Status, User Agent, Server IP Address,</B> and <B>Server Port</B>.</LI>
+		</OL>
+		<BR>
+		<H2>Additional Information</H2>
+		<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16543" TITLE="http://www.microsoft.com/"
+				TARGET="_blank">HOW TO: Enable <NOLOC>IIS</NOLOC> Logging Site Activity (300390)</A></P>
+		<BR>
+		<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007
+				<NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+	</BODY>
+</HTML>

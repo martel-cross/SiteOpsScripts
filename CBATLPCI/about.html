@@ -1,0 +1,52 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Portions © 2002-2004 Shavlik Technologies, LLC
+-->
+<HTML DIR="LTR">
+<head>
+<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes" charset="UTF-8"/>
+<link REL="stylesheet" type="text/css" href="css/scanner.css" />
+<script LANGUAGE="javascript">
+<!--
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit() 
+{
+    return top.keyHit(event);
+} 
+
+function initPage()
+{
+  top.Header.ShowFrames();
+  window.focus();
+  version.innerText = parent.Scanner.Version;
+  top.Header.SetNavigationState();
+}
+//-->
+</script>
+</head>
+<body onload="initPage()" oncontextmenu="return false" width = "100%" style ="MARGIN-LEFT:100;MARGIN-RIGHT:100" tabindex = "-1">
+<span class="sys-font-heading3 sys-rhp-color-title">About Microsoft Baseline Security Analyzer</span><br><br>
+Microsoft Baseline Security Analyzer
+
+<span id="version"></span><br><br>
+&#169; 2002-2013 Microsoft Corporation. All rights reserved.<br>
+<br>
+Portions &#169; 2002-2004 Shavlik Technologies, LLC.<br>
+<br>
+<br>
+<div id="About" align = right>
+<input id="OK" class = "buttonok" type="button" value="OK" style="width: 80px;height: 23px;padding: 0px 5px 1px 6px;overflow: visible;" onclick="top.Header.GoHome();" name="OK">
+<br>
+</div>
+
+</body>
+</html>

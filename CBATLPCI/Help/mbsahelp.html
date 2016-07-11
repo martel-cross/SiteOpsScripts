@@ -1,0 +1,797 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_MBSAhelp">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>Microsoft</NOLOC> Baseline Security Analyzer Help">
+
+<TITLE>Microsoft Baseline Security Analyzer Version 2.1 Help</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+<H1><NOLOC>Microsoft</NOLOC> Baseline Security Analyzer Help</H1>
+
+<A NAME="Contents"></A><H2>Contents</H2>
+
+<UL>
+<LI><A HREF="#Relnotes">Release Notes for MBSA 2.3</A></LI>
+
+<LI><A HREF="#GettingStarted">Getting Started</A>
+<UL>
+<LI><A HREF="#SysReqs">System Requirements</A></LI>
+<LI><A HREF="#Options">Scanning Options</A></LI>
+</UL></LI>
+<LI><A HREF="#Checks">Security Checks</A></LI>
+
+<LI><A HREF="#CLI">MBSA Command-Line Tool</A></LI>
+
+<LI><A HREF="#Notes">General Notes</A></LI>
+<LI><A HREF="#Security">Security Implications of Remote Scanning</A></LI>
+<LI><A HREF="#howtocorrect">How to Correct Common Errors</A></LI>
+
+<LI><A HREF="#Bugs">Reporting Bugs or Requesting Support</A></LI>
+</UL>
+<HR>
+<A NAME="Relnotes"></A><H1>Release Notes for MBSA 2.3</H1>
+<P>For the most up-to-date information about this release, see <a href="readme.html">Release notes for MBSA 2.3</a>.</P>
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<HR>
+
+<H1><A NAME="GettingStarted">Getting Started</A></H1>
+
+<P><NOLOC>Microsoft&reg;</NOLOC> Baseline Security Analyzer (MBSA) gives you the ability to assess the administrative vulnerabilities present on one or multiple computers. MBSA scans the specified computers and then generates a report that contains details for each computer about the security checks that MBSA performed, the results, and recommendations for fixing any problems. In addition to checking for misconfiguration that might cause security problems in the operating system, you can check for security problems in <NOLOC>Microsoft SQL Server</NOLOC>, 
+MSDE and Microsoft Internet Information Services (IIS). You can also determine whether a computer has the most current <NOLOC>Microsoft Windows&reg;</NOLOC> and <NOLOC>Microsoft Office</NOLOC> updates installed, and you can check for security updates, update rollups, and service packs for other products hosted by the 
+<NOLOC>Microsoft Update</NOLOC> site.</P>
+
+<P>MBSA is integrated with <NOLOC>Microsoft Update</NOLOC> and <NOLOC>Windows Server Update 
+Services</NOLOC> technologies to provide unified results consistent with <NOLOC>Microsoft 
+Update</NOLOC>, <NOLOC>Windows Server Update Services</NOLOC> (<NOLOC>WSUS</NOLOC>) Server, Systems Management Server 
+(SMS) and System Center Configuration Manager (SCCM). MBSA will query each 
+target client to determine its security compliance using the most current 
+<NOLOC>Microsoft Update</NOLOC> catalog. Clients assigned to a <NOLOC>WSUS</NOLOC> server will report 
+compliance issues only for missing updates approved by the <NOLOC>WSUS</NOLOC> administrator. If the 
+online <NOLOC>Microsoft Update</NOLOC> site and an assigned <NOLOC>WSUS</NOLOC> server is not available, MBSA 
+will use an offline catalog (if available) or download the current catalog from the <NOLOC>Microsoft Windows Update</NOLOC> site.</P>
+
+<P>The following sections describe the minimum required configuration of computers that run MBSA or are scanned by MBSA, outline the types of security scans you can choose to perform, and explain options for configuring target computers.</P>
+
+<UL>
+<LI><A HREF="#SysReqs">System Requirements</A></LI>
+<LI><A HREF="#Options">Scanning Options</A></LI>
+</UL>
+
+
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<A NAME="SysReqs"></A><H2>System Requirements</H2>
+
+<P>This section describes the system requirements for computers running or being scanned by MBSA.</P>
+
+<H3>Requirements for Running MBSA to Scan the Local Computer</H3>
+
+<UL>
+  <LI>The computer must be running <NOLOC>Microsoft Windows&nbsp;Server&trade; 2012 R2</NOLOC>, <NOLOC>Windows&nbsp;8.1</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2012</NOLOC>, <NOLOC>Windows&nbsp;8</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2008 R2</NOLOC>, <NOLOC>Windows&nbsp;7</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2008</NOLOC>, <NOLOC>Windows Vista</NOLOC>, <NOLOC>Windows&nbsp;Server&trade; 2003</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, or <NOLOC>Windows 2000</NOLOC> Service Pack 3 or later.</LI>
+  <LI><NOLOC>Internet Explorer</NOLOC>&nbsp;5.01 or later must be installed.</LI>
+  <LI>An XML parser is required in order for the tool to function correctly. It 
+	is recommended that the most recent version of the <NOLOC>MSXML</NOLOC> parser be installed 
+	(see <A HREF="#GetParser">Obtaining an XML Parser</A> for information on downloading and installing an XML parser). On <NOLOC>Windows 2000</NOLOC> 
+	systems that do not have <NOLOC>MSXML</NOLOC> 3.0 or later installed, setup will not 
+	continue until the user installs the latest <NOLOC>MSXML</NOLOC> parser.</LI>
+	<LI>The World Wide Web Service is required if you want to perform local <NOLOC>IIS</NOLOC> 
+	administrative vulnerability checks.</LI>
+<LI><NOLOC>Windows Update</NOLOC> Agent&nbsp;3.0 is required to scan for updates.</LI>
+  <LI>The following must be enabled: 
+  <UL><LI>Workstation service</LI>
+  <LI>Server service</LI></UL>
+  </LI>
+</UL>
+<H3>Requirements for Running MBSA to Scan Remote Computers</H3>
+
+<UL>
+  <LI>The computer must be running <NOLOC>Microsoft Windows&nbsp;Server&trade; 2012 R2</NOLOC>, <NOLOC>Windows&nbsp;8.1</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2012</NOLOC>, <NOLOC>Windows&nbsp;8</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2008 R2</NOLOC>, <NOLOC>Windows&nbsp;7</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2008</NOLOC>, <NOLOC>Windows Vista</NOLOC>, <NOLOC>Windows&nbsp;Server&trade; 2003</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, or <NOLOC>Windows 2000</NOLOC> Service Pack 3 or later.</LI>
+  <LI><NOLOC>Internet Explorer</NOLOC>&nbsp;5.01 or later must be installed.</LI>
+  <LI>An XML parser is required in order for the tool to function correctly. It 
+	is recommended that the most recent version of the <NOLOC>MSXML</NOLOC> parser be installed 
+	(see <A HREF="#GetParser">Obtaining an XML Parser</A> for information on downloading and installing an XML parser). On <NOLOC>Windows 2000</NOLOC> 
+	systems that do not have <NOLOC>MSXML</NOLOC> 3.0 or later installed, setup will not 
+	continue until the user installs the latest <NOLOC>MSXML</NOLOC> parser.</LI>
+  <LI>The <NOLOC>IIS</NOLOC> Common Files are required on the computer performing remote scans of <NOLOC>IIS</NOLOC> computers. 
+  The <NOLOC>IIS</NOLOC>  
+	Common Files are required on the local computer when remotely scanning an <NOLOC>IIS</NOLOC> 
+	server.</LI>
+<LI><NOLOC>Windows</NOLOC> Update Agent&nbsp;3.0 is required to scan for updates.</LI>
+  <LI>The following  must be enabled: 
+  <UL><LI>Workstation service</LI>
+  <LI>Client for <NOLOC>Microsoft</NOLOC> Networks</LI></UL></LI>
+</UL>
+<H3>Requirements for a Computer to Be Scanned Remotely</H3>
+
+<UL>
+  <LI>The computer must be running <NOLOC>Microsoft Windows&nbsp;Server&trade; 2012 R2</NOLOC>, <NOLOC>Windows&nbsp;8.1</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2012</NOLOC>, <NOLOC>Windows&nbsp;8</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2008 R2</NOLOC>, <NOLOC>Windows&nbsp;7</NOLOC>, <NOLOC>Microsoft Windows&nbsp;Server&trade; 2008</NOLOC>, <NOLOC>Windows Vista</NOLOC>, <NOLOC>Windows&nbsp;Server&trade; 2003</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, or <NOLOC>Windows 2000</NOLOC> Service Pack 3 or later. <NOLOC>Itanium</NOLOC>-based computers must be running <NOLOC>Windows Server 2003</NOLOC> 
+	with SP1 or higher.</LI>
+	<LI><NOLOC>Internet Explorer</NOLOC> 5.01 or later is required for <NOLOC>IE</NOLOC> zone checks.</LI>
+  <LI><NOLOC>IIS</NOLOC> is required for <NOLOC>IIS</NOLOC> product and administrative vulnerability checks.</LI>
+  <LI><NOLOC>Microsoft SQL Server</NOLOC>&nbsp;7.0, 2000, 2005, 2008
+	or <NOLOC>Microsoft</NOLOC> Data Engine or <NOLOC>Microsoft SQL Server 2000</NOLOC> Desktop Engine (MSDE) is required for <NOLOC>SQL</NOLOC> 
+	product and administrative vulnerability checks.</LI>
+<LI><NOLOC>Windows</NOLOC> Update Agent&nbsp;3.0 is required to scan for updates.</LI>
+  <LI><NOLOC>Microsoft Office 2000</NOLOC>, <NOLOC>Office XP</NOLOC> or <NOLOC>Office&nbsp;System 2003</NOLOC> is required for <NOLOC>Office</NOLOC> 
+	product and administrative vulnerability checks.</LI>
+  <LI><NOLOC>Windows</NOLOC> Installer 3.0 or later is required for Office product updates checks.</LI>
+  <LI>The following must be enabled: 
+  <UL><LI>Server service</LI>
+  <LI>Remote Registry service</LI>
+  <LI>File and Print Sharing</LI></UL></LI>
+  <LI>Distributed COM (DCOM) is required for remote security update scanning.</LI>
+</UL>
+
+<p>To run MBSA, you must be logged on with an account that has local administrative privileges on each computer being scanned either locally or remotely.</p>
+<p>MBSA can perform an online scan for target clients that have connectivity to 
+the internet to access the <NOLOC>Microsoft Update</NOLOC> web site, an online or offline scan 
+for clients assigned to a WSUS Server or an offline scan for target clients that 
+have no connectivity to either the <NOLOC>Microsoft Update</NOLOC> or an assigned WSUS Server 
+or any combination of online and offline client connectivity.</p>
+<p>For clients to be scanned in offline mode, the scanning MBSA client must 
+either have direct access to the internet to obtain the necessary offline 
+catalog (<NOLOC>CAB</NOLOC>) file, the updated <NOLOC>Windows</NOLOC> Update Agent (WUA) client, an 
+authentication file and possibly a redistribution catalog file. If the 
+scanning MBSA client does not have access to internet to obtain these catalogs 
+and installers, they will need to be downloaded and placed in a local directory 
+based on the user performing the MBSA scan (usually <CODE>C:\Documents and 
+Settings\&lt;username&gt;\Local Settings\Application Data\Microsoft\MBSA\Cache)</CODE>. 
+See the <a href="http://go.microsoft.com/fwlink/?LinkId=91743">MBSA FAQ</a> for 
+detailed information regarding offline mode and the placement of needed files 
+for offline scanning.</p>
+<p>MBSA can also be used as lightweight solution requiring only a limited number 
+of files to perform a scan instead of the full MBSA installation.&nbsp; The 
+lightweight MBSA scan option can be used to perform a full security update (not 
+vulnerability assessment) scan using the <CODE>/xmlout</CODE> (xml data) parameter. 
+This parameter provides basic output to the console in XML format, making 
+integration with other solutions fast and easy. The output includes all the data 
+elements of the <CODE>/HF</CODE> mode and more. See the section on
+<a href="#ScanningOnlyForSecurityUpdates">Scanning only for security updates</a> 
+or the <a href="http://go.microsoft.com/fwlink/?LinkId=91743">MBSA FAQ</a> for 
+detailed information regarding the lightweight scan options that support only a 
+limited number of commands for customers who require previous <CODE>MBSACLI.EXE /HF</CODE>
+mode features.</p>
+
+<A NAME="GetParser"></A>
+<H3>Obtaining an XML Parser</H3>
+
+<P>XML parsers have shipped in each version of <NOLOC>Internet Explorer</NOLOC> since version&nbsp;5.01. 
+However, it is recommended to have the latest version of <NOLOC>Internet Explorer</NOLOC> and the latest 
+version of the <NOLOC>MSXML</NOLOC> parser installed.</P>
+
+<P>The latest version of the <NOLOC>MSXML</NOLOC> parser is available from the
+<a href="http://go.microsoft.com/fwlink/?LinkId=16533"><NOLOC>Microsoft</NOLOC> Web site</a>.
+</P>
+
+<P>Additional information on the <NOLOC>Microsoft</NOLOC> XML parser is available from the 
+<A ID="MSUrl1" HREF="http://go.microsoft.com/fwlink/?LinkID=16976" TARGET="_blank"><NOLOC>Microsoft</NOLOC> XML Developer Center</A>.
+</P>
+
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<H2><A NAME="Options">Scanning Options</A></H2>
+
+<P>The following checks are optional. Before scanning a computer, you can choose whether or not to run these checks. See <a href="..\optionshelp.html">Scanning Options</a> for more details.</P>
+
+<DL>
+ <DT><B>Check for <NOLOC>Windows</NOLOC> administrative vulnerabilities</B></DT>
+ <DD>Selecting this option scans for problems with the way that <NOLOC>Windows</NOLOC> is configured on the target computer. Such factors as the number of members of the local Administrators group, file-system type, and whether <NOLOC>Windows</NOLOC> Firewall is enabled are checked and reported. </DD>
+ <DT><B> Check for weak passwords  </B></DT>
+ <DD>Selecting this option tests the passwords of local user accounts to determine whether any are blank or have other problems that might allow them to be guessed easily.</DD>
+ <DT><B> Check for <NOLOC>IIS</NOLOC> administrative vulnerabilities  </B></DT>
+ <DD>Selecting this option checks for Internet Information Services (IIS) administrative vulnerabilities. When scanning servers running <NOLOC>IIS</NOLOC>, the computer running MBSA must have the Common Files installed for the highest version of <NOLOC>IIS</NOLOC> to be scanned. For example, to scan servers running <NOLOC>IIS</NOLOC> 6.0, the <NOLOC>IIS</NOLOC> 6.0 Common Files must be installed on the computer running MBSA.</DD>
+ <DT><B> Check for <NOLOC>SQL Server</NOLOC> administrative vulnerabilities  </B></DT>
+ <DD>Selecting this option checks for administrative vulnerabilities on each instance of <NOLOC>Microsoft SQL Server</NOLOC>, <NOLOC>Microsoft</NOLOC> Data Engine, 
+ SQL Express or <NOLOC>Microsoft SQL Server 2000</NOLOC> Desktop Engine (MSDE) running on the target computer. 
+<P class="note">Note</P>
+<UL>
+<LI>Scanning <NOLOC>SQL Server</NOLOC> running in a <span lang="en-us"></span>cluster configuration can produce erroneous errors for <NOLOC>Sysadmin</NOLOC> role members, guest account, and account password tests.</LI></UL>
+</DD>
+ <DT><B> Check for security updates </B></DT>
+ <DD>Selecting this option checks the target computer for missing <NOLOC>Microsoft Windows</NOLOC> and <NOLOC>Microsoft Office</NOLOC> updates. When you select this option, you can also specify the following options:
+<DL>
+   <DT><B>Configure computers for <NOLOC>Microsoft Update</NOLOC> and scanning prerequisites</B></DT>
+   <DD>Selecting this option installs the current version of the <NOLOC>Windows</NOLOC> Update Agent on the target computer if it is absent or out of date and configures the target computer to meet other requirements for scanning for security updates.</DD>
+   <DT><B>Use additional catalogs (if available)</B></DT>
+	<DD>This option will appear only if additional catalogs are found on the 
+	local machine.&nbsp; If present, this option will be selected.&nbsp; 
+	De-selecting this option will ignore any additional catalogs even if they 
+	are present.</DD>
+<DT><B>Scan using <NOLOC>Windows Server Update Services (WSUS)</NOLOC> servers only</B></DT>
+<DD>Selecting this option scans only for those security updates that are approved on the computer's 
+assigned <NOLOC>WSUS</NOLOC> server. The <NOLOC>Microsoft Update</NOLOC> Web site, offline 
+or additional catalogs are not used.</DD>
+<DT><B>Scan using <NOLOC>Microsoft Update</NOLOC> only</B></DT>
+<DD>Selecting this option uses only the security update catalog downloaded from the <NOLOC>Microsoft Update</NOLOC> Web site to determine the updates to be checked. Updates that are not approved on the computer's <NOLOC>Update Services</NOLOC> server are reported as though they were approved.  
+If the <NOLOC>Microsoft Update</NOLOC> site cannot be reached by the client, an error will be 
+reported.</DD>
+<DT><B>Scan using offline catalog only</B></DT>
+<DD>Selecting this option uses only the offline security update catalog 
+(WSUSSCN2.CAB) downloaded from 
+<NOLOC>Microsoft or cached on the local machine</NOLOC>.  
+If the
+<NOLOC>offline catalog cannot be downloaded from Microsoft and there is no 
+locally cached copy, </NOLOC>
+an error will be 
+reported.</DD>
+<DT><B>Scan using additional catalogs only</B></DT>
+<DD>Selecting this option uses only additional catalogs (if available).&nbsp;  
+If there are no additional catalogs, an error will be 
+reported.</DD>
+</DL>
+
+
+</DD>
+</DL>
+
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<HR>
+
+
+<H1><A NAME="Checks">Security Checks</A></H1>
+
+<P>This section lists the security settings that <NOLOC>Microsoft</NOLOC> Baseline Security Analyzer checks during a full scan. Note that if a product is not installed on a computer being scanned, the corresponding product checks will not be performed and will not be reflected in the MBSA scan reports.</P>
+
+<H2>Security update checks</H2>
+<p>Scanning computers for security updates uses <NOLOC>Microsoft Update</NOLOC> and <NOLOC>Windows Server Update Services</NOLOC> 
+technologies.  MBSA 
+provides integration for <NOLOC>WSUS</NOLOC> Server 
+administrators and is a comprehensive 
+standalone tool for the information technology professional.</p>
+<p><A HREF="check5311.html">Check for security updates, update rollups, and service packs published to <NOLOC>Microsoft Update</NOLOC></A></p>
+
+<H2><NOLOC>Windows</NOLOC> checks</H2>
+
+<P><A HREF="check5317.html">Check for account password expiration</A><BR>
+<A HREF="check5313.html">Check for file system type on hard drives</A><BR>
+<A HREF="check5319.html">Check if Auto Logon feature is enabled</A><BR>
+<A HREF="check5318.html">Check if Guest account is enabled</A><BR>
+<A HREF="check53110.html">Check the <CODE>RestrictAnonymous</CODE> registry key settings</A><BR>
+<A HREF="check5316.html">Check the number of local Administrator accounts</A><BR>
+<A HREF="check5315.html">Check for blank or simple local user account 
+passwords</A><BR>
+<A HREF="check53116.html">Check if unnecessary services are running</A><BR>
+<A HREF="check53115.html">List the shares present on the computer</A><BR>
+<A HREF="check53114.html">Check if <NOLOC>Windows</NOLOC> auditing is enabled</A><BR>
+<A HREF="check53117.html">Check the <NOLOC>Windows</NOLOC> version running on the scanned 
+computer</A><br>
+<a href="check53179.html">Check if Internet Connection Firewall is enabled</a><br>
+<a href="check53178.html">Check if Automatic Updates is enabled</a><br>
+<a href="check5340.html">Check if incomplete updates require the computer to be restarted</a></P>
+
+<H2>IIS checks</H2>
+
+<P><A HREF="check5323.html">Check if the <NOLOC>IIS</NOLOC> Lockdown tool (version&nbsp;2.1) was 
+run on the computer</A><BR>
+<A HREF="check5324.html">Check if <NOLOC>IIS</NOLOC> sample applications are installed</A><BR>
+<A HREF="check5326.html">Check if <NOLOC>IIS</NOLOC> parent paths are enabled</A><BR>
+<A HREF="check5325.html">Check if the <NOLOC>IIS</NOLOC> Admin virtual folder is installed</A><BR>
+<A HREF="check5327.html">Check if the <NOLOC>MSADC</NOLOC> and Scripts virtual directories are 
+installed</A><BR>
+<A HREF="check5328.html">Check if <NOLOC>IIS</NOLOC> logging is enabled</A><BR>
+<A HREF="check5321.html">Check if <NOLOC>IIS</NOLOC> is running on a domain controller</A></P>
+
+<H2><NOLOC>SQL Server</NOLOC> checks</H2>
+
+<P><A HREF="check5335.html">Check if Administrators group belongs in <NOLOC>Sysadmin</NOLOC> 
+role</A><BR>
+<A HREF="check53311.html">Check if <CODE>CmdExec</CODE> role is restricted to <NOLOC>Sysadmin</NOLOC> only</A><BR>
+<A HREF="check5331.html">Check if <NOLOC>SQL Server</NOLOC> is running on a domain controller</A><BR>
+<A HREF="check5336.html">Check if sa account password is exposed</A><BR>
+<A HREF="check53312.html">Check <NOLOC>SQL Server</NOLOC> installation folders access permissions</A><BR>
+<A HREF="check5339.html">Check if Guest account has database access</A> <BR>
+<A HREF="check53310.html">Check if Everyone group has access to <NOLOC>SQL Server</NOLOC> registry 
+keys</A><BR>
+<A HREF="check5334.html">Check if <NOLOC>SQL Server</NOLOC> service accounts are members of the local 
+Administrators group</A><BR>
+<A HREF="check5338.html">Check if <NOLOC>SQL Server</NOLOC> accounts have blank or simple passwords</A><BR>
+<A HREF="check5333.html">Check the <NOLOC>SQL Server</NOLOC> authentication mode type</A><BR>
+<A HREF="check5337.html">Check the number of <NOLOC>Sysadmin</NOLOC> role members</A><BR>
+<a href="check53313.html">Check SQL Server password and expiration policies</a><BR>
+<a href="check53315.html">Check SQL Server Integration Services</a></P>
+
+<H2>Desktop application checks</H2>
+
+<P><A HREF="check53111.html">List the <NOLOC>Internet Explorer</NOLOC> security zone settings 
+for each local user</A><br>
+<a href="check53176.html">Check if <NOLOC>Internet Explorer</NOLOC> Enhanced Security 
+Configuration is enabled for Administrators</a><br>
+<a href="check53177.html">Check if <NOLOC>Internet Explorer</NOLOC> Enhanced Security 
+Configuration is enabled for non-Administrators</a><BR>
+<A HREF="check53112.html">List the <NOLOC>Office</NOLOC> products security zone settings for 
+each local user</A></P>
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<HR>
+<H1><A NAME="CLI">Command-Line Tool</A></H1>
+
+<P>Instead of the MBSA graphical user interface (GUI) tool, you can use the MBSA command-line tool to perform local and remote security scans and to display reports from previous scans. The tool is located in the directory where MBSA was installed (by default, <CODE>%programfiles%\<NOLOC>Microsoft</NOLOC> Baseline Security Analyzer 2</CODE>).</P>
+
+<H2>Syntax</H2>
+
+<P>To perform a full scan of one or more computers:</P>
+
+<PRE><CODE><B>MBSACLI</B> [<B>/target </B>{[<I>domain</I><B>\</B>]<I>computer</I> | <I>IP</I>} | <B>/r</B> <I>IP</I>-<I>IP</I> | <B>/d</B> <I>domain</I>] [<B>/n</B> <I>option</I>[<B>+</B><I>option</I>...]]  
+        [<B>/o</B> <I>template</I>] [<B>/qp</B>] [<B>/qr</B>] [<B>/qe</B>] [<B>/qt</B>] [<B>/q</B>] [<B>/listfile</B> <I>file</I>] [<strong>/xmlout</strong>]  
+        [<B>/wa</B> | <B>/wi</B> | <strong>/offline</strong> | <strong>/addonly</strong>] [<strong>/noadd</strong>] [<strong>/cabpath</strong> <em>path</em>] [<B>/catalog</B> <I>file</I>]
+	[<B>/nvc</B>] [<B>/ia</B>] [<B>/mu</B>] [<B>/nd</B>] [<B>/u</B> <I>username</I> <B>/p</B> <I>password</I>] [<B>/rd</B> <I>directory</I>] [<strong>/?</strong>]</CODE></PRE>
+
+<P>To scan the local computer for updates only, sending the results to standard output (<CODE>STDOUT</CODE>) in XML:</P>
+
+<PRE><CODE><B>MBSACLI</B> [<B>/xmlout</B>] [<B>/unicode</B>] [<B>/wa</B> | <B>/wi</B>] [<B>/nd</B>] [<B>/catalog</B> <I>file</I>] </CODE></PRE>
+
+
+<P>To scan one or more computers for updates only, creating reports that can be displayed by MBSA:</P>
+
+<PRE><CODE><B>MBSACLI</B> [<B>/target </B>{[<I>domain</I>]<B>\</B><I>computer</I> | <I>IP</I>} | <B>/r</B> <I>IP</I>-<I>IP</I> | <B>/d</B> <I>domain</I>] [<B>/n OS+IIS+SQL+Password</B>] 
+        [<B>/o</B> <I>template</I>] [<B>/qp</B>] [<B>/qr</B>] [<B>/qe</B>] [<B>/qt</B>] [<B>/q</B>] [<B>/listfile</B> <I>file</I>] [<strong>/xmlout</strong>]  
+        [<B>/wa</B> | <B>/wi</B> | <strong>/offline</strong> | <strong>/addonly</strong>] [<strong>/noadd</strong>] [<strong>/cabpath</strong> <em>path</em>] [<B>/catalog</B> <I>file</I>]
+	[<B>/nvc</B>] [<B>/ia</B>] [<B>/mu</B>] [<B>/nd</B>] [<B>/u</B> <I>username</I> <B>/p</B> <I>password</I>] [<B>/rd</B> <I>directory</I>] [<strong>/?</strong>]</CODE></PRE>
+
+
+<P>To display a report:</P>
+
+<PRE><CODE><B>MBSACLI</B> [<B>/l</B>] [<B>/ls</B>] [<B>/lr</B> <I>report</I>] [<B>/ld</B> <I>report</I>] [<B>/nvc</B>] </CODE></PRE>
+
+<P>To display a report from a specific directory:</P>
+
+<PRE><CODE><B>MBSACLI</B> [<B>/l</B>] [<B>/lr</B> <I>report</I>] [<B>/ld</B> <I>report</I>] [<B>/nvc</B>] [<B>/rd</B> <I>directory</I>] </CODE></PRE>
+
+<P>To display usage information:</P>
+
+<PRE><CODE><B>MBSACLI</B> [<B>/?</B>]</CODE></PRE>
+
+<H2>Parameters</H2>
+
+<P>You cannot use any of these parameters more than once each time you run the command.</P>
+
+<DL>
+<DT><B>/target </B>[<I>domain</I><B>\</B>]<I>computer</I> | <I>IP</I></DT>
+<DD>Scans the specified computer. You can identify the computer by using its IP address or its name and, optionally, the domain to which it belongs.</DD>
+
+<DT><B>/r</B> <I>IP</I>-<I>IP</I></DT>
+<DD>Scans all the computers that are identified by a range of IP addresses.</DD>
+
+<DT><B>/d</B> <I>domain</I></DT>
+<DD>Scans all the computers in the specified domain.</DD>
+
+<DT><B>/n</B> <I>option</I>[<B>+</B><I>option</I>...]</DT>
+<DD>Excludes the specified scan types from the scan. You can specify the following options, separating them with a plus sign (+):
+<DL><DT><B>OS</B></DT><DD>Excludes <NOLOC>Windows</NOLOC> administrative vulnerability checks</DD>
+<DT><B>SQL</B></DT><DD>Excludes <NOLOC>SQL Server</NOLOC> administrative vulnerability checks</DD>
+<DT><B>IIS</B></DT><DD>Excludes <NOLOC>IIS</NOLOC> administrative vulnerability checks</DD>
+<DT><B>Password</B></DT><DD>Excludes password vulnerability checks</DD></DL></DD>
+
+<DT><B>/o</B> <I>template</I></DT>
+<DD>Specifies the template that MBSA uses when naming the XML output file. You can use these symbols to represent computer-specific information:
+<DL>
+<DT><CODE>%d%</CODE></DT><DD>Replaced with the name of the computer's domain</DD>
+<DT><CODE>%c%</CODE></DT><DD>Replaced with the name of the computer</DD>
+<DT><CODE>%t%</CODE></DT><DD>Replaced with the date and time when the scan was performed</DD>
+<DT><CODE>%IP%</CODE></DT><DD>Replaced with the computer's IP address</DD>
+</DL>
+<P>The default file-name template is <CODE>%d&nbsp;-&nbsp:%c%&nbsp;(%t%)</CODE>.</P>
+<P>You can also use the variable names that were supported by previous versions of MBSA: <CODE>%domain%</CODE>, <CODE>%computername%</CODE>, and <CODE>%date%</CODE>.</P>
+</DD>
+
+<DT><B><NOLOC>/qp</NOLOC></B></DT>
+<DD>Does not display scan progress.</DD>
+
+<DT><B><NOLOC>/qr</NOLOC></B></DT>
+<DD>Does not display the report list.</DD>
+
+<DT><B><NOLOC>/qe</NOLOC></B></DT>
+<DD>Does not display the error list.</DD>
+
+<DT><B><NOLOC>/qt</NOLOC></B></DT>
+<DD>Does not display the text output after scanning a single computer.</DD>
+
+<DT><B><NOLOC>/q</NOLOC></B></DT>
+<DD>Does not display scan progress, the report list, the error list, or text output.</DD>
+
+<DT><B><NOLOC>/listfile</NOLOC></B> <I>file</I></DT>
+<DD>Scans the computers identified in a file. The <I>file</I> argument is the path and name of a text file in ASCII or Unicode format that contains one or more IP addresses or computer names. Each IP address or computer name must appear on a separate line.</DD>
+
+<DT><B><NOLOC>/xmlout</NOLOC></B></DT>
+<DD>Checks the local computer for security updates only, displaying the results as XML text. To save the report in a file, use command redirection to redirect standard output (<CODE>STDOUT</CODE>) to a file, for example, <CODE>MBSACLI /xmlout &gt; output.xml</CODE>.
+<P>For more information about using this parameter, see <A HREF="#SecurityUpdatesScan">Security Updates Scan</A>.</P>
+</DD>
+
+<DT><B><NOLOC>/wa</NOLOC></B></DT> 
+<DD>Scans only for security updates that are approved on the computer's <NOLOC>Update Services</NOLOC> server. The <NOLOC>Microsoft Update</NOLOC> web site and the offline catalog are not used. This parameter cannot be used with the <CODE>/wi</CODE> parameter.</DD>
+
+<DT><B><NOLOC>/wi</NOLOC></B></DT>
+<DD>Uses only the <NOLOC>Microsoft Update</NOLOC> web site or offline catalog for security update information. Updates that are not approved on the computer's <NOLOC>Update Services</NOLOC> server are displayed as though they were approved. This parameter cannot be used with <CODE>/wa</CODE> parameter. Use this parameter to scan computers whose assigned <NOLOC>Update Services</NOLOC> servers are not available.</DD>
+
+<DT><B><NOLOC>/offline</NOLOC></B></DT>
+	<DD>Uses only the offline catalog for security update information. Updates that are not approved on the computer's <NOLOC>Update Services</NOLOC> server are displayed as though they were approved. Use this parameter to 
+	force MBSA to act as if it is in a secure or offline environment without 
+	access to Microsoft or WSUS for assessments.&nbsp; Combine with <CODE>/nvc </CODE>
+	and <CODE>/nd</CODE> to prevent MBSA from connecting to Microsoft for newer 
+	versions of MBSA or needed scan files.</DD>
+
+<DT><B><NOLOC>/addonly</NOLOC></B></DT>
+	<DD>Uses only the additional catalogs (if they exist) for security update information. Updates that are not approved on the computer's <NOLOC>Update Services</NOLOC> server are 
+	ignored unless the WSUS server includes the updates in the additional 
+	catalogs, in which case they are displayed as though they were approved. This parameter cannot be used with <CODE>/noadd</CODE> 
+	parameter. Use this parameter to force MBSA to use only additional catalogs, 
+	not Microsoft Update, WSUS Server or the offline catalog.</DD>
+
+<DT><B><NOLOC>/noadd</NOLOC></B></DT>
+	<DD>Ignores any additional catalogs (even if they exist) and any other 
+	security assessment options selected. This parameter cannot be used with <CODE>/addonly</CODE> parameter. Use this parameter to 
+	ignore additional catalogs even if they exist.</DD>
+
+<DT><B><NOLOC>/cabpath</B> <em>path</em></NOLOC></DT>
+	<DD>Specifies a local directory path or network share to obtain offline or 
+	additional catalog files for security update information.</DD>
+
+<DT><B><NOLOC>/catalog</NOLOC></B> <I>file</I></DT>
+<DD>Specifies the offline catalog containing the security update information to be used when scanning. The offline catalog must be a <NOLOC>.cab</NOLOC> file signed by Microsoft. The default offline catalog is <NOLOC>Wsusscn2.cab</NOLOC>, which is downloaded from the <NOLOC>Microsoft</NOLOC> Web site. When this parameter is not used, <NOLOC>Wsusscn2.cab</NOLOC> is downloaded from the <NOLOC>Microsoft</NOLOC> Web site if it is different from the locally cached version. Using this parameter prevents a newer file from being downloaded, and so should be used with care. The <I>file</I> argument must specify a file located on the computer performing the scan.</DD>
+
+<DT><B><NOLOC>/nvc</NOLOC></B></DT>
+<DD>Prevents MBSA from checking for a newer version of MBSA.</DD>
+
+<DT><B><NOLOC>/ia</NOLOC></B></DT>
+<DD>Installs or updates the required <NOLOC>Windows</NOLOC> Update Agent on the computer being scanned. When this parameter is not used, computers that do not have the required version of Automatic Updates will return an error in the report, and computers that do not have <NOLOC>Windows</NOLOC> Installer 3.0 or later may receive incomplete results from <NOLOC>Microsoft Office</NOLOC> and other products that require <NOLOC>Windows</NOLOC> Installer 3.0 for scanning.</DD>
+
+<DT><B><NOLOC>/mu</NOLOC></B></DT>
+<DD>Configures computers to use the <NOLOC>Microsoft Update</NOLOC> site on the computer being scanned.</DD>
+
+<DT><B><NOLOC>/nd</NOLOC></B></DT>
+<DD>Do not download any files from the <NOLOC>Microsoft</NOLOC> Web site when scanning. Use this parameter to prevent the download of <NOLOC>Wsusscn2.cab</NOLOC>, <NOLOC>Muauth.cab</NOLOC>, <NOLOC>WindowsUpdateAgent30-x86.exe</NOLOC> and <NOLOC>WindowsUpdateAgent30-x64.exe</NOLOC> during the scanning process. When this parameter is selected, MBSA will use any previously downloaded copies of the files. If you want, you can download the files yourself and place them in <CODE>C:\Documents and Settings\<I>username</I>\Local Settings\Application Data\Microsoft\MBSA\Cache</CODE>. This parameter applies only to downloads from the <NOLOC>Microsoft</NOLOC> Web site to the scanning computer. Downloads from the scanning computer to the target computer are automatic and cannot be disabled if the corresponding features are used.</DD>
+
+<DT><B><NOLOC>/u</NOLOC></B> <I>username</I> <B><NOLOC>/p</NOLOC></B> <I>password</I></DT>
+<DD>Specifies the user name and password to be used when scanning a remote computer. The <CODE>/u</CODE> and <CODE>/p</CODE> parameters must be used together and cannot be used when scanning the local computer. The specified user must have administrative privileges on the computer being scanned. For security purposes, the password is not sent over the network in clear text. Instead, MBSA uses the <NOLOC>Windows</NOLOC> challenge-response mechanism to secure the authentication process.</DD>
+
+<DT><B><NOLOC>/rd</NOLOC></B> <I>directory</I></DT>
+<DD>Specifies a local directory path or network share to place a completed scan 
+report.
+          Retrieves the reports from the given directory or network share when used with report options</DD>
+<DT><B><NOLOC>/l</NOLOC></B></DT>
+<DD>Lists all available reports.</DD>
+
+<DT><B><NOLOC>/ls</NOLOC></B></DT>
+<DD>Lists reports from the most recent scan.</DD>
+
+<DT><B><NOLOC>/lr</NOLOC></B> <I>report</I></DT>
+<DD>Displays an overview of the specified report.</DD>
+
+<DT><B><NOLOC>/ld</NOLOC></B> <I>report</I></DT>
+<DD>Displays the details of the specified report. When scanning a single computer, this is the default behavior unless the <CODE>/qt</CODE> parameter is used.</DD>
+
+<DT><B><NOLOC>/unicode</NOLOC></B></DT>
+<DD>Produces the report with Unicode characters. Users running Japanese MBSA or scanning computers running
+Japanese <NOLOC>Windows</NOLOC> should specify this parameter.</DD>
+
+<DT><B><NOLOC>/?</NOLOC></B></DT>
+<DD>Displays usage information for the command-line tool.</DD>
+
+</DL>
+
+<H2>Selecting a computer to scan</H2>
+<P>Use the following parameters to specify the computer to be scanned. If you do not specify one of these parameters on the command line, MBSA scans the local computer, that is, the computer on which it is running.</P>
+
+<DL>
+
+<DT><B><NOLOC>/target</NOLOC></B> [<I>domain</I><B>\</B>]<I>computer</I></DT><DD>Scans the named computer. The domain or workgroup name is optional.</DD>
+<DT><B><NOLOC>/target</NOLOC></B> <I>nnn</I><B>.</B><I>nnn</I><B>.</B><I>nnn</I><B>.</B><I>nnn</I></DT><DD>Scans the computer identified by the specified IP address.</DD>
+<DT><B><NOLOC>/r</NOLOC></B> <I>nnn</I><B>.</B><I>nnn</I><B>.</B><I>nnn</I><B>.</B><I>nnn</I><B>-</B><I>nnn</I><B>.</B><I>nnn</I><B>.</B><I>nnn</I><B>.</B><I>nnn</I></DT><DD>Scans the computers identified by a range of IP addresses.</DD>
+<DT><B>/listfile</B> <I>filename</I></DT><DD>Scans each computer identified by name or IP address listed in the specified file.  Place each computer name or IP address on a separate line in either an ASCII or UNICODE format text file.</DD>
+<DT><B><NOLOC>/d</NOLOC></B> <I>domain</I></DT><DD>Scans all computers in the specified domain.</DD>
+</DL>
+
+<H2>Excluding specific checks</H2>
+<P>To exclude a specific check from scan, use the <CODE>/n</CODE> parameter with the keyword for that check. The following are the keywords you can use with the <CODE>/n</CODE> parameter.</P>
+<DL>
+<DT><B><NOLOC>/n IIS</NOLOC></B></DT><DD>Skips <NOLOC>IIS</NOLOC> checks</DD>
+<DT><B><NOLOC>/n OS</NOLOC></B></DT><DD>Skips <NOLOC>Windows</NOLOC> Operating System (OS) checks. This also skips the <NOLOC>Internet Explorer</NOLOC> and <NOLOC>Outlook</NOLOC> zone checks and the <NOLOC>Office</NOLOC> macro security checks.</DD>
+
+<DT><B><NOLOC>/n Password</NOLOC></B></DT><DD>Skips password checks.</DD>
+<DT><B><NOLOC>/n SQL</NOLOC></B></DT><DD>Skips <NOLOC>SQL Server</NOLOC>/MSDE checks.</DD>
+<DT><B><NOLOC>/n Updates</NOLOC></B></DT><DD>Skips security update checks.</DD>
+
+</DL>
+
+<H2>Specifying parameters for security update checks</H2>
+
+<P>The following parameters determine how a security update check is performed and reported.</P>
+
+<DL>
+
+<DT><B><NOLOC>/wa</NOLOC></B></DT> 
+<DD>Scans only for security updates that are approved on the computer's <NOLOC>Update Services</NOLOC> server. The <NOLOC>Microsoft Update</NOLOC> web site and the offline catalog are not used. This parameter cannot be used with the <CODE>/wi</CODE> parameter.</DD>
+
+<DT><B><NOLOC>/wi</NOLOC></B></DT>
+<DD>Uses only the <NOLOC>Microsoft Update</NOLOC> web site or offline catalog for security update information. Updates that are not approved on the computer's <NOLOC>Update Services</NOLOC> server are displayed as though they were approved. This parameter cannot be used with <CODE>/wa</CODE> parameter. Use this parameter to scan computers whose assigned <NOLOC>Update Services</NOLOC> servers are not available.</DD>
+
+<DT><B><NOLOC>/mu</NOLOC></B></DT>
+<DD>Configures computers to use the <NOLOC>Microsoft Update</NOLOC> site on the computer being scanned.</DD>
+
+<DT><B><NOLOC>/offline</NOLOC></B></DT>
+	<DD>Uses only the offline catalog for security update information. Updates that are not approved on the computer's <NOLOC>Update Services</NOLOC> server are displayed as though they were approved. Use this parameter to 
+	force MBSA to act as if it is in a secure or offline environment without 
+	access to Microsoft or WSUS for assessments.&nbsp; Combine with <CODE>/nvc </CODE>
+	and <CODE>/nd</CODE> to prevent MBSA from connecting to Microsoft for newer 
+	versions of MBSA or needed scan files.</DD>
+
+<DT><B><NOLOC>/addonly</NOLOC></B></DT>
+	<DD>Uses only the additional catalogs (if they exist) for security update information. Updates that are not approved on the computer's <NOLOC>Update Services</NOLOC> server are 
+	ignored unless the WSUS server includes the updates in the additional 
+	catalogs, in which case they are displayed as though they were approved. This parameter cannot be used with <CODE>/noadd</CODE> 
+	parameter. Use this parameter to force MBSA to use only additional catalogs, 
+	not Microsoft Update, WSUS Server or the offline catalog.</DD>
+
+<DT><B><NOLOC>/noadd</NOLOC></B></DT>
+	<DD>Ignores any additional catalogs (even if they exist) and any other 
+	security assessment options selected. This parameter cannot be used with <CODE>/addonly</CODE> parameter. Use this parameter to 
+	ignore additional catalogs even if they exist.</DD>
+
+<DT><B><NOLOC>/cabpath</B> <em>path</em></NOLOC></DT>
+	<DD>Specifies a local directory path or network share to obtain offline or 
+	additional catalog files for security update information.</DD>
+
+<DT><B><NOLOC>/catalog</NOLOC></B> <I>file</I></DT>
+<DD>Specifies the offline catalog containing the security update information to be used when scanning. The offline catalog must be a <NOLOC>.cab</NOLOC> file signed by Microsoft. The default offline catalog is <NOLOC>Wsusscn2.cab</NOLOC>, which is downloaded from the <NOLOC>Microsoft</NOLOC> Web site. When this parameter is not used, <NOLOC>Wsusscn2.cab</NOLOC> is downloaded from the <NOLOC>Microsoft</NOLOC> Web site if it is different from the locally cached version. Using this parameter prevents a newer file from being downloaded, and so should be used with care. The <I>file</I> argument must specify a file located on the computer performing the scan.</DD>
+
+<DT><B><NOLOC>/ia</NOLOC></B></DT>
+<DD>Installs or updates the required <NOLOC>Windows</NOLOC> Update Agent on the computer being scanned. When this parameter is not used, computers that do not have the required version of Automatic Updates will return an error in the report, and computers that do not have <NOLOC>Windows</NOLOC> Installer 3.0 or later may receive incomplete results from <NOLOC>Microsoft Office</NOLOC> and other products that require <NOLOC>Windows</NOLOC> Installer 3.0 for scanning.</DD>
+
+<DT><B><NOLOC>/xmlout</NOLOC></B></DT>
+<DD>Checks the local computer for security updates only, displaying the results as XML text.</DD>
+<DD>Specifies the offline catalog containing the security update information to be used when scanning. The offline catalog must be a <NOLOC>.cab</NOLOC> file signed by <NOLOC>Microsoft</NOLOC>. The default offline catalog is <NOLOC>Wsusscn2.cab</NOLOC>, which is downloaded from the <NOLOC>Microsoft</NOLOC> Web site. When this parameter is not used, <NOLOC>Wsusscn2.cab</NOLOC> is downloaded from the <NOLOC>Microsoft</NOLOC> Web site if it is different from the locally cached version. Using this parameter prevents a newer file from being downloaded, and so should be used with care.</DD>
+	<dt></dt>
+
+</DL>
+
+<H2><a name="ScanningOnlyForSecurityUpdates">Scanning only for security updates</a></H2>
+<p>Using <CODE>/xmlout</CODE> specifies that MBSA only checks for security updates and displays scan results as XML text in the command line window.  Only the MBSA engine (<NOLOC>MBSAcli.exe</NOLOC> and
+ <NOLOC>Wusscan.dll</NOLOC>) files are needed for this type of scanning, and only the parameters listed below can be used with this parameter:</p>
+
+<UL>
+<LI><CODE>/catalog</CODE></LI>
+<LI><CODE>/wa</CODE></LI>
+<LI><CODE>/wi</CODE></LI>
+<LI><CODE>/nvc</CODE></LI>
+<LI><CODE>/nd</CODE></LI>
+<LI><CODE>/unicode</CODE></LI>
+</UL>
+
+<p>When using the <CODE>/xmlout</CODE> parameter, you must explicitly redirect the XML output into a file using standard console
+ redirection.  Also, the XML results  must be processed separately from MBSA because they observe a different format
+ than the full MBSA report files.  The benefit of this parameter is to avoid the full installation package of MBSA 
+ when only checking for updates on a single computer.  If the minimum system requirements are met, only the engine
+ files are needed and can be easily copied from another computer having a full installation present.</p>
+
+ 
+<H2>Displaying results and details</H2>
+<p>You can use the MBSA command-line interface to list or display reports produced by previous scans. These report parameters cannot be combined with scanning 
+parameters.</p>
+
+<DL>
+<DT><B><NOLOC>/l</NOLOC></B></DT><DD>Lists all the reports that are available. If <CODE>/rd</CODE> is specified reports are listed from the given directory.</DD>
+<DT><B><NOLOC>/ls</NOLOC></B></DT><DD>Lists the reports from most recent scan.</DD>
+<DT><B><NOLOC>/lr</NOLOC></B> <I>report</I></DT><DD>Displays an overview of the named report. If <CODE>/rd</CODE> is specified report is searched in the given directory.</DD>
+<DT><B><NOLOC>/ld</NOLOC></B> <I>report</I></DT><DD>Displays details of the named report. Unless the <CODE>/qt</CODE> parameter is used, this is the default behavior whenever MBSA scans a single computer. If <CODE>/rd</CODE> is specified report is searched in the given directory.</DD>
+</DL>
+
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<HR>
+
+<H1><A NAME="Notes">General Notes</A></H1>
+
+<H2>Scan Reports</H2>
+
+<P>Scan reports are stored on the computer on which MBSA is installed, 
+in the SecurityScans folder of the user's profile (<CODE>%userprofile%\SecurityScans</CODE>) 
+by default. Using the command-line interface, the <CODE>/rd</CODE> (report directory) folder 
+can be specified to place completed scan reports in a specific directory or 
+network share. MBSA creates an individual security report for each computer that it scans, either locally or remotely. Report files are named with the file extension
+ .MBSA, which is a registered file association for MBSA, so that clicking on the file in <NOLOC>Windows</NOLOC> Explorer will start MBSA to view the report.</P>
+
+<H2><A NAME="SecurityUpdatesScan">Security Updates Scan</A></H2>
+
+<P>When you perform a security update scan, all security-related updates are checked and reported. If
+ a target computer is assigned to a <NOLOC>WSUS</NOLOC> server, the report will indicate which updates have not been
+ approved on the <NOLOC>Update Services</NOLOC> server using an informational score.  When you select the <B>Scan using <NOLOC>
+assigned Windows Server Update Services</NOLOC> (WSUS) servers only</B> check box or use the <CODE>/wa</CODE> parameter on the command line, only  security
+ updates marked as approved by the <NOLOC>Update Services</NOLOC> administrator are checked and reported by MBSA.</p>
+
+<p>In addition, updates that are installed and not yet superseded by another update will be included in the Current Update Compliance section of the report.  When
+ an update has been superseded by another update and both are installed, the report will only reflect the
+ more recent update and not both.  When available during update publication, related IDs will be included in the report as they have been listed in the Technical Details section of the security bulletin.</p>
+
+<P>Security update checks are not performed for products that are not installed on a scanned computer, and these checks are not listed in 
+the Security Update Scan Results table in the report.</P>
+
+<p>For more information, see <a href="..\optionshelp.html">Scanning Options</a>; you can also access this topic while running MBSA.</P>
+
+<H2>Partially Installed Updates</H2>
+
+<P>For updates installed by using <NOLOC>Windows Update</NOLOC>, <NOLOC>Microsoft Update</NOLOC>, or Automatic Updates that required a restart of the computer that was postponed by the user, the report will indicate that the update is not installed because the required reboot has not occurred. In this case, restarting the computer and scanning again will cause the update to report the proper installation status.</P>
+ 
+<P>For updates that were installed by directly downloading or running the 
+update, but for which a required system restart was postponed, MBSA will provide 
+an indication of the pending restart under the Windows Check named Incomplete 
+Updates. This capability is available only for those updates that were built 
+using the standard installer (<NOLOC>update.exe</NOLOC>).</P>
+
+
+<H2>Localized Versions</H2>
+
+<P>MBSA has console localization support for Japanese, German, and French, 
+but has the ability to scan localized OS versions of the target computers independently
+ of the console language.  This is because all languages supported by
+ <NOLOC>Microsoft Update</NOLOC> can be scanned equally, but the results are stored in the language of the MBSA console installation.</P>
+
+<p>The following examples illustrate scenarios that may be encountered when using
+ different languages of the operating system and of the MBSA console:</p>
+ <UL>
+<li> A Japanese system with the Japanese version of MBSA installed that scans a Japanese system: 
+results of scanning a Japanese target computer are shown in Japanese. </LI>
+
+<li>A French system with the Japanese version of MBSA installed that scans a French system: 
+Results are shown in Japanese due to the Japanese version of MBSA installed.</LI>
+</UL>
+
+<H2>Remote (Network) Scans</H2>
+<P>MBSA can be used to scan a domain or a range of IP addresses from a central computer
+ given the system requirements listed earlier in this topic. When performing remote scans, you must run MBSA while logged on with an account that has local administrative privileges on each computer being scanned. When using the MBSA command-line tool to perform scans, you can either run the tool while logged on with an account with local administrative privileges on each computer, or you can use the <CODE>/u</CODE> and <CODE>/p</CODE> parameters to supply the user name and password of such an account. In a multidomain environment where a firewall or filtering router separates the two
+ networks (two separate <NOLOC>Active Directory&reg;</NOLOC> domains), TCP ports 139 and 445 and UDP ports 137
+ and 138 must be open in order for MBSA to connect and authenticate to the remote servers being scanned.</P>
+ 
+
+<H2>Error Reporting</H2>
+
+<P><NOLOC>Microsoft</NOLOC> Baseline Security Analyzer displays an error if any of the following occurs:</P>
+
+<UL>
+  <LI> A user attempts to scan the computer but is not a local administrator on 
+  the computer being scanned.</LI>
+  <LI>A computer being scanned does not respond to an initial connection 
+  attempt from the computer on which the tool is running. This may be the result of an invalid host name or IP
+ address, or it may be a network connectivity issue.</LI>
+  <LI>A computer being scanned does not have the latest <NOLOC>Windows</NOLOC> Update Agent 
+	(WUA) client or the Automatic Update service has been disabled. </LI>
+  <LI>A remote computer being scanned does not have the proper services enabled.</LI>
+  <LI><NOLOC>IIS</NOLOC> Common Files are not installed on the computer running MBSA when performing a remote scan of an <NOLOC>IIS</NOLOC> server.</LI>
+  <LI>The computer running MBSA does not have Internet access to download the 
+	<NOLOC>.cab</NOLOC> file required to perform the security update check during a scan. If a 
+	previous copy of the .cab file was downloaded in a prior scan, the tool will 
+	attempt to use this locally cached copy if an Internet connection is not 
+	detected.</LI>
+</UL>
+
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<HR>
+
+<H1><A name="Security">Security Implications of Remote Scanning</A></H1>
+
+<P>If you use MBSA to scan remote computers, you should be aware of two aspects that might affect your network's security. </P>
+
+<H2>Updating <NOLOC>Windows</NOLOC> Update Agent on Target Computers</H2>
+
+<P>When scanning a target computer for security updates, MBSA relies on <NOLOC>Windows</NOLOC> Update Agent (WUA) running on the target computer. 
+By default, installation of WUA and configuration to MU on the target computer is not performed. This 
+feature is turned off by default to ensure administrators have full control over 
+updates to target clients. If the target computer does not have the current version of WUA installed, MBSA can install the WUA by selecting the check in the <B>Configure computers for <NOLOC>Microsoft Update</NOLOC> and scanning prerequisites</B> check box before performing a security update scan. When using the MBSA command-line tool, specify the <CODE>/ia</CODE> and <CODE>/mu</CODE> options on the command line.
+
+
+<P>If you do not select MBSA to install or update WUA on target computers, you can use one of several methods to ensure that the current version of WUA is installed on each target computer:</P>
+
+<UL>
+<LI>Rely on <NOLOC>Microsoft Update</NOLOC> or the <NOLOC>Windows Server Update Services</NOLOC> server to install WUA on the target computer</LI>
+<LI>Register the target computer with the <NOLOC>Microsoft Update</NOLOC> Web site</LI>
+<LI>Manually install the latest WUA on each target computer</LI>
+<LI>Deploy WUA as part of a system image</LI>
+</UL>
+
+<P>The following sections describe each of these methods in greater detail. In addition to these methods, you can deploy WUA using a software distribution product, such as SMS, 
+SCCM or a third-party solution.</P>
+
+<P CLASS="important">Important</P>
+<UL><LI>When MBSA updates WUA on a target computer, it downloads and executes two files in addition to the WUA files: <NOLOC>MBSA2ri.exe</NOLOC> and <NOLOC>MBSA2mu.exe</NOLOC>. If you choose to allow MBSA to automatically update WUA on target computers, and if you are concerned that these files or the WUA files could be tampered with in transit, you should consider using a secure network protocol such as IPsec  to secure the network transmission. See the <a href="http://go.microsoft.com/fwlink/?LinkId=48127">Microsoft web site</a> for information about IPsec.</LI></UL>
+
+<H3>Using <NOLOC>Windows Server Update Services</NOLOC> Server</H3>
+
+<P><NOLOC>Windows Server Update Services</NOLOC> (<NOLOC>WSUS</NOLOC>) server enables network administrators to deploy the latest <NOLOC>Microsoft</NOLOC> product updates to <NOLOC>Microsoft Windows Server 2000</NOLOC>, 
+<NOLOC>Windows&nbsp;XP</NOLOC>, <NOLOC>Windows Server 2003</NOLOC>, <NOLOC>Windows Vista</NOLOC>, <NOLOC>Windows Server 2008</NOLOC>, <NOLOC>Windows&nbsp;7</NOLOC>, <NOLOC>Windows Server 2008 R2</NOLOC>, <NOLOC>Windows&nbsp;8</NOLOC>, <NOLOC>Windows Server 2012</NOLOC>, <NOLOC>Windows&nbsp;8.1</NOLOC> and <NOLOC>Windows Server 2012 R2</NOLOC> operating systems. By using Update Services, you can fully manage the distribution of updates that are released through <NOLOC>Microsoft Update</NOLOC> to computers in your network. Computers that are assigned to a 
+<NOLOC>WSUS</NOLOC> server automatically receive the current version of WUA, enabling them to be scanned by MBSA. To learn more about 
+WSUS server, see the <a href="http://go.microsoft.com/fwlink/?linkid=16479">Microsoft Web site</a>.</P>
+
+<H3>Using the <NOLOC>Microsoft Update</NOLOC> Web Site</H3>
+
+<P>You can configure target computers to obtain the current version of WUA directly from <NOLOC>Microsoft Update</NOLOC> and to configure the target computer to use <NOLOC>Microsoft Update</NOLOC> when being scanned. To do so, log on each target computer as an administrator, connect to the  
+<a href="http://go.microsoft.com/fwlink/?linkid=42632"><NOLOC>Microsoft Update</NOLOC> Web site</a> and follow the instructions provided there.</P>
+
+<H3>Manually Installing WUA</H3>
+
+<P>If you want to maintain maximum control over how WUA is installed or updated on target computers, you can manually install WUA on each target computer. Doing so requires that you execute the appropriate WUA installation program on each target computer, either by logging on interactively and then running the installation program, or using a software distribution system such as <NOLOC>Microsoft Systems Management Server</NOLOC> 
+or System Center Configuration Manager.</P> 
+
+<P>You can obtain the necessary WUA installation programs from the <NOLOC>Microsoft</NOLOC> Web site:</P>
+
+<UL>
+<LI>For x86-based computers: 
+<a href="http://go.microsoft.com/fwlink/?LinkId=90992"><CODE>WindowsUpdateAgent30-x86.exe</CODE></a></LI>
+
+<LI>For x64-based computers: 
+<a href="http://go.microsoft.com/fwlink/?LinkId=90993"><CODE>WindowsUpdateAgent30-x64.exe</CODE></a></LI>
+
+<LI>For Itanium-based computers: 
+<a href="http://go.microsoft.com/fwlink/?LinkId=91749"><CODE>WindowsUpdateAgent30-ia64.exe</CODE></a></LI>
+</UL>
+
+<H3>Deploying WUA Within a System Image</H3>
+
+<P>If you are configuring new computers that are being built from a disk image, you can install WUA on the master computer, register the master computer with <NOLOC>Microsoft Update</NOLOC>, or both, before creating the master image.  Be sure you are familiar with how to prepare a Windows system image. For more information, see the <A HREF="http://go.microsoft.com/fwlink/?LinkId=47033">Microsoft Web site</A>.</P>
+
+<H2>MBSA and Administrator Accounts</H2>
+
+<P>Scanning with MBSA requires you to run MBSA with an 
+account that is an administrator on all scanned computers. Depending upon how 
+your network has been secured, this can introduce significant risk should the user-account be compromised, but it is necessary to be able to scan for certain vulnerabilities. If this risk is acceptable, you should take steps to mitigate this risk. For example, making this account a member of the Domain Admins group requires less 
+administrative overhead because the account automatically has the required rights on all 
+potential clients, but if the account is compromised, the risk to the enterprise 
+is severe. You should consider creating a special account for this purpose and enabling the account only when it is needed to scan domain computers.
+Making the account a local administrator on each target computer but not a member of the Domain Admins group
+requires you to manage this account on every target computer, but the risk of compromise 
+is limited to the target computers themselves, not to the domain as a whole. You can further mitigate the threat 
+by using only <NOLOC>Kerberos</NOLOC> authentication, which is less vulnerable to attacks than 
+<NOLOC>LanMan</NOLOC> authentication, but doing so might require an upgrade to 
+<NOLOC>Active Directory</NOLOC>.</p>
+
+
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<HR>
+
+<H1><A NAME="howtocorrect">How to Correct Common Errors</A></H1>
+
+<P>For up-to-date information about troubleshooting MBSA setup and operations, see the Frequently Asked Questions at the <A href="http://go.microsoft.com/fwlink/?LinkID=45293"><NOLOC>Microsoft</NOLOC> Web site</A>.</p>
+
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+<HR>
+<H1><A NAME="Bugs">Reporting Bugs or Requesting Support </A></H1>
+
+<P>An MBSA newsgroup exists for users 
+to post questions and obtain information on tool updates, technical questions, 
+and upcoming versions:</P>
+<P>&nbsp;&nbsp;&nbsp; News server:&nbsp; <NOLOC>Msnews.microsoft.com</NOLOC><BR>
+&nbsp;&nbsp; Newsgroup:&nbsp; <NOLOC>&nbsp; Microsoft.public.security.baseline_analyzer</NOLOC></P>
+
+<P>To contact <NOLOC>Microsoft</NOLOC> Product Support Services, see the <A href="http://go.microsoft.com/fwlink/?LinkId=48135"><NOLOC>Microsoft</NOLOC> Web site</A>.</P>
+
+<P>When reporting bugs, include the following information:</P>
+<UL>
+  <LI>The <NOLOC>WindowsUpdate.log</NOLOC> file on the target client</LI>
+	<LI>A completed MBSA scan report</LI>
+  <LI>Operating system and service pack version of the computer running the tool</LI>
+  <LI>Operating system and service pack version of the computer being scanned</LI>
+  <LI><NOLOC>Internet Explorer</NOLOC> version</LI>
+  <LI>Tool version information located in the About <NOLOC>Microsoft</NOLOC> Baseline Security Analyzer window (in the tool graphical user interface)</LI>
+</UL>
+<P><I>Return to</I> <A HREF="#Contents">Contents</A></P>
+
+</BODY>
+
+</HTML>

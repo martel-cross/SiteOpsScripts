@@ -1,0 +1,345 @@
+;
+;  Database file (null) for Default zone scope in zone cbdr.com.
+;      Zone version:  1599
+;
+
+@                       IN  SOA qtxad2.atl.careerbuilder.com. admin.atl.careerbuilder.com. (
+                        		1599         ; serial number
+                        		900          ; refresh
+                        		600          ; retry
+                        		86400        ; expire
+                        		300        ) ; default TTL
+
+;
+;  Zone NS records
+;
+
+@                       NS	drawsad1.atl.careerbuilder.com.
+@                       NS	drawsad2.atl.careerbuilder.com.
+@                       NS	qtmad1.atl.careerbuilder.com.
+qtmad1.atl.careerbuilder.com. A	10.240.10.9
+@                       NS	qtxad2.atl.careerbuilder.com.
+@                       NS	qtxad1.atl.careerbuilder.com.
+@                       NS	devad1.atl.careerbuilder.com.
+@                       NS	devad2.atl.careerbuilder.com.
+@                       NS	qtmad2.atl.careerbuilder.com.
+@                       NS	qtwad2.atl.careerbuilder.com.
+@                       NS	bearad1.atl.careerbuilder.com.
+bearad1.atl.careerbuilder.com. A	10.230.10.9
+@                       NS	qtwad1.atl.careerbuilder.com.
+@                       NS	luigiad2.atl.careerbuilder.com.
+@                       NS	luigiad1.atl.careerbuilder.com.
+@                       NS	bearad2.atl.careerbuilder.com.
+
+;
+;  Zone records
+;
+
+@                       A	208.82.7.36
+ad                      CNAME	www.careerbuilder.com.
+alerts                  A	10.240.62.250
+apply                   A	10.240.62.254
+                        MX	10	apply.cbdr.com.
+applynow                A	208.82.4.132
+bd                      A	208.82.5.49
+                        A	208.82.7.49
+bob                     A	10.197.62.100
+bobtest                 A	10.197.62.99
+businesscards           A	10.240.62.100
+cbdataimport            A	10.240.62.100
+                        MX	10	cbdataimport.cbdr.com.
+a10async.chi            A	10.230.62.35
+a10docsrv.chi           A	10.230.62.33
+a10jobsrch.chi          A	10.230.62.31
+a10parse.chi            A	10.230.62.37
+a10ressrch.chi          A	10.230.62.36
+a10rproc.chi            A	10.230.62.34
+a10solrjob.chi          A	10.230.62.30
+applallfeed.chi         CNAME	jobsrch.chi.cbdr.com.
+applallsrch.chi         CNAME	jobsrch.chi.cbdr.com.
+applprifeed.chi         CNAME	jobsrch.chi.cbdr.com.
+applprisrch.chi         CNAME	jobsrch.chi.cbdr.com.
+appsrch.chi             CNAME	jobsrch.chi.cbdr.com.
+async.chi               A	10.230.62.35
+bkeep.chi               A	10.230.62.111
+docfeed.chi             CNAME	docsrv.chi.cbdr.com.
+docsrv.chi              A	10.230.62.33
+dpisvc.chi              A	10.230.62.174
+flume.chi               A	10.230.62.130
+ghqasync.chi            A	10.197.62.133
+ghqbkeep.chi            A	10.197.62.170
+ghqdocserv.chi          A	10.197.62.135
+ghqrproc.chi            A	10.197.62.150
+ghqscache.chi           A	10.197.62.136
+ghqsovrensvc.chi        A	10.197.62.159
+ghqsrch.chi             A	10.197.62.134
+ghqswarm.chi            A	10.197.62.165
+img.chi                 A	208.88.80.49
+jobdata.chi             CNAME	docsrv.chi.cbdr.com.
+jobfeed.chi             CNAME	jobsrch.chi.cbdr.com.
+jobsrch.chi             A	10.230.62.31
+jsolr.chi               A	10.230.62.182
+matchfeed.chi           CNAME	jobsrch.chi.cbdr.com.
+matchsrch.chi           CNAME	jobsrch.chi.cbdr.com.
+parse.chi               A	10.230.62.222
+productstatus.chi       A	10.230.62.38
+res1yfeed.chi           CNAME	jobsrch.chi.cbdr.com.
+res1ysrch.chi           CNAME	jobsrch.chi.cbdr.com.
+resallfeed.chi          CNAME	jobsrch.chi.cbdr.com.
+resdata.chi             CNAME	docsrv.chi.cbdr.com.
+ressrch.chi             A	10.230.62.36
+ressrch1y.chi           CNAME	jobsrch.chi.cbdr.com.
+ressrchall.chi          CNAME	jobsrch.chi.cbdr.com.
+rproc.chi               A	10.230.62.34
+scache.chi              A	10.230.62.32
+solrfst.chi             A	10.230.62.183
+SolrJob.chi             A	10.230.62.30
+SolrJobMatch.chi        CNAME	solrjob.chi.cbdr.com.
+sovrensvc.chi           A	10.230.62.110
+swarm.chi               A	10.230.62.165
+ws.chi                  A	10.230.62.169
+wstest.chi              A	10.197.62.161
+china                   CNAME	img.cbdr.com.
+cnsrc                   CNAME	cnsrc.gslb.cbdr.com.
+resdata.core            A	10.240.62.131
+resdatatest.core        A	10.197.62.130
+ressrch.core            A	10.240.62.130
+ressrchtest.core        A	10.197.62.230
+devblast                A	10.197.62.127
+cbasync.dis             CNAME	internal-cbasync-1941739559.us-east-1.elb.amazonaws.com.
+cbauth.dis              CNAME	internal-cbauth-647961324.us-east-1.elb.amazonaws.com.
+cbbatch.dis             CNAME	internal-cbbatch-1966543717.us-east-1.elb.amazonaws.com.
+cbsvc.dis               CNAME	internal-cbsvc-1321145264.us-east-1.elb.amazonaws.com.
+email.dis               A	10.237.62.154
+jeproc.dis              CNAME	internal-jeproc-632162556.us-east-1.elb.amazonaws.com.
+mailapp.dis             CNAME	internal-mailapp-563309425.us-east-1.elb.amazonaws.com.
+mailcam.dis             A	10.237.62.153
+mailcampaign.dis        CNAME	internal-campaignemail-1479536542.us-east-1.elb.amazonaws.com.
+mailhigh.dis            CNAME	internal-mailhigh-1472562789.us-east-1.elb.amazonaws.com.
+maillow.dis             CNAME	internal-maillow-1272641731.us-east-1.elb.amazonaws.com.
+mailsvc.dis             A	10.237.62.159
+matchsrch.dis           CNAME	matchsrch.iac.cbdr.com.
+parse.dis               A	10.237.62.161
+resume.dis              A	10.237.62.157
+rproc.dis               A	10.237.62.162
+site.dis                A	10.237.62.158
+sovrensvc.dis           A	10.237.62.110
+ws.dis                  A	10.230.62.170
+drdocsrv.dr             CNAME	beardrdoc1.atl.careerbuilder.cm.
+www.drweb.dr            A	10.230.62.122
+dyn                     A	208.82.5.17
+                        A	208.82.7.17
+email                   A	10.240.62.250
+emj                     A	208.82.5.49
+                        A	208.82.7.49
+beehivefarmtest.ghq     A	10.197.62.176
+devhivestream.ghq       A	10.197.62.175
+searchqueue.ghq         A	10.197.62.252
+searchsoa.ghq           A	10.197.62.251
+solrfst.ghq             A	10.197.62.173
+solrjob.ghq             A	10.197.62.172
+
+;
+;  Delegated sub-zone:  gslb.cbdr.com.
+;
+gslb                    3600	NS	qtsgtm.careerbuilder.com.
+qtsgtm.careerbuilder.com. 3600	A	208.82.7.229
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  api.iac.cbdr.com.
+;
+api.iac                 0	NS	qtw-csmdns.iac.cbdr.com.
+api.iac                 0	NS	chi-csmdns.iac.cbdr.com.
+;  End delegation
+
+apiprodstatus.iac       A	10.240.62.39
+boasync.iac             A	10.240.62.183
+bob.iac                 A	10.197.62.100
+bomail.iac              A	10.240.62.181
+bosvc.iac               A	10.240.62.182
+bosvcws.iac             A	10.240.62.184
+cass.iac                A	10.240.63.80
+cbasync.iac             A	10.240.62.140
+cbauth.iac              A	10.240.62.120
+cbmtn.iac               A	10.240.62.149
+cbrs.iac                A	10.240.62.135
+cbsnc.iac               A	10.240.62.145
+cbsvc.iac               A	10.240.62.115
+chi-csmdns.iac          A	10.230.62.82
+dpifeed.iac             A	10.240.62.200
+dpifeedtest.iac         A	10.197.62.192
+dpimail.iac             A	10.240.62.190
+dpimailtest.iac         A	10.197.62.195
+
+;
+;  Delegated sub-zone:  dpimap.iac.cbdr.com.
+;
+dpimap.iac              3600	NS	atlasdns.careerbuilder.com.
+atlasdns.careerbuilder.com. 3600	A	10.240.10.82
+;  End delegation
+
+
+;
+;  Delegated sub-zone:  dpimaptest.iac.cbdr.com.
+;
+dpimaptest.iac          NS	10.197.62.82.
+10.197.62.82.           A	10.197.62.82
+;  End delegation
+
+dpisvc.iac              A	10.240.62.174
+dpisvctest.iac          A	10.197.62.191
+flume.iac               A	10.240.62.110
+ghqasync.iac            A	10.197.62.107
+ghqauth.iac             A	10.197.62.155
+ghqjeproc.iac           A	10.197.62.179
+ghqmailcampaign.iac     A	10.197.62.146
+ghqmailhigh.iac         A	10.197.62.143
+ghqmaillow.iac          A	10.197.62.144
+ghqmailpsa.iac          A	10.197.62.147
+ghqmailsvc.iac          A	10.197.62.145
+ghqrproc.iac            A	10.197.62.148
+ghqsnc.iac              A	10.197.62.154
+GHQSovrenSVC.iac        A	10.197.62.152
+                        A	10.197.62.102
+ghqsvc.iac              A	10.197.62.117
+hivestream.iac          A	10.240.62.145
+jeproc.iac              A	10.240.62.142
+luigi-csmdns.iac        A	10.237.62.82
+mailcampaign.iac        A	10.240.62.178
+mailhigh.iac            A	10.240.62.177
+maillow.iac             A	10.240.62.176
+mailpsa.iac             CNAME	maillow.iac.cbdr.com.
+mailsvc.iac             A	10.240.62.175
+
+;
+;  Delegated sub-zone:  mappingtest.iac.cbdr.com.
+;
+mappingtest.iac         NS	10.197.62.82.
+10.197.62.82.           A	10.197.62.82
+;  End delegation
+
+matchsrch.iac           A	10.240.62.233
+parse.iac               A	10.240.62.222
+pivotal.iac             A	10.64.5.250
+qtw-csmdns.iac          A	10.210.62.82
+
+;
+;  Delegated sub-zone:  rackhost.iac.cbdr.com.
+;
+rackhost.iac            NS	luigi-csmdns.iac.cbdr.com.
+rackhost.iac            3600	NS	qtw-csmdns.iac.cbdr.com.
+rackhost.iac            3600	NS	chi-csmdns.iac.cbdr.com.
+;  End delegation
+
+rproc.iac               A	10.240.62.230
+
+;
+;  Delegated sub-zone:  searchapi.iac.cbdr.com.
+;
+searchapi.iac           0	NS	chi-csmdns.iac.cbdr.com.
+searchapi.iac           0	NS	qtw-csmdns.iac.cbdr.com.
+;  End delegation
+
+searchqueue.iac         A	10.240.62.203
+searchqueuepriority.iac A	10.240.62.202
+searchsoa.iac           A	10.240.62.201
+smtphigh.iac            A	10.240.62.152
+smtppsa.iac             A	10.240.62.155
+smtprelay.iac           A	10.240.62.151
+sncpoola.iac            CNAME	cbsnc.iac.cbdr.com.
+sncpoolb.iac            CNAME	cbsnc.iac.cbdr.com.
+sncpoolc.iac            CNAME	cbsnc.iac.cbdr.com.
+SolrJob.iac             A	10.240.62.161
+SolrJobMatch.iac        CNAME	solrjob.iac.cbdr.com.
+sovrensvc.iac           A	10.240.62.110
+ws.iac                  A	10.240.62.169
+wstest.iac              A	10.197.62.160
+
+;
+;  Delegated sub-zone:  www.iac.cbdr.com.
+;
+www.iac                 NS	qtw-csmdns.iac.cbdr.com.
+www.iac                 NS	chi-csmdns.iac.cbdr.com.
+;  End delegation
+
+jobsrch.iat             A	10.200.63.100
+img                     A	208.88.80.49
+                        A	208.82.7.49
+imgtest                 A	10.197.62.116
+jobposter               A	10.240.62.172
+jobseeker               A	10.240.62.171
+mediachi                A	208.88.80.49
+mediaqtw                A	208.82.7.49
+mii                     CNAME	img.cbdr.com.
+mtgslb                  A	10.240.10.82
+ghqbatch.mx             A	10.197.62.142
+myresumes               A	10.240.62.190
+                        MX	10	myresumes.cbdr.com.
+nacho                   CNAME	www.brightfuse.com.
+pi                      A	10.197.62.103
+applallfeed.qtw         CNAME	jobsrch.qtw.cbdr.com.
+applallsrch.qtw         CNAME	jobsrch.qtw.cbdr.com.
+applprifeed.qtw         CNAME	jobsrch.qtw.cbdr.com.
+applprisrch.qtw         CNAME	jobsrch.qtw.cbdr.com.
+appsrch.qtw             CNAME	jobsrch.qtw.cbdr.com.
+async.qtw               A	10.210.62.35
+bkeep.qtw               A	10.210.62.111
+docfeed.qtw             CNAME	docsrv.qtw.cbdr.com.
+docsrv.qtw              A	10.210.62.33
+dpisvc.qtw              A	10.210.62.174
+flume.qtw               A	10.210.62.130
+ghqasync.qtw            A	10.197.62.166
+ghqbkeep.qtw            A	10.197.62.169
+ghqdocserv.qtw          A	10.197.62.140
+ghqrproc.qtw            A	10.197.62.149
+ghqscache.qtw           A	10.197.62.141
+ghqsovrensvc.qtw        A	10.197.62.157
+ghqsrch.qtw             A	10.197.62.139
+ghqswarm.qtw            A	10.197.62.156
+img.qtw                 A	208.82.7.49
+jobdata.qtw             CNAME	docsrv.qtw.cbdr.com.
+jobfeed.qtw             CNAME	jobsrch.qtw.cbdr.com.
+jobsrch.qtw             A	10.210.62.31
+jsolr.qtw               A	10.210.62.182
+matchfeed.qtw           CNAME	jobsrch.qtw.cbdr.com.
+matchsrch.qtw           CNAME	jobsrch.qtw.cbdr.com.
+parse.qtw               A	10.210.62.37
+pnsvc.qtw               A	10.218.63.54
+productstatus.qtw       A	10.210.62.38
+res1yfeed.qtw           CNAME	jobsrch.qtw.cbdr.com.
+res1ysrch.qtw           CNAME	jobsrch.qtw.cbdr.com.
+resallfeed.qtw          CNAME	jobsrch.qtw.cbdr.com.
+resdata.qtw             CNAME	docsrv.qtw.cbdr.com.
+ressrch.qtw             A	10.210.62.36
+ressrch1y.qtw           CNAME	jobsrch.qtw.cbdr.com.
+ressrchall.qtw          CNAME	jobsrch.qtw.cbdr.com.
+rlsvc.qtw               A	10.218.63.56
+rproc.qtw               A	10.210.62.34
+scache.qtw              A	10.210.62.32
+solosvc.qtw             CNAME	rlsvc.qtw.cbdr.com.
+solrfst.qtw             A	10.210.62.183
+SolrJob.qtw             A	10.210.62.30
+SolrJobMatch.qtw        CNAME	solrjob.qtw.cbdr.com.
+sovrensvc.qtw           A	10.210.62.110
+swarm.qtw               A	10.210.62.165
+vs.qtw                  A	10.218.63.71
+ws.qtw                  A	10.210.62.169
+wstest.qtw              A	10.197.62.163
+async.rebel             CNAME	cbasync.mx.cbdr.com.
+cbrproc.rebel           A	10.240.63.230
+maillow.rebel           CNAME	maillow.mx.cbdr.com.
+rproc.rebel             CNAME	cbrproc.rebel.cbdr.com.
+scache.rebel            CNAME	scache.qtw.cbdr.com.
+resume                  A	10.240.62.173
+                        MX	10	resume.cbdr.com.
+site                    A	10.240.62.250
+teamtrack               A	10.64.6.22
+test                    MX	10	test.cbdr.com.
+vs                      A	208.88.82.207
+www                     A	208.82.5.36
+wwwtest                 A	10.197.62.114
+wwwtestapi              CNAME	10.197.62.122.
+xmg                     CNAME	img.cbdr.com.
+xmj                     CNAME	emj.cbdr.com.

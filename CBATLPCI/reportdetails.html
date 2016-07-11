@@ -1,0 +1,129 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+	<head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=UTF-8"/>
+		<title> Microsoft Baseline Security Analyzer</title>
+		<link rel="stylesheet" type="text/css" href="css/resultdetails.css">
+		<script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+			<script language="javascript">
+
+Myparent=window.dialogArguments;
+var Detailxml = Myparent.Detailxml;
+var Detailxsl = Myparent.Detailxsl;
+
+function initPage()
+{
+	Detailxml.loadXML('');
+	Detailxsl.loadXML('');
+
+	Detailxml.async = false
+	
+	// Load the XSL
+	Detailxsl.async = false
+	
+	if(Myparent.parent.parent.gblHotFixCheck == true) 
+	{
+		Detailxsl.load("reportdetailsWUS.xsl"); 
+	} 
+	else if (Myparent.parent.parent.gblIEZones == true) 
+	{
+		Detailxsl.load("reportdetailsIEZones.xsl");
+	} 
+	else if (Myparent.parent.parent.gblSQLInstanceName != "") 
+	{
+		Detailxsl.load("reportdetailssql.xsl"); 
+	} 
+	else 
+	{
+		Detailxsl.load("reportdetails.xsl"); 
+	}
+
+	Detailxsl.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+	
+	Detailxml.loadXML(Myparent.xml.xml)
+	
+	var CheckIDNodes = Detailxsl.selectNodes("//xsl:variable[@name='CheckID']/@select");  
+	// Replace the values with the check id
+	for (var i = CheckIDNodes.nextNode(); i != null; i = CheckIDNodes.nextNode())
+	{
+		i.value = Myparent.parent.parent.gblrptCheckID;
+	}
+
+	var GroupIDNodes = Detailxsl.selectNodes("//xsl:variable[@name='GroupID']/@select");  
+	// Replace the values with the check id
+	for (var i = GroupIDNodes.nextNode(); i != null; i = GroupIDNodes.nextNode())
+	{
+		i.value = "'" + Myparent.parent.parent.gblrptGroupId + "'";
+	}
+	
+	if (Myparent.parent.parent.gblSQLInstanceName != "") {
+		var InstanceNameNodes = Detailxsl.selectNodes("//xsl:variable[@name='InstanceName']/@select");  
+		// Replace the values with the instance name
+		for (var i = InstanceNameNodes.nextNode(); i != null; i = InstanceNameNodes.nextNode())
+		{
+			i.value = "'" + Myparent.parent.parent.gblSQLInstanceName + "'";
+		}
+	}
+	
+	ResultDetails.innerHTML = Detailxml.transformNode(Detailxsl);
+	
+	Detailxml.loadXML('');
+	Detailxsl.loadXML('');
+}
+
+function OpenIEZonesSubDetails(ZoneName, Id)
+{
+	var WindowLeft = window.screenLeft - 300;
+	var WindowTop = window.screenTop - 300; 
+
+	Myparent.parent.parent.gblIEZonesId = Id;
+	Myparent.parent.parent.gblIEZoneName = ZoneName;
+
+	try {
+	Myparent.windowRptIEZonesSubDetails = window.showModelessDialog("reportdetailsIEZonesSub.html",window,"toolbar:no;location:no;directories:no;status:no;menubar:no;scrollbars:yes;resizable:yes;dialogWidth:800px;dialogHeight:600px;maximize:yes;minimize:yes;unadorned:no;dialogLeft:" + WindowLeft + ";dialogTop:" + WindowTop);
+	Myparent.windowRptIEZonesSubDetails.focus();
+	} catch (e) {}
+}
+
+function CloseIEZonesSubDetails()
+{
+	try {
+		Myparent.windowRptIEZonesSubDetails.close()
+		Myparent.windowRptIEZonesSubDetails = null;
+	} 
+	catch (e)
+	{
+	; // don't throw a script error if we can't close a window
+	}
+}
+
+function ToggleOtherIDs(obj, img)
+{
+	var tbody = obj.parentNode.parentNode.parentNode;
+	var mydiv = tbody.lastChild.lastChild.firstChild;
+	var myimg = tbody.firstChild.firstChild.firstChild;
+	
+	if(mydiv.style.display == "")
+	{
+		mydiv.style.display = "none";
+		myimg.src = "graphics/exp_expand.gif";
+	}
+	else
+	{
+		mydiv.style.display = "";
+		myimg.src = "graphics/exp_collapse.gif";
+	}
+}
+			</script>
+	</head>
+	<body id="bodyID" onload="initPage()" style="margin:10" onBeforeUnload="CloseIEZonesSubDetails();" oncontextmenu="return false"
+         ondragstart="return false" >
+		<p class="banner">
+		    <img alt="Microsoft Baseline Security Analyzer" src="Graphics/banner.jpg">
+		</p>
+    	<div Height="0" id="ResultDetails">
+		</div>
+	</body>
+</html>

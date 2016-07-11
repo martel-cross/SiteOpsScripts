@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5333">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="<NOLOC>SQL Server</NOLOC> Authentication Mode">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1><NOLOC>SQL Server</NOLOC> Authentication Mode</H1>
+
+<H2>Check Description</H2>
+
+<P>This check determines the authentication mode used on the computer running <NOLOC>Microsoft&reg; SQL Server&trade;</NOLOC> that is being 
+scanned.</P>
+
+<P><NOLOC>SQL Server</NOLOC> provides two modes for securing access to the server: <NOLOC>Windows</NOLOC> Authentication Mode and Mixed Mode.</P>
+
+<P>In <NOLOC>Windows</NOLOC> Authentication Mode, <NOLOC>SQL Server</NOLOC> relies solely on the <NOLOC>Windows&reg;</NOLOC> authentication of the user. <NOLOC>Windows</NOLOC> users or groups are then granted access to the computer running <NOLOC>SQL Server</NOLOC>. In Mixed Mode, users may be authenticated by <NOLOC>Windows</NOLOC> or by <NOLOC>SQL Server</NOLOC>. Users that are authenticated by <NOLOC>SQL Server</NOLOC> have their user name and password pairs maintained within the computer running <NOLOC>SQL Server</NOLOC>.</P>
+
+<P><B><NOLOC>Windows</NOLOC> Authentication Mode</B></P>
+
+<P>This security mode allows <NOLOC>SQL Server</NOLOC> to rely on <NOLOC>Windows</NOLOC> to authenticate users in the same way as other applications. Connections made to the server using this mode are called trusted connections.</P>
+
+<P>When you use <NOLOC>Windows</NOLOC> Authentication Mode, the database administrator allows users to access the computer running <NOLOC>SQL Server</NOLOC> by granting them the right to log on to <NOLOC>SQL Server</NOLOC>. <NOLOC>Windows</NOLOC> security identifiers (SIDs) are used to track <NOLOC>Windows</NOLOC> authenticated users. As <NOLOC>Windows</NOLOC> SIDs are used, the database administrator can grant access directly to <NOLOC>Windows</NOLOC> users or groups.</P>
+
+<P><B>Mixed Mode</B></P>
+      
+<P>In <NOLOC>SQL Server</NOLOC>, Mixed Mode relies on <NOLOC>Windows</NOLOC> to authenticate users when the client and server are capable of using <NOLOC>NTLM</NOLOC> or <NOLOC>Kerberos</NOLOC> logon authentication protocols. If either party is incapable of using a standard <NOLOC>Windows</NOLOC> logon, <NOLOC>SQL Server</NOLOC> requires a user name and password pair, and compares this pair against those stored in its system tables. Connections that rely on user name and password pairs are called non-trusted.</P>
+      
+<P>Mixed Mode is supplied for two reasons:</P>
+<UL>
+<LI>Backward compatibility with older versions of <NOLOC>SQL Server</NOLOC></LI>
+<LI>Compatibility when <NOLOC>SQL Server</NOLOC> is 
+installed on <NOLOC>Windows&nbsp;95</NOLOC> and <NOLOC>Windows&nbsp;98</NOLOC> operating systems
+<P>(Trusted connections are 
+not supported on computers running <NOLOC>Windows&nbsp;95</NOLOC> or <NOLOC>Windows&nbsp;98</NOLOC> when they are acting as the server.)</P></LI></UL>
+ 
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16547" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft SQL Server&nbsp;</NOLOC>Security</A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16549" TITLE="http://www.microsoft.com/" TARGET="_blank"><NOLOC>Microsoft</NOLOC> Security Bulletin (MS00-035): Frequently Asked Questions</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

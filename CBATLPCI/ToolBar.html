@@ -1,0 +1,157 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+    <head>
+        <meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/Scanner.css" />
+        <script LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+    </head>
+    <SCRIPT LANGUAGE="javascript">
+    <!--
+    document.onmousewheel = onmousescroll;
+    function onmousescroll()
+    {
+        if (window.event.shiftKey) 
+        {
+            return false;
+        }
+        return true;
+    } 
+    window.onresize = function() 
+    {
+        SizeContentElement();
+    }
+    function SizeContentElement()
+    {
+        var wndHt = document.body.clientHeight;
+        if(wndHt - seeAlso.offsetHeight < Tasks.offsetTop + Tasks.offsetHeight + 20)
+        {
+            document.all["seeAlso"].className = "sys-bottompane-resize";
+        }
+        else
+        {
+            document.all["seeAlso"].className = "sys-bottompane-normal";
+        }
+    }
+    function HaveXML()
+    {
+        var xml = null;
+        try
+        {
+            xml = XCreateObject("MSXML2.DOMDocument");
+        }
+        catch (e)
+        { ; }
+
+        if( xml != null )
+        {
+            delete xml;
+            return true;
+        }
+        return false;
+    }
+
+    function Stale()
+    {
+        return false;
+    }
+
+    function isAltKey(ev,ch)
+    {
+        if (ev.altKey)
+        {
+            var key = String.fromCharCode(ev.keyCode);
+            return (key == ch || key.toLowerCase(key) == ch.toLowerCase(key))
+        }
+        return false;
+    }
+    function keyUp(evt)
+    {//copy and print when user enter "alt + c" and "alt + p"
+    
+    if(isAltKey(event,"c"))
+    {
+        if(Copy.href == "javascript:parent.CopyReport();")//copy report
+        {
+            parent.CopyReport();
+        }
+        else//copy the list
+        {
+            parent.CopyReportList();
+        }
+            
+    }
+    else if(isAltKey(event,"p"))
+    {
+        if(Print.href == "javascript:parent.PrintReport();")//print report
+        {
+            parent.PrintReport();
+        }
+        else//print the list
+        {
+            parent.PrintReportList();
+        }
+    }
+    
+    }
+
+    //-->
+    </SCRIPT>
+    <body onload = "SizeContentElement();" oncontextmenu="return false" class="header" tabindex = "-1">
+    <base target="Content">
+        <form id="frmToolBar" name="frmToolBar">
+            <div id = "Tasks">
+                <input type="hidden" id="tbselectedinnertext" name="tbselectedinnertext">
+                <table id="menuTable" cellspacing="0" WIDTH="100%">
+                    <tbody>
+                        <tr>
+                            <td ID="menuTitle">
+                                <div class="sys-font-body-bold sys-toppane-header"><font face = Tahoma color="#FFFFFF">Tasks</font></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ID="trMainButtons">
+    <script>
+    <!--
+    if (!HaveXML() || Stale())
+        document.write ("<span style='display:none'>");
+    //-->
+    </script>
+                                <A class="link-normal" id="pickcomputer" style="WIDTH: 100%" href="pickcomputer.html" name="pickcomputer" ONCLICK="top.Header.OnNewLink('pickcomputer.html');parent.Content.location.assign(this.href); return false;">
+                                Scan a computer</A>
+                                <A class="link-normal" id="pickcomputers" style="WIDTH: 100%" href="pickcomputers.html" name="pickcomputers" ONCLICK="top.Header.OnNewLink('pickcomputers.html');parent.Content.location.assign(this.href); return false;">
+                                Scan multiple computers</A>
+                                <A class="link-normal" id="pickreport" style="WIDTH: 100%" href="javascript:parent.ViewReports(false);" name="pickreport" ONCLICK="parent.Content.location.assign(this.href); return false;">
+                                View security reports</A><A class="sys-link-disabled" id="viewreport" style="WIDTH: 100%" href="javascript:void(0);" name="viewreport" tabindex = "-1" ONCLICK="top.Header.OnNewLink(this.href);parent.Content.location.assign(this.href); return false;">
+                                <A class="link-normal" id="about" style="WIDTH: 100%" href="about.html" name="about" ONCLICK="top.Header.OnNewLink('about.html');parent.Content.location.assign(this.href); return false;">
+                                About Microsoft Baseline Security Analyzer</A>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="seeAlso" class="sys-bottompane-normal">
+                <table cellspacing="0" WIDTH="100%">
+                    <tbody>
+                        <tr>
+                        <td ID="MBSA">
+                            <div class="subHeader sys-font-body-bold" style = "padding-left:20"><font face = Tahoma color="#FFFFFF">See Also</font></div>
+<script>
+<!--
+if (!HaveXML() || Stale())
+    document.write ("</span>");
+//-->
+</script>
+                            <A class="link-normal" id="help" style="WIDTH: 100%" name="help" target="_blank" href="help/mbsahelp.html">
+                            Microsoft Baseline Security Analyzer Help</A>
+                            <a  class="link-normal" id="microsoftwebsite" style="WIDTH: 100%" name="microsoftwebsite" target="_blank" href="http://go.microsoft.com/fwlink/?LinkId=16558">
+                            Microsoft Security Web site</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </form>
+    </body>
+</html>

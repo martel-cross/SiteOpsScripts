@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5313fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="File System">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>File System</H1>
+
+<H2>Issue</H2>
+
+<P>If you are running the FAT file system, which is not a secured
+file system, you should consider converting to the NTFS file system.</P>
+
+<P>Secured file systems, such as NTFS, are a key component of security, because they restrict user access to data. By using file system security, you can specify which users are allowed to access individual files and what type of access they are allowed (for example, read or modify). NTFS protects your data by preventing unwanted user access to it.</P>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>You need to manually secure your files by using access control lists (ACLs). To do this, right-click the file or folder to which you want to control, click <B>Properties</B>, click the <B>Security</B> tab, and then specify the appropriate access restrictions for the file.</LI>
+</UL>
+
+<H2>Solution</H2>
+
+<P>Convert your system from FAT to NTFS. For more information, view the 
+documentation below on using NTFS and how to convert drives to NTFS.</P>
+
+<H2>Additional Information</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16482" TITLE="http://www.microsoft.com/" TARGET="_blank">Choosing between NTFS, FAT, and <NOLOC>FAT32</NOLOC></A></P>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16483" TITLE="http://www.microsoft.com/" TARGET="_blank">How to Restore the Default NTFS Permissions for <NOLOC>Windows&nbsp;2000</NOLOC></A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+</BODY>
+</HTML>

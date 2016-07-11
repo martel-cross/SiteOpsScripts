@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check53110fix">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Restrict Anonymous Users">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Restrict Anonymous Users</H1>
+
+<H2>Issue</H2>
+
+<P>The <B><CODE>RestrictAnonymous</CODE></B> registry setting controls the level 
+of enumeration granted to an anonymous user. If <B><CODE>RestrictAnonymous</CODE></B> is set to 
+0 (the default setting), any user can obtain system information, including: 
+user names and details, account policies, and share names. Anonymous users can use this information in an attack on your system. The list of user names and share names 
+could help potential attackers identify who is an administrator, which computers 
+have weak account protection, and which computers share information with 
+the network.</P>
+
+<H2>Solution</H2>
+
+<P>To restrict anonymous connections from accessing this system information, 
+change the <B><CODE>RestrictAnonymous</CODE></B> security settings. You can do this through 
+the Security Configuration Manager snap-in (the setting is defined in the Local 
+Policies portion of the default security templates) or through a registry 
+editor. You can change the registry setting from 0 to 1 or 2 in <NOLOC>Windows&reg;</NOLOC>&nbsp;2000:</P>
+
+<BLOCKQUOTE>
+<P>0 - None. Rely on default permissions.</P>
+<P>1 - Do not allow enumeration of Security Accounts Manager (SAM) accounts and names.</P>
+<P>2 - No access without explicit anonymous permissions.</P>
+</BLOCKQUOTE>
+
+<P CLASS="caution"><FONT COLOR="red">Caution</FONT></P>
+<UL>
+    <LI>Before you set this value to 2, see article 246261, "How to Use the <CODE>RestrictAnonymous</CODE> Registry Value in <NOLOC>Windows</NOLOC>&nbsp;2000." We recommend that you do not set this value to 2 on domain controllers or computers running <NOLOC>Small Business Server (SBS)</NOLOC> in Mixed-Mode environments (for example, networks with downlevel clients). In addition, client computers with <B><CODE>RestrictAnonymous</CODE></B> set to 2 should not take on the role of master browser. For more details on configuring <B><CODE>RestrictAnonymous</CODE></B> on domain controllers and in <NOLOC>Windows</NOLOC>&nbsp;2000 environments, and to better understand potential compatibility issues when using this setting, refer to the <NOLOC>Microsoft</NOLOC> Knowledge Base articles 
+that are listed later in this document.</LI>
+</UL>
+
+<P CLASS="note">Note</P>
+<UL>
+    <LI>In <NOLOC>Windows&nbsp;XP</NOLOC>, there is a new <NOLOC>EveryoneIncludesAnonymous</NOLOC> registry setting that controls whether permissions given to the built-in Everyone group apply to anonymous users. By default, permissions granted to the Everyone group do not apply to anonymous users in <NOLOC>Windows&nbsp;XP</NOLOC>. This provides the same level of anonymous user restrictions as the <CODE>RestrictAnonymous</CODE> setting in previous 
+<NOLOC>Windows</NOLOC> operating systems. The <CODE>EveryoneIncludesAnonymous</CODE> </B>setting can be configured through the Security Configuration Manager snap-in (the setting is 
+defined in the Local Policies portion of the security template) on <NOLOC>Windows&nbsp;XP</NOLOC> Professional systems or through a registry editor. This setting is located within the same registry key as <CODE>RestrictAnonymous</CODE>. For registry path information, see the following Knowledge Base articles.</LI>
+</UL>
+
+<H2>Additional Resources</H2>
+
+<P><A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16956" TITLE="http://www.microsoft.com/" TARGET="_blank">How to Use the <CODE>RestrictAnonymous</CODE> Registry Value in <NOLOC>Windows</NOLOC>&nbsp;2000 (246261)</A></P>
+
+<BR>
+<P><FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+</BODY>
+</HTML>

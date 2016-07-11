@@ -1,0 +1,697 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+    <head>
+        <META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes" CHARSET="UTF-8"/>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="css/scanner.css" />
+        <SCRIPT LANGUAGE="javascript" SRC="includes/object.js"></SCRIPT>
+        <SCRIPT LANGUAGE="javascript">
+<!--
+
+document.onmousewheel = onmousescroll;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function isAltKey(ev,ch)
+{
+    if (ev.altKey)
+        {
+        var key = String.fromCharCode(ev.keyCode);
+        return (key == ch || key.toLowerCase(key) == ch.toLowerCase(key))
+        }
+    return false;
+}
+
+function keyUp(evt)
+{    //run the scan if user presses "alt + s"
+    if (isAltKey(event,"s"))
+        {
+        if(AllOptionsDisabled==false)
+            Scan();
+        }
+}
+
+function keyDown()
+{
+    if(event.keyCode == top.BACKSPACE)
+        Edit = true;
+}
+
+var ControlToUse = "CPU";
+var AllOptionsDisabled = false;
+function initPage()//this loads the hidden dropdown
+{
+    top.Header.ShowFrames();
+    var xml = XCreateObject("MSXML2.DOMDocument")
+    var objxsl = XCreateObject("MSXML2.DOMDocument")
+
+    xml.async = false;
+    objxsl.async = false;
+    AllOptionsDisabled = false;
+
+    //load the xml from the object
+    xml.loadXML(parent.Scanner.GetConfigXML("mru",false));
+    
+    //load the computer mru list
+    objxsl.load("computerMRU.xsl");
+    mruData = '<SELECT id="ComboBoxID" onchange = "ComboBox.cbo_OnChange();" style="WIDTH:170px;">';
+    mruData += xml.transformNode(objxsl);
+    mruData += "</SELECT>";
+    mruData += '<img src="Graphics/pixel.gif" width=30 height=1>';
+    mruData += '<input type="text" id="thisComputerLabel" name="thisComputerLabel" value="" tabIndex="-1" readOnly="true" style="border: none">';
+    document.all["cpuMRUListContainer"].innerHTML = mruData;
+    LoadHiddenComboBox();
+    //load the IP mru list
+    //dont check to see if there is a "Last" because it may have already been found
+    objxsl.load("ipMRU.xsl");
+    mruData = '<select id="IPComboBoxID" tabindex="-1" onchange ="IPComboBox.cboIP_OnChange();" style="WIDTH:160px">';
+    mruData += xml.transformNode(objxsl);
+    mruData += "</select>";
+    document.all["ipMRU"].innerHTML = mruData;
+    LoadHiddenIPComboBox();
+    chkHotfixes.checked = parent.CheckHotFix;
+    additCabsAvailable = parent.Scanner.DetectAdditionalCabs("");
+	chkAdditionCabs.checked = additCabsAvailable;
+	parent.CheckAdditCabs = additCabsAvailable;
+	
+    if (additCabsAvailable)
+    {
+        chkAdditionCabsText.style.display="inline";
+        chkAdvOptText(3).style.display="inline";
+    }
+    chkIIS.checked = parent.CheckIIS;
+    chkOS.checked = parent.CheckOS;
+    chkPasswords.checked = parent.CheckPasswords;
+    chkSQL.checked = parent.CheckSQL;
+    chkAdv.checked = parent.gblOptAdvanced;
+    chkAdvOpt(parent.gblOptAdvSelected).checked = true;
+    chkInstall.checked = parent.gblConfigTarget;
+
+    //load the default computer name (Local)
+    var LocalDomain = parent.Scanner.LocalDomain;
+    var LocalMachine = parent.Scanner.LocalMachine;
+    var ThisComputer = LocalDomain + "\\" + LocalMachine;
+
+    document.all["thisComputerLabel"].value = Trim(parent.Scanner.ThisComputer);
+
+    if(parent.PartialRefresh)
+    {    
+        ComboBox.SetDefaultText(parent.ComputerName);
+        IP1.value = parent.IPAddress1;
+        IP2.value = parent.IPAddress2;
+        IP3.value = parent.IPAddress3;
+        IP4.value = parent.IPAddress4;
+        document.all["RptName"].value = parent.ReportName;
+        var IPFilled = (IP1.value != "") || (IP2.value != "") || (IP3.value != "") || (IP4.value != "");
+
+        if((IPFilled  ) || (!IPFilled  && (parent.ComputerName == "")))
+        {
+            document.all["thisComputerLabel"].value = "";
+
+        }
+    }
+    else
+    {
+        ComboBox.SetDefaultText(ThisComputer);
+        document.all["thisComputerLabel"].value = Trim(parent.Scanner.ThisComputer);
+
+        
+    }
+    
+    SetScanState();
+    
+    CheckOptions();
+    document.onkeyup = keyUp;
+
+    // Remove all the (this computer) marks
+    for(i=0; i<document.all["ComboBoxID"].options.length; i++)
+    {
+        opt = document.all["ComboBoxID"].options[i].text;
+
+        // This code is to make compatible with previous MBSA versions (1.0, 1.1, 1.1.X).
+        // The string "(this computer)" below needs to be always in English
+        var re = new RegExp("^(.*)\\s*\\(\\s*t\\s*h\\s*i\\s*s\\s*c\\s*o\\s*m\\s*p\\s*u\\s*t\\s*e\\s*r\\s*\\)\\s*$", "i");
+        var are = re.exec(opt);
+
+        if( are )
+        {
+            // (this computer) was found on the name
+            document.all["ComboBoxID"].options[i].text = Trim(are[1]);
+        }
+    }
+
+     for(i=0; i<document.all["ComboBoxID"].options.length; i++)
+    {
+        var opt = document.all["ComboBoxID"].options[i].text;
+
+        if( Trim(opt.toUpperCase()) == Trim(ThisComputer.toUpperCase()) )
+        {
+             document.all["ComboBoxID"].options.remove(i);
+             i--;
+        }
+    }
+ 
+    // Ensure we always have the local machine on the list
+    opt = document.createElement("OPTION");
+    opt.text = ThisComputer;
+    document.all["ComboBoxID"].options.add(opt, 0);
+    document.all["ComboBoxID"].selectedIndex = 0;
+    if(parent.PartialRefresh)
+    {
+        document.all["ComboBoxID"].selectedIndex = -1;
+    }
+    parent.PartialRefresh = false;
+    IP1.value = "";
+    IP2.value = "";
+    IP3.value = "";
+    IP4.value = "";
+    ControlToUse = "CPU";
+
+    delete xml;
+    delete objxsl;
+    top.Header.SetNavigationState();
+}
+
+function CheckOptions()
+{
+        if(!chkOS.checked)
+        {
+                    //chkPasswords.checked = false;
+                    //parent.CheckPasswords = false;
+                    //chkPasswords.disabled = true;
+        } else {
+                    chkPasswords.disabled = false;
+        }
+        if(!chkOS.checked && !chkSQL.checked && !chkIIS.checked)
+        {
+                   //chkHotfixes.checked = false;
+                    //parent.CheckHotFix = false;
+                    //chkHotfixes.disabled = true;
+        } else {
+                    chkHotfixes.disabled = false;
+        }
+        
+           chkAdv.disabled = !chkHotfixes.checked;
+           chkAdvText.disabled = !chkHotfixes.checked;
+           if( chkAdv.disabled )
+               chkAdv.checked = false;
+
+           chkInstall.disabled = !chkHotfixes.checked;
+           chkInstallText.disabled = !chkHotfixes.checked;
+           if( chkInstall.disabled )
+               chkInstall.checked = false;
+        
+        chkAdditionCabsText.disabled = !chkHotfixes.checked;
+        if (chkAdditionCabsText.disabled )
+            chkAdditionCabs.checked = false;
+        
+        chkAdvOptText(0).disabled = !chkAdv.checked;
+        chkAdvOptText(1).disabled = !chkAdv.checked;
+        chkAdvOptText(2).disabled = !chkAdv.checked;
+        chkAdvOptText(3).disabled = !chkAdv.checked | !chkAdditionCabs.checked;
+        if(!chkAdv.checked)
+        {
+            chkAdvOpt(0).checked = false;
+            chkAdvOpt(1).checked = false;
+            chkAdvOpt(2).checked = false;
+            chkAdvOpt(3).checked = false;
+        }
+        if (chkAdvOptText(3).disabled && chkAdvOpt(3).checked )
+        {
+            chkAdvOpt(0).checked = true;
+        }
+
+        if (chkAdvOptText(3).disabled)
+        {
+            chkAdvOpt(3).checked = false;
+        }
+        
+}
+
+function CheckReportName()
+{
+    if (document.all["RptName"].value == "")
+        document.all["RptName"].value = "%D% - %C% (%T%)";
+    if(!parent.Scanner.VerifyReportMask(parent.gblScanMode, document.all["RptName"].value))
+    {
+        alert(parent.Scanner.LastErrorText);
+        return( false );
+    }
+
+    return( true );
+}
+
+function LoadHiddenIPComboBox()
+{
+    IPComboBox = new CreateIPComboBoxObject("IPComboBoxID", "IPComboBox");
+    IPComboBox.UseStateFunctions = true;
+}
+function LoadHiddenComboBox()
+{
+    ComboBox = new CreateComboBoxObject("ComboBoxID", "ComboBox");
+    ComboBox.UseStateFunctions = true;
+    ComboBox.SetAccessKey("c");
+    ComboBox.focus();
+}
+
+function SetPartialRefreshValues()
+{
+
+    parent.PartialRefresh = true;
+
+    parent.ComputerName = ComboBox.GetSelectedText();
+    parent.IPAddress1 = IP1.value;
+    parent.IPAddress2 = IP2.value;
+    parent.IPAddress3 = IP3.value;
+    parent.IPAddress4 = IP4.value;
+    parent.ReportName = document.all["RptName"].value;
+}
+
+function DoPartialRefresh()
+{
+    SetPartialRefreshValues();
+    window.location.reload(true);
+}
+
+function Scan()
+{
+    if(ControlToUse == "CPU")
+    {
+        parent.gblScanMode   = 1;
+    }
+    else
+    {
+        parent.gblScanMode   = 2;
+    }
+
+    if( !CheckReportName() )
+    {
+        DoPartialRefresh();
+        return false;
+    }
+    
+    parent.gblReportName = document.all["RptName"].value;
+    
+    bScanTargetNameOk = false;
+
+    if(ControlToUse == "CPU")
+    {
+        parent.gblScanParams = ComboBox.GetSelectedText();
+        bScanTargetNameOk = (parent.gblScanParams != "");
+    }
+    else
+    {
+        parent.gblScanParams = ReplaceFullWidth(IP1.value + "." + IP2.value + "." + IP3.value + "." + IP4.value);
+        bScanTargetNameOk = ValidateIP(parent.gblScanParams);
+    }
+
+    if (bScanTargetNameOk)
+    {
+                top.ScanInProgress = true;
+        parent.Content.location.assign("scan.html");
+        return true;
+    }
+    else
+    {
+        alert("Please enter a computer name or a valid IP address of the machine to be scanned.");
+        DoPartialRefresh();
+        return false;
+    }
+}
+
+function ReplaceFullWidth(IP)
+{
+    // replace full width digits with regular digits
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF10),"g"),"0");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF11),"g"),"1");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF12),"g"),"2");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF13),"g"),"3");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF14),"g"),"4");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF15),"g"),"5");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF16),"g"),"6");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF17),"g"),"7");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF18),"g"),"8");
+    IP = IP.replace(new RegExp(String.fromCharCode(0xFF19),"g"),"9");
+    return IP
+}
+
+function ValidateIP(IP) {
+    if (IP.search(/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/) != -1) {
+        var IPArr = IP.split(/\./);
+
+        // Reject reserved IP addresses (0, 224-255) or numbers > 255
+        if (IPArr[0] == 0 || IPArr[0] >= 224 
+            || IPArr[1] > 255 || IPArr[2] > 255 || IPArr[3] > 255)
+            return false;
+        return true;
+    }
+    else
+        return false;
+}
+
+function SetState(from)
+{    
+    if(from == "IP")
+    {    
+        ComboBox.Clear();
+        ControlToUse = "IP";
+                thisComputerLabel.value = "";
+    }
+    else//from CPU
+    {    
+        IP1.value = "";
+        IP2.value = "";
+        IP3.value = "";
+        IP4.value = "";
+        ControlToUse = "CPU";
+    }
+}
+
+function numbersonly(myfield, e, dec)
+{
+var key;
+var keychar;
+
+if (window.event)
+   key = window.event.keyCode;
+else if (e)
+   key = e.which;
+else
+   return true;
+keychar = String.fromCharCode(key);
+if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) )
+   return true;    // null, no key, backspace, tab, return, escape
+else if ((("0123456789").indexOf(keychar) > -1))
+ {  
+    return true;
+ }
+else if (dec && (keychar == "."))
+   {
+   myfield.form.elements[dec].focus();
+   return false;
+   }
+else
+   return false;
+}
+
+function OptionsClick(OptionID)
+{
+    CheckOptions();
+    switch(OptionID)
+    {
+        case "CheckHotFix":
+            parent.CheckHotFix = chkHotfixes.checked;
+            chkInstall.checked = !chkHotfixes.checked;
+            chkAdv.disabled = !chkHotfixes.checked;
+            OptionsClick("CheckAdvanced");
+            break;
+        case "CheckIIS":
+            parent.CheckIIS = chkIIS.checked; 
+            break;
+        case "CheckOS":
+            parent.CheckOS = chkOS.checked;
+            break;
+        case "CheckPasswords":
+            parent.CheckPasswords = chkPasswords.checked;
+            break;
+        case "CheckSQL":
+            parent.CheckSQL = chkSQL.checked;
+            break;
+        case "CheckInstall":
+            parent.gblConfigTarget= chkInstall.checked;
+            break;
+        case "CheckAdditionCabs":
+            parent.CheckAdditCabs = chkAdditionCabs.checked;
+            OptionsClick("CheckAdvancedOption");
+            break;
+        case "CheckAdvanced":
+            parent.gblOptAdvanced = chkAdv.checked;
+            if( chkAdv.checked )
+                chkAdvOpt(0).checked = true;
+            OptionsClick("CheckAdvancedOption");
+            break;
+        case "CheckAdvancedOption":
+            if (chkAdvOpt(0).checked)
+                parent.gblOptAdvSelected = 0;
+            else if (chkAdvOpt(1).checked)
+                parent.gblOptAdvSelected = 1;
+            else if (chkAdvOpt(2).checked)
+                parent.gblOptAdvSelected = 2;
+            else if (chkAdvOpt(3).checked)
+                parent.gblOptAdvSelected = 3;
+            break;
+    }
+    SetScanState();
+}
+
+function SetScanState()
+{
+    if(parent.CheckSQL == false && parent.CheckPasswords == false &&
+       parent.CheckOS == false && parent.CheckIIS == false && parent.CheckHotFix == false)
+    {//disable scan button
+        top.Footer.document.all["StartScan"].className = "sys-link-disabled";
+        top.Footer.document.all["StartScan"].href = "javascript:void(0);";
+        top.Footer.document.all["StartScan"].disabled  = true;
+        AllOptionsDisabled = true;
+    }
+    else
+    {
+        top.Footer.document.all["StartScan"].href = "javascript:top.Content.pc.Scan();";
+        top.Footer.document.all["StartScan"].className = "sys-link-normal";
+        top.Footer.document.all["StartScan"].disabled  = false;
+        AllOptionsDisabled = false;
+    }
+}
+function CheckForDot(ControlToHaveFocus)
+{//the param ControlToHaveFocus is the control that should recieve focus if a dot is press ascii 46
+    var pressed=(window.event.keyCode)
+    if(pressed == 46)
+    {
+        document.all["IP" + ControlToHaveFocus].focus();
+        document.all["IP" + ControlToHaveFocus].select();
+    }
+}
+function IPOnKeyUp()
+{
+ keycode = event.keyCode;
+ var NewText = "";
+ if(keycode == 38) // up arrow
+ {
+    NewText = IPComboBox.IPAddressArrowUp(IP1.value + "." + IP2.value + "." + IP3.value + "." + IP4.value);
+    if(NewText != "")
+    {    //apply the new IP
+        SetState("IP");
+        var IPArr = NewText.split(".")
+        if( IPArr.length == 4 )
+        {
+            document.all["IP1"].value = IPArr["0"];
+            document.all["IP2"].value = IPArr["1"];
+            document.all["IP3"].value = IPArr["2"];
+            document.all["IP4"].value = IPArr["3"];
+        }
+        else
+        {
+            document.all["IP1"].value = "";
+            document.all["IP2"].value = "";
+            document.all["IP3"].value = "";
+            document.all["IP4"].value = "";
+        }
+    }
+ }
+ else if(keycode == 40) // down arrow
+ {
+    NewText = IPComboBox.IPAddressArrowDown(IP1.value + "." + IP2.value + "." + IP3.value + "." + IP4.value);
+    if(NewText != "")
+    {    //apply the new IP
+        SetState("IP");
+        var IPArr = NewText.split(".")
+        if( IPArr.length == 4 )
+        {
+            document.all["IP1"].value = IPArr["0"];
+            document.all["IP2"].value = IPArr["1"];
+            document.all["IP3"].value = IPArr["2"];
+            document.all["IP4"].value = IPArr["3"];
+        }
+        else
+        {
+            document.all["IP1"].value = "";
+            document.all["IP2"].value = "";
+            document.all["IP3"].value = "";
+            document.all["IP4"].value = "";
+        }
+    }
+ }
+}
+//-->
+        </SCRIPT>
+        <script src="includes/dropdown.js"></script>
+    </head>
+    <body onload="initPage();AlignTextBoxesOverDropDowns();AlignIPCombos();" onUnload = " top.Header.DisableButtons();" onresize="AlignTextBoxesOverDropDowns();AlignIPCombos();" style = "MARGIN-LEFT:100;" oncontextmenu="return false" tabindex = "-1">
+        <span class="sys-font-heading3 sys-rhp-color-title">Which computer do you want to scan?</span><br>
+        <br>
+        <span>Enter the name of the computer or its IP address.</span>
+        <br>
+        <div id="Pickcomputer">
+
+            <table style ="MARGIN-TOP:10;" width = "100%">
+                <tr>
+                <td>
+                <table>
+                <tr style ="MARGIN-BOTTOM:10">
+                    <td style="WIDTH: 135px"><u>C</u>omputer name:
+                    </td>
+                    <td><img src="Graphics/pixel.gif" style="visibility: hidden"></td>
+                    <td>
+                        <img src="Graphics/pixel.gif" align="right" style="visibility:hidden">
+                        <div id="cpuMRUListContainer"></div>
+                    </td>
+                </tr>
+                <tr style ="MARGIN-BOTTOM:10">
+                    <td style="WIDTH: 135px"><u>I</u>P address:</td>
+                    <td></td>
+                    <td>
+                        <img src="Graphics/pixel.gif" width="1" height="25" align="right" style="visibility:hidden">
+                        <input accesskey="i" id="IP1" size="3" maxlength="3" onchange="if (this.value!='') SetState('IP')"  onkeydown ="keyDown();" onblur ="Edit = false;" onKeyUp="IPOnKeyUp()" onKeyPress="CheckForDot(2);SetState('IP');return numbersonly(this, event)">.
+                        <input id="IP2" size="3" maxlength="3" onkeydown ="keyDown();"  onKeyUp="IPOnKeyUp()" onblur ="Edit = false;" onchange="if (this.value!='') SetState('IP')" onKeyPress="CheckForDot(3);SetState('IP');return numbersonly(this, event)">.
+                        <input id="IP3" size="3" maxlength="3" onkeydown ="keyDown();"  onKeyUp="IPOnKeyUp()" onblur ="Edit = false;" onchange="if (this.value!='') SetState('IP')" onKeyPress="CheckForDot(4);SetState('IP');return numbersonly(this, event)">.
+                        <input id="IP4" size="4" maxlength="3" onkeydown ="keyDown();"  onKeyUp="IPOnKeyUp()" onblur ="Edit = false;" onchange="if (this.value!='') SetState('IP')" onKeyPress="SetState('IP');return numbersonly(this, event)">
+                        <img src="Graphics/pixel.gif" width="25" height="1" align="top" xstyle="visibility:hidden">
+                        <span id="ipMRU" name="ipMRU"></span>
+                    </td>
+                </tr>
+                <tr style ="MARGIN-BOTTOM:10">
+                    <td style="WIDTH: 135px">Security <u>r</u>eport name:</td>
+                    <td></td>
+                    <td>
+                        <img src="Graphics/pixel.gif" width="1" height="25" align="right" style="visibility:hidden">
+                        <input id="RptName" accessKey="r" size="50" style="WIDTH: 300px" value="%D% - %C% (%T%)" onkeydown ="keyDown();" onblur ="Edit = false;">
+                    </td>
+                </tr>
+                <tr style ="MARGIN-BOTTOM:10">
+                    <td style="WIDTH: 135px"></td>
+                    <td></td>
+                    <td>
+                        <nobr>%D% = domain,</nobr>
+                        <nobr>%C% = computer,</nobr>
+                        <nobr>%T% = date and time,</nobr>
+                        <nobr>%IP% = IP address</nobr>
+                    </td>
+                </tr>
+                <tr style = "MARGIN-TOP:20;MARGIN-BOTTOM:10">
+                    <td style="WIDTH: 135px">Options:</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </table></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr style ="MARGIN-BOTTOM:10">
+                <td>
+                    <TABLE cellSpacing="0" cellPadding="0" style="MARGIN-LEFT:20">
+                            <tr style = "margin-bottom:10">
+                                <TD COLSPAN="2"><INPUT id="chkOS" onclick="OptionsClick('CheckOS')" type="checkbox" accessKey="w"> 
+                                    Check for <u>W</u>indows administrative vulnerabilities</TD>
+                                <TD height="20"></TD>
+                            </tr>
+                            <tr style = "margin-bottom:10">
+                                <TD COLSPAN="2"><INPUT id="chkPasswords" onclick="OptionsClick('CheckPasswords')" type="checkbox" accessKey="k"> 
+                                    Check for wea<u>k</u> passwords</TD>                            
+                            <TD height="20"></TD>
+                            </tr>
+                            <tr style = "margin-bottom:10">
+                                <TD COLSPAN="2"><INPUT id="chkIIS" onclick="OptionsClick('CheckIIS')" type="checkbox" accessKey="v"> 
+                                    Check for IIS administrative <u>v</u>ulnerabilities</TD>
+                                <TD height="20"></TD>
+                            </tr>
+                            <tr style = "margin-bottom:10">
+                                <TD COLSPAN="2"><INPUT id="chkSQL" onclick="OptionsClick('CheckSQL')" type="checkbox" accessKey="q"> 
+                                    Check for S<u>Q</u>L administrative vulnerabilities</TD>
+                                <TD height="20"></TD>
+                            </tr>
+                            <tr style = "margin-bottom:10">
+                                <TD COLSPAN="2"><INPUT id="chkHotfixes" onclick="OptionsClick('CheckHotFix')" type="checkbox" accessKey="e"> 
+                                    Check for s<u>e</u>curity updates</TD>
+                                <TD height="20"></TD>
+                            </tr>
+                            <tr style = "margin-bottom:10">
+                                <TD><div style="padding-left: 19"><TABLE border="0" cellpadding="0" cellspacing="0"  style ="MARGIN-BOTTOM:10">
+                                <TR style = "margin-bottom:10">
+                                    <TD nowrap align="left" id="chkInstallText">
+                                        <INPUT onclick="OptionsClick('CheckInstall')" id="chkInstall" name="chkInstall" type="Checkbox" accessKey="u"/>
+                                        
+                                            Configure computers for Microsoft <u>U</u>pdate and scanning prerequisites
+                                    </TD>
+                                </TR>
+                                <TR style = "margin-bottom:10"> 
+                                    <TD nowrap align="left" id="chkAdditionCabsText" style="display:none"> 
+                                        <INPUT onclick="OptionsClick('CheckAdditionCabs')" id="chkAdditionCabs" name="chkAdditionCabs" type="Checkbox" accessKey="n"/>
+                                        
+                                            Use additio<u>n</u>al catalogs
+                                    </TD>
+                                </TR>
+                                <TR style = "margin-bottom:10">
+                                    <TD nowrap align="left" id="chkAdvText">
+                                        <INPUT onclick="OptionsClick('CheckAdvanced')" id="chkAdv" name="chkAdv" type="Checkbox" accessKey="o"/>
+                                        
+                                            Advanced Update Services <u>o</u>ptions:
+                                    </TD>
+                                </TR>
+                                <TR style = "margin-bottom:10">
+                                    <TD><div style="padding-left: 19"><TABLE border="0" cellpadding="0" cellspacing="0">
+                                    <TR style = "margin-bottom:10">
+                                        <TD nowrap align="left" id="chkAdvOptText">
+                                            <INPUT onclick="OptionsClick('CheckAdvancedOption')" id="chkAdvOpt" name="chkAdvOpt" type=radio value="wus" accessKey="a"/>
+                                            
+                                            Scan using <u>a</u>ssigned Windows Server Update Services(WSUS) servers only
+                                        </TD>
+                                    </TR>
+                                    <TR style = "margin-bottom:10">
+                                        <TD nowrap align="left" id="chkAdvOptText">
+                                            <INPUT onclick="OptionsClick('CheckAdvancedOption')" id="chkAdvOpt" name="chkAdvOpt" type=radio value="mu" accessKey="m"/>
+                                            
+                                                Scan using <u>M</u>icrosoft Update only
+                                        </TD>
+                                    </TR>
+                                    <TR style = "margin-bottom:10">
+                                        <TD nowrap align="left" id="chkAdvOptText">
+                                            <INPUT onclick="OptionsClick('CheckAdvancedOption')" id="chkAdvOpt" name="chkAdvOpt" type=radio value="offline" accessKey="f"/>
+                                                Scan using o<u>f</u>fline catalog only
+                                        </TD>
+                                    </TR>
+                                    <TR style = "margin-bottom:10">
+                                        <TD nowrap align="left" id="chkAdvOptText" style="display:none">
+                                            <INPUT onclick="OptionsClick('CheckAdvancedOption')" id="chkAdvOpt" name="chkAdvOpt" type=radio value="addit" accessKey="g"/>
+                                                Scan using additional catalo<u>g</u>s only
+                                        </TD>
+                                    </TR>
+                                    </TABLE></div></TD>
+                                </TR>                                
+                                </TABLE></div></TD>
+                            <td></td>
+                            </tr>
+                            <tr style ="MARGIN-BOTTOM:10">
+                                <TD COLSPAN="2" >&nbsp;
+                                     Learn more about <A class="sys-link-normal" style="PADDING-LEFT: 1px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" href="optionshelp.html" target="_blank">
+                            Scanning Options </A> 
+
+                                                                </TD>
+                                <TD height="20"></TD>
+                            </tr>                            
+                        </TABLE>
+                    </td>
+                <td></td>
+                <td></td>
+                </tr>
+
+    </table>
+    </div> 
+    </body>
+</html>

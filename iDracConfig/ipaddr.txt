@@ -1,0 +1,10 @@
+;File containing DNS Names of iDrac
+;One name per line
+
+;Lines starting with a semicolon are comments
+
+
+;Do not include .idrac.careerbuilder.com, the script adds this in itself
+
+
+rebelsolredge01

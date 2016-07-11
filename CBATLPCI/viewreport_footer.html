@@ -1,0 +1,192 @@
+﻿<!--
+© 2002-2007, Microsoft Corporation. All rights reserved.
+Developed By Shavlik Technologies, LLC
+-->
+<html>
+<head>
+<meta http-equiv="MSThemeCompatible" content="Yes" charset="UTF-8"/>
+<link REL="stylesheet" type="text/css" href="css/scanner.css" />
+<script LANGUAGE="javascript">
+<!--
+function onLinkClick(nLink)
+{
+
+// The following are the values for each link.
+// Link value   Function called
+//       1      PrintReport()
+//       2      CopyReport()
+//       3      PreviousReport()
+//       4      NextReport()
+
+    if(nLink==1)
+    {
+        if(Print.href == "javascript:parent.PrintReport();")//print report
+        {
+            top.PrintReport();
+        }
+        else//copy the list
+        {
+            top.PrintReportList();
+        }
+    }
+    else if(nLink==2)
+    {
+        if(Copy.href == "javascript:parent.CopyReport();")//copy report
+        {
+            top.CopyReport();
+        }
+        else //copy the list
+        {
+            top.CopyReportList();
+        }
+    }
+    else if(nLink==3)
+    {
+        if(document.all["PreviousReport"].href == "javascript:void(0);")
+            return false; 
+        PreviousReport();
+    }
+    else if(nLink==4)
+    {
+        if(document.all["NextReport"].href == "javascript:void(0);")
+            return false; 
+        NextReport();
+    }
+    else
+    {    //This is unknown condition.Hence let it be handled in the default way.
+        return true;
+    }
+    return false;
+}
+document.onmousewheel = onmousescroll;
+document.onkeydown = keyHit;
+function onmousescroll()
+{
+    if (window.event.shiftKey) 
+    {
+        return false;
+    }
+    return true;
+}
+function keyHit()
+{
+    return top.keyHit(event);
+}
+
+function initPage()
+{
+    top.Header.ShowFrames();
+    window.focus();
+    top.Header.SetNavigationState();
+}
+function NextReport()
+{
+    //get the next filename and increment index
+    parent.ReportListArrIndex++;
+    parent.ReportToView = parent.ReportListArr[parent.ReportListArrIndex]
+    top.Content.ChangeReport(parent.ReportToView);
+    top.Content.SetNavigationState();
+}
+
+function PreviousReport()
+{
+    //get the next filename and decrement index
+    parent.ReportListArrIndex--;
+    parent.ReportToView = parent.ReportListArr[parent.ReportListArrIndex]
+    top.Content.ChangeReport(parent.ReportToView);
+    top.Content.SetNavigationState();
+}
+
+function SortOnChange()
+{
+    var sortArr = document.all["SortOrder"].value.split("|");
+    var sortKey = sortArr[0];
+    var sortOrder = sortArr[1];
+    //call the sort method
+    top.Content.sort(sortKey,sortOrder);
+}
+
+function isAltKey(ev,ch)
+{
+    if (ev.altKey)
+    {
+        var key = String.fromCharCode(ev.keyCode);
+        return (key == ch || key.toLowerCase(key) == ch.toLowerCase(key))
+    }
+    return false;
+}
+
+function keyUp(evt)
+{
+    //copy and print when user enter "alt + c" and "alt + p"
+     if(isAltKey(event,"c"))
+     {
+        if(Copy.href == "javascript:top.CopyReport();")//copy report
+        {
+            top.CopyReport();
+        }
+        else//copy the list
+        {
+            top.CopyReportList();
+        }
+            
+     }
+     else if(isAltKey(event,"p"))
+     {
+        if(Print.href == "javascript:parent.PrintReport();")//print report
+        {
+            top.PrintReport();
+        }
+        else//print the list
+        {
+            top.PrintReportList();
+        }
+     }
+     
+}
+//-->
+</script>
+</head>
+<body onload="initPage()" oncontextmenu="return false" style="BORDER-TOP:#DFDFDF 1px solid" ondragstart="return false" onselectstart="return false" tabindex = "-1">
+<div id="viewreportfooter">
+<form id="viewreportfooter" name="viewreportfooter">
+<table Border="0" cellspacing="0">
+    <tr>
+        <td height="75">
+            <table width="100%">
+                <tr id = "Actions">
+                    <td width = "25%" valign = "middle">
+                        
+                            <a accessKey="p" style="WIDTH: 100%" id="Print" onClick="return onLinkClick(1)" class="sys-link-normal">
+                            <IMG style="MARGIN: 0px 4px -1px -17px; WIDTH: 16px; HEIGHT: 16px" height="16" src="Graphics/print.jpg" width="16" align="absMiddle"><u>P</u>rint this report</a>
+                        
+                    </td>
+                    <td width = "25%" valign = "middle">
+                            <a accessKey="c" style="WIDTH: 100%" id="Copy" onClick="return onLinkClick(2)" class="sys-link-normal">
+                            <IMG style="MARGIN: 0px 4px -1px -17px; WIDTH: 16px; HEIGHT: 16px" height="16" src="Graphics/copy.jpg" width="16" align="absMiddle"><u>C</u>opy to clipboard</a>
+                            
+                    </td>
+                    <td width = "25%">
+                    
+                    <a id="PreviousReport" style="WIDTH: 100%" href="javascript:PreviousReport();" onClick="return onLinkClick(3)" name="PreviousReport">
+                    <img id="PreviousReportImg" style="MARGIN: 0px 4px -1px -17px; WIDTH: 30px; HEIGHT: 25px" class="arrow" src="Graphics/barrow.gif" align="absMiddle" WIDTH="30" HEIGHT="25">Previous security report</a>
+                    </td>
+                   
+                    <td width = "25%">
+                    <a id="NextReport" style="WIDTH: 100%" href="javascript:NextReport();" onClick="return onLinkClick(4)"  name="NextReport">Next security report
+                     <img id="NextReportImg" style="WIDTH: 30px; HEIGHT: 25px" class="arrow" src="Graphics/arrow.gif" align="absMiddle" WIDTH="30" HEIGHT="25"></a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="1" width="961"></td>
+    </tr>
+</table>
+</form>
+</div>
+<TEXTAREA ID="ClipBoardText" name="ClipBoardText" STYLE="display:none;"></TEXTAREA>
+<span style="DISPLAY:none" name="HiddenCopyReport" id="HiddenCopyReport"><span>
+</body>
+</html>

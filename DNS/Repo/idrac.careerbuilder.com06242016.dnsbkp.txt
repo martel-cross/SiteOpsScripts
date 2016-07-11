@@ -1,0 +1,1314 @@
+;
+;  Database file (null) for Default zone scope in zone idrac.careerbuilder.com.
+;      Zone version:  9957
+;
+
+@                       IN  SOA qtxad2.atl.careerbuilder.com. hostmaster.atl.careerbuilder.com. (
+                        		9957         ; serial number
+                        		900          ; refresh
+                        		600          ; retry
+                        		86400        ; expire
+                        		3600       ) ; default TTL
+
+;
+;  Zone NS records
+;
+
+@                       NS	drawsad1.atl.careerbuilder.com.
+@                       NS	drawsad2.atl.careerbuilder.com.
+@                       NS	qtmad1.atl.careerbuilder.com.
+qtmad1.atl.careerbuilder.com. A	10.240.10.9
+@                       NS	luigiad1.atl.careerbuilder.com.
+@                       NS	luigiad2.atl.careerbuilder.com.
+@                       NS	qtmad2.atl.careerbuilder.com.
+@                       NS	bearad1.atl.careerbuilder.com.
+bearad1.atl.careerbuilder.com. A	10.230.10.9
+@                       NS	qtwad1.atl.careerbuilder.com.
+@                       NS	qtwad2.atl.careerbuilder.com.
+@                       NS	devad2.atl.careerbuilder.com.
+@                       NS	devad1.atl.careerbuilder.com.
+@                       NS	qtxad1.atl.careerbuilder.com.
+@                       NS	qtxad2.atl.careerbuilder.com.
+@                       NS	bearad2.atl.careerbuilder.com.
+
+;
+;  Zone records
+;
+
+autoa                   86400	A	10.241.110.160
+autob                   86400	A	10.241.110.161
+bearapim1               A	10.231.106.215
+bearapim2               A	10.231.106.216
+bearbkp1                86400	A	10.231.245.50
+BEARBUILDVM1            A	10.231.15.119
+bearcass01              86400	A	10.231.110.110
+bearcass03              86400	A	10.231.110.112
+bearcass04              86400	A	10.231.110.113
+bearddp1a               A	10.231.110.118
+bearddp1b               A	10.231.110.119
+beardeployvm1           86400	A	10.231.15.96
+BEARDHCP1               86400	A	10.231.10.9
+BEARDPIWEB2             A	10.231.212.102
+bearimg01               86400	A	10.231.205.64
+bearjapi1               86400	A	10.231.121.101
+bearjapi2               86400	A	10.231.121.102
+BEARLS01                86400	A	10.231.65.111
+bearsc1                 86400	A	10.231.60.101
+bearsc10                86400	A	10.231.60.110
+BEARSC11                86400	A	10.231.60.111
+bearsc2                 86400	A	10.231.60.102
+bearsc3                 86400	A	10.231.60.103
+bearsc4                 86400	A	10.231.60.104
+bearsc5                 86400	A	10.231.60.105
+bearsc6                 86400	A	10.231.60.106
+bearsc7                 86400	A	10.231.60.107
+bearsc8                 86400	A	10.231.60.108
+bearsc9                 86400	A	10.231.60.109
+bearsolrapi1            86400	A	10.231.214.136
+bearsolrapi11           86400	A	10.231.106.113
+bearsolrapi12           86400	A	10.231.106.114
+bearsolrapi13           86400	A	10.231.106.115
+bearsolrapi2            86400	A	10.231.214.137
+bearsolrapi3            86400	A	10.231.214.140
+bearsolrapi4            86400	A	10.231.214.142
+bearsolrapi5            86400	A	10.231.214.144
+bearsolrapi6            86400	A	10.231.214.146
+bearsolrapi7            86400	A	10.231.214.148
+bearsolrapi8            86400	A	10.231.214.150
+bearsolrapi9            86400	A	10.231.106.111
+Bearsolrapim1           A	10.231.214.138
+bearsolrapim11          86400	A	10.231.106.107
+bearsolrapim12          86400	A	10.231.106.108
+bearsolrapim13          86400	A	10.231.106.109
+Bearsolrapim2           A	10.231.106.216
+bearsolrapim3           86400	A	10.231.214.139
+bearsolrapim4           86400	A	10.231.214.141
+bearsolrapim5           86400	A	10.231.214.143
+bearsolrapim6           86400	A	10.231.214.145
+bearsolrapim7           86400	A	10.231.214.147
+bearsolrapim8           86400	A	10.231.214.149
+bearsolrapim9           86400	A	10.231.106.105
+bearsolrcmp1            86400	A	10.231.86.123
+bearsolrcmp2            86400	A	10.231.86.124
+bearsolrcmpm1           86400	A	10.231.86.122
+bearsolrdp1             86400	A	10.231.86.101
+bearsolrdp10            86400	A	10.231.86.110
+bearsolrdp11            86400	A	10.231.86.112
+bearsolrdp12            86400	A	10.231.86.113
+bearsolrdp13            86400	A	10.231.86.114
+bearsolrdp14            86400	A	10.231.86.115
+bearsolrdp15            86400	A	10.231.86.116
+bearsolrdp16            86400	A	10.231.86.117
+bearsolrdp17            86400	A	10.231.86.118
+bearsolrdp18            86400	A	10.231.86.119
+bearsolrdp19            86400	A	10.231.86.120
+bearsolrdp2             86400	A	10.231.86.102
+bearsolrdp20            86400	A	10.231.86.121
+bearsolrdp21            900	A	10.231.86.126
+bearsolrdp210C3CEC      900	A	10.231.86.126
+bearsolrdp22            900	A	10.231.86.127
+bearsolrdp220C3F0C      900	A	10.231.86.127
+bearsolrdp23            900	A	10.231.86.128
+bearsolrdp230C33C4      900	A	10.231.86.128
+BEARSOLRDP24            A	10.231.86.129
+bearsolrdp240C33E6      900	A	10.231.86.129
+bearsolrdp25            900	A	10.231.86.130
+bearsolrdp250C3D1B      900	A	10.231.86.130
+bearsolrdp3             86400	A	10.231.86.103
+bearsolrdp4             86400	A	10.231.86.104
+bearsolrdp5             86400	A	10.231.86.105
+bearsolrdp6             86400	A	10.231.86.106
+bearsolrdp7             86400	A	10.231.86.107
+bearsolrdp8             86400	A	10.231.86.108
+bearsolrdp9             86400	A	10.231.86.109
+bearsolrdpm1            86400	A	10.231.86.100
+bearsolrdpm2            86400	A	10.231.86.111
+bearsolrdpm3            A	10.231.86.131
+bearsolrdpm30C33F5      900	A	10.231.86.131
+bearsolredge01          86400	A	10.231.106.112
+bearsolredge02          A	10.231.106.166
+bearsolredge03          A	10.231.106.167
+bearsolredge04          A	10.231.106.173
+bearsolredgem1          86400	A	10.231.106.106
+bearsolrmsi1            86400	A	10.231.106.117
+bearsolrmsi2            86400	A	10.231.106.118
+bearsolrmsi3            86400	A	10.231.106.119
+bearsolrmsi4            86400	A	10.231.106.120
+bearsolrmsi5            86400	A	10.231.106.121
+bearsolrmsim1           86400	A	10.231.106.116
+bearsolrmsp1            A	10.231.106.122
+bearsolrmsp2            86400	A	10.231.106.123
+bearsolrmsp3            A	10.231.106.124
+bearsolrmsp4            86400	A	10.231.106.125
+bearsolrmsp5            86400	A	10.231.106.126
+BEARSOLRMYS01           A	10.231.106.131
+BEARSOLRMYS02           A	10.231.106.132
+BEARSOLRMYS03           A	10.231.106.133
+BEARSOLRMYS04           A	10.231.106.134
+BEARSOLRMYS05           A	10.231.106.135
+BEARSOLRMYS06           A	10.231.106.136
+BEARSOLRMYS07           A	10.231.106.137
+BEARSOLRMYS08           A	10.231.106.138
+BEARSOLRMYS09           A	10.231.106.139
+BEARSOLRMYS10           A	10.231.106.140
+Bearsolrmysm1           A	10.231.106.130
+bearsolrnt3             86400	A	10.231.77.147
+BEARSOLRONE03           A	10.231.106.168
+BEARSOLRONE04           A	10.231.106.169
+BEARSOLRONE05           A	10.231.106.170
+BEARSOLRONE06           A	10.231.106.171
+BEARSOLRONE07           A	10.231.106.172
+BEARSOLRONEM1           A	10.231.106.165
+bearsolrres1            86400	A	10.231.76.160
+bearsolrres10           86400	A	10.231.76.169
+bearsolrres11           86400	A	10.231.76.170
+bearsolrres12           86400	A	10.231.76.171
+bearsolrres13           86400	A	10.231.76.172
+bearsolrres14           86400	A	10.231.76.173
+bearsolrres15           86400	A	10.231.76.174
+bearsolrres16           86400	A	10.231.76.175
+bearsolrres17           86400	A	10.231.76.176
+bearsolrres18           86400	A	10.231.76.177
+bearsolrres19           86400	A	10.231.76.178
+bearsolrres2            86400	A	10.231.76.161
+bearsolrres20           86400	A	10.231.76.179
+bearsolrres21           86400	A	10.231.76.180
+bearsolrres22           86400	A	10.231.76.140
+bearsolrres23           86400	A	10.231.76.141
+bearsolrres24           86400	A	10.231.76.142
+bearsolrres25           86400	A	10.231.76.143
+bearsolrres26           86400	A	10.231.76.144
+bearsolrres27           86400	A	10.231.76.145
+bearsolrres28           86400	A	10.231.76.146
+bearsolrres29           900	A	10.231.77.157
+bearsolrres290C5717     900	A	10.231.77.157
+bearsolrres3            86400	A	10.231.76.162
+bearsolrres30           900	A	10.231.77.158
+bearsolrres300C33C5     900	A	10.231.77.158
+bearsolrres31           900	A	10.231.77.159
+bearsolrres310C32F8     900	A	10.231.77.159
+bearsolrres32           900	A	10.231.77.160
+bearsolrres320C3363     900	A	10.231.77.160
+bearsolrres37           86400	A	10.231.77.151
+bearsolrres38           86400	A	10.231.77.152
+bearsolrres4            86400	A	10.231.76.163
+bearsolrres5            86400	A	10.231.76.164
+bearsolrres6            86400	A	10.231.76.165
+bearsolrres7            86400	A	10.231.76.166
+bearsolrres8            86400	A	10.231.76.167
+bearsolrres9            86400	A	10.231.76.168
+bearsolrresjobm1        A	10.231.214.110
+bearsolrresm1           86400	A	10.231.76.150
+bearsolrresm2           86400	A	10.231.76.151
+bearsolrresm3           86400	A	10.231.76.152
+bearsolrresm4           86400	A	10.231.76.153
+bearsolrresm5           A	10.231.76.154
+bearsolrrpp1            86400	A	10.231.77.138
+bearsolrrpp10           86400	A	10.231.77.154
+bearsolrrpp2            86400	A	10.231.77.139
+bearsolrrpp3            86400	A	10.231.77.140
+bearsolrrpp4            86400	A	10.231.77.141
+bearsolrrpp5            86400	A	10.231.77.142
+bearsolrrpp6            86400	A	10.231.77.143
+bearsolrrpp7            86400	A	10.231.77.144
+bearsolrrpp8            86400	A	10.231.77.145
+bearsolrrpp9            86400	A	10.231.77.153
+bearsolrrppm1           86400	A	10.231.76.147
+bearsolrrppm2           86400	A	10.231.76.148
+bearsolrtn1             86400	A	10.231.76.149
+bearsolrtn2             86400	A	10.231.77.146
+bearsolrtn3             A	10.231.77.147
+bearsolrtn4             86400	A	10.231.77.148
+bearsolrtn5             86400	A	10.231.77.149
+bearsolrtn6             86400	A	10.231.77.150
+bearsolrtnm1            86400	A	10.231.77.155
+bearsolrutil1           86400	A	10.231.214.112
+bearsolrutil2           86400	A	10.231.214.113
+BEARSRCHBAT1            86400	A	10.231.105.111
+BEARSRCHBAT10           86400	A	10.231.105.118
+BEARSRCHBAT2            86400	A	10.231.105.112
+BEARSRCHBAT3            86400	A	10.231.105.108
+BEARSRCHBAT4            86400	A	10.231.105.109
+BEARSRCHBAT5            86400	A	10.231.105.110
+BEARSRCHBAT6            86400	A	10.231.105.114
+BEARSRCHBAT7            86400	A	10.231.105.115
+BEARSRCHBAT8            86400	A	10.231.105.116
+BEARSRCHBAT9            86400	A	10.231.105.117
+BEARSTAPI1              86400	A	10.231.205.161
+BEARSTAPI10             86400	A	10.231.205.170
+BEARSTAPI11             86400	A	10.231.205.171
+BEARSTAPI12             86400	A	10.231.205.172
+BEARSTAPI13             86400	A	10.231.205.173
+BEARSTAPI14             86400	A	10.231.205.174
+BEARSTAPI15             86400	A	10.231.205.175
+BEARSTAPI16             86400	A	10.231.205.176
+BEARSTAPI17             86400	A	10.231.205.177
+BEARSTAPI18             86400	A	10.231.205.178
+BEARSTAPI19             86400	A	10.231.205.179
+BEARSTAPI2              86400	A	10.231.205.162
+BEARSTAPI20             86400	A	10.231.205.180
+BEARSTAPI3              86400	A	10.231.205.163
+BEARSTAPI4              86400	A	10.231.205.164
+BEARSTAPI5              86400	A	10.231.205.165
+BEARSTAPI6              86400	A	10.231.205.166
+BEARSTAPI7              86400	A	10.231.205.167
+BEARSTAPI8              86400	A	10.231.205.168
+BEARSTAPI9              86400	A	10.231.205.169
+BEARVMHOST01            86400	A	10.231.15.101
+BEARVMHOST02            86400	A	10.231.15.102
+bearws1                 86400	A	10.231.205.71
+bearws2                 86400	A	10.231.205.72
+BIRDSA                  A	10.240.19.194
+BIRDSB                  A	10.240.19.195
+BOBAA                   86400	A	10.241.110.80
+BOBAB                   86400	A	10.241.110.81
+bobatch100              86400	A	10.241.105.157
+bobatch101              86400	A	10.241.105.158
+boblast100              86400	A	10.241.10.100
+brock                   86400	A	10.231.65.230
+bumblea                 A	10.241.110.86
+bumbleb                 A	10.241.110.87
+CBBLAST100              86400	A	10.241.10.110
+CBBOASYNC01             86400	A	10.241.183.102
+CBBOASYNC02             86400	A	10.241.183.103
+CBBOMX01                86400	A	10.241.160.203
+CBBOMX02                86400	A	10.241.160.204
+cbcass10                86400	A	10.241.205.149
+cbcass11                86400	A	10.241.205.150
+cbcass12                86400	A	10.241.205.151
+cbcass13                86400	A	10.241.205.152
+cbcass14                86400	A	10.241.205.153
+cbcass15                86400	A	10.241.205.154
+cbcass16                900	A	10.241.205.155
+cbcass17                900	A	10.241.205.156
+cbcass18                900	A	10.241.205.157
+cbcass19                900	A	10.241.205.158
+cbcass20                900	A	10.241.205.159
+cbcass21                900	A	10.241.205.160
+cbcass22                900	A	10.241.243.29
+cbcass9                 86400	A	10.241.205.148
+cbcasssp1               900	A	10.241.121.101
+cbcasssp2               900	A	10.241.205.163
+cbcassweb01             86400	A	10.241.205.101
+cbcassweb02             86400	A	10.241.205.102
+cbcassweb03             86400	A	10.241.205.103
+cbcassweb04             86400	A	10.241.205.104
+cbcassweb05             86400	A	10.241.205.105
+cbcassweb06             86400	A	10.241.205.106
+cbcassweb07             86400	A	10.241.205.107
+cbcassweb08             86400	A	10.241.205.108
+CBLS                    86400	A	10.241.20.75
+cbrabbit01              86400	A	10.241.205.130
+cbrabbit02              86400	A	10.241.205.131
+cbrabbit03              86400	A	10.241.205.128
+cbrabbit04              86400	A	10.241.205.129
+CBSOASRCHBAT01          86400	A	10.241.105.125
+CBSOASRCHBAT02          86400	A	10.241.105.126
+CBSOASRCHBAT03          86400	A	10.241.105.127
+CBSOASRCHBAT04          86400	A	10.241.105.128
+CBSOASRCHBAT05          86400	A	10.241.105.129
+CBSOASRCHBAT06          86400	A	10.241.105.130
+cbsoasrchbat07          86400	A	10.241.105.131
+CBSOASRCHBAT08          86400	A	10.241.105.132
+CBSOASRCHBAT09          86400	A	10.241.105.133
+CBSOASRCHBAT10          86400	A	10.241.105.134
+CBSOASRCHBAT11          86400	A	10.241.105.137
+CBSOASRCHBAT12          86400	A	10.241.105.138
+CBSOASRCHBAT13          86400	A	10.241.105.139
+CBSOASRCHBAT14          86400	A	10.241.105.140
+CBSOASRCHBAT15          86400	A	10.241.105.141
+CBSOASRCHBAT16          86400	A	10.241.105.142
+CBSOASRCHBAT17          86400	A	10.241.105.143
+CBSOASRCHBAT18          86400	A	10.241.105.144
+CBSOASRCHBAT19          86400	A	10.241.105.145
+CBSOASRCHBAT20          86400	A	10.241.105.146
+CBSRCHBAT01             86400	A	10.241.105.120
+CBSRCHBAT02             86400	A	10.241.105.121
+CBSRCHBAT03             86400	A	10.241.105.122
+CBSRCHBAT04             86400	A	10.241.105.123
+CBSRCHBAT5              86400	A	10.241.105.116
+CBSRCHBAT6              86400	A	10.241.105.117
+CBSRCHBAT7              86400	A	10.241.105.118
+CBSRCHBAT8              86400	A	10.241.105.119
+CBSTATSBATCH01          86400	A	10.241.105.135
+CBSTATSBATCH02          86400	A	10.241.105.136
+chi108c1                A	10.231.253.50
+chi108c1bl01            86400	A	10.231.253.51
+chi108c1bl02            86400	A	10.231.253.52
+chi108c1bl03            86400	A	10.231.253.53
+chi108c1bl04            86400	A	10.231.253.54
+chi108c1bl05            86400	A	10.231.253.55
+chi108c1bl06            86400	A	10.231.253.56
+chi108c1bl07            86400	A	10.231.253.57
+chi108c1bl08            86400	A	10.231.253.58
+chi108c1bl09            86400	A	10.231.253.59
+chi108c1bl10            86400	A	10.231.253.60
+chi108c1bl11            86400	A	10.231.253.61
+chi108c1bl12            86400	A	10.231.253.62
+chi108c1bl13            86400	A	10.231.253.63
+chi108c1bl14            86400	A	10.231.253.64
+chi108c1bl15            86400	A	10.231.253.65
+chi108c1bl16            86400	A	10.231.253.66
+chi108c2                A	10.231.253.80
+chi108c2bl01            86400	A	10.231.253.81
+chi108c2bl02            86400	A	10.231.253.82
+chi108c2bl03            86400	A	10.231.253.83
+chi108c2bl04            86400	A	10.231.253.84
+chi108c2bl05            86400	A	10.231.253.85
+chi108c2bl06            86400	A	10.231.253.86
+chi108c2bl07            86400	A	10.231.253.87
+chi108c2bl08            86400	A	10.231.253.88
+chi108c2bl09            86400	A	10.231.253.89
+chi108c2bl10            86400	A	10.231.253.90
+chi108c2bl11            86400	A	10.231.253.91
+chi108c2bl12            86400	A	10.231.253.92
+chi108c2bl13            86400	A	10.231.253.93
+chi108c2bl14            86400	A	10.231.253.94
+chi108c2bl15            86400	A	10.231.253.95
+chi108c2bl16            86400	A	10.231.253.96
+chi108s1                A	10.231.254.50
+chi108s2                A	10.231.254.80
+chi109c1                A	10.231.253.110
+chi109c1bl01            86400	A	10.231.253.111
+chi109c1bl02            86400	A	10.231.253.112
+chi109c1bl03            86400	A	10.231.253.113
+chi109c1bl04            86400	A	10.231.253.114
+chi109c1bl05            86400	A	10.231.253.115
+chi109c1bl06            86400	A	10.231.253.116
+chi109c1bl07            86400	A	10.231.253.117
+chi109c1bl08            86400	A	10.231.253.118
+chi109c1bl09            86400	A	10.231.253.119
+chi109c1bl10            86400	A	10.231.253.120
+chi109c1bl11            86400	A	10.231.253.121
+chi109c1bl12            86400	A	10.231.253.122
+chi109c1bl13            86400	A	10.231.253.123
+chi109c1bl14            86400	A	10.231.253.124
+chi109c1bl15            86400	A	10.231.253.125
+chi109c1bl16            86400	A	10.231.253.126
+chi109c2bl01            86400	A	10.231.253.127
+chi109c2bl02            86400	A	10.231.253.128
+chi109c2bl03            86400	A	10.231.253.129
+chi109c2bl04            86400	A	10.231.253.130
+chi109c2bl05            86400	A	10.231.253.131
+chi109c2bl06            86400	A	10.231.253.132
+chi109c2bl07            86400	A	10.231.253.133
+chi109c2bl08            86400	A	10.231.253.134
+chi109c2bl09            86400	A	10.231.253.135
+chi109c2bl10            86400	A	10.231.253.136
+chi109c2bl11            86400	A	10.231.253.137
+chi109c2bl12            86400	A	10.231.253.138
+chi109c2bl13            86400	A	10.231.253.139
+chi109c2bl14            86400	A	10.231.253.140
+chi109c2bl15            86400	A	10.231.253.141
+chi109c2bl16            86400	A	10.231.253.142
+chi109s1                A	10.231.254.110
+CHIAPP01VM01            86400	A	10.231.216.44
+CHIAPP01VM02            86400	A	10.231.216.45
+CHIAPP01VM03            86400	A	10.231.216.46
+CHIAPP01VM04            86400	A	10.231.216.47
+CHIAPP01VM05            86400	A	10.231.216.48
+CHIAPP01VM06            86400	A	10.231.216.49
+CHIAPP01VM07            86400	A	10.231.216.50
+CHIAPP01VM08            86400	A	10.231.216.51
+CHIAPP01VM09            86400	A	10.231.216.52
+CHIAPP01VM10            86400	A	10.231.216.53
+CHIAPP01VM11            86400	A	10.231.216.54
+CHIAPP01VM12            86400	A	10.231.216.55
+CHIAPP01VM13            86400	A	10.231.216.56
+CHIAPP01VM14            86400	A	10.231.216.57
+CHIAPP01VM15            86400	A	10.231.216.58
+CHIAPP01VM16            86400	A	10.231.216.59
+CHIAPP01VM17            86400	A	10.231.216.60
+CHIAPP01VM18            86400	A	10.231.216.61
+CHIAPP01VM19            86400	A	10.231.216.62
+CHIAPP01VM20            86400	A	10.231.216.63
+CHIAPP01VM21            86400	A	10.231.216.64
+CHIAPP01VM22            86400	A	10.231.216.65
+CHIAPP01VM23            86400	A	10.231.216.66
+CHIAPP01VM24            86400	A	10.231.216.67
+CHIAPP01VM25            86400	A	10.231.216.68
+CHIAPP01VM26            86400	A	10.231.216.69
+CHIAPP01VM27            86400	A	10.231.216.70
+CHIAPP01VM28            86400	A	10.231.216.71
+CHIAPP01VM29            86400	A	10.231.216.72
+CHIAPP01VM30            86400	A	10.231.216.73
+CHIAPP01VM31            86400	A	10.231.216.74
+CHIAPP01VM32            86400	A	10.231.216.75
+CHIAPP02VM01            86400	A	10.231.216.11
+CHIAPP02VM02            86400	A	10.231.216.12
+CHIAPP02VM03            86400	A	10.231.216.13
+CHIAPP02VM04            86400	A	10.231.216.14
+CHIAPP02VM05            86400	A	10.231.216.15
+CHIAPP02VM06            86400	A	10.231.216.16
+CHIAPP02VM07            86400	A	10.231.216.17
+CHIAPP02VM08            86400	A	10.231.216.18
+CHIAPP02VM09            86400	A	10.231.216.19
+CHIAPP02VM10            86400	A	10.231.216.20
+CHIAPP02VM11            86400	A	10.231.216.21
+CHIAPP02VM12            86400	A	10.231.216.22
+CHIAPP02VM13            86400	A	10.231.216.23
+CHIAPP02VM14            86400	A	10.231.216.24
+CHIAPP02VM15            86400	A	10.231.216.25
+CHIAPP02VM16            86400	A	10.231.216.26
+CHIAPP02VM17            86400	A	10.231.216.27
+CHIAPP02VM18            86400	A	10.231.216.28
+CHIAPP02VM19            86400	A	10.231.216.29
+CHIAPP02VM20            86400	A	10.231.216.30
+CHIAPP02VM21            86400	A	10.231.216.31
+CHIAPP02VM22            86400	A	10.231.216.32
+CHIAPP02VM23            86400	A	10.231.216.33
+CHIAPP02VM24            A	10.231.216.34
+CHIAPP02VM25            86400	A	10.231.216.35
+CHIAPP02VM26            86400	A	10.231.216.36
+CHIAPP02VM27            86400	A	10.231.216.37
+CHIAPP02VM28            86400	A	10.231.216.38
+CHIAPP02VM29            86400	A	10.231.216.39
+CHIAPP02VM30            86400	A	10.231.216.40
+CHIAPP02VM31            86400	A	10.231.216.41
+CHIAPP02VM32            86400	A	10.231.216.42
+CHIAPP03VM01            86400	A	10.231.103.80
+CHIAPP03VM02            86400	A	10.231.103.81
+CHIAPP03VM03            86400	A	10.231.103.82
+CHIAPP03VM04            86400	A	10.231.103.83
+CHIAPP03VM05            86400	A	10.231.103.84
+CHIAPP03VM06            86400	A	10.231.103.85
+CHIAPP03VM07            86400	A	10.231.103.86
+CHIAPP03VM08            86400	A	10.231.103.87
+CHIAPP03VM09            86400	A	10.231.103.88
+CHIAPP03VM10            86400	A	10.231.103.89
+CHIAPP03VM11            86400	A	10.231.103.90
+CHIAPP03VM12            86400	A	10.231.103.91
+CHIAPP03VM13            86400	A	10.231.103.92
+CHIAPP03VM14            86400	A	10.231.103.93
+CHIAPP03VM15            86400	A	10.231.103.94
+CHIAPP03VM16            86400	A	10.231.103.95
+CHIAPP03VM17            86400	A	10.231.103.96
+CHIAPP03VM18            86400	A	10.231.103.97
+CHIAPP03VM19            86400	A	10.231.103.98
+CHIAPP03VM20            86400	A	10.231.103.99
+CHIAPP03VM21            86400	A	10.231.103.100
+CHIAPP03VM22            86400	A	10.231.103.101
+CHIAPP03VM23            86400	A	10.231.103.102
+CHIAPP03VM24            86400	A	10.231.103.103
+CHIAPP03VM25            86400	A	10.231.103.104
+CHIAPP03VM26            86400	A	10.231.103.105
+CHIAPP03VM27            86400	A	10.231.103.106
+CHIAPP03VM28            86400	A	10.231.103.107
+CHIAPP03VM29            86400	A	10.231.103.108
+CHIAPP03VM30            86400	A	10.231.103.109
+CHIAPP03VM31            86400	A	10.231.103.110
+CHIAPP03VM32            86400	A	10.231.103.111
+chictrl1a               86400	A	10.231.67.100
+chictrl1b               86400	A	10.231.67.101
+chidsrv1a               86400	A	10.231.67.104
+chidsrv1b               86400	A	10.231.67.105
+chimsg1a                86400	A	10.231.67.126
+chimsg1b                86400	A	10.231.67.127
+CHIPXEHOST              A	10.231.15.80
+CHISBRGE01              A	10.231.65.18
+chisc1a                 86400	A	10.231.67.130
+chisc1b                 86400	A	10.231.67.131
+CHISOLRFST01            A	10.231.106.174
+CHISOLRFST02            A	10.231.106.175
+CHISW1                  A	10.231.110.44
+CHISW2                  A	10.231.110.45
+chivctr1                86400	A	10.231.101.48
+chivmhost01             A	10.231.15.121
+cliffa                  A	10.241.110.115
+cliffb                  A	10.241.110.116
+DBMONITOR               86400	A	10.241.245.179
+devapp01vm01            86400	A	10.241.243.11
+devapp01vm02            86400	A	10.241.243.12
+devapp01vm03            86400	A	10.241.243.13
+devapp01vm04            86400	A	10.241.243.14
+devapp01vm05            86400	A	10.241.243.15
+devapp01vm06            86400	A	10.241.243.16
+devapp01vm07            86400	A	10.241.243.17
+devapp01vm08            86400	A	10.241.243.18
+devapp01vm09            86400	A	10.241.243.19
+devapp01vm10            86400	A	10.241.243.20
+devapp01vm11            86400	A	10.241.243.21
+devapp01vm12            86400	A	10.241.243.22
+devapp01vm13            86400	A	10.241.243.23
+devapp01vm14            A	10.241.243.24
+devapp01vm15            A	10.241.243.25
+devapp01vm16            86400	A	10.241.243.26
+devapp01vm17            86400	A	10.241.243.27
+devapp01vm18            86400	A	10.241.243.28
+devapp01vm19            86400	A	10.241.243.29
+devapp01vm20            86400	A	10.241.243.30
+devapp01vm21            86400	A	10.241.243.31
+devapp01vm22            86400	A	10.241.243.32
+devapp01vm23            86400	A	10.241.243.33
+devapp01vm24            86400	A	10.241.243.34
+devapp01vm25            86400	A	10.241.243.35
+devapp01vm26            86400	A	10.241.243.36
+devapp01vm27            86400	A	10.241.243.37
+devapp01vm28            86400	A	10.241.243.38
+devapp01vm29            86400	A	10.241.243.39
+devapp01vm30            86400	A	10.241.243.40
+devapp01vm31            86400	A	10.241.243.41
+devapp01vm32            86400	A	10.241.243.42
+devapp01vml14           86400	A	10.241.243.24
+devbkp1                 86400	A	10.241.245.111
+devbobaa                86400	A	10.241.99.91
+devbobab                86400	A	10.241.99.92
+DEVDBVM1                86400	A	10.241.19.51
+DEVDBVM2                A	10.241.19.52
+DEVDBVM3                86400	A	10.241.19.53
+DEVDBVM4                A	10.241.19.54
+DEVDBVM5                86400	A	10.241.19.55
+DEVDBVM6                86400	A	10.241.19.56
+devekm1                 86400	A	10.241.245.99
+devhana                 86400	A	10.241.99.101
+devhanb                 86400	A	10.241.99.102
+devmegaa                86400	A	10.241.99.68
+devmegab                86400	A	10.241.99.69
+devoptimusa             86400	A	10.241.99.60
+devoptimusb             86400	A	10.241.99.61
+devsbvm3                86400	A	10.241.19.108
+devsbvm4                86400	A	10.241.19.109
+devsbvm5                A	10.241.19.110
+devsoundb               A	10.241.99.73
+devvctr1                86400	A	10.241.70.50
+devvm1                  86400	A	10.241.19.101
+                        A	10.241.19.51
+devvm2                  86400	A	10.241.19.102
+devvm3                  86400	A	10.241.19.103
+devvm4                  86400	A	10.241.19.104
+devvm5                  86400	A	10.241.19.105
+devwara                 86400	A	10.241.99.76
+devwarb                 86400	A	10.241.99.77
+dis-vascoidvm           A	10.232.15.110
+doctora                 86400	A	10.241.110.97
+doctorb                 86400	A	10.241.110.98
+DPIBATCH1Q              A	10.241.105.150
+DPIBATCH2Q              A	10.241.105.151
+DPIBLAST1Q              A	10.241.212.200
+DPIFEED2Q               A	10.241.91.153
+DPIMAIL1Q               A	10.241.212.190
+dpimail2q               60	A	10.241.212.171
+DPISVC1Q                A	10.241.213.100
+drautoa                 A	10.232.111.160
+drautob                 86400	A	10.232.111.161
+drbobaa                 86400	A	10.232.111.80
+drbobab                 86400	A	10.232.111.81
+drdbtfs                 86400	A	10.232.110.128
+drdoctora               86400	A	10.232.111.97
+drdoctorb               86400	A	10.232.111.98
+drhana                  86400	A	10.232.111.90
+drhanb                  86400	A	10.232.111.91
+drjapimdb1              A	10.232.121.101
+drmegaa                 86400	A	10.232.111.156
+drmegab                 86400	A	10.232.111.157
+drmgmtvm1               86400	A	10.232.70.91
+drmgmtvm2               A	10.232.70.92
+drmgmtvm3               A	10.232.70.93
+drmgmtvm4               A	10.232.70.94
+drmgmtvm5               A	10.232.70.95
+drobia                  86400	A	10.232.111.119
+drobib                  86400	A	10.232.111.120
+droptimusa              86400	A	10.232.111.152
+droptimusb              86400	A	10.232.111.153
+drsidea                 86400	A	10.232.111.105
+drsideb                 86400	A	10.232.111.106
+drwara                  86400	A	10.232.111.129
+drwarb                  86400	A	10.232.111.130
+ghqbuild2               A	10.241.30.146
+ghqfound01              A	10.241.30.148
+HANA                    86400	A	10.241.110.90
+HANB                    86400	A	10.241.110.91
+jurassica               86400	A	10.241.110.56
+jurassicb               86400	A	10.241.110.57
+KASEYA                  86400	A	10.241.65.213
+luigiad1                86400	A	10.232.10.9
+luigiad2                86400	A	10.232.10.10
+LUIGIHD1D1              86400	A	10.232.99.101
+LUIGIHD1D10             86400	A	10.232.99.110
+LUIGIHD1D11             86400	A	10.232.99.111
+LUIGIHD1D12             86400	A	10.232.99.112
+LUIGIHD1D13             86400	A	10.232.99.113
+LUIGIHD1D14             86400	A	10.232.99.114
+LUIGIHD1D2              86400	A	10.232.99.102
+LUIGIHD1D3              86400	A	10.232.99.103
+LUIGIHD1D4              86400	A	10.232.99.104
+LUIGIHD1D5              86400	A	10.232.99.105
+LUIGIHD1D6              86400	A	10.232.99.106
+LUIGIHD1D7              86400	A	10.232.99.107
+LUIGIHD1D8              86400	A	10.232.99.108
+LUIGIHD1D9              86400	A	10.232.99.109
+LUIGIHD1M1              86400	A	10.232.99.100
+LUIGIHD2D1              86400	A	10.232.99.116
+LUIGIHD2D10             86400	A	10.232.99.125
+LUIGIHD2D11             86400	A	10.232.99.126
+LUIGIHD2D12             86400	A	10.232.99.127
+LUIGIHD2D13             86400	A	10.232.99.128
+LUIGIHD2D14             86400	A	10.232.99.129
+LUIGIHD2D2              86400	A	10.232.99.117
+LUIGIHD2D3              86400	A	10.232.99.118
+LUIGIHD2D4              86400	A	10.232.99.119
+LUIGIHD2D5              86400	A	10.232.99.120
+LUIGIHD2D6              86400	A	10.232.99.121
+LUIGIHD2D7              86400	A	10.232.99.122
+LUIGIHD2D8              86400	A	10.232.99.123
+LUIGIHD2D9              86400	A	10.232.99.124
+LUIGIHD2M1              86400	A	10.232.99.115
+LUIGIHD3D1              86400	A	10.232.99.131
+LUIGIHD3D10             86400	A	10.232.99.140
+LUIGIHD3D11             86400	A	10.232.99.141
+LUIGIHD3D12             86400	A	10.232.99.142
+LUIGIHD3D13             86400	A	10.232.99.143
+LUIGIHD3D14             86400	A	10.232.99.144
+LUIGIHD3D2              86400	A	10.232.99.132
+LUIGIHD3D3              86400	A	10.232.99.133
+LUIGIHD3D4              86400	A	10.232.99.134
+LUIGIHD3D5              86400	A	10.232.99.135
+LUIGIHD3D6              86400	A	10.232.99.136
+LUIGIHD3D7              86400	A	10.232.99.137
+LUIGIHD3D8              86400	A	10.232.99.138
+LUIGIHD3D9              86400	A	10.232.99.139
+LUIGIHD3M1              86400	A	10.232.99.130
+LUIGIHDJK1              86400	A	10.232.70.85
+luigivctr1              86400	A	10.232.70.90
+mailbosm1               60	A	10.241.182.100
+mailbosm2               60	A	10.241.182.101
+MAILSM100               86400	A	10.241.188.240
+megaa                   A	10.241.110.156
+megab                   A	10.241.110.157
+mistyjr                 86400	A	10.240.17.200
+nassite                 86400	A	10.241.99.100
+OBIA                    86400	A	10.241.110.119
+OBIB                    86400	A	10.241.110.120
+odsbobaa                86400	A	10.241.245.136
+odsbobab                86400	A	10.241.245.137
+odshana                 86400	A	10.241.245.128
+odshanb                 86400	A	10.241.245.129
+odsmegaa                86400	A	10.241.245.124
+odsmegab                86400	A	10.241.245.125
+odsoptimusa             86400	A	10.241.245.120
+odsoptimusb             86400	A	10.241.245.121
+odswara                 86400	A	10.241.245.132
+odswarb                 86400	A	10.241.245.133
+optimusa                A	10.241.110.152
+optimusb                A	10.241.110.153
+pmtaconsole             86400	A	10.241.193.50
+QTM-NS-i-196            A	10.241.65.196
+qtm-ns-storage          86400	A	10.241.65.197
+qtmad1                  86400	A	10.241.10.9
+qtmad2                  86400	A	10.241.10.10
+QTMBKP1                 86400	A	10.241.245.50
+QTMCASS1                86400	A	10.241.205.171
+qtmcass10               86400	A	10.241.205.180
+qtmcass11               86400	A	10.241.205.181
+qtmcass12               86400	A	10.241.205.182
+qtmcass13               86400	A	10.241.205.183
+qtmcass14               86400	A	10.241.205.184
+qtmcass15               86400	A	10.241.205.185
+qtmcass16               A	10.241.205.186
+qtmcass17               86400	A	10.241.205.187
+qtmcass18               A	10.241.205.188
+qtmcass19               86400	A	10.241.205.189
+qtmcass2                86400	A	10.241.205.172
+qtmcass20               A	10.241.205.190
+qtmcass21               A	10.241.205.191
+qtmcass22               900	A	10.241.99.103
+qtmcass24               900	A	10.241.121.103
+qtmcass3                86400	A	10.241.205.173
+qtmcass4                86400	A	10.241.205.174
+qtmcass5                86400	A	10.241.205.175
+qtmcass6                86400	A	10.241.205.176
+qtmcass7                86400	A	10.241.205.177
+qtmcass8                86400	A	10.241.205.178
+qtmcass9                86400	A	10.241.205.179
+qtmcassdb1              A	10.241.205.111
+qtmcassdb2              A	10.241.205.112
+qtmchefs1               86400	A	10.241.65.80
+qtmchefw1               86400	A	10.241.65.81
+qtmekm1                 A	10.241.245.150
+qtmhb1d1                86400	A	10.241.99.193
+qtmhb1d2                86400	A	10.241.99.194
+QTMHB1M1                86400	A	10.241.99.190
+qtmhb2d1                86400	A	10.241.99.195
+qtmhb2d2                86400	A	10.241.99.196
+QTMHB2M1                86400	A	10.241.99.191
+qtmhb3d1                86400	A	10.241.99.197
+qtmhb3d2                86400	A	10.241.99.198
+QTMHB3M1                86400	A	10.241.99.192
+qtmhd1d1                86400	A	10.241.99.131
+qtmhd1d10               86400	A	10.241.99.139
+qtmhd1d11               86400	A	10.241.99.140
+qtmhd1d12               86400	A	10.241.99.154
+qtmhd1d2                86400	A	10.241.99.132
+qtmhd1d3                86400	A	10.241.99.133
+qtmhd1d4                86400	A	10.241.99.134
+qtmhd1d5                86400	A	10.241.99.138
+qtmhd1d6                86400	A	10.241.99.141
+qtmhd1d7                86400	A	10.241.99.142
+qtmhd1d8                86400	A	10.241.99.143
+qtmhd1d9                86400	A	10.241.99.149
+qtmhd1m1                86400	A	10.241.99.118
+qtmhd2d1                86400	A	10.241.99.135
+qtmhd2d10               86400	A	10.241.99.150
+qtmhd2d11               86400	A	10.241.99.151
+qtmhd2d12               86400	A	10.241.99.155
+qtmhd2d2                86400	A	10.241.99.136
+qtmhd2d3                86400	A	10.241.99.137
+qtmhd2d4                86400	A	10.241.99.145
+qtmhd2d5                86400	A	10.241.99.146
+qtmhd2d6                86400	A	10.241.99.144
+qtmhd2d7                86400	A	10.241.99.147
+qtmhd2d8                86400	A	10.241.99.148
+qtmhd2d9                86400	A	10.241.99.153
+qtmhd2m1                86400	A	10.241.99.119
+qtmhd3d1                86400	A	10.241.99.129
+qtmhd3d10               86400	A	10.241.99.152
+qtmhd3d11               86400	A	10.241.99.156
+qtmhd3d12               86400	A	10.241.99.157
+qtmhd3d2                86400	A	10.241.99.164
+qtmhd3d3                86400	A	10.241.99.165
+qtmhd3d4                86400	A	10.241.99.166
+qtmhd3d5                86400	A	10.241.99.167
+qtmhd3d6                86400	A	10.241.99.168
+qtmhd3d7                86400	A	10.241.99.169
+qtmhd3d8                86400	A	10.241.99.170
+qtmhd3d9                86400	A	10.241.99.188
+qtmhd3m1                86400	A	10.241.99.120
+qtmhdjk1                86400	A	10.241.99.51
+qtmhdtest1              A	10.241.99.240
+qtmhgate02              A	10.241.99.99
+qtmhgate03              A	10.241.99.103
+qtmhgate1               86400	A	10.241.99.111
+qtmhgate2               86400	A	10.241.99.112
+qtmhgate3               A	10.241.99.113
+qtmjapimdb1             900	A	10.241.121.101
+qtmjapimdb2             A	10.241.121.102
+QTMJAPIMDB20C32CA       900	A	10.241.121.102
+qtmjapimdb3             A	10.241.121.103
+qtmjdproc1              A	10.241.230.112
+qtmjdproc2              A	10.241.230.113
+qtmjdrabbit1            A	10.241.205.112
+qtmjdrabbit2            A	10.241.205.113
+qtmmap1                 86400	A	10.241.91.131
+qtmmap10                86400	A	10.241.91.140
+qtmmap11                86400	A	10.241.91.141
+QTMMAP12                86400	A	10.241.91.142
+qtmmap2                 86400	A	10.241.91.132
+qtmmap3                 86400	A	10.241.91.133
+qtmmap4                 86400	A	10.241.91.134
+qtmmap5                 86400	A	10.241.91.135
+qtmmap6                 86400	A	10.241.91.136
+qtmmap7                 86400	A	10.241.91.137
+                        A	10.240.19.71
+qtmmap8                 86400	A	10.241.91.138
+qtmmap9                 86400	A	10.241.91.139
+qtmmgmtvm               86400	A	10.241.70.90
+qtmmgmtvm1              86400	A	10.241.70.91
+qtmmgmtvm2              86400	A	10.241.70.92
+qtmmgmtvm3              A	10.241.70.93
+qtmmgmtvm4              86400	A	10.241.70.94
+qtmmgmtvm5              86400	A	10.241.70.95
+qtmopscenter1           86400	A	10.241.205.170
+qtmpassvm1              A	10.241.10.71
+qtmrabbit1              A	10.241.205.132
+qtmrabbit2              A	10.241.205.133
+qtmrabbit3              A	10.241.205.134
+qtmrabbit4              A	10.241.205.135
+qtmscanner              86400	A	10.241.65.254
+qtmvctr1                A	10.241.70.90
+QTWAPP01VM01            86400	A	10.211.216.44
+QTWAPP01VM02            86400	A	10.211.216.45
+QTWAPP01VM03            86400	A	10.211.216.46
+QTWAPP01VM04            86400	A	10.211.216.47
+QTWAPP01VM05            86400	A	10.211.216.48
+QTWAPP01VM06            86400	A	10.211.216.49
+QTWAPP01VM07            86400	A	10.211.216.50
+QTWAPP01VM08            A	10.211.216.51
+QTWAPP01VM09            86400	A	10.211.216.52
+QTWAPP01VM10            86400	A	10.211.216.53
+QTWAPP01VM11            86400	A	10.211.216.54
+QTWAPP01VM12            86400	A	10.211.216.55
+QTWAPP01VM13            86400	A	10.211.216.56
+QTWAPP01VM14            86400	A	10.211.216.57
+QTWAPP01VM15            86400	A	10.211.216.58
+QTWAPP01VM16            86400	A	10.211.216.59
+QTWAPP01VM17            86400	A	10.211.216.60
+QTWAPP01VM18            86400	A	10.211.216.61
+QTWAPP01VM19            86400	A	10.211.216.62
+QTWAPP01VM20            86400	A	10.211.216.63
+QTWAPP01VM21            86400	A	10.211.216.64
+QTWAPP01VM22            86400	A	10.211.216.65
+QTWAPP01VM23            86400	A	10.211.216.66
+QTWAPP01VM24            86400	A	10.211.216.67
+QTWAPP01VM25            86400	A	10.211.216.68
+QTWAPP01VM26            86400	A	10.211.216.69
+QTWAPP01VM27            86400	A	10.211.216.70
+QTWAPP01VM28            86400	A	10.211.216.71
+QTWAPP01VM29            86400	A	10.211.216.72
+QTWAPP01VM30            86400	A	10.211.216.73
+QTWAPP01VM31            A	10.211.216.74
+QTWAPP01VM32            86400	A	10.211.216.75
+QTWAPP02SW01            A	10.211.217.11
+QTWAPP02SW02            A	10.211.217.12
+QTWAPP02VM01            86400	A	10.211.216.11
+QTWAPP02VM02            86400	A	10.211.216.12
+QTWAPP02VM03            86400	A	10.211.216.13
+QTWAPP02VM04            86400	A	10.211.216.14
+QTWAPP02VM05            86400	A	10.211.216.15
+QTWAPP02VM06            86400	A	10.211.216.16
+QTWAPP02VM07            86400	A	10.211.216.17
+QTWAPP02VM08            86400	A	10.211.216.18
+QTWAPP02VM09            86400	A	10.211.216.19
+QTWAPP02VM10            86400	A	10.211.216.20
+QTWAPP02VM11            86400	A	10.211.216.21
+QTWAPP02VM12            86400	A	10.211.216.22
+QTWAPP02VM13            86400	A	10.211.216.23
+QTWAPP02VM14            86400	A	10.211.216.24
+QTWAPP02VM15            86400	A	10.211.216.25
+QTWAPP02VM16            86400	A	10.211.216.26
+QTWAPP02VM17            86400	A	10.211.216.27
+QTWAPP02VM18            86400	A	10.211.216.28
+QTWAPP02VM19            86400	A	10.211.216.29
+QTWAPP02VM20            86400	A	10.211.216.30
+QTWAPP02VM21            86400	A	10.211.216.31
+QTWAPP02VM22            86400	A	10.211.216.32
+QTWAPP02VM23            86400	A	10.211.216.33
+QTWAPP02VM24            86400	A	10.211.216.34
+QTWAPP02VM25            86400	A	10.211.216.35
+QTWAPP02VM26            A	10.211.216.36
+QTWAPP02VM27            86400	A	10.211.216.37
+QTWAPP02VM28            86400	A	10.211.216.38
+QTWAPP02VM29            86400	A	10.211.216.39
+QTWAPP02VM30            86400	A	10.211.216.40
+QTWAPP02VM31            86400	A	10.211.216.41
+QTWAPP02VM32            86400	A	10.211.216.42
+QTWAPP03VM32            900	A	10.211.216.75
+qtwb1c1                 A	10.211.200.51
+                        A	10.211.213.50
+qtwb1c1bl01             86400	A	10.211.213.51
+qtwb1c1bl02             86400	A	10.211.213.52
+qtwb1c1bl03             86400	A	10.211.213.53
+qtwb1c1bl04             86400	A	10.211.213.54
+qtwb1c1bl05             86400	A	10.211.213.55
+qtwb1c1bl06             86400	A	10.211.213.56
+qtwb1c1bl07             86400	A	10.211.213.57
+qtwb1c1bl08             86400	A	10.211.213.58
+qtwb1c1bl09             86400	A	10.211.213.59
+qtwb1c1bl10             86400	A	10.211.213.60
+qtwb1c1bl11             86400	A	10.211.213.61
+qtwb1c1bl12             86400	A	10.211.213.62
+qtwb1c1bl13             86400	A	10.211.213.63
+qtwb1c1bl14             86400	A	10.211.213.64
+qtwb1c1bl15             86400	A	10.211.213.65
+qtwb1c1bl16             86400	A	10.211.213.66
+qtwb1c2                 A	10.211.200.52
+                        A	10.211.213.80
+qtwb1c2bl01             86400	A	10.211.213.81
+qtwb1c2bl02             86400	A	10.211.213.82
+qtwb1c2bl03             86400	A	10.211.213.83
+qtwb1c2bl04             86400	A	10.211.213.84
+qtwb1c2bl05             86400	A	10.211.213.85
+qtwb1c2bl06             86400	A	10.211.213.86
+qtwb1c2bl07             86400	A	10.211.213.87
+qtwb1c2bl08             86400	A	10.211.213.88
+qtwb1c2bl09             86400	A	10.211.213.89
+qtwb1c2bl10             86400	A	10.211.213.90
+qtwb1c2bl11             86400	A	10.211.213.91
+qtwb1c2bl12             86400	A	10.211.213.92
+qtwb1c2bl13             86400	A	10.211.213.93
+qtwb1c2bl14             86400	A	10.211.213.94
+qtwb1c2bl15             86400	A	10.211.213.95
+qtwb1c2bl16             86400	A	10.211.213.96
+qtwb2c1                 A	10.211.200.53
+                        A	10.211.213.110
+qtwb2c1bl01             A	10.211.213.111
+qtwb2c1bl02             86400	A	10.211.213.112
+qtwb2c1bl03             86400	A	10.211.213.113
+qtwb2c1bl04             86400	A	10.211.213.114
+qtwb2c1bl05             86400	A	10.211.213.115
+qtwb2c1bl06             86400	A	10.211.213.116
+qtwb2c1bl07             86400	A	10.211.213.117
+qtwb2c1bl08             86400	A	10.211.213.118
+qtwb2c1bl09             86400	A	10.211.213.119
+qtwb2c1bl10             86400	A	10.211.213.120
+qtwb2c1bl11             86400	A	10.211.213.121
+qtwb2c1bl12             86400	A	10.211.213.122
+qtwb2c1bl13             86400	A	10.211.213.123
+qtwb2c1bl14             86400	A	10.211.213.124
+qtwb2c1bl15             86400	A	10.211.213.125
+qtwb2c1bl16             86400	A	10.211.213.126
+qtwb2c2                 A	10.211.200.54
+qtwb2c2bl01             86400	A	10.211.213.127
+qtwb2c2bl02             86400	A	10.211.213.128
+qtwb2c2bl03             86400	A	10.211.213.129
+qtwb2c2bl04             86400	A	10.211.213.130
+qtwb2c2bl05             86400	A	10.211.213.131
+qtwb2c2bl06             86400	A	10.211.213.132
+qtwb2c2bl07             86400	A	10.211.213.133
+qtwb2c2bl08             86400	A	10.211.213.134
+qtwb2c2bl09             86400	A	10.211.213.135
+qtwb2c2bl10             86400	A	10.211.213.136
+qtwb2c2bl11             86400	A	10.211.213.137
+qtwb2c2bl12             86400	A	10.211.213.138
+qtwb2c2bl13             86400	A	10.211.213.139
+qtwb2c2bl14             86400	A	10.211.213.140
+qtwb2c2bl15             86400	A	10.211.213.141
+qtwb2c2bl16             86400	A	10.211.213.142
+qtwb2s2                 A	10.211.214.140
+qtwbkp1                 86400	A	10.211.245.171
+qtwctrl1a               86400	A	10.211.67.54
+qtwctrl1b               86400	A	10.211.67.55
+QTWDHCP1                A	10.211.205.131
+qtwdsrv1a               86400	A	10.211.67.58
+qtwdsrv1b               86400	A	10.211.67.59
+qtwjapi1                A	10.211.121.101
+qtwjapi2                A	10.211.121.102
+qtwmsg1a                86400	A	10.211.67.66
+qtwmsg1b                86400	A	10.211.67.67
+qtwsc1a                 86400	A	10.211.67.62
+qtwsc1b                 86400	A	10.211.67.63
+qtwsolrfst01            A	10.211.106.174
+qtwsolrfst02            A	10.211.106.175
+QTWSTACHE1              86400	A	10.211.212.97
+QTWSTACHE2              86400	A	10.211.212.98
+QTX114S1                900	A	10.241.205.137
+QTX114S2                900	A	10.241.243.26
+QTX114S20C3D72          900	A	10.241.205.192
+QTX115S1                900	A	10.241.205.194
+QTX115S10C345E          900	A	10.241.243.28
+QTX115S2                900	A	10.241.205.136
+QTXANRAD01              86400	A	10.241.65.18
+qtxapp01vm01            86400	A	10.241.216.44
+qtxapp01vm02            86400	A	10.241.216.45
+qtxapp01vm03            86400	A	10.241.216.46
+qtxapp01vm04            86400	A	10.241.216.47
+qtxapp01vm05            86400	A	10.241.216.48
+qtxapp01vm06            86400	A	10.241.216.49
+qtxapp01vm07            86400	A	10.241.216.50
+qtxapp01vm08            86400	A	10.241.216.51
+qtxapp01vm09            86400	A	10.241.216.52
+qtxapp01vm10            86400	A	10.241.216.53
+qtxapp01vm11            86400	A	10.241.216.54
+qtxapp01vm12            86400	A	10.241.216.55
+qtxapp01vm13            86400	A	10.241.216.56
+qtxapp01vm14            86400	A	10.241.216.57
+qtxapp01vm15            86400	A	10.241.216.58
+qtxapp01vm16            86400	A	10.241.216.59
+qtxapp01vm17            86400	A	10.241.216.60
+qtxapp01vm18            86400	A	10.241.216.61
+qtxapp01vm19            86400	A	10.241.216.62
+qtxapp01vm20            86400	A	10.241.216.63
+qtxapp01vm21            86400	A	10.241.216.64
+qtxapp01vm22            86400	A	10.241.216.65
+qtxapp01vm23            86400	A	10.241.216.66
+qtxapp01vm24            86400	A	10.241.216.67
+qtxapp01vm25            86400	A	10.241.216.68
+qtxapp01vm26            86400	A	10.241.216.69
+qtxapp01vm27            86400	A	10.241.216.70
+qtxapp01vm28            86400	A	10.241.216.71
+qtxapp01vm29            86400	A	10.241.216.72
+qtxapp01vm30            86400	A	10.241.216.73
+qtxapp01vm31            86400	A	10.241.216.74
+qtxapp01vm32            86400	A	10.241.216.75
+QTXAPP02SW01            A	10.241.217.11
+QTXAPP02SW02            A	10.241.217.12
+qtxapp02vm01            86400	A	10.241.216.11
+QTXAPP02VM02            86400	A	10.241.216.12
+QTXAPP02VM03            86400	A	10.241.216.13
+QTXAPP02VM04            86400	A	10.241.216.14
+QTXAPP02VM05            86400	A	10.241.216.15
+QTXAPP02VM06            86400	A	10.241.216.16
+QTXAPP02VM07            86400	A	10.241.216.17
+QTXAPP02VM08            86400	A	10.241.216.18
+QTXAPP02VM09            86400	A	10.241.216.19
+QTXAPP02VM10            86400	A	10.241.216.20
+QTXAPP02VM11            86400	A	10.241.216.21
+QTXAPP02VM12            86400	A	10.241.216.22
+QTXAPP02VM13            86400	A	10.241.216.23
+QTXAPP02VM14            86400	A	10.241.216.24
+QTXAPP02VM15            86400	A	10.241.216.25
+QTXAPP02VM16            86400	A	10.241.216.26
+QTXAPP02VM17            86400	A	10.241.216.27
+QTXAPP02VM18            86400	A	10.241.216.28
+QTXAPP02VM19            86400	A	10.241.216.29
+QTXAPP02VM20            86400	A	10.241.216.30
+QTXAPP02VM21            86400	A	10.241.216.31
+QTXAPP02VM22            86400	A	10.241.216.32
+QTXAPP02VM23            86400	A	10.241.216.33
+QTXAPP02VM24            86400	A	10.241.216.34
+QTXAPP02VM25            86400	A	10.241.216.35
+QTXAPP02VM26            86400	A	10.241.216.36
+QTXAPP02VM27            86400	A	10.241.216.37
+QTXAPP02VM28            86400	A	10.241.216.38
+QTXAPP02VM29            86400	A	10.241.216.39
+QTXAPP02VM30            86400	A	10.241.216.40
+QTXAPP02VM31            86400	A	10.241.216.41
+QTXAPP02VM32            86400	A	10.241.216.42
+qtxcbone01              86400	A	10.241.122.101
+qtxcbone02              86400	A	10.241.122.102
+qtxdhcp1                86400	A	10.241.205.121
+qtxgeohost02            86400	A	10.241.15.108
+qtxhyper2               86400	A	10.211.255.12
+qtxhyperv1              86400	A	10.211.255.11
+qtxvctr1                86400	A	10.241.101.48
+rebelb1123              A	10.211.107.101
+REBELBAT01              86400	A	10.211.105.100
+REBELBAT02              A	10.211.15.148
+REBELBAT03              86400	A	10.211.105.102
+REBELBAT04              86400	A	10.211.105.103
+REBELBLAST1             86400	A	10.211.10.102
+rebelboasync2           60	A	10.241.183.101
+rebelbows1              60	A	10.241.181.90
+rebelbows2              60	A	10.241.181.91
+REBELCONAPI01           86400	A	10.211.205.201
+REBELDFS1               A	10.211.15.107
+REBELDPIBATCH1          A	10.211.105.201
+REBELDPISVC1            60	A	10.211.213.101
+rebeldpisvc2            A	10.211.213.102
+rebeldpiweb1            86400	A	10.211.212.103
+rebeldpiweb2            86400	A	10.211.213.102
+rebeldw1                86400	A	10.241.20.51
+rebeldw2                86400	A	10.241.20.52
+rebeldw3                86400	A	10.241.20.53
+REBELDW4                86400	A	10.241.20.54
+REBELIMG01              A	10.211.205.64
+REBELIMG02              86400	A	10.211.205.66
+REBELLS                 86400	A	10.211.245.203
+rebelmxws100            86400	A	10.241.160.102
+rebelmxws101            86400	A	10.241.160.103
+REBELNXS1               A	10.211.45.100
+REBELNXS2               A	10.211.45.101
+rebelpoi7               86400	A	10.211.106.107
+REBELRDIO1              86400	A	10.211.64.101
+REBELRDIO2              86400	A	10.211.64.102
+REBELRDIO3              86400	A	10.211.64.103
+REBELRDIO4              86400	A	10.211.64.104
+REBELSC01               86400	A	10.211.60.201
+REBELSC02               86400	A	10.211.60.202
+REBELSC03               86400	A	10.211.60.203
+REBELSC04               86400	A	10.211.60.204
+REBELSC05               86400	A	10.211.60.205
+REBELSC06               86400	A	10.211.60.206
+REBELSC07               86400	A	10.211.60.207
+REBELSC08               86400	A	10.211.60.208
+REBELSC09               86400	A	10.211.60.209
+REBELSC10               86400	A	10.211.60.110
+REBELSC11               86400	A	10.211.60.111
+REBELSC7                86400	A	10.211.60.107
+rebelsolrapi1           86400	A	10.211.106.123
+rebelsolrapi11          86400	A	10.211.106.136
+rebelsolrapi12          A	10.211.106.137
+rebelsolrapi13          86400	A	10.211.106.138
+rebelsolrapi2           86400	A	10.211.106.124
+rebelsolrapi3           86400	A	10.211.106.117
+rebelsolrapi4           86400	A	10.211.106.111
+rebelsolrapi5           86400	A	10.211.106.112
+rebelsolrapi6           86400	A	10.211.106.121
+rebelsolrapi7           86400	A	10.211.106.126
+rebelsolrapi8           86400	A	10.211.106.128
+rebelsolrapi9           A	10.211.106.134
+rebelsolrapim1          86400	A	10.211.106.109
+rebelsolrapim11         A	10.211.106.131
+rebelsolrapim12         86400	A	10.211.106.132
+rebelsolrapim13         A	10.211.106.133
+rebelsolrapim2          86400	A	10.211.106.110
+rebelsolrapim3          86400	A	10.211.106.116
+rebelsolrapim4          86400	A	10.211.106.118
+rebelsolrapim5          86400	A	10.211.106.119
+rebelsolrapim6          86400	A	10.211.106.120
+rebelsolrapim7          86400	A	10.211.106.122
+rebelsolrapim8          86400	A	10.211.106.127
+rebelsolrapim9          A	10.211.106.129
+rebelsolrbeast          86400	A	10.211.76.170
+rebelsolrcmp1           86400	A	10.211.86.123
+rebelsolrcmp2           86400	A	10.211.86.124
+rebelsolrcmpm1          86400	A	10.211.86.122
+rebelsolrdp1            86400	A	10.211.86.101
+rebelsolrdp10           86400	A	10.211.86.110
+rebelsolrdp11           86400	A	10.211.86.112
+rebelsolrdp12           86400	A	10.211.86.113
+rebelsolrdp13           86400	A	10.211.86.114
+rebelsolrdp14           86400	A	10.211.86.115
+rebelsolrdp15           86400	A	10.211.86.116
+rebelsolrdp16           86400	A	10.211.86.117
+rebelsolrdp17           86400	A	10.211.86.118
+rebelsolrdp18           86400	A	10.211.86.119
+rebelsolrdp19           86400	A	10.211.86.120
+rebelsolrdp2            86400	A	10.211.86.102
+rebelsolrdp20           86400	A	10.211.86.121
+Rebelsolrdp21           A	10.211.86.126
+rebelsolrdp210C3EDE     900	A	10.211.86.126
+rebelsolrdp22           A	10.211.86.127
+rebelsolrdp23           A	10.211.86.128
+rebelsolrdp230C332E     900	A	10.211.86.128
+rebelsolrdp24           A	10.211.86.129
+rebelsolrdp24F90775     900	A	10.211.86.129
+rebelsolrdp25           A	10.211.86.130
+rebelsolrdp250C5762     900	A	10.211.86.130
+rebelsolrdp3            86400	A	10.211.86.103
+rebelsolrdp4            86400	A	10.211.86.104
+rebelsolrdp5            86400	A	10.211.86.105
+rebelsolrdp6            86400	A	10.211.86.106
+rebelsolrdp7            86400	A	10.211.86.107
+rebelsolrdp8            86400	A	10.211.86.108
+rebelsolrdp9            86400	A	10.211.86.109
+rebelsolrdpm1           86400	A	10.211.86.100
+rebelsolrdpm2           86400	A	10.211.86.111
+rebelsolrdpm3           A	10.211.86.131
+rebelsolrdpm30C5771     900	A	10.211.86.131
+rebelsolredge01         86400	A	10.211.106.135
+rebelsolredge02         A	10.211.106.166
+rebelsolredge03         A	10.211.106.167
+rebelsolredge04         A	10.211.106.173
+rebelsolredgem1         86400	A	10.211.106.130
+rebelsolrjob1           86400	A	10.211.214.120
+REBELSOLRJOB10          86400	A	10.211.214.129
+REBELSOLRJOB11          86400	A	10.211.214.130
+REBELSOLRJOB12          86400	A	10.211.214.131
+REBELSOLRJOB13          86400	A	10.211.214.132
+rebelsolrjob14          86400	A	10.211.214.133
+rebelsolrjob15          A	10.211.214.134
+REBELSOLRJOB16          86400	A	10.211.214.135
+REBELSOLRJOB17          86400	A	10.211.214.136
+rebelsolrjob18          86400	A	10.211.214.137
+REBELSOLRJOB19          86400	A	10.211.214.138
+rebelsolrjob2           86400	A	10.211.214.121
+REBELSOLRJOB20          86400	A	10.211.214.139
+REBELSOLRJOB24          86400	A	10.211.214.143
+REBELSOLRJOB25          86400	A	10.211.214.144
+REBELSOLRJOB26          86400	A	10.211.214.145
+REBELSOLRJOB27          86400	A	10.211.214.146
+REBELSOLRJOB28          86400	A	10.211.214.147
+REBELSOLRJOB29          86400	A	10.211.214.148
+rebelsolrjob3           86400	A	10.211.214.122
+REBELSOLRJOB31          86400	A	10.211.214.150
+REBELSOLRJOB32          86400	A	10.211.214.151
+rebelsolrjob4           86400	A	10.211.214.123
+rebelsolrjob5           86400	A	10.211.214.124
+rebelsolrjob6           86400	A	10.211.214.125
+rebelsolrjob7           86400	A	10.211.214.126
+rebelsolrjob8           86400	A	10.211.214.127
+REBELSOLRJOB9           86400	A	10.211.214.128
+rebelsolrjobm1          86400	A	10.211.214.101
+rebelsolrjobm2          86400	A	10.211.214.102
+rebelsolrjobm3          86400	A	10.211.214.103
+REBELSOLRMSI1           86400	A	10.211.106.140
+rebelsolrmsi2           A	10.211.106.141
+rebelsolrmsi3           86400	A	10.211.106.142
+rebelsolrmsi4           A	10.211.106.143
+REBELSOLRMSI5           86400	A	10.211.106.144
+rebelsolrmsim1          86400	A	10.211.106.139
+rebelsolrmsp2           86400	A	10.211.106.146
+rebelsolrmsp4           86400	A	10.211.106.148
+REBELSOLRMYS01          86400	A	10.211.106.151
+REBELSOLRMYS02          A	10.211.106.152
+REBELSOLRMYS03          A	10.211.106.153
+REBELSOLRMYS04          86400	A	10.211.106.154
+REBELSOLRMYS05          86400	A	10.211.106.155
+REBELSOLRMYS06          86400	A	10.211.106.156
+REBELSOLRMYS07          86400	A	10.211.106.157
+REBELSOLRMYS08          86400	A	10.211.106.158
+REBELSOLRMYS09          86400	A	10.211.106.159
+REBELSOLRMYS10          86400	A	10.211.106.160
+REBELSOLRMYSM1          86400	A	10.211.106.150
+REBELSOLRONE03          A	10.211.106.168
+rebelsolrone03F8A6EB    86400	A	10.211.106.168
+REBELSOLRONE04          A	10.211.106.169
+REBELSOLRONE05          A	10.211.106.170
+REBELSOLRONE06          A	10.211.106.171
+REBELSOLRONE07          A	10.211.106.172
+REBELSOLRONEM1          A	10.211.106.165
+rebelsolrres1           86400	A	10.211.77.110
+rebelsolrres10          86400	A	10.211.77.119
+rebelsolrres11          86400	A	10.211.77.120
+rebelsolrres12          86400	A	10.211.77.121
+rebelsolrres13          86400	A	10.211.77.122
+rebelsolrres14          86400	A	10.211.77.123
+rebelsolrres15          86400	A	10.211.77.124
+rebelsolrres16          86400	A	10.211.77.125
+rebelsolrres17          86400	A	10.211.77.126
+rebelsolrres18          86400	A	10.211.77.127
+rebelsolrres19          86400	A	10.211.77.128
+rebelsolrres2           86400	A	10.211.77.111
+rebelsolrres20          86400	A	10.211.77.129
+rebelsolrres21          86400	A	10.211.77.130
+rebelsolrres22          86400	A	10.211.77.131
+rebelsolrres23          86400	A	10.211.77.132
+rebelsolrres24          86400	A	10.211.77.133
+rebelsolrres25          86400	A	10.211.77.134
+rebelsolrres26          86400	A	10.211.77.135
+rebelsolrres27          86400	A	10.211.77.136
+rebelsolrres28          86400	A	10.211.77.137
+REBELSOLRRES29          A	10.211.77.157
+rebelsolrres29F6EC30    900	A	10.211.77.157
+rebelsolrres3           86400	A	10.211.77.112
+REBELSOLRRES30          A	10.211.77.158
+rebelsolrres300C3CE6    900	A	10.211.77.158
+REBELSOLRRES31          A	10.211.77.159
+rebelsolrres310C3ED9    900	A	10.211.77.159
+REBELSOLRRES32          A	10.211.77.160
+rebelsolrres320C3CFA    900	A	10.211.77.160
+REBELSOLRRES35          86400	A	10.211.77.153
+rebelsolrres4           86400	A	10.211.77.113
+rebelsolrres5           86400	A	10.211.77.114
+rebelsolrres6           86400	A	10.211.77.115
+rebelsolrres7           86400	A	10.211.77.116
+rebelsolrres8           86400	A	10.211.77.117
+rebelsolrres9           86400	A	10.211.77.118
+rebelsolrresm1          86400	A	10.211.77.101
+rebelsolrresm2          86400	A	10.211.77.102
+rebelsolrresm3          86400	A	10.211.77.103
+rebelsolrresm4          86400	A	10.211.77.104
+REBELSOLRRESM5          86400	A	10.211.77.100
+rebelsolrresm50C1E78    900	A	10.211.77.100
+REBELSOLRRPP1           86400	A	10.211.77.138
+REBELSOLRRPP10          86400	A	10.211.77.150
+REBELSOLRRPP2           86400	A	10.211.77.139
+REBELSOLRRPP3           86400	A	10.211.77.140
+REBELSOLRRPP4           86400	A	10.211.77.141
+REBELSOLRRPP5           86400	A	10.211.77.142
+REBELSOLRRPP6           86400	A	10.211.77.143
+REBELSOLRRPP7           86400	A	10.211.77.144
+REBELSOLRRPP8           86400	A	10.211.77.145
+REBELSOLRRPP9           86400	A	10.211.77.155
+rebelsolrrppm1          86400	A	10.211.77.105
+rebelsolrrppm2          86400	A	10.211.77.106
+REBELSOLRTN1            86400	A	10.211.77.147
+REBELSOLRTN2            A	10.211.77.148
+REBELSOLRTN3            86400	A	10.211.77.149
+REBELSOLRTN4            86400	A	10.211.77.156
+REBELSOLRTN5            A	10.211.77.151
+REBELSOLRTN6            86400	A	10.211.77.152
+REBELSOLRTNM1           86400	A	10.211.77.146
+rebelsolrutil1          86400	A	10.211.76.171
+rebelsolrutil2          86400	A	10.211.76.172
+rebelsolrutil3          86400	A	10.211.76.173
+rebelspace              86400	A	10.211.15.93
+REBELSTAPI1             86400	A	10.211.205.161
+REBELSTAPI10            86400	A	10.211.205.170
+REBELSTAPI2             86400	A	10.211.205.162
+REBELSTAPI3             86400	A	10.211.205.163
+REBELSTAPI4             86400	A	10.211.205.164
+REBELSTAPI5             86400	A	10.211.205.165
+REBELSTAPI6             86400	A	10.211.205.166
+REBELSTAPI7             86400	A	10.211.205.167
+REBELSTAPI8             86400	A	10.211.205.168
+REBELSTAPI9             86400	A	10.211.205.169
+REBELVMHOST01           86400	A	10.211.15.121
+                        86400	A	10.211.15.120
+REBELVMHOST02           86400	A	10.211.15.122
+REBELVMHOST03           A	10.211.15.122
+REBELVMHOST04           86400	A	10.211.15.117
+REBELWS01               86400	A	10.211.205.51
+REBELWS02               86400	A	10.211.205.52
+rebesolrdp220C3E30      900	A	10.211.86.127
+rebesolrone01           A	10.211.106.166
+sidea                   86400	A	10.241.110.50
+sideb                   86400	A	10.241.110.51
+smtprelay150            86400	A	10.231.65.231
+solarwindsdb            86400	A	10.241.10.237
+sounda                  A	10.241.110.76
+soundb                  A	10.241.110.77
+telx-redpanda1          86400	A	172.30.254.22
+testtest                A	10.240.18.100
+wara                    86400	A	10.241.110.101
+warb                    86400	A	10.241.110.102

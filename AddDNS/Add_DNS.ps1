@@ -1,0 +1,1 @@
+﻿Import-CSV "C:\SiteOpsScripts\AddDNS\hosts.csv" | foreach {dnscmd.exe $_.dnsserver /RecordAdd $_.zone $_.name /createPTR $_.type $_.IP}

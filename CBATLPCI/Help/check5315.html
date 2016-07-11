@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML DIR="LTR">
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+
+<META NAME="MS-HAID" CONTENT="a_check5315">
+
+<META NAME="MS.LOCALE" CONTENT="EN-US">
+
+<META NAME="DESCRIPTION" LOCCONTENT="Local Account Passwords">
+
+<TITLE>Microsoft Baseline Security Analyzer 2</TITLE>
+
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="..\css\coUA.css">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="..\css\coUAprint.css"> 
+</HEAD>
+
+<BODY>
+<P CLASS="banner"><IMG SRC="../Graphics/banner.jpg" WIDTH="332" HEIGHT="51" alt="Microsoft Baseline Security Analyzer"></P>
+
+<H1>Local Account Passwords</H1>
+
+<H2>Check Description</H2>
+
+<P>This check identifies any blank or simple passwords for each local user 
+account on the computer. This check is not performed on domain controllers.</P>
+<P><NOLOC>Microsoft&reg; Windows&reg; Server&nbsp;2008</NOLOC>, <NOLOC>Microsoft&reg; Windows&reg; Server&nbsp;2003</NOLOC>, <NOLOC>Windows&nbsp;Vista</NOLOC>, <NOLOC>Windows&nbsp;XP</NOLOC>, 
+and <NOLOC>Windows</NOLOC>&nbsp;2000 operating systems all require user authentication through passwords. In general, users are permitted to choose their own passwords. The security of their account depends on the choice of the password. This check enumerates all user accounts and checks for the following password conditions:</P>
+
+<UL>
+<LI>Password is blank. </LI>
+<LI>Password is the same as the user account name. </LI>
+<LI>Password is the same as the computer name. </LI>
+<LI>Password uses the word "password."</LI>
+<LI>Password uses the word "admin" or "administrator."</LI>
+</UL>
+
+<P>This check also notifies you of any accounts that have been disabled or are currently locked out.</P>
+
+<P>For <NOLOC>Windows&nbsp;XP</NOLOC> computers that use simple file sharing (includes <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition and <NOLOC>Windows&nbsp;XP</NOLOC> Professional computers not joined to a domain), MBSA will not flag local accounts with blank passwords. To help protect users who do not password-protect their accounts, <NOLOC>Windows&nbsp;XP</NOLOC> Professional accounts without passwords can only be used to log on at the physical computer console. By default, accounts with blank passwords can no longer be used to log on to the computer remotely over the network, or for any other logon activity <i>except</i> at the main physical console logon screen.</P>
+
+<P CLASS="note">Notes</P>
+<UL>
+    <LI><NOLOC>Microsoft</NOLOC> Baseline Security Analyzer does not attempt to crack passwords during this check, and instead attempts a password change request using each condition in the preceding list. Account lockout policy counts will be reset if in effect on the scanned computer.</LI>
+</UL>
+
+<H2>Additional Resources</H2>
+
+<P>
+<A ID="MSUrl0" HREF="http://go.microsoft.com/fwlink/?LinkID=16501" TITLE="http://www.microsoft.com/" TARGET="_blank">What's New in Security for <NOLOC>Windows&nbsp;XP</NOLOC> Professional and <NOLOC>Windows&nbsp;XP</NOLOC> Home Edition</A></P>
+
+<P>
+<A ID="MSUrl" HREF="http://go.microsoft.com/fwlink/?LinkID=16498" TITLE="http://www.microsoft.com/" TARGET="_blank">Creating Strong Passwords</A></P>
+
+<BR>
+<P> <FONT SIZE="-2"><NOLOC>&copy;</NOLOC>2002-2007 <NOLOC>Microsoft Corporation</NOLOC>. All rights reserved.</FONT></P>
+
+
+
+</BODY>
+</HTML>
